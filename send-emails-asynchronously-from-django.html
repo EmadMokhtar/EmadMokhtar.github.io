@@ -11,6 +11,8 @@
 
 
 
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,22 +35,25 @@
 <meta property="article:tag" content="python"/>
 <meta property="article:tag" content="celery"/>
 <meta property="article:tag" content="emails"/>
-<meta property="og:image" content="">
+<meta property="og:image" content="/images/profile.png">
   <title>Emad Mokhtar's Framework &ndash; Send Emails Asynchronously from Django</title>
 </head>
 <body>
   <aside>
     <div>
       <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+        <img src="/images/profile.png" alt="" title="">
       </a>
       <h1><a href=""></a></h1>
-      <p>Geek developer who's in search of code perfection</p>
+      <p>Geek developer who's in search of code perfection.</p>
       <nav>
         <ul class="list">
         </ul>
       </nav>
       <ul class="social">
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-envelope-o" href="emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-stack-overflow" href="" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
         <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
         <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
         <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
@@ -69,7 +74,7 @@
 <li>How to use <a href="http://www.celeryproject.org/">Celery</a> and <a href="https://github.com/pmclanahan/django-celery-email">Django-Celery-Email</a> to send email asynchronously.</li>
 </ol>
 <p>Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background.</p>
-<p><a href="http://www.emadmokhtar.com/wp-content/uploads/1442310863_full.png" target="_blank"><img src="http://www.emadmokhtar.com/wp-content/uploads/1442310863_thumb.png" align="middle" class="aligncenter" /></a></p>
+<p><img alt="Alt Text" src="/images/1442310863_full.png" /></p>
 <p>Now let’s see how we can do that.</p>
 <h2>Step 1: Install and Setup Celery</h2>
 <ul>
@@ -253,7 +258,7 @@ I've created class that can help use in this task</p>
     "name": "Emad Mokhtar",
     "url": "/author/emad-mokhtar.html"
   },
-  "image": "{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png",
+  "image": "/images/profile.png",
   "url": "/send-emails-asynchronously-from-django.html",
   "description": "In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email ..."
 }
