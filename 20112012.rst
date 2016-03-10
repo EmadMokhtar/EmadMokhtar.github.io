@@ -1,0 +1,71 @@
+</2011><2012>
+#############
+:date: 2011-12-24 23:33
+:author: admin
+:category: life
+:tags: 2011, 2012
+:slug: 20112012
+:status: published
+
+|it\_photo\_113446\_42|
+
+In the beginning of every year I say to myself never regret your
+mistakes just learn from them, start the new year with fresh thoughts,
+new hopes, new dreams, being optimistic, and keep on trying till I reach
+the highest ground.
+
+Sometimes looking back on what had happened in the previous year, is
+good to know that there are a lot of great things happened, I made a
+short list:
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<Year id="2011">
+
+  <Things>
+
+    <Thing>Got married to `Lamees
+Ayman <http://twitter.com/#!/Lamees>`__.</Thing>
+
+    <Thing>Jumped from think as one person to think as two.</Thing>
+
+    <Thing>Got a new android phone `HTC Desire
+HD <http://www.htc.com/www/smartphones/htc-desire-hd/>`__.</Thing>
+
+    <Thing>Rooted my HTC Desire HD.</Thing>
+
+    <Thing>Transfer my blog `from dasBlog to
+Wordpress <http://www.emadmokhtar.com/2011/11/jump-from-dasblog-to-wordpress/>`__.</Thing>
+
+    <Thing>Had a wonderful vacation in Egypt.</Thing>
+
+    <Thing>Got Amazon Kindle as my birthday gift.</Thing>
+
+    <Thing>Got Kuwaiti and Egyptian driving license.</Thing>
+
+    <Thing>Got into Microsoft Dynamics AX world.</Thing>
+
+    <Thing>Egypt Revolution.</Thing>
+
+    <Thing>Met a lot of Egyptian geeks during my vacation.</Thing>
+
+    <Thing>Made many friends on real life and followers on
+Twitter.</Thing>
+
+    <Thing>Gave my voice in elections for the first time in my
+life.</Thing>
+
+  </Things>
+
+</Year>
+
+2012 I’m ready to start, I’m ready to chase my dreams and make them
+true, I’m ready to rock, so let’s rock and roll baby. |Winking smile|
+
+.. |it\_photo\_113446\_42| image:: http://www.emadmokhtar.com/wp-content/uploads/2011/12/it_photo_113446_42_thumb.jpg
+   :width: 432px
+   :height: 289px
+   :target: http://www.emadmokhtar.com/wp-content/uploads/2011/12/it_photo_113446_42.jpg
+.. |Winking smile| image:: http://www.emadmokhtar.com/wp-content/uploads/2011/12/wlEmoticon-winkingsmile.png
+   :class: wlEmoticon wlEmoticon-winkingsmile
+
