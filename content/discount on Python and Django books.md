@@ -9,21 +9,21 @@ Generously PACKT publishing is offering 50% discount on Python and Django ebook 
 
 ## Interesting ebooks and videos for Python:
 
-[![](https://www.packtpub.com/sites/default/files/5130OS_Python%20Machine%20Learning_.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning)
+[![Python Machine Learning](https://www.packtpub.com/sites/default/files/5130OS_Python%20Machine%20Learning_.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning)
 
-[![](https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-video)
+[![Mastering Python](https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-video)
 
-[![](https://www.packtpub.com/sites/default/files/3358OS_cov.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/python-data-analysis)
+[![Python DAta Analysis](https://www.packtpub.com/sites/default/files/3358OS_cov.jpg)](https://www.packtpub.com/big-data-and-business-intelligence/python-data-analysis)
 
-[![](https://www.packtpub.com/sites/default/files/2355OS_4558_Geospatial%20Development%20by%20Example%20with%20Python.jpg)](https://www.packtpub.com/application-development/geospatial-development-example-python)
+[![Geospatial Development by Example Python](https://www.packtpub.com/sites/default/files/2355OS_4558_Geospatial%20Development%20by%20Example%20with%20Python.jpg)](https://www.packtpub.com/application-development/geospatial-development-example-python)
 
 ## Interesting ebooks and videos for Django:
 
-[![](https://www.packtpub.com/sites/default/files/6775O9S_Web%20Development%20with%20Django%20Cookbook-%20Second%20Edition.jpg)](https://www.packtpub.com/web-development/web-development-django-cookbook-second-edition)
+[![Web Development Django Cookbook](https://www.packtpub.com/sites/default/files/6775O9S_Web%20Development%20with%20Django%20Cookbook-%20Second%20Edition.jpg)](https://www.packtpub.com/web-development/web-development-django-cookbook-second-edition)
 
-[![](https://www.packtpub.com/sites/default/files/B03922_Django%20By%20Example_.jpg)](https://www.packtpub.com/web-development/django-example)
+[![Django By Example](https://www.packtpub.com/sites/default/files/B03922_Django%20By%20Example_.jpg)](https://www.packtpub.com/web-development/django-example)
 
-[![](https://www.packtpub.com/sites/default/files/bookretailers/9781783989805_new.jpg)](https://www.packtpub.com/web-development/mastering-django-web-development-video)
+[![Master Django Web Developement](https://www.packtpub.com/sites/default/files/bookretailers/9781783989805_new.jpg)](https://www.packtpub.com/web-development/mastering-django-web-development-video)
 
 ## Coupons
 
