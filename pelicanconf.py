@@ -42,3 +42,4 @@ MENUITEMS = (
              )
 MAIN_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
+DISQUS_SITENAME = "EmadMokhtar"
