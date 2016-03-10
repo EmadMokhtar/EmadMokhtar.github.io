@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'EmadMokhtar'
+AUTHOR = u'Emad Mokhtar'
 SITENAME = u"Emad Mokhtar's Framework"
 SITEURL = 'emadmokhtar.github.io'
 SITESUBTITLE = 'Geek developer who\'s in search of code perfection.'
