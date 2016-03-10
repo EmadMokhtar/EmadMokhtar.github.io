@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'EmadMokhtar'
 SITENAME = u"Emad Mokhtar's Framework"
-SITEURL = ''
+SITEURL = 'emadmokhtar.github.io'
 SITESUBTITLE = 'Geek developer who\'s in search of code perfection.'
 SITEDESCRIPTION = 'My thoughts and experince on software development and life.'
 SITELOGO = SITEURL + '/images/profile.jpg'
