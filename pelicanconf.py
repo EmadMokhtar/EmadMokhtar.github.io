@@ -33,6 +33,9 @@ SOCIAL = (
           ('twitter', 'https://twitter.com/emadmokhtar'),
           ('linkedin', 'https://www.linkedin.com/in/emadmokhtar/'),)
 
+
+GITHUB_ACTIVITY_FEED = 'https://github.com/EmadMokhtar.atom'
+GITHUB_ACTIVITY_MAX_ENTRIES = 10
 TWITTER_USERNAME = 'EmadMokhtar'
 GITHUB_URL = 'https://www.github.com/EmadMokhtar'
 THEME = 'Flex'
@@ -46,3 +49,6 @@ MENUITEMS = (
 MAIN_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 DISQUS_SITENAME = "emadmokhtarsframework"
+
+PLUGIN_PATHS = ['plugins']
+STATIC_PATHS = ['images']
