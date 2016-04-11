@@ -5,8 +5,6 @@ Tags: review
 Authors: Emad Mokhtar
 
 
-# My Experience with Fitbit Customer Service
-
 ![fitbit-logo]({filename}/images/fitbit-logo.png)
 
 ## The start

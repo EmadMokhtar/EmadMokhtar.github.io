@@ -5,8 +5,6 @@ Tags: review
 Authors: Emad Mokhtar
 
 
-# DotPen review
-
 I bought an iPad Mini 2 to write paper-less/eletronic notes instead of having notebook and a pen always inside my pockets, I [blogged about it before](/2015/12/paperless-notes/), but I upgraded my stylus from [Moshi Stanza Duo](http://www.moshi.com/peripheral-stylus-pen-stanza-duo) to [DotPen](http://dot-tec.com/), and I want to share my experince with you. 
 
 # My Experience
