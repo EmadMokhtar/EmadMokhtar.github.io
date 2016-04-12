@@ -28,7 +28,7 @@
 <meta property="og:url" content=""/>
 <meta property="og:image" content="/images/profile.jpg">
 
-  <title>Emad Mokhtar's Framework &ndash; Tags</title>
+  <title>Emad Mokhtar's Framework &ndash; Category: Development</title>
 </head>
 <body>
   <aside>
@@ -62,20 +62,31 @@
 
 <article>
   <header>
-    <h1>Tags</h1>
+    <h2><a href="/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html#solution-for-psycopg2-installation-error-with-mac-osx-el-capitan">Solution for psycopg2 installation error with Mac OSX El Capitan</a></h2>
+    <p>
+      Posted on Sun 11 October 2015 in <a href="/category/development.html">Development</a>
+      &#8226; Tagged with
+      <a href="/tag/developement.html">developement</a>,      <a href="/tag/macosx.html">macosx</a>      &#8226; <a href="/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html#disqus_thread">Leave a comment</a>
+    </p>
   </header>
   <div>
-    <ul class="list">          <li><a href="/tag/celery.html">celery</a> (1)</li>
-          <li><a href="/tag/developement.html">developement</a> (1)</li>
-          <li><a href="/tag/django.html">django</a> (3)</li>
-          <li><a href="/tag/ebooks.html">ebooks</a> (1)</li>
-          <li><a href="/tag/emails.html">emails</a> (1)</li>
-          <li><a href="/tag/macosx.html">macosx</a> (1)</li>
-          <li><a href="/tag/python.html">python</a> (3)</li>
-          <li><a href="/tag/review.html">review</a> (2)</li>
-    </ul>
+      <p>If you tried to install to install psycopg2 package after upgrading to Mac OSX El Capitan and got an error like this: </p>
+<div class="highlight"><pre><span></span><span class="n">xcrun</span><span class="o">:</span> <span class="n">error</span><span class="o">:</span> <span class="n">invalid</span> <span class="n">active</span> <span class="n">developer</span> <span class="n">path</span> <span class="o">(/</span><span class="n">Library</span><span class="sr">/Developer/</span><span class="n">CommandLineTools</span><span class="o">),</span> 
+<span class="n">missing</span> <span class="n">xcrun</span> <span class="n">at</span><span class="o">:</span> <span class="sr">/Library/Developer/CommandLineTools/usr/bin/x</span><span class="n">crun</span>
+</pre></div>
+
+
+<p><img alt="pip.log" src="/images/1444569163_full.png" /></p>
+<h2>The Soltuion:</h2>
+<p>Simplly install Command-Line Tools </p>
+<div class="highlight"><pre><span></span>sudo xcode-select --install
+</pre></div>
+      <a class="btn" href="/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html#solution-for-psycopg2-installation-error-with-mac-osx-el-capitan">Continue reading</a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
 
     <footer>
         <p>&copy; Emad Mokhtar </p>
@@ -86,5 +97,23 @@
 
 
 
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Emad Mokhtar's Framework ",
+  "url" : "",
+  "image": "/images/profile.jpg",
+  "description": "My thoughts and experince on software development and life."
+}
+</script><script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>
