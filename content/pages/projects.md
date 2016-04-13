@@ -2,8 +2,6 @@ Title: Projects
 Date: 2016-03-13 12:00
 Authors: Emad Mokhtar
 
-# Projects
-
 #### [Ma3ana Kam](/2015/03/my-first-django-app/)
 
 Financial system which is dividing the monthly budget into a weekly budget, most of us make budget on monthly basis because we get paid on monthly basis, but imagine your budget will be on weekly basis, it’s like every week is new budget and new start, and in order to keep track of the weekly budget you need to know how much you need to spend in a week.
