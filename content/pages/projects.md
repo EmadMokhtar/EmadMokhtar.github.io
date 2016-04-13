@@ -67,7 +67,7 @@ You can find it on [GitHub](https://github.com/EmadMokhtar/CustomControls.Notifi
 
 #### [Cosmic International Website](http://www.cosmic.com.kw)
 
-![Cosmic-website]({filename}/images/1442310863_full.png)
+![Cosmic-website]({filename}/images/Cosmic-website.png)
 
 A company website that have company profile and product catalog, and   
 company e-commerce web application where customer can order company products online.
@@ -81,7 +81,7 @@ company e-commerce web application where customer can order company products onl
 
 #### Web TimeTel
 
-![WebTimeTel-WebApp]({filename}/images/1442310863_full.png)
+![WebTimeTel-WebApp]({filename}/images/WebTimeTel-WebApp.png)
 
 Time attendance web application built using ASP.NET WebForms with rich   
 user experiences looks like Windows Modern UI “Metro UI”, bilingual, and easy to use.
