@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="admin" />
+<meta name="description" content="If you try to change the TextMode property of ASP.NET TextBox control to Multiline and set the MaxLength property it’ll not work and user can insert as much characters as he/she want. WHY? Because when you put TextBox in your WebForm it’ll be rendered to HTML ..." />
+<meta name="keywords" content="aspnet, webforms">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Fix MaxLength property for ASP.NET Multiline Textbox"/>
+<meta property="og:description" content="If you try to change the TextMode property of ASP.NET TextBox control to Multiline and set the MaxLength property it’ll not work and user can insert as much characters as he/she want. WHY? Because when you put TextBox in your WebForm it’ll be rendered to HTML ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/fix-maxlength-property-for-asp-net-multiline-textbox.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-11-12 10:54:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/admin.html">
+<meta property="article:section" content="asp.net, webdev"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="article:tag" content="webforms"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Fix MaxLength property for ASP.NET Multiline Textbox</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="fix-maxlength-property-for-asp-net-multiline-textbox">Fix MaxLength property for ASP.NET Multiline Textbox</h1>
+    <p>Posted on Mon 12 November 2012 in <a href="/category/aspnet-webdev.html">asp.net, webdev</a></p>
+  </header>
+  <div>
+    <p>If you try to change the TextMode property of ASP.NET TextBox control to
+Multiline and set the MaxLength property it’ll not work and user can
+insert as much characters as he/she want. WHY? Because when you put
+TextBox in your WebForm it’ll be rendered to HTML <em>&lt;input&gt;</em> tag
+but when you set the TextMode to multiline it’ll be rendered to
+<em>&lt;textarea&gt;</em> tag, and MaxLength attribute is in <em>&lt;input&gt;</em>
+but it’s not for <em>&lt;textarea&gt;</em>.</p>
+<p>So dude How can I solve this issue?</p>
+<p>From my opinion it’s better to solve this by using JavaScript function
+than using RegularExpressionValidator, so let’s write the JavaScript
+function and call it in onKeyPress TextBox client event.</p>
+<p><div
+id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:246112b8-c17a-4cb5-92ce-8f31e8e69d6f"
+class="wlWriterEditableSmartContent"
+style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px"></p>
+<p>JavaScript function</p>
+</div>
+
+<div style="background: #ddd; overflow: auto">
+
+1.  <span style="color:#f1f2f3">        </span><span
+    style="color:#93c763">function</span><span style="color:#f1f2f3">
+    textboxMultilineMaxNumber(txt, maxLen) {</span>
+2.   
+3.  <span style="color:#f1f2f3">            </span><span
+    style="color:#93c763">if</span><span style="color:#f1f2f3">
+    (txt.value.length &gt; (maxLen -</span><span
+    style="color:#ffcd22">1</span><span
+    style="color:#f1f2f3">))</span><span
+    style="color:#93c763">return</span><span
+    style="color:#f1f2f3"></span><span
+    style="color:#93c763">false</span><span
+    style="color:#f1f2f3">;</span>
+4.  <span style="color:#f1f2f3">            </span><span
+    style="color:#93c763">else</span><span style="color:#f1f2f3">
+    {</span>
+5.  <span style="color:#f1f2f3">                </span><span
+    style="color:#93c763">return</span><span
+    style="color:#f1f2f3"></span><span
+    style="color:#93c763">true</span><span
+    style="color:#f1f2f3">;</span>
+6.  <span style="color:#f1f2f3">            }</span>
+7.  <span style="color:#f1f2f3">        }</span>
+
+</div>
+
+</div>
+
+</div>
+
+<p><div
+id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:a74685d0-fe1e-4754-9188-7572abf305bd"
+class="wlWriterEditableSmartContent"
+style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px"></p>
+<p>MultiLine TextBox</p>
+</div>
+
+<div style="background: #ddd; overflow: auto">
+
+1.  <span style="color:#f1f2f3">&lt;</span><span
+    style="color:#93c763">asp</span><span
+    style="background:#293134;color:#e0e2e4">:</span><span
+    style="color:#93c763">TextBox</span><span
+    style="color:#f1f2f3"></span><span
+    style="background:#293134;color:#e0e2e4">ID=</span><span
+    style="color:#ec7600">"TextBox1"</span><span
+    style="color:#f1f2f3"></span><span
+    style="background:#293134;color:#e0e2e4">runat=</span><span
+    style="color:#ec7600">"server"</span><span
+    style="color:#f1f2f3"></span><span
+    style="background:#293134;color:#e0e2e4">TextMode=</span><span
+    style="color:#ec7600">"MultiLine"</span><span
+    style="color:#f1f2f3"></span>
+2.      <span style="color:#f1f2f3"></span><span
+    style="background:#293134;color:#e0e2e4">onkeypress=</span><span
+    style="color:#ec7600">"return
+    textboxMultilineMaxNumber(this,15);"</span><span
+    style="color:#f1f2f3">&gt;</span>
+3.      <span style="color:#f1f2f3">&lt;/</span><span
+    style="color:#93c763">asp</span><span
+    style="background:#293134;color:#e0e2e4">:</span><span
+    style="color:#93c763">TextBox</span><span
+    style="color:#f1f2f3">&gt;</span>
+
+</div>
+
+</div>
+
+</div>
+
+<p>As you can see in line number 2 I pass TextBox and MaxLength, this will
+make the max number of characters user can input in the MultiLine
+TextBox is 15.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+      <a href="/tag/webforms.html">webforms</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Fix MaxLength property for ASP.NET Multiline Textbox",
+  "headline": "Fix MaxLength property for ASP.NET Multiline Textbox",
+  "datePublished": "2012-11-12 10:54:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "admin",
+    "url": "/author/admin.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/fix-maxlength-property-for-asp-net-multiline-textbox.html",
+  "description": "If you try to change the TextMode property of ASP.NET TextBox control to Multiline and set the MaxLength property it’ll not work and user can insert as much characters as he/she want. WHY? Because when you put TextBox in your WebForm it’ll be rendered to HTML ..."
+}
+</script></body>
+</html>

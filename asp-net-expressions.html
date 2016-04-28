@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="admin" />
+<meta name="description" content="ASP.NET Expression is written inline surrounded with <% %> in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that" />
+<meta name="keywords" content="aspnet, webforms">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="ASP.NET Expressions"/>
+<meta property="og:description" content="ASP.NET Expression is written inline surrounded with <% %> in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/asp-net-expressions.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-05-10 10:18:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/admin.html">
+<meta property="article:section" content="asp.net"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="article:tag" content="webforms"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; ASP.NET Expressions</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="asp-net-expressions">ASP.NET Expressions</h1>
+    <p>Posted on Thu 10 May 2012 in <a href="/category/aspnet.html">asp.net</a></p>
+  </header>
+  <div>
+    <p>ASP.NET Expression is written inline surrounded with &lt;% %&gt; in
+other words you will write them with your markup in .ASPX files for
+specific task, for example if want to access a connection string there
+an expression for that</p>
+<p><div
+id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6d3b7f79-fd9a-48fd-bfc1-3c5be9c2555f"
+class="wlWriterEditableSmartContent"
+style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+1.  <span style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+    style="background:#22282a;color:#f1f2f3">\$
+    ConnectionStrings:DefaultConnection</span><span
+    style="background:#f1f91f;color:#8c8cb4">%&gt;</span>
+
+</div>
+
+</div>
+
+</div>
+
+<p>Let’s lists all ASP.NET Expression and it’s task:</p>
+<ol>
+<li>
+<p><strong>Directive Expression</strong> &lt;%@ .. %&gt; </p>
+<ul>
+<li>
+<p>It’s used in Web Forms .ASPX files or User Control .ASCX files
+    to set settings, for example the Page directive where you can
+    declare Title, Master Page, Language, etc....
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:71543a9a-790e-415b-abbe-598f963864dd"
+    class="wlWriterEditableSmartContent"
+    style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background-color: #22282a; overflow: auto; padding: 2px 5px;"></p>
+<p><span style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+style="background:#22282a;color:#f1f2f3">@</span><span
+style="background:#22282a;color:#a1f538">Page</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">Title=</span><span
+style="background:#22282a;color:#fdb62b">"Home Page"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">Language=</span><span
+style="background:#22282a;color:#fdb62b">"C#"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">MasterPageFile=</span><span
+style="background:#22282a;color:#fdb62b">"\~/Site.Master"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">AutoEventWireup=</span><span
+style="background:#22282a;color:#fdb62b">"true"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">CodeBehind=</span><span
+style="background:#22282a;color:#fdb62b">"Default.aspx.cs"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">Inherits=</span><span
+style="background:#22282a;color:#fdb62b">"ASPNETExpressions._Default"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#f1f91f;color:#8c8cb4">%&gt;</span></p>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data-Binding Expression</strong> &lt;%# .. %&gt;</p>
+<ul>
+<li>
+<p>Create binding between server control with data source when
+    calling DataBind() method, most of the time you’ll see this
+    expression inside Data Bound Controls like GridView
+    and DetailView.
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f5f2993a-a0c2-4010-ad56-86e108a817d4"
+    class="wlWriterEditableSmartContent"
+    style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background-color: #22282a; overflow: auto; padding: 2px 5px;"></p>
+<p><span style="background:#22282a;color:#f1f2f3">&lt;</span><span
+style="background:#22282a;color:#a1f538">asp</span><span
+style="background:#293134;color:#e0e2e4">:</span><span
+style="background:#22282a;color:#a1f538">TextBox</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">runat=</span><span
+style="background:#22282a;color:#fdb62b">"server"</span><span
+style="background:#22282a;color:#f1f2f3"></span><span
+style="background:#293134;color:#e0e2e4">ID=</span><span
+style="background:#22282a;color:#fdb62b">"txtFirstName"</span><span
+style="background:#22282a;color:#f1f2f3">  </span><span
+style="background:#293134;color:#e0e2e4">Text=</span><span
+style="background:#22282a;color:#fdb62b">"</span><span
+style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+style="background:#22282a;color:#f1f2f3"># Eval(</span><span
+style="background:#22282a;color:#fdb62b">"FirstName"</span><span
+style="background:#22282a;color:#f1f2f3">)</span><span
+style="background:#f1f91f;color:#8c8cb4">%&gt;</span><span
+style="background:#22282a;color:#fdb62b">"</span><span
+style="background:#22282a;color:#f1f2f3">/&gt;</span></p>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Expression Builder</strong> &lt;%\$ .. %&gt;</p>
+<ul>
+<li>This expression is used to set controls properties that located
+    in configuration files <strong>Web.Config</strong> such as <strong>AppSettings,
+    ConnectionStrings, or Resources</strong></li>
+<li>
+<p>It’s syntax is <strong>&lt;%\$ Expression Prefix: Expression Value
+    %&gt;</strong>
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:95f0c2bc-a900-415a-9b09-13a9f46e969b"
+    class="wlWriterEditableSmartContent"
+    style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background-color: #22282a; overflow: auto; padding: 2px 5px; white-space: nowrap"></p>
+<p><span style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+style="background:#22282a;color:#f1f2f3">\$
+ConnectionStrings:DefaultConnection</span><span
+style="background:#f1f91f;color:#8c8cb4">%&gt;</span></p>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Server-side Comment Expression</strong> &lt;%-- .. --%&gt;</p>
+<ul>
+<li>
+<p>It’s to comment a block of code so that it’ll not rendered or
+    executed inside the page.
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6d5a6d2f-8ebb-4e42-ab11-13098c0ae941"
+    class="wlWriterEditableSmartContent"
+    style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<p><div
+style="background-color: #22282a; overflow: auto; padding: 2px 5px; white-space: nowrap"></p>
+<p><span style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+style="background:#22282a;color:#66747b">-- This is a comment
+--</span><span
+style="background:#f1f91f;color:#8c8cb4">%&gt;</span></p>
+</div>
+
+</div>
+
+</div>
+
+<p>
+
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Displaying Expression</strong> &lt;%= .. %&gt;<strong> </strong></p>
+</li>
+</ol>
+<ul>
+-   It’s the simplest way to display one piece of information such as
+    Integer or String inside the page, it’ll be converted to
+    **Response.Write().**
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:de895cc5-cf68-4ffb-86bc-8414efb48a13"
+    class="wlWriterEditableSmartContent"
+    style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px">
+
+    <div
+    style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt">
+
+    <div
+    style="background-color: #22282a; overflow: auto; padding: 2px 5px; white-space: nowrap">
+
+    <span style="background:#f1f91f;color:#8c8cb4">&lt;%</span><span
+    style="background:#22282a;color:#f1f2f3">=</span><span
+    style="background:#22282a;color:#678cb1">DateTime</span><span
+    style="background:#22282a;color:#e8e2b7">.</span><span
+    style="background:#22282a;color:#f1f2f3">UtcNow</span><span
+    style="background:#22282a;color:#e8e2b7">.</span><span
+    style="background:#22282a;color:#f1f2f3">ToString(</span><span
+    style="background:#22282a;color:#fdb62b">"dd/MM/yyyy"</span><span
+    style="background:#22282a;color:#f1f2f3">)</span><span
+    style="background:#f1f91f;color:#8c8cb4">%&gt;</span>
+
+    </div>
+
+    </div>
+
+    </div>
+
+</ul>
+
+<h3><font size="2"><u>Tip:</u></font></h3>
+<p>Every time you’ll see &lt;% look at the next character:</p>
+<ul>
+<li>If it @ then it’s <strong>Directive Expression</strong>.</li>
+<li>If it = then it’s <strong>Displaying Expression</strong>.</li>
+<li>If it # then it’s <strong>Data-Binding Expression</strong>.</li>
+<li>If it -- then it’s <strong>Comment</strong>.</li>
+<li>If it \$ then it’s <strong>Expression Builder</strong>.</li>
+</ul>
+<p><strong><u>Note:</u></strong></p>
+<p>If you make incorrect syntax inside these expression, Exception will be
+thrown.</p>
+<!--more-->
+
+<p><font style="font-weight: normal" size="2">Microsoft Support:
+<a href="http://support.microsoft.com/kb/976112">Introduction to ASP.NET inline expressions in the .NET
+Framework</a></font></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+      <a href="/tag/webforms.html">webforms</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "ASP.NET Expressions",
+  "headline": "ASP.NET Expressions",
+  "datePublished": "2012-05-10 10:18:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "admin",
+    "url": "/author/admin.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/asp-net-expressions.html",
+  "description": "ASP.NET Expression is written inline surrounded with <% %> in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that"
+}
+</script></body>
+</html>
