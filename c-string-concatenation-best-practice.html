@@ -30,7 +30,7 @@
 <meta property="article:published_time" content="2014-06-18 11:57:00+03:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="/author/emadmokhtar.html">
-<meta property="article:section" content=".net"/>
+<meta property="article:section" content="dotNet"/>
 <meta property="article:tag" content="csharp"/>
 <meta property="og:image" content="/images/profile.jpg">
   <title>Emad Mokhtar's Framework &ndash; C# String Concatenation Best Practice</title>
@@ -68,7 +68,7 @@
 <article>
   <header>
     <h1 id="c-string-concatenation-best-practice">C# String Concatenation Best Practice</h1>
-    <p>Posted on Wed 18 June 2014 in <a href="/category/net.html">.net</a></p>
+    <p>Posted on Wed 18 June 2014 in <a href="/category/dotnet.html">dotNet</a></p>
   </header>
   <div>
     <p>Once I’ve start to learn .NET and C# I heard about the difference
@@ -76,234 +76,66 @@ between string <strong>+ concatenation operator</strong> and <strong>StringBuild
 in C# and how to use them and which on is better to perform string
 concatenation, so I thought to give it a real benchmark and see the
 results.</p>
-<p>For benchmarking I’ll use  <strong>+ Operator</strong>, <strong>StringBuilder</strong> class, and
-<strong>string.Concat()</strong> method, so let’s start.</p>
-<h5>Code:</h5>
-<h5></h5>
-<p><div
-id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:e13392af-4b92-4c6a-981a-700a29b017d3"
-class="wlWriterEditableSmartContent"
-style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #ddd; overflow: auto">
+<p>For benchmarking I’ll use  <code>+ Operator</code>, <code>StringBuilde</code> class, and
+<code>string.Concat()</code> method, so let’s start.</p>
+<h1>Code:</h1>
+<div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">nameUsingPlus</span> <span class="p">=</span> <span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">plusWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameUsingPlus</span> <span class="p">+=</span> <span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">plusWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
 
-1.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> nameUsingPlus
-    =</span><span style="background:#000000;color:#a5c25c">"I will tell
-    all of my friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-2.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> plusWatch =</span><span
-    style="background:#000000;color:#ffc66d">Stopwatch</span><span
-    style="background:#000000;color:#ffffff">.StartNew();</span>
-3.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">for</span><span
-    style="background:#000000;color:#ffffff"> (</span><span
-    style="background:#000000;color:#cc7832">int</span><span
-    style="background:#000000;color:#ffffff"> i = 0; i &lt;
-    10000; i++)</span>
-4.  <span style="background:#000000;color:#ffffff">{</span>
-5.      <span style="background:#000000;color:#ffffff">nameUsingPlus
-    +=</span><span style="background:#000000;color:#a5c25c">" I will
-    tell all of my friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-6.  <span style="background:#000000;color:#ffffff">}</span>
-7.  <span
-    style="background:#000000;color:#ffffff">plusWatch.Stop();</span>
-8.   
-9.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> nameConcatMethod
-    =</span><span style="background:#000000;color:#a5c25c">"I will tell
-    all of my friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-10. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> concatMethodWatch
-    =</span><span
-    style="background:#000000;color:#ffc66d">Stopwatch</span><span
-    style="background:#000000;color:#ffffff">.StartNew();</span>
-11. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">for</span><span
-    style="background:#000000;color:#ffffff"> (</span><span
-    style="background:#000000;color:#cc7832">int</span><span
-    style="background:#000000;color:#ffffff"> i = 0; i &lt;
-    10000; i++)</span>
-12. <span style="background:#000000;color:#ffffff">{</span>
-13.     <span style="background:#000000;color:#ffffff">nameConcatMethod
-    =</span><span
-    style="background:#000000;color:#cc7832">string</span><span
-    style="background:#000000;color:#ffffff">.Concat(nameConcatMethod,</span><span
-    style="background:#000000;color:#a5c25c">" I will tell all of my
-    friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">);</span>
-14. <span style="background:#000000;color:#ffffff">}</span>
-15. <span
-    style="background:#000000;color:#ffffff">concatMethodWatch.Stop();</span>
-16.  
-17. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> nameStringBuilder
-    =</span><span
-    style="background:#000000;color:#cc7832">new</span><span
-    style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#ffc66d">StringBuilder</span><span
-    style="background:#000000;color:#ffffff">(</span><span
-    style="background:#000000;color:#a5c25c">"I will tell all of my
-    friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">);</span>
-18. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> stringBuilderWatch
-    =</span><span
-    style="background:#000000;color:#ffc66d">Stopwatch</span><span
-    style="background:#000000;color:#ffffff">.StartNew();</span>
-19. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">for</span><span
-    style="background:#000000;color:#ffffff"> (</span><span
-    style="background:#000000;color:#cc7832">int</span><span
-    style="background:#000000;color:#ffffff"> i = 0; i &lt;
-    1000000; i++)</span>
-20. <span style="background:#000000;color:#ffffff">{</span>
-21.     <span
-    style="background:#000000;color:#ffffff">nameStringBuilder.Append(</span><span
-    style="background:#000000;color:#a5c25c">" I will tell all of my
-    friends about emadmokhtar.com today!"</span><span
-    style="background:#000000;color:#ffffff">);</span>
-22. <span style="background:#000000;color:#ffffff">}</span>
-23.  
-24. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">var</span><span
-    style="background:#000000;color:#ffffff"> name =
-    nameStringBuilder.ToString();</span>
-25. <span
-    style="background:#000000;color:#ffffff">stringBuilderWatch.Stop();</span>
-26.  
-27.  
-28. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#ffc66d">Console</span><span
-    style="background:#000000;color:#ffffff">.WriteLine(</span><span
-    style="background:#000000;color:#a5c25c">"Plus Oprator took
-    {</span><span
-    style="background:#000000;color:#3cb371">0}</span><span
-    style="background:#000000;color:#a5c25c">"</span><span
-    style="background:#000000;color:#ffffff">,
-    plusWatch.Elapsed.Milliseconds);</span>
-29. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#ffc66d">Console</span><span
-    style="background:#000000;color:#ffffff">.WriteLine(</span><span
-    style="background:#000000;color:#a5c25c">"String.Concat() took
-    {</span><span
-    style="background:#000000;color:#3cb371">0}</span><span
-    style="background:#000000;color:#a5c25c">"</span><span
-    style="background:#000000;color:#ffffff">,
-    concatMethodWatch.Elapsed.Milliseconds);</span>
-30. <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#ffc66d">Console</span><span
-    style="background:#000000;color:#ffffff">.WriteLine(</span><span
-    style="background:#000000;color:#a5c25c">"StringBuilder took
-    {</span><span
-    style="background:#000000;color:#3cb371">0}</span><span
-    style="background:#000000;color:#a5c25c">"</span><span
-    style="background:#000000;color:#ffffff">,
-    stringBuilderWatch.Elapsed.Milliseconds);</span>
+<span class="kt">var</span> <span class="n">nameConcatMethod</span> <span class="p">=</span> <span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">concatMethodWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameConcatMethod</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Concat</span><span class="p">(</span><span class="n">nameConcatMethod</span><span class="p">,</span> <span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">concatMethodWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
 
-</div>
+<span class="kt">var</span> <span class="n">nameStringBuilder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">stringBuilderWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">1000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameStringBuilder</span><span class="p">.</span><span class="n">Append</span><span class="p">(</span><span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-</div>
+<span class="kt">var</span> <span class="n">name</span> <span class="p">=</span> <span class="n">nameStringBuilder</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="n">stringBuilderWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
 
-</div>
 
-<p>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Plus Oprator took {0}&quot;</span><span class="p">,</span> <span class="n">plusWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;String.Concat() took {0}&quot;</span><span class="p">,</span> <span class="n">concatMethodWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;StringBuilder took {0}&quot;</span><span class="p">,</span> <span class="n">stringBuilderWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+</pre></div>
 
-</h5>
-##### Results:
 
-[![stringbench](http://www.emadmokhtar.com/wp-content/uploads/stringbench_thumb1.png "stringbench"){width="640"
-height="324"}](http://www.emadmokhtar.com/wp-content/uploads/stringbench1.png)
-
-Please note in code I benchmarked **+ operator** and **String.Concat()**
-method for 10000 times and **StringBuilder** for 1000000 times and
-**StringBuilder** is still the most efficient way to concatenate strings
-in C\#.
-
-##### Explanation:
-
-String in .NET Framework is immutable so you can’t change String after
+<h1>Results:</h1>
+<p><img alt="stringbench" src="http://www.emadmokhtar.com/wp-content/uploads/stringbench1.png" /></p>
+<p>Please note in code I benchmarked <code>+ operator</code> and <code>String.Concat()</code>
+method for 10000 times and <code>StringBuilder</code> for 1000000 times and
+<code>StringBuilder</code> is still the most efficient way to concatenate strings
+in C#.</p>
+<h1>Explanation:</h1>
+<p>String in .NET Framework is immutable so you can’t change String after
 assign a value for it. When you use + Operator or String,Concat() to
 concatunate two strings it’ll create a third string and assign the first
-and second string values to it.
+and second string values to it.</p>
+<p>this line of code <code>string fullName = "Emad" + "Mokhtar";</code></p>
+<p><img alt="string2" src="http://www.emadmokhtar.com/wp-content/uploads/string2.png" /></p>
+<p>is equivalents to this code </p>
+<div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">firstName</span> <span class="p">=</span> <span class="s">&quot;Emad&quot;</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s">&quot;Mokhtar&quot;</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">fullName</span> <span class="p">=</span> <span class="n">firstName</span> <span class="p">+</span> <span class="n">lastName</span><span class="p">;</span>
+</pre></div>
 
-this line of code
 
-<div
-id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:de39e50f-6fdd-44c6-a2c4-2f1d9beea178"
-class="wlWriterEditableSmartContent"
-style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-
-<div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt">
-
-<div style="background: #fff; max-height: 300px; overflow: auto">
-
-1.  <span style="background:#000000;color:#cc7832">string</span><span
-    style="background:#000000;color:#ffffff"> fullName =</span><span
-    style="background:#000000;color:#a5c25c">"Emad"</span><span
-    style="background:#000000;color:#ffffff"> +</span><span
-    style="background:#000000;color:#a5c25c">"Mokhtar"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-
-</div>
-
-</div>
-
-</div>
-
-[![string2](http://www.emadmokhtar.com/wp-content/uploads/string2_thumb.png "string2"){width="912"
-height="335"}](http://www.emadmokhtar.com/wp-content/uploads/string2.png)
-
-is equivalents to this snippet
-
-<div
-id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f702ccd7-fc2f-46dc-b529-7843aa688a2a"
-class="wlWriterEditableSmartContent"
-style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px">
-
-<div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt">
-
-<div style="background: #fff; max-height: 300px; overflow: auto">
-
-1.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">string</span><span
-    style="background:#000000;color:#ffffff"> firstName =</span><span
-    style="background:#000000;color:#a5c25c">"Emad"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-2.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">string</span><span
-    style="background:#000000;color:#ffffff"> lastName =</span><span
-    style="background:#000000;color:#a5c25c">"Mokhtar"</span><span
-    style="background:#000000;color:#ffffff">;</span>
-3.  <span style="background:#000000;color:#ffffff"></span><span
-    style="background:#000000;color:#cc7832">string</span><span
-    style="background:#000000;color:#ffffff"> fullName = firstName +
-    lastName;</span>
-
-</div>
-
-</div>
-
-</div>
-
-[![string](http://www.emadmokhtar.com/wp-content/uploads/string_thumb.png "string"){width="921"
-height="342"}](http://www.emadmokhtar.com/wp-content/uploads/string.png)
-
-But when you use **StringBuilder** class C\# compiler will take care of
+<p><img alt="string" src="http://www.emadmokhtar.com/wp-content/uploads/string.png" /></p>
+<p>But when you use <strong>StringBuilder</strong> class C# compiler will take care of
 memory allocations by using the same C/C++ characters array concept and
-produce the string object once you call **ToString()** method.
+produce the string object once you call <code>ToString()</code> method.</p>
   </div>
   <div class="tag-cloud">
     <p>
