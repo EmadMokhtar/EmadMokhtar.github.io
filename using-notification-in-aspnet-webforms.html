@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="I always asked myself, how can I show a neat notification and call it from Page code behind? I want to call this notification after doing something in code behind, for example notify user that “Record Inserted Successfully” and this notification looks like the one on Twitter and Stackoverflow. I ..." />
+<meta name="keywords" content="aspnet, jnotify, jquery">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Using Notification in ASP.NET WebForms"/>
+<meta property="og:description" content="I always asked myself, how can I show a neat notification and call it from Page code behind? I want to call this notification after doing something in code behind, for example notify user that “Record Inserted Successfully” and this notification looks like the one on Twitter and Stackoverflow. I ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/using-notification-in-aspnet-webforms.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-02-02 15:37:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="article:tag" content="jnotify"/>
+<meta property="article:tag" content="jquery"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Using Notification in ASP.NET WebForms</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="using-notification-in-aspnet-webforms">Using Notification in ASP.NET WebForms</h1>
+    <p>Posted on Thu 02 February 2012 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p>I always asked myself, how can I show a neat notification and call it
+from Page code behind? I want to call this notification after doing
+something in code behind, for example notify user that “Record Inserted
+Successfully” and this notification looks like the one on
+<a href="http://twitter.com/">Twitter</a> and
+<a href="http://stackoverflow.com/">Stackoverflow</a>. I found jQuery plug-in
+called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.htm">jNotify</a>
+has what I want from the notification, and ASP.NET has the Method
+“<strong><a href="http://msdn.microsoft.com/en-us/library/asz8zsxy.aspx">ClientScriptManager.RegisterStartupScript
+Method</a></strong>” to add
+Script to page on runtime, so why not combine 2 together and create a
+helper method  plus make it extension method for
+<a href="http://msdn.microsoft.com/en-us/library/system.web.ui.page.aspx">Page</a>.</p>
+<h4>Helper Method:</h4>
+<p>This is the most important part, here where the 2 part I mentioned
+above.</p>
+<div class="highlight"><pre><span></span>using System.Web.UI;
+
+namespace jQueryNotification.Helper
+{
+    public static class NotificationHelper
+    {
+        /// <span class="nt">&lt;summary&gt;</span>
+        /// Shows the successful notification.
+        /// <span class="nt">&lt;/summary&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>The page.<span class="nt">&lt;/param&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;message&quot;</span><span class="nt">&gt;</span>The message.<span class="nt">&lt;/param&gt;</span>
+        public static void ShowSuccessfulNotification(this Page page, string message)
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), &quot;notificationScript&quot;,
+                                                    &quot;<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&#39;text/javascript&#39;</span><span class="nt">&gt;</span>  $(document).ready(function () { $.jnotify(&#39;&quot; +
+                                                    message + &quot;&#39;); });<span class="nt">&lt;/script&gt;</span>&quot;);
+        }
+    }
+}
+</pre></div>
+
+
+<h4>jNotify Script and Style:</h4>
+<p>In order to use the helper method you need to add jQuery script and
+jNotify script and style</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Styles/jquery.jnotify.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;Scripts/jquery-1.4.2.min.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;Scripts/jquery.jnotify.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h4>Page Code Behind:</h4>
+<p>ASPX:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">asp:Button</span> <span class="na">ID</span><span class="o">=</span><span class="s">&quot;btnSuccess&quot;</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span> <span class="na">Text</span><span class="o">=</span><span class="s">&quot;Successful Notification&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;btnSuccess_Click&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>CS:</p>
+<p><strong>Note: Make sure you add the helper method class reference to page’s
+code behind</strong></p>
+<div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">jQueryNotification.Helper</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">jQueryNotification</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">Default</span> <span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">Page_Load</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">void</span> <span class="nf">btnSuccess_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">ShowSuccessfulNotification</span><span class="p">(</span><span class="s">&quot;Success Notification&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h4>Screenshots:</h4>
+<p><img alt="SNAG-0031" src="/images/SNAG-0031.png" /></p>
+<p><img alt="SNAG-0029" src="/images/SNAG-0029.png" /></p>
+<p><img alt="SNAG-0030" src="/images/SNAG-0030.png" /></p>
+<h4>Project File:</h4>
+<p>I uploaded a project include the notification helper methods I’m using
+in my projects, I’ve added 6 Methods:</p>
+<ol>
+<li>
+<p>Successful Notification:</p>
+<ol>
+<li>Normal.</li>
+<li>Delayed</li>
+</ol>
+</li>
+<li>
+<p>Warning Notification:</p>
+<ol>
+<li>Normal.</li>
+<li>Delayed.</li>
+</ol>
+</li>
+<li>
+<p>Error Notification:</p>
+<ol>
+<li>Normal.</li>
+<li>Delayed.</li>
+</ol>
+</li>
+</ol>
+<p>I hope these helper methods will help you in your ASP.NET projects,
+happy and productive coding everyone.</p>
+<p>On GitHub: <a href="https://github.com/EmadMokhtar/jQuery-Notification">https://github.com/EmadMokhtar/jQuery-Notification</a></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+      <a href="/tag/jnotify.html">jnotify</a>
+      <a href="/tag/jquery.html">jquery</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Using Notification in ASP.NET WebForms",
+  "headline": "Using Notification in ASP.NET WebForms",
+  "datePublished": "2012-02-02 15:37:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/using-notification-in-aspnet-webforms.html",
+  "description": "I always asked myself, how can I show a neat notification and call it from Page code behind? I want to call this notification after doing something in code behind, for example notify user that “Record Inserted Successfully” and this notification looks like the one on Twitter and Stackoverflow. I ..."
+}
+</script></body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="While leaning web developing using Django and Python, I found out VirtualEnv or Virtual Environment is widely used, in first I didn't get it because I came from Microsoft .NET Framework development platform, so I thought of writing a post about it to make simple. What is Virtual Environment ..." />
+<meta name="keywords" content="django, pip, python, virtualenv">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Virtual Environment"/>
+<meta property="og:description" content="While leaning web developing using Django and Python, I found out VirtualEnv or Virtual Environment is widely used, in first I didn't get it because I came from Microsoft .NET Framework development platform, so I thought of writing a post about it to make simple. What is Virtual Environment ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/virtual-environment.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-03-01 17:10:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="pip"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="virtualenv"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Virtual Environment</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="virtual-environment">Virtual Environment</h1>
+    <p>Posted on Sun 01 March 2015 in <a href="/category/python.html">Python</a></p>
+  </header>
+  <div>
+    <p>While leaning web developing using Django and Python, I found out
+VirtualEnv or Virtual Environment is widely used, in first I didn't get
+it because I came from Microsoft .NET Framework development platform, so
+I thought of writing a post about it to make simple.</p>
+<h2>What is Virtual Environment?</h2>
+<p>VirtualEnv or Virtual Environment is a way to create isolated
+development environment each one has it's own packages and specific
+package version, for example VirEnv1 has Django 1.6 and VirEnv2 has
+Django 1.7, this isolation will keep your project packages dependency
+clear, isolated, and as I'll show you below that you can replicate the
+environment with one command and file, so if you work in team it's easy
+to share the same environment among the
+team.</p>
+<p><img alt="virtualenv 1" src="/images/Screenshot-from-2015-03-01-193423.png" />
+<img alt="virtualenv 2" src="/images/Screenshot-from-2015-03-01-193318.png" /></p>
+<h2>How to install VirtualEnv?</h2>
+<p>VirtualEnv is a python package so to install is you need to install pip
+first.</p>
+<ol>
+<li>
+<p>Open terminal and type the following command</p>
+<p><code>sudo apt-get install python-pip</code></p>
+</li>
+<li>
+<p>After finish installing pip type the following command to install
+    virtual environment</p>
+<p><code>sudo pip install virtualenv</code></p>
+</li>
+<li>
+<p>After finish installing virtualenv, type the following command to
+    create folder to store your virtual environments</p>
+<p><code>mkdir .virtualenvs</code></p>
+</li>
+</ol>
+<h2>How to create virtualenv?</h2>
+<p>After install virtualenv you are ready to create your first virtual
+environment, open the terminal:</p>
+<ol>
+<li>
+<p>Browse .virtualenvs folder</p>
+<p><code>cd .virtualenvs</code></p>
+</li>
+<li>
+<p>Create your virtualenv by tying the following command</p>
+<p><code>virtualenv VirEnv1</code></p>
+</li>
+<li>
+<p>Now virtualenv will create a folder inside .virtualenvs with
+    virtualenv name, browse it</p>
+<p><code>cd VirEnv1</code></p>
+</li>
+<li>
+<p>Now the virtualenv is created but you need to activate it. To
+    activate the virtualenv type the following command</p>
+<p><code>source bin/activate</code></p>
+</li>
+<li>
+<p>If you find the treminal current line has virtualenv name inside
+    brackets (VirEnv1) this means that your virtualenv is activated.</p>
+</li>
+</ol>
+<p><img alt="activate" src="/images/activate.png" /></p>
+<p>There is another package to help you doing the above setups with one
+simple command which called virtualenvwrapper.</p>
+<h2>What is virtualenvwrapper?</h2>
+<p>virtualenvwrapper is a package help creating and managing virtualenv
+easy and fast.</p>
+<h2>How to install VirtualWnvWrapper?</h2>
+<p>To install virtualenvwrapper just type the following command</p>
+<div class="highlight"><pre><span></span>sudo pip install virtualenvwrapper
+</pre></div>
+
+
+<h2>How to use virtualenvwrapper?</h2>
+<p>To use virtualenvwrapper you need <a href="https://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file">first to configure your shell</a> to active its commend every time you open new session.</p>
+<h1>Configure shell</h1>
+<ol>
+<li>Open .bash_profile by typing this command in the terminal nano
+    \~/.bashrc</li>
+<li>Add these  3 lines to the file and save it.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="x">export WORKON_HOME=</span><span class="p">$</span><span class="nv">HOME</span><span class="x">/.virtualenvsexport PROJECT_HOME=</span><span class="p">$</span><span class="nv">HOME</span><span class="x">/Develsource /usr/local/bin/virtualenvwrapper.sh</span>
+</pre></div>
+
+
+<p>First line configure the path for your virtual environments
+folder.Second line configure the path for your development project
+folder.Third line is virtualenvwrapper executable file. virtualenvwrapper
+Commands:To create new virtual environment:</p>
+<div class="highlight"><pre><span></span>mkvirtualenv &lt;virtual environment name&gt;
+</pre></div>
+
+
+<p>boom your virtual environment is created and activated as well.To
+activate virtual environment:</p>
+<div class="highlight"><pre><span></span>workon  &lt;virtual environment name&gt;
+</pre></div>
+
+
+<p>To deactivate virtual environment:</p>
+<div class="highlight"><pre><span></span>deactivate
+</pre></div>
+
+
+<h2>How to Replicate your virtual environment?</h2>
+<p>Every virtual environment has its own packages, and there are command to
+list all the packages and its version, export pacakge list, and install
+packages from file exported, lets see how to can do this.</p>
+<h1>List virtual environment packages</h1>
+<div class="highlight"><pre><span></span>pip freeze
+</pre></div>
+
+
+<p><img alt="pip-freeze" src="/images/pip-freeze2.png" /></p>
+<h1>Export environment packages</h1>
+<div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
+</pre></div>
+
+
+<p><img alt="pip-freeze" src="/images/pip-freeze-2.png" />
+<img alt="requirements" src="/images/requirements2.png" /></p>
+<h1>Install virtual envirment packages from file</h1>
+<div class="highlight"><pre><span></span>pip install -r requirement.txt
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/django.html">django</a>
+      <a href="/tag/pip.html">pip</a>
+      <a href="/tag/python.html">python</a>
+      <a href="/tag/virtualenv.html">virtualenv</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Virtual Environment",
+  "headline": "Virtual Environment",
+  "datePublished": "2015-03-01 17:10:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/virtual-environment.html",
+  "description": "While leaning web developing using Django and Python, I found out VirtualEnv or Virtual Environment is widely used, in first I didn't get it because I came from Microsoft .NET Framework development platform, so I thought of writing a post about it to make simple. What is Virtual Environment ..."
+}
+</script></body>
+</html>

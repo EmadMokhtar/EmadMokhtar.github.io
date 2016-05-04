@@ -113,7 +113,7 @@ results.</p>
 
 
 <h1>Results:</h1>
-<p><img alt="stringbench" src="http://www.emadmokhtar.com/wp-content/uploads/stringbench1.png" /></p>
+<p><img alt="stringbench" src="/images/stringbench1.png" /></p>
 <p>Please note in code I benchmarked <code>+ operator</code> and <code>String.Concat()</code>
 method for 10000 times and <code>StringBuilder</code> for 1000000 times and
 <code>StringBuilder</code> is still the most efficient way to concatenate strings
@@ -124,7 +124,7 @@ assign a value for it. When you use + Operator or String,Concat() to
 concatunate two strings it’ll create a third string and assign the first
 and second string values to it.</p>
 <p>this line of code <code>string fullName = "Emad" + "Mokhtar";</code></p>
-<p><img alt="string2" src="http://www.emadmokhtar.com/wp-content/uploads/string2.png" /></p>
+<p><img alt="string2" src="/images/string2.png" /></p>
 <p>is equivalents to this code </p>
 <div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">firstName</span> <span class="p">=</span> <span class="s">&quot;Emad&quot;</span><span class="p">;</span>
 <span class="kt">string</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s">&quot;Mokhtar&quot;</span><span class="p">;</span>
@@ -132,7 +132,7 @@ and second string values to it.</p>
 </pre></div>
 
 
-<p><img alt="string" src="http://www.emadmokhtar.com/wp-content/uploads/string.png" /></p>
+<p><img alt="string" src="/images/string.png" /></p>
 <p>But when you use <strong>StringBuilder</strong> class C# compiler will take care of
 memory allocations by using the same C/C++ characters array concept and
 produce the string object once you call <code>ToString()</code> method.</p>
