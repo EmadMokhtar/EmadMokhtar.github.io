@@ -10,7 +10,7 @@ Since I joined the software industry 4+ years, and I’m working, coding, and de
 
 If you watched House M.D. series you will know that Dr. House always need his team to think with him even if they are away from the right answer but being there to start a brainstorming and with one simple unintended input from the team Dr. House can find the solution.
 
-![House MD](http://www.emadmokhtar.com/wp-content/uploads/1434438424_full.jpeg)
+![House MD]({filename}/images/1434438424_full.jpeg)
 
 
 So I decided that stop working alone and my next gig will be within a development team.
