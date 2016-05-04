@@ -5,7 +5,7 @@ Category: Review
 Tags: book, bookreview, dotNet, powershell
 Slug: book-review-windows-powershell-4-0-for-net-developers
 
-![dotNET\_Developers](http://www.emadmokhtar.com/wp-content/uploads/dotNET_Developers.jpg)
+![dotNET\_Developers]({filesname}/images/dotNET_Developers.jpg)
 
 My academic colleague [Sherif Talaat](http://www.sheriftalaat.com/)
 released his second book [Windows PowerShell 4.0 for .NET
