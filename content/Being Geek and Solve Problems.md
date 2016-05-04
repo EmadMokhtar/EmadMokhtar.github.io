@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Slug: being-geek-solve-problems
 
-![Puzzles](http://www.emadmokhtar.com/wp-content/uploads/2011/11/Puzzles_2.jpg)
+![Puzzles]({filesname}/images/Puzzles_2.jpg)
 
 Sometimes in my life when I face a problem I do everything/mean to solve
 it, because the feeling of solving problems is wonderful feeling
@@ -17,7 +17,7 @@ Or the feeling Tom Hanks/Chuck Noland in [Cast Away
 (2000)](http://www.imdb.com/title/tt0162222/) had when he made a fire by
 using wood and said “I made a fire I made a fire”.
 
-![Cast\_Away\_8](http://www.emadmokhtar.com/wp-content/uploads/2011/11/Cast_Away_8_2.jpg)
+![Cast\_Away\_8]({filesname}/images/Cast_Away_8_2.jpg)
 
 If I face a problem anytime I can’t do anything except totally focus on
 solving it, usually I forget about anything around me and keep focusing
