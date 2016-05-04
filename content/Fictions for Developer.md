@@ -6,7 +6,7 @@ Tags: developer, geek
 Slug: fictions-for-developers
 Status: published
 
-![blackhole](http://www.emadmokhtar.com/wp-content/uploads/blackhole.jpg)
+![blackhole]({filename}/images/blackhole.jpg)
 
 **[Tim Ferriss](http://www.timothyferriss.com/)** recommended in his
 **[4-Hours
