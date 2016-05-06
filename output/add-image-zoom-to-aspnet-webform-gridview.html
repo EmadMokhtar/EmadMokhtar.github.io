@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="The main reason I’m writing this article is to let you know there is always some way better and simpler to don something, one day I want to add image zoom feature to ASP.NET WebForms GridView that shows list of products with thumbnail, and instead of user click ..." />
+<meta name="keywords" content="aspnet, gridview">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Add Image Zoom to ASP.NET WebForm GridView"/>
+<meta property="og:description" content="The main reason I’m writing this article is to let you know there is always some way better and simpler to don something, one day I want to add image zoom feature to ASP.NET WebForms GridView that shows list of products with thumbnail, and instead of user click ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/add-image-zoom-to-aspnet-webform-gridview.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2013-05-27 16:31:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="article:tag" content="gridview"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Add Image Zoom to ASP.NET WebForm GridView</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="add-image-zoom-to-aspnet-webform-gridview">Add Image Zoom to ASP.NET WebForm GridView</h1>
+    <p>Posted on Mon 27 May 2013 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p>The main reason I’m writing this article is to let you know there is
+always some way better and simpler to don something, one day I want to
+add image zoom feature to ASP.NET WebForms GridView that shows list of
+products with thumbnail, and instead of user click on row to get the
+product information and see a full picture of the product, I want user
+to just when hovering on the image a big preview of it appears, I found
+this jQuery plug-in called
+<a href="http://www.elevateweb.co.uk/image-zoom">elevateZoom</a> I love it because
+it’s simple, have a lot of feature, and easy to configure.</p>
+<p>Now the change is how to add this plug-in to every single image in every
+row in GridView, I googled but unfortunately I found many of complex
+solution and I thought these developers intend to make this complex, but
+no this isn’t that complex, I denied all of them even they are working
+and I’ll tell you what If done in the end of this article, so let us how
+to get this done.</p>
+<p>First <a href="http://www.elevateweb.co.uk/image-zoom/download">download</a> the
+plug-in, reference jQuery to your ASP.NET application, second add the
+GridView control to your form and bind your data, third in the image
+column bind he thumbnail image to ImageUrl property and add custom
+attribute <strong>data-zoom-image</strong> and bind the full image to it.</p>
+<p>Here is GridView aspx code:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">asp:GridView</span> <span class="na">ID</span><span class="o">=</span><span class="s">&quot;GridView1&quot;</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span> <span class="na">CssClass</span><span class="o">=</span><span class="s">&quot;table table-striped table-hover&quot;</span> <span class="na">PageSize</span><span class="o">=</span><span class="s">&quot;5&quot;</span> <span class="na">DataSourceID</span><span class="o">=</span><span class="s">&quot;odsProducts&quot;</span> <span class="na">EmptyDataText</span><span class="o">=</span><span class="s">&quot;No Products&quot;</span> <span class="na">AllowPaging</span><span class="o">=</span><span class="s">&quot;True&quot;</span> <span class="na">AutoGenerateColumns</span><span class="o">=</span><span class="s">&quot;False&quot;</span> <span class="na">BorderStyle</span><span class="o">=</span><span class="s">&quot;None&quot;</span> <span class="na">meta:resourcekey</span><span class="o">=</span><span class="s">&quot;grvProductsResource1&quot;</span> <span class="na">EnableTheming</span><span class="o">=</span><span class="s">&quot;True&quot;</span> <span class="na">GridLines</span><span class="o">=</span><span class="s">&quot;None&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Columns</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">asp:TemplateField</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;Image&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;ThumbnailFile&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">ItemTemplate</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">asp:Image</span>  <span class="na">ID</span><span class="o">=</span><span class="s">&quot;ItemThumb&quot;</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span> <span class="na">ImageUrl</span><span class="o">=</span><span class="s">&#39;&lt;%# String.Format(&quot;{0}{1}&quot;,Eval(&quot;ImagePath&quot;),Eval(&quot;ThumbnailFile&quot;)) %&gt;&#39;</span>
+                                     <span class="na">data-zoom-image</span><span class="o">=</span><span class="s">&#39;&lt;%#</span> <span class="na">String</span> <span class="na">Format</span><span class="err">(&quot;{</span><span class="na">0</span><span class="err">}{</span><span class="na">1</span><span class="err">}&quot;,</span><span class="na">Eval</span><span class="err">(&quot;</span><span class="na">ImagePath</span><span class="err">&quot;)</span> <span class="na">Eval</span><span class="err">(&quot;</span><span class="na">ImageFile</span><span class="err">&quot;))</span> <span class="err">%</span><span class="p">&gt;</span> /&gt;
+            <span class="p">&lt;/</span><span class="nt">ItemTemplate</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">asp:TemplateField</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;DescEnglish&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;Description&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;DescEnglish&quot;</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">Columns</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">PagerSettings</span> <span class="na">Position</span><span class="o">=</span><span class="s">&quot;TopAndBottom&quot;</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">PagerStyle</span> <span class="na">CssClass</span><span class="o">=</span><span class="s">&quot;pagination&quot;</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">RowStyle</span> <span class="na">BackColor</span><span class="o">=</span><span class="s">&quot;White&quot;</span> <span class="na">HorizontalAlign</span><span class="o">=</span><span class="s">&quot;Center&quot;</span> <span class="na">VerticalAlign</span><span class="o">=</span><span class="s">&quot;Middle&quot;</span> <span class="p">/&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">HeaderStyle</span> <span class="na">HorizontalAlign</span><span class="o">=</span><span class="s">&quot;Center&quot;</span> <span class="na">VerticalAlign</span><span class="o">=</span><span class="s">&quot;Middle&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">HeaderStyle</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">asp:GridView</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><strong>data-zoom-image</strong> custom attribute is used by <a href="http://www.elevateweb.co.uk/image-zoom">elevateZoom</a> to display the full image, the last thing is to tell the plug-in about images in our GridView in order to zooming, this can be done via JavaScript.</p>
+<p>JavaScript to perform zooming:</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+        <span class="kd">function</span> <span class="nx">pageLoad</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#grvProducts img&quot;</span><span class="p">).</span><span class="nx">elevateZoom</span><span class="p">();</span>
+        <span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+
+<p>I’m glad to tell you we’re done, please if you want more configuration check this <a href="http://www.elevateweb.co.uk/image-zoom/configuration">link</a> but don’t forget like I said before I’ll tell you now what I’ve done.</p>
+<p>When I’m googling about this I found developers using DataBound event to inject JavaScript to Image in each row, and more treble, but I thought how to tell elevateZoom that I want to add zoom to every image in GridView, an idea hit me “What about jQuery selectors?” and yes this is the solution as you can see I select all <em>img</em> tags in element with <em>id = grvProducts.</em></p>
+<p><img alt="Perview" src="/images/zoom-perview.gif" /></p>
+<p>Developer please think simple, and that all folks, enjoy developing ;)</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+      <a href="/tag/gridview.html">gridview</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Add Image Zoom to ASP.NET WebForm GridView",
+  "headline": "Add Image Zoom to ASP.NET WebForm GridView",
+  "datePublished": "2013-05-27 16:31:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/add-image-zoom-to-aspnet-webform-gridview.html",
+  "description": "The main reason I’m writing this article is to let you know there is always some way better and simpler to don something, one day I want to add image zoom feature to ASP.NET WebForms GridView that shows list of products with thumbnail, and instead of user click ..."
+}
+</script></body>
+</html>

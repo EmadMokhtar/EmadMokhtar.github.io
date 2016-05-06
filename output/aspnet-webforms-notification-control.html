@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="In 2012 I wrote about using notification in ASP.NET WebForms and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse ..." />
+<meta name="keywords" content="aspnet">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="ASP.NET WebForms Notification Control"/>
+<meta property="og:description" content="In 2012 I wrote about using notification in ASP.NET WebForms and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/aspnet-webforms-notification-control.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2014-06-19 12:30:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET, side-projects"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; ASP.NET WebForms Notification Control</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="aspnet-webforms-notification-control">ASP.NET WebForms Notification Control</h1>
+    <p>Posted on Thu 19 June 2014 in <a href="/category/aspnet-side-projects.html">ASP.NET, side-projects</a></p>
+  </header>
+  <div>
+    <p>In 2012 I wrote about <a href="http://www.emadmokhtar.com/2012/02/using-notification-in-asp-net-webforms/">using notification in ASP.NET
+WebForms</a>
+and most of questions I’ve got are asking about why it isn’t working, so
+I thought I can make it easier for developers by creating ASP.NET Server
+Control that has notification functionality and developers can reuse it
+like any ASP.NET Server Control in their toolbox.</p>
+<h5>About the Project</h5>
+<p>Notification Control is open source/free ASP.NET server control like
+<a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSampleSite/">ASP.NET Ajax toolkit
+controls</a>,
+it’s wrapper for awesome jQuery plug-in called
+<a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm">jNotify</a> to use
+it’s functionality from code behind, it’s on
+<a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl">GitHub</a>,
+please fork it, or test it and report bugs/issues on GitHub.</p>
+<p>You can find demo at <a href="http://notificaitoncontrol.azurewebsites.net/">http://notificaitoncontrol.azurewebsites.net/</a></p>
+<h5>How to Install</h5>
+<ol>
+<li>
+<p>Download via GitHub repository:</p>
+<ol>
+<li>Download the repository as<strong> </strong> <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip"><strong>Zip
+    file</strong></a>.</li>
+<li>Run Visual Studio, and open
+    project.<a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png"><img _="
+" alt="Screenshot-0016" height="221" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0016_thumb1.png" title="Screenshot-0016" width="725" /></a></li>
+<li>Build the
+    project.<a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png"><img _="
+" alt="Screenshot-0026" height="97" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0026_thumb1.png" title="Screenshot-0026" width="847" /></a><a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png"><img _="
+" alt="Screenshot-0019" height="297" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0019_thumb1.png" title="Screenshot-0019" width="754" /></a></li>
+<li>Go to bin/Release folder and locate the
+    <em>CustomControls.NotificationControl.dll</em> file.
+    <a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png"><img _="
+" alt="Screenshot-0020" height="125" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0020_thumb2.png" title="Screenshot-0020" width="748" /></a></li>
+</ol>
+</li>
+<li>
+<p>Download via Nuget:</p>
+<ol>
+<li>
+<p>In Visual Studio open Package Manager Console and type</p>
+<ol>
+<li><em>Install-Package NotificationControl</em></li>
+</ol>
+</li>
+<li>
+<p>Wait until the package download is done.</p>
+</li>
+<li>Open the project folder, then browse to
+    {ProjectFolder}/NotificationControl.{version} you’ll find the
+    DLL file.</li>
+</ol>
+</li>
+<li>
+<p>In your ASP.NET WebForms project open any .ASPX file then open
+    the toolbox.</p>
+</li>
+<li>Right click on any tab you need to add the control to it.</li>
+<li>Select <em>Choose Items...</em> then browse to the
+    <em>CustomControls.NotificationControl.dll</em> file.
+    <a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png"><img _="
+" alt="Screenshot-0021" height="342" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021_thumb.png" title="Screenshot-0021" width="340" /></a><a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png"><img _="
+" alt="Screenshot-0022" height="550" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022_thumb.png" title="Screenshot-0022" width="898" /></a></li>
+</ol>
+<h5>How to Use</h5>
+<ul>
+<li>Drag and drop the control from Toolbox to ASPX page.</li>
+<li>
+<p>Give it an ID.
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:bc8a98d4-c172-43f4-8eec-49d5638f4872"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span style="background:#000000;color:#ffffff">&lt;</span><span
+    style="background:#000000;color:#ffc66d">aspCont</span><span
+    style="background:#000000;color:#ffffff">:</span><span
+    style="background:#000000;color:#ffc66d">NotificationControl</span><span
+    style="background:#000000;color:#ffffff"> ID=</span><span
+    style="background:#000000;color:#a5c25c">"Notificaiton"</span><span
+    style="background:#000000;color:#ffffff"> runat=</span><span
+    style="background:#000000;color:#a5c25c">"server"</span><span
+    style="background:#000000;color:#ffffff">
+    EmbededjQuery=</span><span
+    style="background:#000000;color:#a5c25c">"True"</span><span
+    style="background:#000000;color:#ffffff">&gt;&lt;/</span><span
+    style="background:#000000;color:#ffc66d">aspCont</span><span
+    style="background:#000000;color:#ffffff">:</span><span
+    style="background:#000000;color:#ffc66d">NotificationControl</span><span
+    style="background:#000000;color:#ffffff">&gt;</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+<li>
+<p>Enable <strong><em>EmbededjQuery</em></strong> property in order the control add jQuery
+    or or disable it if you’re already have jQuery js file in the page.</p>
+</li>
+<li>
+<p>From code-behind just call one of its methods, here is description
+    for each method:</p>
+<ul>
+<li>
+<p>Show info notification with message and default delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6efa1c1e-ec8c-4a64-b9f4-f27ab968d5c7"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowInfo(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    info"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show info notification with message and 5000 milliseconds delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:5cc8651d-c001-4fcc-a8a9-b615ad5ea387"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowInfo(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    info"</span><span
+    style="background:#000000;color:#ffffff">,</span><span
+    style="background:#000000;color:#cc7832">5000</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show warning notification with message and default delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:dde0b24b-269b-45ba-a272-71694125cc37"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowWraning(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    warning"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show warning notification with message and 5000 milliseconds
+    delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:dc5f456e-b982-43ae-bf2d-a6a0d65d119f"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowWraning(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    warning"</span><span
+    style="background:#000000;color:#ffffff">,</span><span
+    style="background:#000000;color:#cc7832">5000</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show error notification with message and default delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f5e3c44d-be69-4c43-b9a3-3b55d19455bf"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowError(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    error"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show error notification with message and 5000 milliseconds delay
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:e0770450-1ad8-4479-a67e-fad9d5225729"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowError(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's
+    error"</span><span
+    style="background:#000000;color:#ffffff">,</span><span
+    style="background:#000000;color:#cc7832">5000</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show info notification with message and it'll be sticky (user
+    must close it to hide):
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:9ef15cc2-c3be-4d48-aa33-31e2a3c3d4ab"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyInfo(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's sticky
+    info"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show warning notification with message and it'll be sticky (user
+    must close it to hide):
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:9eb37912-d771-474a-89df-1d5fd3c1602a"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyWarning(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's sticky
+    warning"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show error notification with message and it'll be sticky (user
+    must close it to hide):
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:fdf5a932-67eb-427d-965d-bac0455aacde"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyError(</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's sticky
+    error"</span><span
+    style="background:#000000;color:#ffffff">);</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p>Show info notification with setup:
+    <div
+    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:1e17f21d-473a-4997-9147-ad8490a7a120"
+    class="wlWriterEditableSmartContent"
+    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
+<p><div
+style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
+<div style="background: #fff; overflow: auto">
+
+<ol>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.Delay
+    =</span><span
+    style="background:#000000;color:#cc7832">5000</span><span
+    style="background:#000000;color:#ffffff">;</span></li>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.Type
+    =</span><span
+    style="background:#000000;color:#ffc66d">NotificationType</span><span
+    style="background:#000000;color:#ffffff">.Info;</span></li>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.Message
+    =</span><span
+    style="background:#000000;color:#a5c25c">"Hello it's info
+    notification with configuration and Show() only"</span><span
+    style="background:#000000;color:#ffffff">;</span></li>
+<li><span
+    style="background:#000000;color:#ffffff">Notificaiton.Show();</span></li>
+</ol>
+</div>
+
+</div>
+
+</div>
+
+</li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "ASP.NET WebForms Notification Control",
+  "headline": "ASP.NET WebForms Notification Control",
+  "datePublished": "2014-06-19 12:30:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/aspnet-webforms-notification-control.html",
+  "description": "In 2012 I wrote about using notification in ASP.NET WebForms and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse ..."
+}
+</script></body>
+</html>

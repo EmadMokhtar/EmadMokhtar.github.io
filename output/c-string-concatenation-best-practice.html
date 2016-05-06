@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..." />
+<meta name="keywords" content="csharp">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="C# String Concatenation Best Practice"/>
+<meta property="og:description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/c-string-concatenation-best-practice.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2014-06-18 11:57:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="dotNet"/>
+<meta property="article:tag" content="csharp"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; C# String Concatenation Best Practice</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="c-string-concatenation-best-practice">C# String Concatenation Best Practice</h1>
+    <p>Posted on Wed 18 June 2014 in <a href="/category/dotnet.html">dotNet</a></p>
+  </header>
+  <div>
+    <p>Once I’ve start to learn .NET and C# I heard about the difference
+between string <strong>+ concatenation operator</strong> and <strong>StringBuilder</strong> class
+in C# and how to use them and which on is better to perform string
+concatenation, so I thought to give it a real benchmark and see the
+results.</p>
+<p>For benchmarking I’ll use  <code>+ Operator</code>, <code>StringBuilde</code> class, and
+<code>string.Concat()</code> method, so let’s start.</p>
+<h1>Code:</h1>
+<div class="highlight"><pre><span></span><span class="kt">var</span> <span class="n">nameUsingPlus</span> <span class="p">=</span> <span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">plusWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameUsingPlus</span> <span class="p">+=</span> <span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">plusWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+
+<span class="kt">var</span> <span class="n">nameConcatMethod</span> <span class="p">=</span> <span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">concatMethodWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">10000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameConcatMethod</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Concat</span><span class="p">(</span><span class="n">nameConcatMethod</span><span class="p">,</span> <span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">concatMethodWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+
+<span class="kt">var</span> <span class="n">nameStringBuilder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">(</span><span class="s">&quot;I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">stringBuilderWatch</span> <span class="p">=</span> <span class="n">Stopwatch</span><span class="p">.</span><span class="n">StartNew</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="m">1000000</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">nameStringBuilder</span><span class="p">.</span><span class="n">Append</span><span class="p">(</span><span class="s">&quot; I will tell all of my friends about emadmokhtar.com today!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">var</span> <span class="n">name</span> <span class="p">=</span> <span class="n">nameStringBuilder</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<span class="n">stringBuilderWatch</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Plus Oprator took {0}&quot;</span><span class="p">,</span> <span class="n">plusWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;String.Concat() took {0}&quot;</span><span class="p">,</span> <span class="n">concatMethodWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;StringBuilder took {0}&quot;</span><span class="p">,</span> <span class="n">stringBuilderWatch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">.</span><span class="n">Milliseconds</span><span class="p">);</span>
+</pre></div>
+
+
+<h1>Results:</h1>
+<p><img alt="stringbench" src="/images/stringbench1.png" /></p>
+<p>Please note in code I benchmarked <code>+ operator</code> and <code>String.Concat()</code>
+method for 10000 times and <code>StringBuilder</code> for 1000000 times and
+<code>StringBuilder</code> is still the most efficient way to concatenate strings
+in C#.</p>
+<h1>Explanation:</h1>
+<p>String in .NET Framework is immutable so you can’t change String after
+assign a value for it. When you use + Operator or String,Concat() to
+concatunate two strings it’ll create a third string and assign the first
+and second string values to it.</p>
+<p>this line of code <code>string fullName = "Emad" + "Mokhtar";</code></p>
+<p><img alt="string2" src="/images/string2.png" /></p>
+<p>is equivalents to this code </p>
+<div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">firstName</span> <span class="p">=</span> <span class="s">&quot;Emad&quot;</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s">&quot;Mokhtar&quot;</span><span class="p">;</span>
+<span class="kt">string</span> <span class="n">fullName</span> <span class="p">=</span> <span class="n">firstName</span> <span class="p">+</span> <span class="n">lastName</span><span class="p">;</span>
+</pre></div>
+
+
+<p><img alt="string" src="/images/string.png" /></p>
+<p>But when you use <strong>StringBuilder</strong> class C# compiler will take care of
+memory allocations by using the same C/C++ characters array concept and
+produce the string object once you call <code>ToString()</code> method.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/csharp.html">csharp</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "C# String Concatenation Best Practice",
+  "headline": "C# String Concatenation Best Practice",
+  "datePublished": "2014-06-18 11:57:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/c-string-concatenation-best-practice.html",
+  "description": "Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..."
+}
+</script></body>
+</html>

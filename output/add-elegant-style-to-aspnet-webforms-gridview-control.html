@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="We are developers whom use the left side of our brains that why we suck in designing; we’ll use the already exist styles while developing ASP.NET web application, that what we’ll do if we don’t have a designer in our team, but thanks for the CSS ..." />
+<meta name="keywords" content="aspnet, gridview">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Add elegant style to ASP.NET WebForms GridView control"/>
+<meta property="og:description" content="We are developers whom use the left side of our brains that why we suck in designing; we’ll use the already exist styles while developing ASP.NET web application, that what we’ll do if we don’t have a designer in our team, but thanks for the CSS ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/add-elegant-style-to-aspnet-webforms-gridview-control.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-07-11 11:45:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="article:tag" content="gridview"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Add elegant style to ASP.NET WebForms GridView control</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="add-elegant-style-to-aspnet-webforms-gridview-control">Add elegant style to ASP.NET WebForms GridView control</h1>
+    <p>Posted on Wed 11 July 2012 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p><img alt="5628591299_8d5839c072" src="/images/5628591299_8d5839c072.jpg" /></p>
+<p>We are developers whom use the left side of our brains that why we suck in
+designing; we’ll use the already exist styles while developing ASP.NET
+web application, that what we’ll do if we don’t have a designer in our
+team, but thanks for the CSS framework over the internet which make our
+like more easier.</p>
+<p>Nowadays I’m playing with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> CSS framework and I find myself create very neat and awesome looking ASP.NET applications by just using the already defined CSS classes in the framework, it’s so easy and the documentation is easy to understand and readable, you can find the documentation right
+<a href="http://twitter.github.com/bootstrap/base-css.html">here</a>.</p>
+<p>So let’s get into the business, the most commonly used ASP.NET Control
+<strong>GridView</strong> is very ugly if you don’t apply a style to it, it’ll look
+like an awful HTML table with bunch of rows and columns, sure you can
+use the ready made styles “Auto Format” created by Microsoft team, but
+also you can apply much better style to it, let’s find
+how.<img alt="SNAG-0089" src="/images/SNAG-0089.png" /></p>
+<p>I’ll show you how to apply 2 styles to GridView:</p>
+<ol>
+<li>Twitter Bootstrap.</li>
+<li>ASP.NET Dynamic Data.</li>
+</ol>
+<h3>Twitter Bootstrap:</h3>
+<p>I mentioned above nowadays I’m playing with Twitter Bootstrap and I love
+its <a href="http://twitter.github.com/bootstrap/base-css.html#tables">Table
+style</a>, it’s
+very simple and neat and have many style can be used separately or make
+a combination of them. I love to use the full combination of them and it
+can be applied to the <strong>GridView</strong> by assign the <strong>CssClass</strong> property
+to Twitter Bootstrap CSS classes like this:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">asp:GridView</span> <span class="na">ID</span><span class="o">=</span><span class="s">&quot;GridView1&quot;</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span> <span class="na">AutoGenerateColumns</span><span class="o">=</span><span class="s">&quot;False&quot;</span>
+    <span class="na">DataSourceID</span><span class="o">=</span><span class="s">&quot;XmlDataSource1&quot;</span>
+    <span class="na">CssClass</span><span class="o">=</span><span class="s">&quot;table table-striped table-bordered table-condensed&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Columns</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">Columns</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">asp:GridView</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>Here is the result:</p>
+<p><img alt="SNAG-0091" src="/images/SNAG-0091.png" /></p>
+<p>You can use style you like you can check the Table styles and make your
+combination or use only one CSS class.</p>
+<p>You can install Twitter Bootstrap to your solution from NuGet. Go to
+Tools –&gt; Library Package Manager –&gt; Manage NuGet Packages for
+solutions… NuGet package manager window will open, search for Twitter
+Bootstrap and Install it.</p>
+<p><img alt="SNAG-0087" src="/images/SNAG-0087.png" /></p>
+<h3>ASP.NET Dynamic Data:</h3>
+<p>One day I was checking <a href="http://msdn.microsoft.com/en-us/library/ee845452.aspx">ASP.NET Dynamic
+Data</a>, I built
+and started the project, and then I saw a very beautiful <strong>GridView.</strong> I
+start to dig in the aspx file on how ASP.NET team made this <strong>GridView</strong>
+beautiful like that, finally I found they are using a CSS specially made
+for Dynamic Data, I grab it and applied it to another demo project has a
+<strong>GridView</strong> and took care of the Image file used in header’s
+background.</p>
+<p>Here is the <strong>GridView</strong> control, take a look on <strong>CssClass</strong>,
+<strong>RowStyle-CssClass</strong>, and <strong>HeaderStyle-CssClass</strong> properties:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">asp:GridView</span> <span class="na">ID</span><span class="o">=</span><span class="s">&quot;GridView&quot;</span> <span class="na">runat</span><span class="o">=</span><span class="s">&quot;server&quot;</span> <span class="na">AutoGenerateColumns</span><span class="o">=</span><span class="s">&quot;False&quot;</span> <span class="na">DataSourceID</span><span class="o">=</span><span class="s">&quot;XmlDataSource&quot;</span>
+            <span class="na">CssClass</span><span class="o">=</span><span class="s">&quot;DDGridView&quot;</span> <span class="na">RowStyle-CssClass</span><span class="o">=</span><span class="s">&quot;td&quot;</span> <span class="na">HeaderStyle-CssClass</span><span class="o">=</span><span class="s">&quot;th&quot;</span> <span class="na">CellPadding</span><span class="o">=</span><span class="s">&quot;6&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">Columns</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">asp:BoundField</span> <span class="na">DataField</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="na">HeaderText</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="na">SortExpression</span><span class="o">=</span><span class="s">&quot;phone&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">Columns</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">asp:GridView</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>Here is the result:</p>
+<p><img alt="SNAG-0092" src="/images/SNAG-0092.png" /></p>
+<p>I’ve created a Demo project, you can download it from
+<a href="https://github.com/EmadMokhtar/ASPNETGridViewWithStyle">GitHub</a>.</p>
+<p>Happy Developing Folks!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+      <a href="/tag/gridview.html">gridview</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Add elegant style to ASP.NET WebForms GridView control",
+  "headline": "Add elegant style to ASP.NET WebForms GridView control",
+  "datePublished": "2012-07-11 11:45:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/add-elegant-style-to-aspnet-webforms-gridview-control.html",
+  "description": "We are developers whom use the left side of our brains that why we suck in designing; we’ll use the already exist styles while developing ASP.NET web application, that what we’ll do if we don’t have a designer in our team, but thanks for the CSS ..."
+}
+</script></body>
+</html>

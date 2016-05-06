@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="At MIX10 conference Microsoft announced about V2 of its Translation API “Microsoft Translator”. I’ll use Microsoft Translator API to translate text from Arabic to English, to show you it ..." />
+<meta name="keywords" content="">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Getting Started with Microsoft Translator V2"/>
+<meta property="og:description" content="At MIX10 conference Microsoft announced about V2 of its Translation API “Microsoft Translator”. I’ll use Microsoft Translator API to translate text from Arabic to English, to show you it ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/getting-started-with-microsoft-translator-v2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2010-10-17 18:13:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content=".net"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Getting Started with Microsoft Translator V2</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="getting-started-with-microsoft-translator-v2">Getting Started with Microsoft Translator V2</h1>
+    <p>Posted on Sun 17 October 2010 in <a href="/category/net.html">.net</a></p>
+  </header>
+  <div>
+    <p><a href="http://www.emadmokhtar.com/wp-content/uploads/2011/11/MSFT-Translator-Logo.jpg"><img alt="MSFT Translator
+Logo" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/MSFT-Translator-Logo_thumb.jpg" title="MSFT Translator Logo" /></a>At
+MIX10 conference Microsoft announced about V2 of its Translation API
+“Microsoft Translator”.</p>
+<p>I’ll use Microsoft Translator API to translate text from Arabic to
+English, to show you it’s so simple and easy.</p>
+<p>Before start coding, you need to get your AppID, so you can use the
+API’s SOAP, HTTP, and AJAX functions, just go to this
+<a href="http://www.bing.com/developers/appids.aspx">link</a> and login using Live
+ID if you have one, or great on if you don’t have it; After provide some
+information about you and your application, the AppID will be created,
+copy and save it, because we’ll use it later.</p>
+<p>Add Microsoft Translator SOAP API to your project by right-click on
+References folder and choose Add Service Reference,</p>
+<p><a href="http://www.emadmokhtar.com/wp-content/uploads/2011/11/add-service-reference1.jpg"><img alt="add service
+reference1" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/add-service-reference1_thumb.jpg" title="add service reference1" /></a></p>
+<p>put this link <a href="http://api.microsofttranslator.com/V2/Soap.svc">http://api.microsofttranslator.com/V2/Soap.svc</a> in
+address filed and press Go,</p>
+<p><a href="http://www.emadmokhtar.com/wp-content/uploads/2011/11/add-service-reference.jpg"><img alt="add service
+reference" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/add-service-reference_thumb.jpg" title="add service reference" /></a></p>
+<p>give it time and SoapService will appear in Services box, give name for
+the Namespace, for example here I gave it “TranslatorSOAP”.</p>
+<p>Now let’s code,</p>
+<p>Here’s a C# code snippet for translating Arabic text to English:</p>
+<p>``` {.brush: .csharp; .highlight: .[11];}
+using MicrosoftTranslatorCS.TranslatorSOAP;</p>
+<p>namespace MicrosoftTranslatorCS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string appId = "Put Your AppID Here";
+            LanguageServiceClient client = new LanguageServiceClient();
+            string Translated = client.Translate(appId, "أهلا و سهلا", "ar", "en");
+            Console.WriteLine(Translated); //Hello
+            Console.ReadLine();</p>
+<div class="highlight"><pre><span></span>    }
+}
+</pre></div>
+
+
+<p>}</p>
+<div class="highlight"><pre><span></span><span class="ow">And</span> <span class="n">here</span><span class="err">’</span><span class="n">s</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">VB</span> <span class="n">code</span> <span class="n">snippet</span><span class="p">:</span>
+
+<span class="err">```</span> <span class="p">{.</span><span class="n">brush</span><span class="p">:</span> <span class="p">.</span><span class="n">vb</span><span class="err">;</span> <span class="p">.</span><span class="n">highlight</span><span class="p">:</span> <span class="p">.</span><span class="o">[</span><span class="mi">8</span><span class="o">]</span><span class="err">;</span><span class="p">}</span>
+<span class="k">Imports</span> <span class="nn">MicrosoftTranslatorVB.TranslatorSOAP</span>
+
+<span class="k">Module</span> <span class="nn">Module1</span>
+
+    <span class="k">Sub</span> <span class="nf">Main</span><span class="p">()</span>
+        <span class="k">Dim</span> <span class="n">appId</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;Put Your AppID Here&quot;</span>
+        <span class="k">Dim</span> <span class="n">client</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">LanguageServiceClient</span><span class="p">()</span>
+        <span class="k">Dim</span> <span class="n">Translated</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">Translate</span><span class="p">(</span><span class="n">appId</span><span class="p">,</span> <span class="s">&quot;أهلا و سهلا&quot;</span><span class="p">,</span> <span class="s">&quot;ar&quot;</span><span class="p">,</span> <span class="s">&quot;en&quot;</span><span class="p">)</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">Translated</span><span class="p">)</span> <span class="c">&#39;Hello</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+<span class="k">End</span> <span class="k">Module</span>
+</pre></div>
+
+
+<p>The Translate method takes 4 parameters, and return the translated text.</p>
+<p><code>{.brush: .csharp;}
+Translate("AppID", "Source Text", "Source Language", "Translated Language")</code></p>
+<p>Source files (C# and VB):</p>
+<iframe style="background-color: #fcfcfc; width: 98px; height: 115px; padding: 0px;" title="Preview" src="http://cid-7d7052e2d56ee805.office.live.com/embedicon.aspx/MyBlogFolder/MicrosoftTranslatorVB.zip" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="320" height="240"></iframe>
+
+<iframe style="background-color: #fcfcfc; width: 98px; height: 115px; padding: 0px;" title="Preview" src="http://cid-7d7052e2d56ee805.office.live.com/embedicon.aspx/MyBlogFolder/MicrosoftTranslatorCS.zip" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="320" height="240"></iframe>
+
+<p><div
+id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:bb488ea2-c0d2-4ea1-a080-a41b7bf7f836"
+class="wlWriterEditableSmartContent"
+style="margin: 0px; display: inline; float: none; padding: 0px;"></p>
+<p>del.icio.us Tags:
+<a href="http://del.icio.us/popular/Microsoft">Microsoft</a>,<a href="http://del.icio.us/popular/Translation">Translation</a>,<a href="http://del.icio.us/popular/Translator">Translator</a></p>
+</div>
+
+<p><div
+id="scid:0767317B-992E-4b12-91E0-4F059A8CECA8:3d4a8b3d-7960-40a0-b67c-68eb0ddc30b2"
+class="wlWriterEditableSmartContent"
+style="margin: 0px; display: inline; float: none; padding: 0px;"></p>
+<p>Technorati Tags:
+<a href="http://technorati.com/tags/Microsoft">Microsoft</a>,<a href="http://technorati.com/tags/Translation">Translation</a>,<a href="http://technorati.com/tags/Translator">Translator</a></p>
+</div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Getting Started with Microsoft Translator V2",
+  "headline": "Getting Started with Microsoft Translator V2",
+  "datePublished": "2010-10-17 18:13:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/getting-started-with-microsoft-translator-v2.html",
+  "description": "At MIX10 conference Microsoft announced about V2 of its Translation API “Microsoft Translator”. I’ll use Microsoft Translator API to translate text from Arabic to English, to show you it ..."
+}
+</script></body>
+</html>

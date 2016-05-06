@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community about Client-side Validation using jQuery in ASP.NET webforms, and I thought I'll share the session as a blog post, so let's start Why using Client-side validation? Web developers love to use Client-side validation to ..." />
+<meta name="keywords" content="">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Client-side Validation in ASP.NET webforms by using jQuery"/>
+<meta property="og:description" content="Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community about Client-side Validation using jQuery in ASP.NET webforms, and I thought I'll share the session as a blog post, so let's start Why using Client-side validation? Web developers love to use Client-side validation to ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/client-side-validation-in-aspnet-webforms-by-using-jquery.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2010-07-20 06:56:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Client-side Validation in ASP.NET webforms by using jQuery</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="client-side-validation-in-aspnet-webforms-by-using-jquery">Client-side Validation in ASP.NET webforms by using jQuery</h1>
+    <p>Posted on Tue 20 July 2010 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p><img alt="JQuery_logo_color_onwhite.png" src="/images/JQuery_logo_color_onwhite.png" /></p>
+<p>Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community
+about Client-side Validation using jQuery in ASP.NET webforms, and I
+thought I'll share the session as a blog post, so let's start</p>
+<h3>Why using Client-side validation?</h3>
+<p>Web developers love to use Client-side validation to increase their web
+application user experience "UX", to make web application feels like the
+desktop application, and to reduce the round-trip to web server to
+validate the user inputs every time he/she submit a page.</p>
+<h3>Demo:</h3>
+<p>First of all I'm using one of the oldest and the first jQuery validation
+plugin called validation, please take a look ot its documentation for
+more info.
+[<a href="http://docs.jquery.com/Plugins/Validation" title="jQuery Validation Plugin Documentation">link</a>]</p>
+<p>Let's create a simple ASP.NET page to apply some of validation rules on:</p>
+<div class="highlight"><pre><span></span>First name:
+
+Password:
+Password Confirmation:
+
+Email Address:
+</pre></div>
+
+
+<p>Now let's write our jQuery code to apply some validation rules on this
+ASP.NET form, but first make sure you create a link for jQuery .js file
+and the plugin validation.js file into the aspx page or you can use the
+Microsoft CDN version {hosted on Microsoft servers} "
+<a href="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js">http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js</a>"
+"<a href="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js">http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js</a>
+":</p>
+<div class="highlight"><pre><span></span>        $(document).ready(function () {
+            $(&quot;#MainForm&quot;).validate({
+                rules:
+                {
+                    TxtFirstName:
+                    {
+                        required: true,
+                        rangelength: [3, 12]
+                    },
+                    TxtPassword:
+                    {
+                        required: true
+                    },
+                    TxtRePassword:
+                    {
+                        required: true,
+                        equalTo: &quot;#txtPassword&quot;
+                    },
+                    TxtEmail:
+                    {
+                        required: true,
+                        email: true
+                    },
+                }
+            },
+            messages:
+                {
+                    TxtFirstName:
+                    {
+                        required: &quot;Please enter your first name&quot;,
+                        rangelength: &quot;Please enter minimum 3 characters and Maximum 12 character&quot;
+                    },
+                    TxtRePassword:
+                    {
+                        required: &quot;Please enter your password again&quot;,
+                        equalTo: &quot;The two password is not matching&quot;
+                    },
+                    TxtEmail:
+                    {
+                        required: &quot;Please enter your email address&quot;,
+                        email: &quot;Please enter valid email address&quot;
+                    }
+
+                }
+        });
+    });
+</pre></div>
+
+
+<p>As you can see it's so simple and easy to apply these validation, like
+required rule, which means this field is required field, and apply the
+email RegExp with email: true.</p>
+<p>The .validate() function takes 2 parameters {rules, messages}, rules is
+the validation rules you want to apply, and message is the text message
+you want to appear to the user if he doesn't apply your validation rules
+on his inputs, and BTW message is optional {overload .validate()
+function} you can let the plugin display the default message according
+to the rule itself, for example here I let the plugin display the
+default message for TxtPassword Required rule.</p>
+<p>Note: please use ASP.NET 4 new feature ClientIDMode, or use <code>&lt;%=txtFirstName.UniqueID %&gt;</code> when writing the Control ID inside jQuery script.</p>
+<p>Please for more validation rules read the documentation I refer above.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Client-side Validation in ASP.NET webforms by using jQuery",
+  "headline": "Client-side Validation in ASP.NET webforms by using jQuery",
+  "datePublished": "2010-07-20 06:56:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/client-side-validation-in-aspnet-webforms-by-using-jquery.html",
+  "description": "Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community about Client-side Validation using jQuery in ASP.NET webforms, and I thought I'll share the session as a blog post, so let's start Why using Client-side validation? Web developers love to use Client-side validation to ..."
+}
+</script></body>
+</html>
