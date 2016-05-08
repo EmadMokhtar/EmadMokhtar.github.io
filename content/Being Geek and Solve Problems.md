@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Slug: being-geek-solve-problems
 
-![Puzzles]({filesname}/images/Puzzles_2.jpg)
+![Puzzles]({filename}/images/Puzzles_2.jpg)
 
 Sometimes in my life when I face a problem I do everything/mean to solve
 it, because the feeling of solving problems is wonderful feeling
