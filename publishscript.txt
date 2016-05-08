@@ -1,1 +1,1 @@
-sudo pelican content -o output -s pelicanconf.py & ghp-import output & git push git@github.com:emadmokhtar/emadmokhtar.github.io.git gh-pages:master
+sudo pelican content -o output -s pelicanconf.py && ghp-import output && git push git@github.com:emadmokhtar/emadmokhtar.github.io.git gh-pages:master
