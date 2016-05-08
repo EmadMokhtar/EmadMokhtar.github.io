@@ -1,13 +1,10 @@
 Title: Communication with your customer
 Date: 2012-03-10 23:34
-Author: admin
-Category: developer
+Author: EmadMokhtar
+Category: Developer
 Tags: development, software
-Slug: communication-with-your-customer
-Status: published
 
-[![pict0554](http://www.emadmokhtar.com/wp-content/uploads/2012/03/pict0554_thumb.jpg "pict0554"){width="534"
-height="357"}](http://www.emadmokhtar.com/wp-content/uploads/2012/03/pict0554.jpg)
+![people sleeping on the floor at airport]({filename}/images/pict0554.jpg)
 
 Today I was having a flight from Egypt, Cairo International Airport to
 Kuwait International Airport and when the airplane was almost reach
