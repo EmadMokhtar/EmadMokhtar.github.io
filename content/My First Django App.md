@@ -21,11 +21,11 @@ I've done the beta version of the app and it is hosted on [PythonAnywere](https:
 
 1.  **Period:** definition of the period dates, the estimate amount to
     be consumed, and description.
-    -   ![]({filename}/images/2015-01-06-16-24-35.png)
+    -   ![Period]({filename}/images/2015-01-06-16-24-35.png)
 
 2.  **Expense:** definition of the expense date, amount,
     and description.
-    -   ![]({filename}/images/2015-01-06-16-25-27.png)
+    -   ![Expense]({filename}/images/2015-01-06-16-25-27.png)
 
 As you can see when you adding a expense system will identify its period based on date, so no need to choose the period you are adding expense to.
 
