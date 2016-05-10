@@ -1,15 +1,9 @@
 Title: Jump from dasBlog to Wordpress
 Date: 2011-11-09 17:18
-Author: admin
-Category: Blog
-Slug: jump-from-dasblog-to-wordpress
-Status: published
+Author: EmadMokhtar
+Category: Developer
 
-[![](http://www.emadmokhtar.com/wp-content/uploads/2011/11/DasBlog-Reflection-640x480-Green.jpg "DasBlog Reflection 640x480 Green"){.alignnone
-.size-full .wp-image-755 width="88"
-height="68"}](http://www.emadmokhtar.com/wp-content/uploads/2011/11/DasBlog-Reflection-640x480-Green.jpg)  **VS. **[![](http://www.emadmokhtar.com/wp-content/uploads/2011/11/wordpress-with-text.png "wordpress-with-text"){.alignnone
-.size-full .wp-image-756 width="141"
-height="87"}](http://www.emadmokhtar.com/wp-content/uploads/2011/11/wordpress-with-text.png)
+![Dasblog logo]({filename}/images/DasBlog-Reflection-640x480-Green.jpg) **VS.** ![Wordpress logo]({filename}/images/wordpress-with-text.png)
 
 In my start into blogging I start to blog on
 [wordpress.com](http://wordpress.com/ "http://wordpress.com/") from
@@ -39,9 +33,7 @@ do in this setup?
 -   Migrate old posts
 -   Upload old media
 -   Install & configure plug-ins
--   Configure [FeedBurner](http://www.feedburner.com/ "feedburner") &
-    [Google
-    Analytics](http://www.google.com/analytics "Google Analytics")
+-   Configure [FeedBurner](http://www.feedburner.com/ "feedburner") & [Google Analytics](http://www.google.com/analytics "Google Analytics")
 
 After all I'm so happy with Wordpress, I'll keep my blog in here and
 will never change my engine again to apply this rule of [Scott
@@ -54,4 +46,3 @@ suckless](http://www.hanselman.com/blog/BlogInteresting32WaysToKeepYourBlogFromS
 >     as having 5 phone numbers on your business card. It makes it
 >     hard to find you, and your two blogs will always be fighting each
 >     other on Google, splitting your virtual  personality.
-
