@@ -22,14 +22,16 @@ Dealing with human is dealing with team, crap again dude I want to put my headph
 
 You’ll learn these skills during your work, I don’t have a screen cast, video training, or book…oh wait wait actually I know some books taking about this:
 
-[Peopleware: Productive Projects and Teams (Second Edition)](http://www.amazon.com/gp/product/0932633439/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0932633439&linkCode=as2&tag=monsblo08-20)![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=0932633439)
+[Peopleware: Productive Projects and Teams (Second Edition)](http://www.amazon.com/gp/product/0932633439/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0932633439&linkCode=as2&tag=monsblo08-20)
+![Peopleware: Productive Projects and Teams (Second Edition)](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=0932633439)
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=1449302440) ![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=0932633439)
+![Peopleware: Productive Projects and Teams (Second Edition)](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=1449302440) ![Peopleware: Productive Projects and Teams (Second Edition)](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=0932633439)
 ![1451377]({filename}/images/1451377.jpg)
 
 [Team Geek: A Software Developer's Guide to Working Well with
 Others](http://www.amazon.com/gp/product/1449302440/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449302440&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=1449302440)
+![Team Geek: A Software Developer's Guide to Working Well with
+Others](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=1449302440)
 
 ![51N8dmGcllL]({filename}/images/51N8dmGcllL.jpg)
 
@@ -93,37 +95,37 @@ Books for developers are like water for fish, you need to read, read, and read. 
 ![0000.L]({filename}/images/0000.L.jpg)
 
 [Clean Code: A Handbook of Agile Software Craftsmanship](http://www.amazon.com/gp/product/B001GSTOAM/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B001GSTOAM&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B001GSTOAM)
+![Clean Code](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B001GSTOAM)
 
 ![0132350882]({filename}/images/0132350882.jpg)
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B001GSTOAM)
+![Clean Code](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B001GSTOAM)
 [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/gp/product/B000SEIBB8/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000SEIBB8&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEIBB8)
+![Design Patterns: Elements of Reusable Object-Oriented Software](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEIBB8)
 
 ![51Q-RLSadrL]({filename}/images/51Q-RLSadrL.jpg)]
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEIBB8)
+![Design Patterns: Elements of Reusable Object-Oriented Software](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEIBB8)
 [The Pragmatic Programmer: From Journeyman to Master](http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000SEGEKI&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEGEKI)
+![The Pragmatic Programmer: From Journeyman to Master](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEGEKI)
 
 ![41F1cZImneL]({filename}/images/41F1cZImneL.jpg)
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEGEKI)
+![The Pragmatic Programmer: From Journeyman to Master](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B000SEGEKI)
 [Code Complete](http://www.amazon.com/gp/product/B004OR1XGK/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B004OR1XGK&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B004OR1XGK)
+![Code Complete](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B004OR1XGK)
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B004OR1XGK)
+![Code Complete](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B004OR1XGK)
 ![51nWkLCu1SL]({filename}/images/51nWkLCu1SL.jpg)
 
 [Effective Programming: More Than Writing Code](http://www.amazon.com/gp/product/B008HUMTO0/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008HUMTO0&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B008HUMTO0)
+![Effective Programming: More Than Writing Code](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B008HUMTO0)
 
 ![51ysOldcmqL]({filename}/images/51ysOldcmqL.jpg)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B008HUMTO0)
+![Effective Programming: More Than Writing Code](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B008HUMTO0)
 
 [The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)](http://www.amazon.com/gp/product/B00AYQNR5U/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AYQNR5U&linkCode=as2&tag=monsblo08-20)
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B00AYQNR5U)
+![The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B00AYQNR5U)
 
-![](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B00AYQNR5U)
+![The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)](http://www.assoc-amazon.com/e/ir?t=monsblo08-20&l=as2&o=1&a=B00AYQNR5U)
 ![5194SMyRiL]({filename}/images/5194SMyRiL.jpg)
