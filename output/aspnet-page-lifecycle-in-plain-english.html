@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know. Let’s dig in and let’s examine ASP.NET Lifecycle but in ..." />
+<meta name="keywords" content="aspnet">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="ASP.NET Page Lifecycle in Plain English"/>
+<meta property="og:description" content="ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know. Let’s dig in and let’s examine ASP.NET Lifecycle but in ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/aspnet-page-lifecycle-in-plain-english.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-05-03 10:38:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="article:tag" content="aspnet"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; ASP.NET Page Lifecycle in Plain English</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="aspnet-page-lifecycle-in-plain-english">ASP.NET Page Lifecycle in Plain English</h1>
+    <p>Posted on Thu 03 May 2012 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p><img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg" /></p>
+<p>ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know.</p>
+<p>Let’s dig in and let’s examine ASP.NET Lifecycle but in short list and description:</p>
+<ol>
+<li>
+<p><strong>PreInit():</strong></p>
+<ul>
+<li>In this event all Controls created and Initialized with their default values. You can create dynamic Controls here. You can set theme programmatically here</li>
+</ul>
+</li>
+<li>
+<p><strong>OnInit():</strong></p>
+<ul>
+<li>In this event you can read the Controls properties the were set in Design Mode and can not read values changed by user.</li>
+</ul>
+</li>
+<li>
+<p><strong>LoadViewState():</strong></p>
+<ul>
+<li>This event fires only if the page is posted back <code>IsPostback == true</code> and here View State data where are stored in hidden form fields get de-serialized and loads all controls View State data.</li>
+</ul>
+</li>
+<li>
+<p><strong>LoadPostBackData():</strong></p>
+<ul>
+<li>This event only fires when Page is posted back and Controls which implement <code>IPostBackDataHandler</code> interface get loaded with values from <code>HTTP POST</code> data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Page_Load():</strong></p>
+<ul>
+<li>This event is well known among ASP.NET developers and here Page gets loaded and after it all <code>Load()</code> events of Page Controls fired.</li>
+</ul>
+</li>
+<li>
+<p><strong>Control Event Handlers:</strong></p>
+<ul>
+<li>These are basically event handlers like Button click event handler <code>Button_Click()</code> which fires after <code>Page_Load()</code> event.</li>
+</ul>
+</li>
+<li>
+<p><strong>PreRender():</strong></p>
+<ul>
+<li>This event is fired for each page child controls and her you can change controls values.</li>
+</ul>
+</li>
+<li>
+<p><strong>SaveViewState():</strong></p>
+<ul>
+<li>In this event Controls View State saved in Page hidden fields.</li>
+</ul>
+</li>
+<li>
+<p><strong>Render():</strong></p>
+<ul>
+<li>Here all Controls get rendered or every Page Controls Render method is called.</li>
+</ul>
+</li>
+<li>
+<p><strong>Unload():</strong></p>
+<ul>
+<li>Here we can have Page and Controls clean up operations. This event the Page and its Controls are rendered.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Notes:</strong></p>
+<ol>
+<li>ASP.NET Lifecycle will be called ever time there a request for the page.</li>
+<li>HTTP POST data has only one value per control, that’s why Control like Textbox can gets value from HTTP Post but Control like DropDownList can not gets data from HTTP Post it can gets data from View State.</li>
+<li><code>Init()</code> and <code>Unload()</code> events are fired from outside to inside controls, fro example: user control Init() event will be fired before <code>Page_Init()</code> event.</li>
+</ol>
+<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ms178472.aspx">ASP.NET Page Lifecycle on MSDN</a></p>
+<p>ASP.NET life cycle events cheat sheet: <a href="http://www.cheat-sheets.org/saved-copy/aspnet-life-cycles-events.pdf">ASP.NET life cycle events cheat sheet</a></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/aspnet.html">aspnet</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "ASP.NET Page Lifecycle in Plain English",
+  "headline": "ASP.NET Page Lifecycle in Plain English",
+  "datePublished": "2012-05-03 10:38:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/aspnet-page-lifecycle-in-plain-english.html",
+  "description": "ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know. Let’s dig in and let’s examine ASP.NET Lifecycle but in ..."
+}
+</script></body>
+</html>
