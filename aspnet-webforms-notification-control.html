@@ -30,7 +30,7 @@
 <meta property="article:published_time" content="2014-06-19 12:30:00+03:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="/author/emadmokhtar.html">
-<meta property="article:section" content="ASP.NET, side-projects"/>
+<meta property="article:section" content="ASP.NET"/>
 <meta property="article:tag" content="aspnet"/>
 <meta property="og:image" content="/images/profile.jpg">
   <title>Emad Mokhtar's Framework &ndash; ASP.NET WebForms Notification Control</title>
@@ -68,417 +68,96 @@
 <article>
   <header>
     <h1 id="aspnet-webforms-notification-control">ASP.NET WebForms Notification Control</h1>
-    <p>Posted on Thu 19 June 2014 in <a href="/category/aspnet-side-projects.html">ASP.NET, side-projects</a></p>
+    <p>Posted on Thu 19 June 2014 in <a href="/category/aspnet.html">ASP.NET</a></p>
   </header>
   <div>
-    <p>In 2012 I wrote about <a href="http://www.emadmokhtar.com/2012/02/using-notification-in-asp-net-webforms/">using notification in ASP.NET
-WebForms</a>
-and most of questions I’ve got are asking about why it isn’t working, so
-I thought I can make it easier for developers by creating ASP.NET Server
-Control that has notification functionality and developers can reuse it
-like any ASP.NET Server Control in their toolbox.</p>
-<h5>About the Project</h5>
-<p>Notification Control is open source/free ASP.NET server control like
-<a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSampleSite/">ASP.NET Ajax toolkit
-controls</a>,
-it’s wrapper for awesome jQuery plug-in called
-<a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm">jNotify</a> to use
-it’s functionality from code behind, it’s on
-<a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl">GitHub</a>,
-please fork it, or test it and report bugs/issues on GitHub.</p>
-<p>You can find demo at <a href="http://notificaitoncontrol.azurewebsites.net/">http://notificaitoncontrol.azurewebsites.net/</a></p>
-<h5>How to Install</h5>
+    <p>In 2012 I wrote about <a href="//Using Notification in ASP.NET WebForms.md/aspnet-webforms-notification-control.html">using notification in ASP.NET WebForms</a> and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse it like any ASP.NET Server Control in their toolbox.</p>
+<h1>About the Project</h1>
+<p>Notification Control is open source/free ASP.NET server control like <a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSamp eSite/">ASP.NET Ajax toolkit controls</a>, it’s wrapper for awesome jQuery plug-in called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm">jNotify</a> to use it’s functionality from code behind, it’s on <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl">GitHub</a>, please fork it, or test it and report bugs/issues on GitHub.</p>
+<p>You can find demo <a href="http://notificaitoncontrol.azurewebsites.net/">here</a></p>
+<h1>How to Install</h1>
+<h2>Download via GitHub repository</h2>
 <ol>
 <li>
-<p>Download via GitHub repository:</p>
-<ol>
-<li>Download the repository as<strong> </strong> <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip"><strong>Zip
-    file</strong></a>.</li>
-<li>Run Visual Studio, and open
-    project.<a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png"><img _="
-" alt="Screenshot-0016" height="221" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0016_thumb1.png" title="Screenshot-0016" width="725" /></a></li>
-<li>Build the
-    project.<a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png"><img _="
-" alt="Screenshot-0026" height="97" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0026_thumb1.png" title="Screenshot-0026" width="847" /></a><a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png"><img _="
-" alt="Screenshot-0019" height="297" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0019_thumb1.png" title="Screenshot-0019" width="754" /></a></li>
-<li>Go to bin/Release folder and locate the
-    <em>CustomControls.NotificationControl.dll</em> file.
-    <a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png"><img _="
-" alt="Screenshot-0020" height="125" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0020_thumb2.png" title="Screenshot-0020" width="748" /></a></li>
-</ol>
+<p>Download the repository as<strong> </strong> <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip">Zip file</a>.</p>
 </li>
 <li>
-<p>Download via Nuget:</p>
+<p>Run Visual Studio, and open       project.<img alt="Screenshot-0016" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png" /></p>
+</li>
+<li>
+<p>Build the project.<img alt="Screenshot-0026" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png" /><img alt="Screenshot-0019" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png" /></p>
+</li>
+<li>
+<p>Go to bin/Release folder and locate the <code>CustomControls.NotificationControl.dll</code> file. <img alt="Screenshot-0020" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png" /></p>
+</li>
+</ol>
+<h2>Download via Nuget:</h2>
 <ol>
 <li>
-<p>In Visual Studio open Package Manager Console and type</p>
-<ol>
-<li><em>Install-Package NotificationControl</em></li>
-</ol>
+<p>In Visual Studio open Package Manager Console and type <code>Install-Package NotificationControl</code>, wait until the package download is done, and open the project folder, then browse to <strong>{ProjectFolder}/NotificationControl.{version}</strong> you’ll find the DLL file.</p>
 </li>
 <li>
-<p>Wait until the package download is done.</p>
-</li>
-<li>Open the project folder, then browse to
-    {ProjectFolder}/NotificationControl.{version} you’ll find the
-    DLL file.</li>
-</ol>
+<p>In your ASP.NET WebForms project open any .ASPX file then open the toolbox.</p>
 </li>
 <li>
-<p>In your ASP.NET WebForms project open any .ASPX file then open
-    the toolbox.</p>
+<p>Right click on any tab you need to add the control to it.</p>
 </li>
-<li>Right click on any tab you need to add the control to it.</li>
-<li>Select <em>Choose Items...</em> then browse to the
-    <em>CustomControls.NotificationControl.dll</em> file.
-    <a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png"><img _="
-" alt="Screenshot-0021" height="342" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021_thumb.png" title="Screenshot-0021" width="340" /></a><a href="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png"><img _="
-" alt="Screenshot-0022" height="550" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022_thumb.png" title="Screenshot-0022" width="898" /></a></li>
+<li>
+<p>Select <strong>Choose Items...</strong> then browse to the <strong>CustomControls.NotificationControl.dll</strong> file.</p>
+<p><img alt="Screenshot-0021" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png" />
+<img alt="Screenshot-0022" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png" /></p>
+</li>
 </ol>
-<h5>How to Use</h5>
+<h1>How to Use</h1>
 <ul>
 <li>Drag and drop the control from Toolbox to ASPX page.</li>
 <li>
 <p>Give it an ID.
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:bc8a98d4-c172-43f4-8eec-49d5638f4872"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span style="background:#000000;color:#ffffff">&lt;</span><span
-    style="background:#000000;color:#ffc66d">aspCont</span><span
-    style="background:#000000;color:#ffffff">:</span><span
-    style="background:#000000;color:#ffc66d">NotificationControl</span><span
-    style="background:#000000;color:#ffffff"> ID=</span><span
-    style="background:#000000;color:#a5c25c">"Notificaiton"</span><span
-    style="background:#000000;color:#ffffff"> runat=</span><span
-    style="background:#000000;color:#a5c25c">"server"</span><span
-    style="background:#000000;color:#ffffff">
-    EmbededjQuery=</span><span
-    style="background:#000000;color:#a5c25c">"True"</span><span
-    style="background:#000000;color:#ffffff">&gt;&lt;/</span><span
-    style="background:#000000;color:#ffc66d">aspCont</span><span
-    style="background:#000000;color:#ffffff">:</span><span
-    style="background:#000000;color:#ffc66d">NotificationControl</span><span
-    style="background:#000000;color:#ffffff">&gt;</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
+    <code>xml
+    &lt;aspCont:NotificationControl ID="Notificaiton" runat="server"
+         EmbededjQuery="True"&gt;&lt;/aspCont:NotificationControl&gt;</code></p>
 </li>
 <li>
-<p>Enable <strong><em>EmbededjQuery</em></strong> property in order the control add jQuery
-    or or disable it if you’re already have jQuery js file in the page.</p>
+<p>Enable <code>EmbededjQuery</code> property in order the control add jQuery or or disable it if you’re already have jQuery js file in the page.</p>
 </li>
-<li>
-<p>From code-behind just call one of its methods, here is description
-    for each method:</p>
-<ul>
-<li>
-<p>Show info notification with message and default delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:6efa1c1e-ec8c-4a64-b9f4-f27ab968d5c7"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowInfo(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    info"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show info notification with message and 5000 milliseconds delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:5cc8651d-c001-4fcc-a8a9-b615ad5ea387"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowInfo(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    info"</span><span
-    style="background:#000000;color:#ffffff">,</span><span
-    style="background:#000000;color:#cc7832">5000</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show warning notification with message and default delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:dde0b24b-269b-45ba-a272-71694125cc37"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowWraning(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    warning"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show warning notification with message and 5000 milliseconds
+<li>From code-behind just call one of its methods, here is description for each method:<ul>
+<li>Show info notification with message and default delay:
+    <code>csharp
+    Notificaiton.ShowInfo("Hello it's info");</code></li>
+<li>Show info notification with message and 5000 milliseconds delay
+    <code>csharp
+    Notificaiton.ShowInfo("Hello it's info", 5000);</code></li>
+<li>Show warning notification with message and default delay
+    <code>csharp
+    Notificaiton.ShowWraning("Hello it's warning");</code></li>
+<li>Show warning notification with message and 5000 milliseconds
     delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:dc5f456e-b982-43ae-bf2d-a6a0d65d119f"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowWraning(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    warning"</span><span
-    style="background:#000000;color:#ffffff">,</span><span
-    style="background:#000000;color:#cc7832">5000</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show error notification with message and default delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:f5e3c44d-be69-4c43-b9a3-3b55d19455bf"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowError(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    error"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show error notification with message and 5000 milliseconds delay
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:e0770450-1ad8-4479-a67e-fad9d5225729"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowError(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's
-    error"</span><span
-    style="background:#000000;color:#ffffff">,</span><span
-    style="background:#000000;color:#cc7832">5000</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show info notification with message and it'll be sticky (user
+    <code>csharp
+    Notificaiton.ShowWraning("Hello it's warning", 5000);</code></li>
+<li>Show error notification with message and default delay
+    <code>csharp
+    Notificaiton.ShowError("Hello it's error");</code></li>
+<li>Show error notification with message and 5000 milliseconds delay
+    <code>csharp
+    Notificaiton.ShowError("Hello it's error", 5000);</code></li>
+<li>Show info notification with message and it'll be sticky (user
     must close it to hide):
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:9ef15cc2-c3be-4d48-aa33-31e2a3c3d4ab"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyInfo(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's sticky
-    info"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
+    <code>csharp
+    Notificaiton.ShowStickyInfo("Hello it's sticky info");</code></li>
 <li>
 <p>Show warning notification with message and it'll be sticky (user
     must close it to hide):
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:9eb37912-d771-474a-89df-1d5fd3c1602a"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyWarning(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's sticky
-    warning"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show error notification with message and it'll be sticky (user
-    must close it to hide):
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:fdf5a932-67eb-427d-965d-bac0455aacde"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.ShowStickyError(</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's sticky
-    error"</span><span
-    style="background:#000000;color:#ffffff">);</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
-</li>
-</ul>
-<!-- -->
-
-<ul>
-<li>
-<p>Show info notification with setup:
-    <div
-    id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:1e17f21d-473a-4997-9147-ad8490a7a120"
-    class="wlWriterEditableSmartContent"
-    style="float: none; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; display: inline; padding-right: 0px"></p>
-<p><div
-style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"></p>
-<div style="background: #fff; overflow: auto">
-
-<ol>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.Delay
-    =</span><span
-    style="background:#000000;color:#cc7832">5000</span><span
-    style="background:#000000;color:#ffffff">;</span></li>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.Type
-    =</span><span
-    style="background:#000000;color:#ffc66d">NotificationType</span><span
-    style="background:#000000;color:#ffffff">.Info;</span></li>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.Message
-    =</span><span
-    style="background:#000000;color:#a5c25c">"Hello it's info
-    notification with configuration and Show() only"</span><span
-    style="background:#000000;color:#ffffff">;</span></li>
-<li><span
-    style="background:#000000;color:#ffffff">Notificaiton.Show();</span></li>
-</ol>
-</div>
-
-</div>
-
-</div>
-
+    ```csharp
+    Notificaiton.ShowStickyWarning("Hello it's sticky warning");</p>
+<p><code>-   Show error notification with message and it'll be sticky (user
+must close it to hide):</code>csharp
+Notificaiton.ShowStickyError("Hello it's sticky error");
+<code>-   Show info notification with setup:</code>csharp
+Notificaiton.Delay = 5000;
+Notificaiton.Type = NotificationType.Info;
+Notificaiton.Message = "Hello it's info notification with configuration and Show() only";
+Notificaiton.Show();</p>
+<p>```</p>
 </li>
 </ul>
 </li>

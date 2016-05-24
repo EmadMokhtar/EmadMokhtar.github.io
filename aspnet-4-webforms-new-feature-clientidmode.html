@@ -70,162 +70,93 @@
     <p>Posted on Tue 04 May 2010 in <a href="/category/aspnet.html">ASP.NET</a></p>
   </header>
   <div>
-    <p>Today we'll examine ClientIDMode the new feature of ASP.NET 4 which
-makes life easier on developers when writing client-side scripting/code
-like javascript or jQuery.</p>
-<h3>ClientIDMode control property:</h3>
-<p>You can assign ClientIDMode property for ASP.NET controls which is take
-4 values</p>
+    <p>Today we'll examine ClientIDMode the new feature of ASP.NET 4 which makes life easier on developers when writing client-side scripting/code like javascript or jQuery.</p>
+<h1>ClientIDMode control property:</h1>
+<p>You can assign ClientIDMode property for ASP.NET controls which is take 4 values</p>
 <ul>
 <li>AutoID</li>
 <li>Inherit</li>
 <li>Predictable</li>
 <li>
-<div>
-
 <p>Static</p>
-</div>
-
-<p><img alt="" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg" /></p>
-<p>And I'll demonstrate what the different between those 4 values.</p>
+<p><img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg" /></p>
 </li>
 </ul>
-<h3>Demo:</h3>
-<p>We've simple ASP.NET 4 page with Master page, with one button on it, and
-We'll set the ClientIDMode for the button control and examine what's
-happen when ASP.NET render it to HTML.</p>
-<h4>AutoID:</h4>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:maroon">asp<span style="color:blue">:<span
-style="color:maroon">Button</span><br />
-<span style="color:red">ID<span style="color:blue">="btnSubmit"</span>
-runat<span style="color:blue">="server"</span> Text<span
-style="color:blue">="Button"</span> ClientIDMode<span
-style="color:blue">="AutoID"</span><br />
-<span style="color:blue">/&gt;<br />
-</span></span></span></span></span></p>
-<h5>The Rendered HTML:</h5>
-<p><span
-style="color:black; font-family:Courier New; font-size:13pt"><input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Button" <span style="background-color:yellow">id="ctl00_ContentPlaceHolder1_btnSubmit"</span>
-/&gt;</span></p>
-<p>It's rendered like what ASP.NET 3.5 do, so if you want to renter
-control's ID like ASP.NET 3.5 set ClientIDMode to AutoID.</p>
-<h4>Inherit:</h4>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:maroon">asp<span style="color:blue">:<span
-style="color:maroon">Button</span><br />
-<span style="color:red">ID<span style="color:blue">="btnSubmit"</span>
-runat<span style="color:blue">="server"</span> Text<span
-style="color:blue">="Button"</span> ClientIDMode<span
-style="color:blue">="Inherit"</span><br />
-<span style="color:blue">/&gt;<br />
-</span></span></span></span></span></p>
-<h5>The Rendered HTML:</h5>
-<p><span
-style="color:black; font-family:Courier New; font-size:13pt"><input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Button" <span style="background-color:yellow">id="btnSubmit</span>"
-/&gt;<br />
-</span></p>
-<p>Actually it tells the <span
-style="color:black; font-family:Arial">control to defer to the naming
-behavior mode of the parent container control</span></p>
-<h4>Predictable (default):</h4>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:maroon">asp<span style="color:blue">:<span
-style="color:maroon">Button</span><br />
-<span style="color:red">ID<span style="color:blue">="btnSubmit"</span>
-runat<span style="color:blue">="server"</span> Text<span
-style="color:blue">="Button"</span> ClientIDMode<span
-style="color:blue">="Predictable"</span><br />
-<span style="color:blue">/&gt;<br />
-</span></span></span></span></span></p>
-<h5>The Rendered HTML:</h5>
-<p><span
-style="color:black; font-family:Courier New; font-size:13pt"><input type="submit" name="ContentPlaceHolder1$btnSubmit" value="Button" <span style="background-color:yellow">id="ContentPlaceHolder1_btnSubmit</span>"
-/&gt;<br />
-</span></p>
+<p>And I'll demonstrate what the different between those 4 values.</p>
+<h1>Demo:</h1>
+<p>We've simple ASP.NET 4 page with Master page, with one button on it, and We'll set the ClientIDMode for the button control and examine what's happen when ASP.NET render it to HTML.</p>
+<h2>AutoID:</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”AutoID”/</span><span class="nt">&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”ctl00_ContentPlaceHolder1_btnSubmit”</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>It's rendered like what ASP.NET 3.5 do, so if you want to renter control's ID like ASP.NET 3.5 set ClientIDMode to AutoID.</p>
+<h2>Inherit:</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Inherit”</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”btnSubmit”</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>Actually it tells the control to defer to the naming behavior mode of the parent container control.</p>
+<h2>Predictable (default):</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Predictable”</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”ContentPlaceHolder1_btnSubmit”</span> <span class="p">/&gt;</span>  
+</pre></div>
+
+
 <p>Remove the ugly default auto generated ID prefix "ctl00"</p>
-<h4>Static:</h4>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:maroon">asp<span style="color:blue">:<span
-style="color:maroon">Button</span><br />
-<span style="color:red">ID<span style="color:blue">="btnSubmit"</span>
-runat<span style="color:blue">="server"</span> Text<span
-style="color:blue">="Button"</span> ClientIDMode<span
-style="color:blue">="Static"</span><br />
-<span style="color:blue">/&gt;<br />
-</span></span></span></span></span></p>
-<h5>The Rendered HTML:</h5>
-<p><span
-style="font-family:Courier New; font-size:13pt"><input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Button" <span style="background-color:yellow">id="btnSubmit</span>"
-/&gt;<br />
-</span></p>
+<h2>Static:</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Static”</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”btnSubmit”</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
 <p>It'll rendered the ID like what you set for ID attribute</p>
-<h3>Where you can set the ClientIDMode:</h3>
-<h4>Web.config:</h4>
+<h1>Where you can set the ClientIDMode:</h1>
+<h2>Web.config:</h2>
 <p>You can set the ClientIDMode in web.config file inside page tag</p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:#a31515">configuration<span style="color:blue">&gt;</span><br />
-</span></span></p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">
-&lt;<span style="color:#a31515">system.web<span
-style="color:blue">&gt;</span><br />
-</span></span></p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">
-&lt;<span style="color:#a31515">pages<span style="color:blue"><br />
-<span style="color:red"><span
-style="background-color:yellow">ClientIDMode<span
-style="color:blue">=</span>"<span
-style="color:blue">Static</span>"</span><span style="color:blue">
-/&gt;</span><br />
-</span></span></span></span></p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">
-&lt;<span style="color:#a31515">compilation<span style="color:blue"><br />
-<span style="color:red">debug<span style="color:blue">=</span>"<span
-style="color:blue">true</span>"<span style="color:blue"><br />
-<span style="color:red">targetFramework<span
-style="color:blue">=</span>"<span style="color:blue">4.0</span>"<span
-style="color:blue"> /&gt;</span><br />
-</span></span></span></span></span></span></p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">
-<!--<span style="color:#a31515"-->system.web<span
-style="color:blue">&gt;</span><br />
-</span></span></p>
-<p><span
-style="color:blue; font-family:Consolas; font-size:12pt"><!--<span style="color:#a31515"-->configuration<span
-style="color:blue">&gt;</span><br />
-</span></span></p>
-<h4>Control:</h4>
-<p>Or you can set it for specific control, but remember the main control is
-inherit this property, and this what we do in the demo.</p>
-<p><span style="color:blue; font-family:Consolas; font-size:12pt">&lt;<span
-style="color:maroon">asp<span style="color:blue">:<span
-style="color:maroon">Button</span><br />
-<span style="color:red">ID<span style="color:blue">="btnSubmit"</span>
-runat<span style="color:blue">="server"</span> Text<span
-style="color:blue">="Button"</span><br />
-<span style="background-color:yellow">ClientIDMode<span
-style="color:blue">="Static"</span></span><br />
-<span style="color:blue">/&gt;<br />
-</span></span></span></span></span></p>
-<h4>Page:</h4>
-<p>Or you can set the ClientIDMode on the page tag in the upper of ASPX
-file.</p>
-<p><span style="font-family:Consolas; font-size:12pt"><span
-style="background-color:yellow">&lt;%</span><span
-style="color:blue">@</span><br />
-<span style="color:maroon">Page</span><br />
-<span style="color:red">Title<span style="color:blue">=""</span>
-Language<span style="color:blue">="C#"</span> MasterPageFile<span
-style="color:blue">="\~/Site.Master"</span> AutoEventWireup<span
-style="color:blue">="true"</span> CodeBehind<span
-style="color:blue">="Demo.aspx.cs"</span> Inherits<span
-style="color:blue">="ClientIDModeDemo.Demo"</span><br />
-<span style="background-color:yellow">ClientIDMode<span
-style="color:blue">="Static</span></span>"</span><br />
-<span style="background-color:yellow">%&gt;<br />
-</span></span></p>
-<p><strong><br />
-</strong> </p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;system.web&gt;</span>
+        ...
+        <span class="nt">&lt;pages</span> <span class="na">ClientIDMode=</span><span class="s">“Static“</span> <span class="nt">/&gt;</span>
+        ...
+    <span class="nt">&lt;/system.web&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+
+
+<h2>Page:</h2>
+<p>You can set the ClientIDMode on the page tag in the upper of ASPX file.</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;%</span><span class="err">@</span> <span class="no">Page</span> <span class="no">Title</span><span class="o">=</span><span class="err">””</span> <span class="no">Language</span><span class="o">=</span><span class="err">”</span><span class="n">C</span><span class="c1">#” MasterPageFile=”~/Site.Master” AutoEventWireup=”true”</span>
+<span class="no">CodeBehind</span><span class="o">=</span><span class="err">”</span><span class="no">Demo</span><span class="o">.</span><span class="n">aspx</span><span class="o">.</span><span class="n">cs</span><span class="err">”</span> <span class="no">Inherits</span><span class="o">=</span><span class="err">”</span><span class="no">ClientIDModeDemo</span><span class="o">.</span><span class="n">Demo</span><span class="err">”</span> <span class="no">ClientIDMode</span><span class="o">=</span><span class="err">”</span><span class="no">Static</span><span class="err">“</span> <span class="cp">%&gt;</span><span class="x"></span>
+</pre></div>
+
+
+<h2>Control:</h2>
+<p>You can set it for specific control, but remember the main control is inherit this property, and this what we do in the demo.</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Static”</span> <span class="nt">/&gt;</span>
+</pre></div>
   </div>
   <div class="tag-cloud">
     <p>
