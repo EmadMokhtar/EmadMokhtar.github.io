@@ -1,16 +1,9 @@
 Title: EgyGeeks Podcast: Episode no.2 Joel Test
 Date: 2010-12-03 11:17
-Author: admin
-Category: community, podcast
-Slug: egygeeks-podcast-episode-no-2-joel-test
-Status: published
+Author: EmadMokhtar
+Category: Community
 
-In this episode me, [@AmrEldib](http://twitter.com/AmrEldib), &
-[@Mohamed Meligy](http://twitter.com/Meligy) talked about [The Joel
-Test: 12 Steps to Better
-Code](http://www.joelonsoftware.com/articles/fog0000000043.html) posted
-on Joel Spolsky’s blog “Joel on software”. How’re we think about it,
-share some stories, & comments.
+In this episode me, [@AmrEldib](http://twitter.com/AmrEldib), & [@Mohamed Meligy](http://twitter.com/Meligy) talked about [The Joel Test: 12 Steps to Better Code](http://www.joelonsoftware.com/articles/fog0000000043.html) posted on Joel Spolsky’s blog “Joel on software”. How’re we think about it, share some stories, & comments.
 
 **Here’s The Joel Test:**
 
@@ -49,28 +42,13 @@ Subscribe to this podcast for
 </font>[<font size="2">iTunes</font>](itpc://egygeeks.podbean.com/feed)<font size="2">.  
 </font>
 
-<div>
 
- 
+Please give us your feed back, you thought can helps us a lot, you can find us on:
 
-</div>
+Twitter: [@EgyGeeks](http://twitter.com/EgyGeeks), [@EgyGeeks/Team-Memebers list](http://twitter.com/EgyGeeks/egygeeks-team)
 
-<div>
+Facebook: [#EgyGeeks](http://www.facebook.com/pages/EgyGeeks/117311724947028)
 
-**Happy listening & please give us your feedback, you can find us on:**
+Blog: [EgyGeek.net](http://www.egygeeks.net/)
 
-</div>
-
-<font size="2">Twitter:
-</font>[<font size="2">@EgyGeeks</font>](http://twitter.com/EgyGeeks)<font size="2">
-, </font>[<font size="2">@EgyGeeks/Team-Memebers
-list</font>](http://twitter.com/EgyGeeks/egygeeks-team)
-
-<font size="2">Facebook:
-</font>[<font size="2">http://www.facebook.com/pages/EgyGeeks/117311724947028</font>](http://www.facebook.com/pages/EgyGeeks/117311724947028 "http://www.facebook.com/pages/EgyGeeks/117311724947028")
-
-<font size="2">Blog:
-</font>[<font size="2">http://www.egygeeks.net/</font>](http://www.egygeeks.net/ "http://www.egygeeks.net/")
-
-<font size="2">Podcast Blog:
-</font>[<font size="2">http://egygeeks.podbean.com/</font>](http://egygeeks.podbean.com/ "http://egygeeks.podbean.com/")
+Podcast Blog: [Podcast](http://egygeeks.podbean.com/)
