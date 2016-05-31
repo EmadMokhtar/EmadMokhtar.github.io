@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins: Not Enforced When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports ..." />
+<meta name="keywords" content="">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Enforce Join option in Crystal Reports"/>
+<meta property="og:description" content="SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins: Not Enforced When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/enforce-join-option-in-crystal-reports.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2011-06-08 10:40:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:section" content="ASP.NET"/>
+<meta property="og:image" content="/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Enforce Join option in Crystal Reports</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="enforce-join-option-in-crystal-reports">Enforce Join option in Crystal Reports</h1>
+    <p>Posted on Wed 08 June 2011 in <a href="/category/aspnet.html">ASP.NET</a></p>
+  </header>
+  <div>
+    <p><img alt="Link option" src="/images/10_1.png" /></p>
+<p>SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:</p>
+<h1>Not Enforced</h1>
+<p>When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the selected tables without restriction (that is, without enforcement based on other tables).</p>
+<h1>Enforced From</h1>
+<p>When you select this option, if the "to" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce From and select only a field from Table B, the Select statement will still include the join to Table A because it is enforced. Conversely, selecting only from Table A with the same join condition will not cause the join to Table B to be enforced.</p>
+<p>Example: Employee.Store_id –&gt; Store.id, CP will enforce the join if the report has at least one of Store’s fields.</p>
+<h1>Enforced To</h1>
+<p>When you select this option, if the "from" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce To and select only a field from Table A, the join to Table B will be enforced, and the Select statement that is generated will include both tables</p>
+<p>Example: Employee.Store_id –&gt; Store.id, CP will enforce the join if the report has at least one of Employee’s fields.<b></p>
+<h1>Enforced Both</h1>
+<p>When you select this option, if either the "from" table or the "to" table for this link is used, the link is enforced.</p>
+<p>Example: Employee.Store_id –&gt; Store.id, CP will always enforce the join.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Enforce Join option in Crystal Reports",
+  "headline": "Enforce Join option in Crystal Reports",
+  "datePublished": "2011-06-08 10:40:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "/author/emadmokhtar.html"
+  },
+  "image": "/images/profile.jpg",
+  "url": "/enforce-join-option-in-crystal-reports.html",
+  "description": "SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins: Not Enforced When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports ..."
+}
+</script></body>
+</html>
