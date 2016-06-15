@@ -1,12 +1,11 @@
 Title: EgyGeeks Podcast - Little Cloudy
 Date: 2011-01-02 15:51
-Author: admin
-Category: community, podcast
+Author: EmadMokhtar
+Category: Community
 Slug: egygeeks-podcast-little-cloudy
 Status: published
 
-We’d recorded the [3rd
-episode](http://egygeeks.podbean.com/2011/01/02/egygeeks-3-a-little-cloudy/)
+We’d recorded the [3rd episode](http://egygeeks.podbean.com/2011/01/02/egygeeks-3-a-little-cloudy/)
 of [EgyGeeks](http://www.egygeeks.net/) podcast, the podcast that speaks
 Egyptian accent about technology, since Cloud Computing is the big buzz
 word these days in IT world, so we decided to have at least one episode
