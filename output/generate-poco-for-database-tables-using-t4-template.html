@@ -3,16 +3,16 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
 
-  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/pygments.min.css">
-  <link rel="stylesheet" type="text/css" href="/theme/stylesheet/font-awesome.min.css">
-
-
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
 
 
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,30 +25,30 @@
 <meta property="og:title" content="Generate POCO for Database Tables Using T4 Template"/>
 <meta property="og:description" content="If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate POCO classes for you, I’ve got a solution for you. Personally I prefer using T4 template that PetaPoco provides, so let’s see ..."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="/generate-poco-for-database-tables-using-t4-template.html"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/generate-poco-for-database-tables-using-t4-template.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2014-05-12 12:26:00+03:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="/author/emadmokhtar.html">
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emadmokhtar.html">
 <meta property="article:section" content="Developer"/>
 <meta property="article:tag" content="poco"/>
 <meta property="article:tag" content="t4"/>
 <meta property="article:tag" content="dotNET"/>
 <meta property="article:tag" content="C#"/>
-<meta property="og:image" content="/images/profile.jpg">
+<meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
   <title>Emad Mokhtar's Framework &ndash; Generate POCO for Database Tables Using T4 Template</title>
 </head>
 <body>
   <aside>
     <div>
-      <a href="">
-        <img src="/images/profile.jpg" alt="" title="">
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
       </a>
-      <h1><a href=""></a></h1>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
       <p>Geek developer who's in search of code perfection.</p>
       <nav>
         <ul class="list">
-          <li><a href="/pages/projects.html#projects">Projects</a></li>
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
           <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
         </ul>
       </nav>
@@ -64,14 +64,14 @@
   </aside>
   <main>
     <nav>
-      <a href="">Home</a>
+      <a href="http://www.emadmokhtar.com">Home</a>
       <a href="https://emadmokhtar.github.io/resume">Resume</a>
     </nav>
 
 <article>
   <header>
     <h1 id="generate-poco-for-database-tables-using-t4-template">Generate POCO for Database Tables Using T4 Template</h1>
-    <p>Posted on Mon 12 May 2014 in <a href="/category/developer.html">Developer</a></p>
+    <p>Posted on Mon 12 May 2014 in <a href="http://www.emadmokhtar.com/category/developer.html">Developer</a></p>
   </header>
   <div>
     <p>If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate <a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object">POCO</a> classes for you, I’ve got a solution for you. Personally I prefer using <a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit">T4 template</a> that <a href="http://www.toptensoftware.com/petapoco/">PetaPoco</a> provides, so let’s see how you can use it.</p>
@@ -82,8 +82,8 @@
 </pre></div>
 
 
-<p><img alt="packagemanager" src="/images/packagemanager.png" /></p>
-<p><img alt="solutionafterinstall" src="/images/solutionafterinstall.png" /></p>
+<p><img alt="packagemanager" src="http://www.emadmokhtar.com/images/packagemanager.png" /></p>
+<p><img alt="solutionafterinstall" src="http://www.emadmokhtar.com/images/solutionafterinstall.png" /></p>
 <p>Second, modify T4 template to generate POCO classes for you:</p>
 <ol>
 <li>Open <code>Database.tt</code> file and modify Settings part.</li>
@@ -94,26 +94,26 @@
 <li>In <code>ClassSuffix</code> write required class name suffix, this is optional.</li>
 <li>Save the file.</li>
 </ol>
-<p><img alt="settings" src="/images/settings.png" /></p>
+<p><img alt="settings" src="http://www.emadmokhtar.com/images/settings.png" /></p>
 <p>Third, congratulation your POCO classes and Repo generated under Database.tt –&gt; Database.cs.</p>
-<p><img alt="pocos" src="/images/pocos.png" /></p>
+<p><img alt="pocos" src="http://www.emadmokhtar.com/images/pocos.png" /></p>
 <h1>Notes:</h1>
 <ul>
 <li>Make sure you set <code>providerName</code> in <code>ConnectString</code> or T4 template will not work.</li>
 <li>If you faced C# issue during POCO generation, please open <code>PetaPoco.Core.ttinclude</code> file and edit the language attribute by removing 3.5 from it.</li>
 </ul>
-<p><img alt="csharpeerror" src="/images/csharpe-error.png" /></p>
+<p><img alt="csharpeerror" src="http://www.emadmokhtar.com/images/csharpe-error.png" /></p>
 <ul>
 <li>If you won't use PetaPoco, modify the generated POCO classes and remove PetaPoco specific class attributes or you can use modified version of <a href="https://dl.dropboxusercontent.com/u/10071407/PetaPoco.Generator.ttinclude">Poco.Generator.ttinclude</a> file.</li>
 </ul>
-<p><img alt="attributes" src="/images/attributes.png" /></p>
+<p><img alt="attributes" src="http://www.emadmokhtar.com/images/attributes.png" /></p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="/tag/poco.html">poco</a>
-      <a href="/tag/t4.html">t4</a>
-      <a href="/tag/dotnet.html">dotNET</a>
-      <a href="/tag/c.html">C#</a>
+      <a href="http://www.emadmokhtar.com/tag/poco.html">poco</a>
+      <a href="http://www.emadmokhtar.com/tag/t4.html">t4</a>
+      <a href="http://www.emadmokhtar.com/tag/dotnet.html">dotNET</a>
+      <a href="http://www.emadmokhtar.com/tag/c.html">C#</a>
     </p>
   </div>
 <div id="disqus_thread"></div>
@@ -148,10 +148,10 @@
   "author": {
     "@type": "Person",
     "name": "EmadMokhtar",
-    "url": "/author/emadmokhtar.html"
+    "url": "http://www.emadmokhtar.com/author/emadmokhtar.html"
   },
-  "image": "/images/profile.jpg",
-  "url": "/generate-poco-for-database-tables-using-t4-template.html",
+  "image": "http://www.emadmokhtar.com/images/profile.jpg",
+  "url": "http://www.emadmokhtar.com/generate-poco-for-database-tables-using-t4-template.html",
   "description": "If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate POCO classes for you, I’ve got a solution for you. Personally I prefer using T4 template that PetaPoco provides, so let’s see ..."
 }
 </script></body>
