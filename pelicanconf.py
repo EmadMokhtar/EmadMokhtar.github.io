@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Emad Mokhtar'
 SITENAME = u"Emad Mokhtar's Framework"
-SITEURL = ''
+SITEURL = 'http://www.emadmokhtar.com'
 SITESUBTITLE = 'Geek developer who\'s in search of code perfection.'
 SITEDESCRIPTION = 'My thoughts and experince on software development and life.'
 SITELOGO = SITEURL + '/images/profile.jpg'
@@ -51,4 +51,5 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISQUS_SITENAME = "emadmokhtarsframework"
 
 PLUGIN_PATHS = ['plugins']
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
