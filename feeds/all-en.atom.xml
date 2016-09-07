@@ -45,11 +45,11 @@ In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I 
 &lt;p&gt;Now let’s see how we can do that.&lt;/p&gt;
 &lt;h2&gt;Step 1: Install and Setup Celery&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;In terminal, active your &lt;a href="http://www.emadmokhtar.com/2015/03/virtual-environment/"&gt;virtualenv&lt;/a&gt; and type &lt;code&gt;$ pip install django-celery&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;In terminal, active your &lt;a href="http://www.emadmokhtar.com/2015/03/virtual-environment/"&gt;virtualenv&lt;/a&gt; and type &lt;code&gt;$ pip install django-celery&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Now celery and its Django app djcelery are installed into your virtualenv.&lt;/li&gt;
 &lt;li&gt;Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery’ to INSTALLED_APPS.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;djcelery&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -91,7 +91,7 @@ In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I 
 &lt;li&gt;In terminal, type &lt;code&gt;$ pip install django-celery-email&lt;/code&gt;, now Django-Celery-Email app installed into your virtualenv.&lt;/li&gt;
 &lt;li&gt;Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery_email’ to INSTALLED_APPS.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;djcelery_email&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -188,10 +188,10 @@ I've created class that can help use in this task&lt;/p&gt;
 
 &lt;h2&gt;Step 4: Running Celery and RabbitMQ&lt;/h2&gt;
 &lt;h3&gt;Running RabbitMQ&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server -detached&lt;/code&gt; if you want to run RabbitMQ in the background.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start -detached&lt;/code&gt; if you want to run RabbitMQ in the background.&lt;/p&gt;
 &lt;h3&gt;Running Celery&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;$ celery -A my_app worker -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category><category term="emails"></category></entry><entry><title>My Experience with Fitbit Customer Service</title><link href="http://www.emadmokhtar.com/my-experience-with-fitbit-customer-service.html" rel="alternate"></link><updated>2016-01-06T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-01-06:my-experience-with-fitbit-customer-service.html</id><summary type="html">&lt;p&gt;&lt;img alt="fitbit-logo" src="http://www.emadmokhtar.com/images/fitbit-logo.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ./manage.py celery -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category><category term="emails"></category></entry><entry><title>My Experience with Fitbit Customer Service</title><link href="http://www.emadmokhtar.com/my-experience-with-fitbit-customer-service.html" rel="alternate"></link><updated>2016-01-06T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-01-06:my-experience-with-fitbit-customer-service.html</id><summary type="html">&lt;p&gt;&lt;img alt="fitbit-logo" src="http://www.emadmokhtar.com/images/fitbit-logo.png" /&gt;&lt;/p&gt;
 &lt;h2&gt;The start&lt;/h2&gt;
 &lt;p&gt;I received Fitbit Flex as my birthday gift from my wife and I joined Fitbit community since 2013, I love the device and I love the sleep tracking feature, and with this feature now I can know why I'm feeling sleepy by data. &lt;/p&gt;
 &lt;h2&gt;First Issue&lt;/h2&gt;

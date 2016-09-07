@@ -9,11 +9,11 @@
 &lt;p&gt;Now let’s see how we can do that.&lt;/p&gt;
 &lt;h2&gt;Step 1: Install and Setup Celery&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;In terminal, active your &lt;a href="http://www.emadmokhtar.com/2015/03/virtual-environment/"&gt;virtualenv&lt;/a&gt; and type &lt;code&gt;$ pip install django-celery&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;In terminal, active your &lt;a href="http://www.emadmokhtar.com/2015/03/virtual-environment/"&gt;virtualenv&lt;/a&gt; and type &lt;code&gt;$ pip install django-celery&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Now celery and its Django app djcelery are installed into your virtualenv.&lt;/li&gt;
 &lt;li&gt;Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery’ to INSTALLED_APPS.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;djcelery&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -55,7 +55,7 @@
 &lt;li&gt;In terminal, type &lt;code&gt;$ pip install django-celery-email&lt;/code&gt;, now Django-Celery-Email app installed into your virtualenv.&lt;/li&gt;
 &lt;li&gt;Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery_email’ to INSTALLED_APPS.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;djcelery_email&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -152,10 +152,10 @@ I've created class that can help use in this task&lt;/p&gt;
 
 &lt;h2&gt;Step 4: Running Celery and RabbitMQ&lt;/h2&gt;
 &lt;h3&gt;Running RabbitMQ&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server -detached&lt;/code&gt; if you want to run RabbitMQ in the background.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start -detached&lt;/code&gt; if you want to run RabbitMQ in the background.&lt;/p&gt;
 &lt;h3&gt;Running Celery&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;$ celery -A my_app worker -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 24 Jan 2016 12:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-01-24:send-emails-asynchronously-from-django.html</guid><category>django</category><category>python</category><category>celery</category><category>emails</category></item><item><title>Extend Django User Model and Generic Class Based View "GCBV"</title><link>http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html</link><description>&lt;p&gt;&lt;img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png" /&gt; When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one &lt;a href="https://www.youtube.com/watch?v=BJiOERA49ZQ"&gt;DjangoCon videos by Andrew Pinkham&lt;/a&gt; to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ./manage.py celery -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 24 Jan 2016 12:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-01-24:send-emails-asynchronously-from-django.html</guid><category>django</category><category>python</category><category>celery</category><category>emails</category></item><item><title>Extend Django User Model and Generic Class Based View "GCBV"</title><link>http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html</link><description>&lt;p&gt;&lt;img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png" /&gt; When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one &lt;a href="https://www.youtube.com/watch?v=BJiOERA49ZQ"&gt;DjangoCon videos by Andrew Pinkham&lt;/a&gt; to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV &lt;/p&gt;
 &lt;h1&gt;What is the relation between GCBV and User Model?&lt;/h1&gt;
 &lt;p&gt;Great question, while I’m working with one of my models fro example her the Teacher model, and teacher will has a user credentials in order to user the app. The easiest and the straightforward way is to make one-to-one relation with &lt;a href="https://github.com/django/django/blob/53ccffdb8c8e47a4d4304df453d8c79a9be295ab/django/contrib/auth/models.py"&gt;django.contrib.auth.models.User&lt;/a&gt; please read the quote from Django documentation: &lt;/p&gt;
 &lt;blockquote&gt;
