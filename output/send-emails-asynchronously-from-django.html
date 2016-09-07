@@ -88,11 +88,11 @@
 <p>Now let’s see how we can do that.</p>
 <h2>Step 1: Install and Setup Celery</h2>
 <ul>
-<li>In terminal, active your <a href="http://www.emadmokhtar.com/2015/03/virtual-environment/">virtualenv</a> and type <code>$ pip install django-celery</code> </li>
+<li>In terminal, active your <a href="http://www.emadmokhtar.com/2015/03/virtual-environment/">virtualenv</a> and type <code>$ pip install django-celery</code></li>
 <li>Now celery and its Django app djcelery are installed into your virtualenv.</li>
 <li>Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery’ to INSTALLED_APPS.</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span> 
+<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
 <span class="o">...</span>
 <span class="s1">&#39;djcelery&#39;</span><span class="p">,</span>
 <span class="o">...</span>
@@ -134,7 +134,7 @@
 <li>In terminal, type <code>$ pip install django-celery-email</code>, now Django-Celery-Email app installed into your virtualenv.</li>
 <li>Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery_email’ to INSTALLED_APPS.</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span> 
+<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
 <span class="o">...</span>
 <span class="s1">&#39;djcelery_email&#39;</span><span class="p">,</span>
 <span class="o">...</span>
@@ -231,10 +231,10 @@ I've created class that can help use in this task</p>
 
 <h2>Step 4: Running Celery and RabbitMQ</h2>
 <h3>Running RabbitMQ</h3>
-<p><code>$ sudo rabbitmq-server</code> and keep the terminal session opened.</p>
-<p><code>$ sudo rabbitmq-server -detached</code> if you want to run RabbitMQ in the background.</p>
+<p><code>$ sudo rabbitmq-server start</code> and keep the terminal session opened.</p>
+<p><code>$ sudo rabbitmq-server start -detached</code> if you want to run RabbitMQ in the background.</p>
 <h3>Running Celery</h3>
-<p><code>$ celery -A my_app worker -l info</code> and keep the terminal session opened.</p>
+<p><code>$ ./manage.py celery -l info</code> and keep the terminal session opened.</p>
   </div>
   <div class="tag-cloud">
     <p>
