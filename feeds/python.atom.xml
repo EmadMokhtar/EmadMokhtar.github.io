@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2016-02-17T12:00:00+03:00</updated><entry><title>PACKT publishing ebooks and videos 50% discount offer</title><link href="/packt-publishing-ebooks-and-videos-50-discount-offer.html" rel="alternate"></link><updated>2016-02-17T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:,2016-02-17:packt-publishing-ebooks-and-videos-50-discount-offer.html</id><summary type="html">&lt;p&gt;Generously PACKT publishing is offering 50% discount on Python and Django ebook and videos. PACKT has many Python ebooks and videos from novice to advanced level, it one of the most publishing company that releases books and videos for Python and Django, If you tried to Google a book for Python or Django, you differently will find one of their books in the search results.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/python.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2016-02-17T12:00:00+03:00</updated><entry><title>PACKT publishing ebooks and videos 50% discount offer</title><link href="http://www.emadmokhtar.com/packt-publishing-ebooks-and-videos-50-discount-offer.html" rel="alternate"></link><updated>2016-02-17T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-02-17:packt-publishing-ebooks-and-videos-50-discount-offer.html</id><summary type="html">&lt;p&gt;Generously PACKT publishing is offering 50% discount on Python and Django ebook and videos. PACKT has many Python ebooks and videos from novice to advanced level, it one of the most publishing company that releases books and videos for Python and Django, If you tried to Google a book for Python or Django, you differently will find one of their books in the search results.&lt;/p&gt;
 &lt;h2&gt;Interesting ebooks and videos for Python:&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning"&gt;&lt;img alt="Python Machine Learning" src="https://www.packtpub.com/sites/default/files/5130OS_Python%20Machine%20Learning_.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-video"&gt;&lt;img alt="Mastering Python" src="https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -14,4 +14,127 @@
 &lt;ul&gt;
 &lt;li&gt;For &lt;a href="https://www.packtpub.com/tech/python#/?utm_source=RP-Emadmokhtar&amp;amp;utm_medium=referral&amp;amp;utm_campaign=OMEPython"&gt;Python&lt;/a&gt; books and videos use &lt;strong&gt;PYTHON50&lt;/strong&gt; code.&lt;/li&gt;
 &lt;li&gt;For &lt;a href="https://www.packtpub.com/tech/django#/?utm_source=RP-Emadmokhtar&amp;amp;utm_medium=referral&amp;amp;utm_campaign=OMEDjango"&gt;Django&lt;/a&gt; books and videos use  &lt;strong&gt;DJANGO50&lt;/strong&gt; code.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="django"></category><category term="python"></category><category term="ebooks"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="django"></category><category term="python"></category><category term="ebooks"></category></entry><entry><title>Virtual Environment</title><link href="http://www.emadmokhtar.com/virtual-environment.html" rel="alternate"></link><updated>2015-03-01T17:10:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2015-03-01:virtual-environment.html</id><summary type="html">&lt;p&gt;While leaning web developing using Django and Python, I found out
+VirtualEnv or Virtual Environment is widely used, in first I didn't get
+it because I came from Microsoft .NET Framework development platform, so
+I thought of writing a post about it to make simple.&lt;/p&gt;
+&lt;h2&gt;What is Virtual Environment?&lt;/h2&gt;
+&lt;p&gt;VirtualEnv or Virtual Environment is a way to create isolated
+development environment each one has it's own packages and specific
+package version, for example VirEnv1 has Django 1.6 and VirEnv2 has
+Django 1.7, this isolation will keep your project packages dependency
+clear, isolated, and as I'll show you below that you can replicate the
+environment with one command and file, so if you work in team it's easy
+to share the same environment among the
+team.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="virtualenv 1" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193423.png" /&gt;
+&lt;img alt="virtualenv 2" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193318.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;How to install VirtualEnv?&lt;/h2&gt;
+&lt;p&gt;VirtualEnv is a python package so to install is you need to install pip
+first.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open terminal and type the following command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install python-pip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After finish installing pip type the following command to install
+    virtual environment&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo pip install virtualenv&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After finish installing virtualenv, type the following command to
+    create folder to store your virtual environments&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkdir .virtualenvs&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;How to create virtualenv?&lt;/h2&gt;
+&lt;p&gt;After install virtualenv you are ready to create your first virtual
+environment, open the terminal:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Browse .virtualenvs folder&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd .virtualenvs&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create your virtualenv by tying the following command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;virtualenv VirEnv1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now virtualenv will create a folder inside .virtualenvs with
+    virtualenv name, browse it&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd VirEnv1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now the virtualenv is created but you need to activate it. To
+    activate the virtualenv type the following command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;source bin/activate&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you find the treminal current line has virtualenv name inside
+    brackets (VirEnv1) this means that your virtualenv is activated.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="activate" src="http://www.emadmokhtar.com/images/activate.png" /&gt;&lt;/p&gt;
+&lt;p&gt;There is another package to help you doing the above setups with one
+simple command which called virtualenvwrapper.&lt;/p&gt;
+&lt;h2&gt;What is virtualenvwrapper?&lt;/h2&gt;
+&lt;p&gt;virtualenvwrapper is a package help creating and managing virtualenv
+easy and fast.&lt;/p&gt;
+&lt;h2&gt;How to install VirtualWnvWrapper?&lt;/h2&gt;
+&lt;p&gt;To install virtualenvwrapper just type the following command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pip install virtualenvwrapper
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;How to use virtualenvwrapper?&lt;/h2&gt;
+&lt;p&gt;To use virtualenvwrapper you need &lt;a href="https://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file"&gt;first to configure your shell&lt;/a&gt; to active its commend every time you open new session.&lt;/p&gt;
+&lt;h1&gt;Configure shell&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Open .bash_profile by typing this command in the terminal nano
+    \~/.bashrc&lt;/li&gt;
+&lt;li&gt;Add these  3 lines to the file and save it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;export WORKON_HOME=&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;HOME&lt;/span&gt;&lt;span class="x"&gt;/.virtualenvsexport PROJECT_HOME=&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;HOME&lt;/span&gt;&lt;span class="x"&gt;/Develsource /usr/local/bin/virtualenvwrapper.sh&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;First line configure the path for your virtual environments
+folder.Second line configure the path for your development project
+folder.Third line is virtualenvwrapper executable file. virtualenvwrapper
+Commands:To create new virtual environment:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkvirtualenv &amp;lt;virtual environment name&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;boom your virtual environment is created and activated as well.To
+activate virtual environment:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;workon  &amp;lt;virtual environment name&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To deactivate virtual environment:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;deactivate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;How to Replicate your virtual environment?&lt;/h2&gt;
+&lt;p&gt;Every virtual environment has its own packages, and there are command to
+list all the packages and its version, export pacakge list, and install
+packages from file exported, lets see how to can do this.&lt;/p&gt;
+&lt;h1&gt;List virtual environment packages&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="pip-freeze" src="http://www.emadmokhtar.com/images/pip-freeze2.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Export environment packages&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze &amp;gt; requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="pip-freeze" src="http://www.emadmokhtar.com/images/pip-freeze-2.png" /&gt;
+&lt;img alt="requirements" src="http://www.emadmokhtar.com/images/requirements2.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Install virtual envirment packages from file&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install -r requirement.txt
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="django"></category><category term="pip"></category><category term="python"></category><category term="virtualenv"></category></entry></feed>

@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/aspnet.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 Jun 2014 12:30:00 +0300</lastBuildDate><item><title>ASP.NET WebForms Notification Control</title><link>http://www.emadmokhtar.com/aspnet-webforms-notification-control.html</link><description>&lt;p&gt;In 2012 I wrote about &lt;a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html"&gt;using notification in ASP.NET WebForms&lt;/a&gt; and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse it like any ASP.NET Server Control in their toolbox.&lt;/p&gt;
+&lt;h1&gt;About the Project&lt;/h1&gt;
+&lt;p&gt;Notification Control is open source/free ASP.NET server control like &lt;a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSamp eSite/"&gt;ASP.NET Ajax toolkit controls&lt;/a&gt;, it’s wrapper for awesome jQuery plug-in called &lt;a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm"&gt;jNotify&lt;/a&gt; to use it’s functionality from code behind, it’s on &lt;a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl"&gt;GitHub&lt;/a&gt;, please fork it, or test it and report bugs/issues on GitHub.&lt;/p&gt;
+&lt;p&gt;You can find demo &lt;a href="http://notificaitoncontrol.azurewebsites.net/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;How to Install&lt;/h1&gt;
+&lt;h2&gt;Download via GitHub repository&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download the repository as&lt;strong&gt; &lt;/strong&gt; &lt;a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip"&gt;Zip file&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run Visual Studio, and open       project.&lt;img alt="Screenshot-0016" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build the project.&lt;img alt="Screenshot-0026" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png" /&gt;&lt;img alt="Screenshot-0019" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to bin/Release folder and locate the &lt;code&gt;CustomControls.NotificationControl.dll&lt;/code&gt; file. &lt;img alt="Screenshot-0020" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Download via Nuget:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In Visual Studio open Package Manager Console and type &lt;code&gt;Install-Package NotificationControl&lt;/code&gt;, wait until the package download is done, and open the project folder, then browse to &lt;strong&gt;{ProjectFolder}/NotificationControl.{version}&lt;/strong&gt; you’ll find the DLL file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In your ASP.NET WebForms project open any .ASPX file then open the toolbox.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Right click on any tab you need to add the control to it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;strong&gt;Choose Items...&lt;/strong&gt; then browse to the &lt;strong&gt;CustomControls.NotificationControl.dll&lt;/strong&gt; file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot-0021" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png" /&gt;
+&lt;img alt="Screenshot-0022" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;How to Use&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Drag and drop the control from Toolbox to ASPX page.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Give it an ID.
+    &lt;code&gt;xml
+    &amp;lt;aspCont:NotificationControl ID="Notificaiton" runat="server"
+         EmbededjQuery="True"&amp;gt;&amp;lt;/aspCont:NotificationControl&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable &lt;code&gt;EmbededjQuery&lt;/code&gt; property in order the control add jQuery or or disable it if you’re already have jQuery js file in the page.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;From code-behind just call one of its methods, here is description for each method:&lt;ul&gt;
+&lt;li&gt;Show info notification with message and default delay:
+    &lt;code&gt;csharp
+    Notificaiton.ShowInfo("Hello it's info");&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show info notification with message and 5000 milliseconds delay
+    &lt;code&gt;csharp
+    Notificaiton.ShowInfo("Hello it's info", 5000);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show warning notification with message and default delay
+    &lt;code&gt;csharp
+    Notificaiton.ShowWraning("Hello it's warning");&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show warning notification with message and 5000 milliseconds
+    delay
+    &lt;code&gt;csharp
+    Notificaiton.ShowWraning("Hello it's warning", 5000);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show error notification with message and default delay
+    &lt;code&gt;csharp
+    Notificaiton.ShowError("Hello it's error");&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show error notification with message and 5000 milliseconds delay
+    &lt;code&gt;csharp
+    Notificaiton.ShowError("Hello it's error", 5000);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show info notification with message and it'll be sticky (user
+    must close it to hide):
+    &lt;code&gt;csharp
+    Notificaiton.ShowStickyInfo("Hello it's sticky info");&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Show warning notification with message and it'll be sticky (user
+    must close it to hide):
+    ```csharp
+    Notificaiton.ShowStickyWarning("Hello it's sticky warning");&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-   Show error notification with message and it'll be sticky (user
+must close it to hide):&lt;/code&gt;csharp
+Notificaiton.ShowStickyError("Hello it's sticky error");
+&lt;code&gt;-   Show info notification with setup:&lt;/code&gt;csharp
+Notificaiton.Delay = 5000;
+Notificaiton.Type = NotificationType.Info;
+Notificaiton.Message = "Hello it's info notification with configuration and Show() only";
+Notificaiton.Show();&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 19 Jun 2014 12:30:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-06-19:aspnet-webforms-notification-control.html</guid><category>aspnet</category></item><item><title>Add Image Zoom to ASP.NET WebForm GridView</title><link>http://www.emadmokhtar.com/add-image-zoom-to-aspnet-webform-gridview.html</link><description>&lt;p&gt;The main reason I’m writing this article is to let you know there is
+always some way better and simpler to don something, one day I want to
+add image zoom feature to ASP.NET WebForms GridView that shows list of
+products with thumbnail, and instead of user click on row to get the
+product information and see a full picture of the product, I want user
+to just when hovering on the image a big preview of it appears, I found
+this jQuery plug-in called
+&lt;a href="http://www.elevateweb.co.uk/image-zoom"&gt;elevateZoom&lt;/a&gt; I love it because
+it’s simple, have a lot of feature, and easy to configure.&lt;/p&gt;
+&lt;p&gt;Now the change is how to add this plug-in to every single image in every
+row in GridView, I googled but unfortunately I found many of complex
+solution and I thought these developers intend to make this complex, but
+no this isn’t that complex, I denied all of them even they are working
+and I’ll tell you what If done in the end of this article, so let us how
+to get this done.&lt;/p&gt;
+&lt;p&gt;First &lt;a href="http://www.elevateweb.co.uk/image-zoom/download"&gt;download&lt;/a&gt; the
+plug-in, reference jQuery to your ASP.NET application, second add the
+GridView control to your form and bind your data, third in the image
+column bind he thumbnail image to ImageUrl property and add custom
+attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image to it.&lt;/p&gt;
+&lt;p&gt;Here is GridView aspx code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt; &lt;span class="na"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GridView1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;runat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;table table-striped table-hover&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;PageSize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;5&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;DataSourceID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;odsProducts&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;EmptyDataText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;No Products&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;AllowPaging&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;True&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;AutoGenerateColumns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;False&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;BorderStyle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;None&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;meta:resourcekey&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;grvProductsResource1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;EnableTheming&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;True&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;GridLines&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;None&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:TemplateField&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Image&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ThumbnailFile&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ItemTemplate&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:Image&lt;/span&gt;  &lt;span class="na"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ItemThumb&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;runat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;ImageUrl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;lt;%# String.Format(&amp;quot;{0}{1}&amp;quot;,Eval(&amp;quot;ImagePath&amp;quot;),Eval(&amp;quot;ThumbnailFile&amp;quot;)) %&amp;gt;&amp;#39;&lt;/span&gt;
+                                     &lt;span class="na"&gt;data-zoom-image&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;lt;%#&lt;/span&gt; &lt;span class="na"&gt;String&lt;/span&gt; &lt;span class="na"&gt;Format&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;{&lt;/span&gt;&lt;span class="na"&gt;0&lt;/span&gt;&lt;span class="err"&gt;}{&lt;/span&gt;&lt;span class="na"&gt;1&lt;/span&gt;&lt;span class="err"&gt;}&amp;quot;,&lt;/span&gt;&lt;span class="na"&gt;Eval&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;ImagePath&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;)&lt;/span&gt; &lt;span class="na"&gt;Eval&lt;/span&gt;&lt;span class="err"&gt;(&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;ImageFile&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;))&lt;/span&gt; &lt;span class="err"&gt;%&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; /&amp;gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;ItemTemplate&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;asp:TemplateField&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DescEnglish&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Description&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DescEnglish&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PagerSettings&lt;/span&gt; &lt;span class="na"&gt;Position&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;TopAndBottom&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;PagerStyle&lt;/span&gt; &lt;span class="na"&gt;CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pagination&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;RowStyle&lt;/span&gt; &lt;span class="na"&gt;BackColor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;White&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HorizontalAlign&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Center&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;VerticalAlign&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Middle&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;HeaderStyle&lt;/span&gt; &lt;span class="na"&gt;HorizontalAlign&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Center&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;VerticalAlign&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Middle&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;HeaderStyle&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;data-zoom-image&lt;/strong&gt; custom attribute is used by &lt;a href="http://www.elevateweb.co.uk/image-zoom"&gt;elevateZoom&lt;/a&gt; to display the full image, the last thing is to tell the plug-in about images in our GridView in order to zooming, this can be done via JavaScript.&lt;/p&gt;
+&lt;p&gt;JavaScript to perform zooming:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;pageLoad&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#grvProducts img&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;elevateZoom&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I’m glad to tell you we’re done, please if you want more configuration check this &lt;a href="http://www.elevateweb.co.uk/image-zoom/configuration"&gt;link&lt;/a&gt; but don’t forget like I said before I’ll tell you now what I’ve done.&lt;/p&gt;
+&lt;p&gt;When I’m googling about this I found developers using DataBound event to inject JavaScript to Image in each row, and more treble, but I thought how to tell elevateZoom that I want to add zoom to every image in GridView, an idea hit me “What about jQuery selectors?” and yes this is the solution as you can see I select all &lt;em&gt;img&lt;/em&gt; tags in element with &lt;em&gt;id = grvProducts.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Perview" src="http://www.emadmokhtar.com/images/zoom-perview.gif" /&gt;&lt;/p&gt;
+&lt;p&gt;Developer please think simple, and that all folks, enjoy developing ;)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 27 May 2013 16:31:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2013-05-27:add-image-zoom-to-aspnet-webform-gridview.html</guid><category>aspnet</category><category>gridview</category></item><item><title>Storing password in plain text, you’re doing it wrong</title><link>http://www.emadmokhtar.com/storing-password-in-plain-text-youre-doing-it-wrong.html</link><description>&lt;p&gt;&lt;img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and if you’re doing it please stop and read this article to know how to do it right and being awesome.&lt;/p&gt;
+&lt;p&gt;Username, Password, or Pin codes these are precious information, and if hacker or even internal employee stole the database he can do whatever he wants with your users information. So How to keep these information safe? The answer is hashing it.&lt;/p&gt;
+&lt;p&gt;Why I was not doing that? I was lazy and every time I googled/binged/searched about this, I found many complex How-To articles, but last week I finally found something simple and it’s the reason I’m writing this article.&lt;/p&gt;
+&lt;h1&gt;What is hashing?&lt;/h1&gt;
+&lt;p&gt;Hashing is encoding string "message” to hash value and you can’t reproduce the original string “message” from hash value, so it’s one way cryptographic algorithm, &lt;a href="http://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it"&gt;it’s different than encryption&lt;/a&gt; that it’s  two way cryptographic algorithm.&lt;/p&gt;
+&lt;h1&gt;How to Hash password?&lt;/h1&gt;
+&lt;p&gt;As I mentioned above I found many articles about how-to hash password but most of them are very complex and I believe in work smart not hard, I found &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers&lt;/code&gt;&lt;/a&gt; Namespace that has  &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;Crypto&lt;/code&gt;&lt;/a&gt; class that has many hashing helpers. I play with it and try to learn how to hash a password.&lt;/p&gt;
+&lt;h1&gt;Flow:&lt;/h1&gt;
+&lt;p&gt;Now let’s understand the flow and then check how to implement it in code. First to save password in database you must hash it using one of hashing algorithm and store the hashes password into database.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="StoreHashedPassword" src="http://www.emadmokhtar.com/images/StoreHashedPassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Second to check the user password in login, you should hash the password user input and compare the two hashed passwords (user input &amp;amp; stored in database).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="RetreiveHashedPassword" src="http://www.emadmokhtar.com/images/RetreiveHashedPassword.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Code:&lt;/h1&gt;
+&lt;p&gt;I’ll show you how to hash user’s password and check the password he’ll enter when login to your system. Like I said above I’ll user &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers.Crypto&lt;/code&gt;&lt;/a&gt; class , this class has 2  methods &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.hashpassword(vvs.99).aspx"&gt;&lt;code&gt;HashPassword&lt;/code&gt;&lt;/a&gt; and &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.verifyhashedpassword(v=vs.99).aspx"&gt;&lt;code&gt;VerifyHashedPassword&lt;/code&gt;&lt;/a&gt; we’ll use them&lt;em&gt;.&lt;/em&gt; we’ll write the code in Unit Tests so no need for Console Application and wait for Command Prompt to run, you’ll just write your code test it and you’ll get results in test results quickly, so let’s get our hand dirty:&lt;/p&gt;
+&lt;h2&gt;Hashing:&lt;/h2&gt;
+&lt;p&gt;What you need to do is to pass the user input password to &lt;code&gt;HashPassword()&lt;/code&gt; method and you’ll get the hashed password.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plainPassword&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;hashedPassword&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Crypto&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HashPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plainPassword&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Comparing:&lt;/h2&gt;
+&lt;p&gt;We can verify the password by passing the hashed password and the plain password and &lt;code&gt;VerifyHashedPassword()&lt;/code&gt; method will return true if it’s verified or false if it’s not.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword,plainPassword));
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Complete Code:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Test]&lt;/span&gt;
+&lt;span class="err"&gt;public&lt;/span&gt; &lt;span class="err"&gt;void&lt;/span&gt; &lt;span class="err"&gt;test_hashing_password()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;plainPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;hashedPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;plainPassword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;;&lt;/span&gt;
+&lt;span class="s"&gt;    hashedPassword = Crypto.HashPassword(plainPassword);&lt;/span&gt;
+&lt;span class="s"&gt;    Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword,plainPassword));&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note: I’m using &lt;a href="http://www.nunit.org/"&gt;NUnit&lt;/a&gt; as my Unit Test Framework and &lt;a href="http://www.jetbrains.com/resharper/"&gt;Resharper&lt;/a&gt; as my Test Runner.*&lt;/p&gt;
+&lt;h1&gt;Yet better Hashing:&lt;/h1&gt;
+&lt;p&gt;Even after hashing passwords you aren’t safe from hacking and hackers, hackers can use &lt;a href="http://en.wikipedia.org/wiki/Rainbow_table"&gt;rainbow table&lt;/a&gt; to attack your system. The good news is you can increase the security of your hashing by adding salt, let’s see how we can do this:&lt;/p&gt;
+&lt;h1&gt;Flow&lt;/h1&gt;
+&lt;p&gt;Save the password looks like the same flow but this time we’ll use &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.generatesalt(v=vs.99).aspx"&gt;&lt;code&gt;GenerateSalt&lt;/code&gt;&lt;/a&gt; method in &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers&lt;/code&gt;&lt;/a&gt; class to generate random salt that will be added to the password and store it to database with the hashed password.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="YetBetterStoreHashingPassword" src="http://www.emadmokhtar.com/images/YetBetterStoreHashingPassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Retrieving and comparing user input password and the one stored in database is as before but you need to retrieve both the hashed password and salt from database, add salt to plain password, hash the produced string, then compare it with the hashed password that retrieved from database.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="YetBetterRetreivePassword" src="http://www.emadmokhtar.com/images/YetBetterRetreivePassword.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Code:&lt;/h1&gt;
+&lt;h2&gt;Hashing:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plainPassword&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;salt&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Crypto&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GenerateSalt&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;passwordSaltCombination&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plainPassword&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;hashedPassword&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Crypto&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HashPassword&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;passwordSaltCombination&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Comparing:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword, passwordSaltCombination));
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Complete Code:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Test]&lt;/span&gt;
+&lt;span class="err"&gt;public&lt;/span&gt; &lt;span class="err"&gt;void&lt;/span&gt; &lt;span class="err"&gt;test_hasing_password_with_salt()&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;plainPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;hashedPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;salt&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;passwordSaltCombination&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+    &lt;span class="na"&gt;plainPassword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;;&lt;/span&gt;
+&lt;span class="s"&gt;    salt = Crypto.GenerateSalt();&lt;/span&gt;
+&lt;span class="s"&gt;    passwordSaltCombination = plainPassword + salt;&lt;/span&gt;
+&lt;span class="s"&gt;    hashedPassword = Crypto.HashPassword(passwordSaltCombination);&lt;/span&gt;
+&lt;span class="s"&gt;    Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword, passwordSaltCombination));&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As you can see it’s simple procedure so please use it and stop saving plain password in your database.&lt;/p&gt;
+&lt;p&gt;I encourage you to read Jeff Atwood’s article &lt;a href="http://www.codinghorror.com/blog/2007/09/youre-probably-storing-passwords-incorrectly.html"&gt;You're Probably Storing Passwords Incorrectly&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Wed, 06 Mar 2013 16:41:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2013-03-06:storing-password-in-plain-text-youre-doing-it-wrong.html</guid><category>security</category><category>dotNet</category><category>Csharp</category></item><item><title>Add elegant style to ASP.NET WebForms GridView control</title><link>http://www.emadmokhtar.com/add-elegant-style-to-aspnet-webforms-gridview-control.html</link><description>&lt;p&gt;&lt;img alt="5628591299_8d5839c072" src="http://www.emadmokhtar.com/images/5628591299_8d5839c072.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;We are developers whom use the left side of our brains that why we suck in
+designing; we’ll use the already exist styles while developing ASP.NET
+web application, that what we’ll do if we don’t have a designer in our
+team, but thanks for the CSS framework over the internet which make our
+like more easier.&lt;/p&gt;
+&lt;p&gt;Nowadays I’m playing with &lt;a href="http://twitter.github.com/bootstrap/"&gt;Twitter Bootstrap&lt;/a&gt; CSS framework and I find myself create very neat and awesome looking ASP.NET applications by just using the already defined CSS classes in the framework, it’s so easy and the documentation is easy to understand and readable, you can find the documentation right
+&lt;a href="http://twitter.github.com/bootstrap/base-css.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So let’s get into the business, the most commonly used ASP.NET Control
+&lt;strong&gt;GridView&lt;/strong&gt; is very ugly if you don’t apply a style to it, it’ll look
+like an awful HTML table with bunch of rows and columns, sure you can
+use the ready made styles “Auto Format” created by Microsoft team, but
+also you can apply much better style to it, let’s find
+how.&lt;img alt="SNAG-0089" src="http://www.emadmokhtar.com/images/SNAG-0089.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I’ll show you how to apply 2 styles to GridView:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Twitter Bootstrap.&lt;/li&gt;
+&lt;li&gt;ASP.NET Dynamic Data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Twitter Bootstrap:&lt;/h3&gt;
+&lt;p&gt;I mentioned above nowadays I’m playing with Twitter Bootstrap and I love
+its &lt;a href="http://twitter.github.com/bootstrap/base-css.html#tables"&gt;Table
+style&lt;/a&gt;, it’s
+very simple and neat and have many style can be used separately or make
+a combination of them. I love to use the full combination of them and it
+can be applied to the &lt;strong&gt;GridView&lt;/strong&gt; by assign the &lt;strong&gt;CssClass&lt;/strong&gt; property
+to Twitter Bootstrap CSS classes like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt; &lt;span class="na"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GridView1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;runat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;AutoGenerateColumns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;False&amp;quot;&lt;/span&gt;
+    &lt;span class="na"&gt;DataSourceID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;XmlDataSource1&amp;quot;&lt;/span&gt;
+    &lt;span class="na"&gt;CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;table table-striped table-bordered table-condensed&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is the result:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0091" src="http://www.emadmokhtar.com/images/SNAG-0091.png" /&gt;&lt;/p&gt;
+&lt;p&gt;You can use style you like you can check the Table styles and make your
+combination or use only one CSS class.&lt;/p&gt;
+&lt;p&gt;You can install Twitter Bootstrap to your solution from NuGet. Go to
+Tools –&amp;gt; Library Package Manager –&amp;gt; Manage NuGet Packages for
+solutions… NuGet package manager window will open, search for Twitter
+Bootstrap and Install it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0087" src="http://www.emadmokhtar.com/images/SNAG-0087.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;ASP.NET Dynamic Data:&lt;/h3&gt;
+&lt;p&gt;One day I was checking &lt;a href="http://msdn.microsoft.com/en-us/library/ee845452.aspx"&gt;ASP.NET Dynamic
+Data&lt;/a&gt;, I built
+and started the project, and then I saw a very beautiful &lt;strong&gt;GridView.&lt;/strong&gt; I
+start to dig in the aspx file on how ASP.NET team made this &lt;strong&gt;GridView&lt;/strong&gt;
+beautiful like that, finally I found they are using a CSS specially made
+for Dynamic Data, I grab it and applied it to another demo project has a
+&lt;strong&gt;GridView&lt;/strong&gt; and took care of the Image file used in header’s
+background.&lt;/p&gt;
+&lt;p&gt;Here is the &lt;strong&gt;GridView&lt;/strong&gt; control, take a look on &lt;strong&gt;CssClass&lt;/strong&gt;,
+&lt;strong&gt;RowStyle-CssClass&lt;/strong&gt;, and &lt;strong&gt;HeaderStyle-CssClass&lt;/strong&gt; properties:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt; &lt;span class="na"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GridView&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;runat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;AutoGenerateColumns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;False&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;DataSourceID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;XmlDataSource&amp;quot;&lt;/span&gt;
+            &lt;span class="na"&gt;CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DDGridView&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;RowStyle-CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;td&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderStyle-CssClass&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;th&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;CellPadding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;6&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:BoundField&lt;/span&gt; &lt;span class="na"&gt;DataField&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;HeaderText&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;SortExpression&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;phone&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;Columns&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;asp:GridView&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is the result:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0092" src="http://www.emadmokhtar.com/images/SNAG-0092.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I’ve created a Demo project, you can download it from
+&lt;a href="https://github.com/EmadMokhtar/ASPNETGridViewWithStyle"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy Developing Folks!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Wed, 11 Jul 2012 11:45:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-07-11:add-elegant-style-to-aspnet-webforms-gridview-control.html</guid><category>aspnet</category><category>gridview</category></item><item><title>ASP.NET Expressions</title><link>http://www.emadmokhtar.com/aspnet-expressions.html</link><description>&lt;p&gt;ASP.NET Expression is written inline surrounded with &amp;lt;% %&amp;gt; in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="ss"&gt;ConnectionStrings&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="no"&gt;DefaultConnection&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let’s lists all ASP.NET Expression and it’s task:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Directive Expression&lt;/strong&gt; &amp;lt;%@ .. %&amp;gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s used in Web Forms .ASPX files or User Control .ASCX files
+    to set settings, for example the Page directive where you can
+    declare Title, Master Page, Language, etc.
+    &lt;code&gt;aspx
+    &amp;lt;%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master"
+    AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASPNETExpressions._Default" %&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data-Binding Expression&lt;/strong&gt; &amp;lt;%# .. %&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Create binding between server control with data source when calling DataBind() method, most of the time you’ll see this expression inside Data Bound Controls like GridView and DetailView.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;aspx
+&amp;lt;asp:TextBox runat="server" ID="txtFirstName"  Text="&amp;lt;%# Eval("FirstName") %&amp;gt;"/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Expression Builder&lt;/strong&gt; &amp;lt;%\$ .. %&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This expression is used to set controls properties that located in configuration files &lt;code&gt;Web.Config&lt;/code&gt; such as &lt;code&gt;AppSettings&lt;/code&gt;, &lt;code&gt;ConnectionStrings&lt;/code&gt;, or &lt;code&gt;Resources&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Its syntax is &lt;code&gt;&amp;lt;$ Expression Prefix: Expression Value %&amp;gt;&lt;/code&gt;
+    &lt;code&gt;aspx
+    &amp;lt;%$ ConnectionStrings:DefaultConnection %&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Server-side Comment Expression&lt;/strong&gt; &amp;lt;%-- .. --%&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s to comment a block of code so that it’ll not rendered or executed inside the page.
+    &lt;code&gt;aspx
+    &amp;lt;%— This is a comment —%&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Displaying Expression&lt;/strong&gt; &amp;lt;%= .. %&amp;gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s the simplest way to display one piece of information such as Integer or String inside the page, it’ll be converted to &lt;code&gt;Response.Write()&lt;/code&gt;.
+&lt;code&gt;aspx
+&amp;lt;%= DateTime.UtcNow.ToString("dd/MM/yyyy") %&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Tip&lt;/h1&gt;
+&lt;p&gt;Every time you’ll see &lt;code&gt;&amp;lt;%&lt;/code&gt; look at the next character:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If it @ then it’s &lt;strong&gt;Directive Expression&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If it = then it’s &lt;strong&gt;Displaying Expression&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If it # then it’s &lt;strong&gt;Data-Binding Expression&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If it -- then it’s &lt;strong&gt;Comment&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If it \$ then it’s &lt;strong&gt;Expression Builder&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Note:&lt;/h1&gt;
+&lt;p&gt;If you make incorrect syntax inside these expression, Exception will be thrown.&lt;/p&gt;
+&lt;p&gt;Microsoft Support: &lt;a href="http://support.microsoft.com/kb/976112"&gt;Introduction to ASP.NET inline expressions in the .NET Framework&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 10 May 2012 10:18:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-05-10:aspnet-expressions.html</guid><category>aspnet</category><category>webforms</category></item><item><title>ASP.NET Page Lifecycle in Plain English</title><link>http://www.emadmokhtar.com/aspnet-page-lifecycle-in-plain-english.html</link><description>&lt;p&gt;&lt;img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know.&lt;/p&gt;
+&lt;p&gt;Let’s dig in and let’s examine ASP.NET Lifecycle but in short list and description:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PreInit():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In this event all Controls created and Initialized with their default values. You can create dynamic Controls here. You can set theme programmatically here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;OnInit():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In this event you can read the Controls properties the were set in Design Mode and can not read values changed by user.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LoadViewState():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This event fires only if the page is posted back &lt;code&gt;IsPostback == true&lt;/code&gt; and here View State data where are stored in hidden form fields get de-serialized and loads all controls View State data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LoadPostBackData():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This event only fires when Page is posted back and Controls which implement &lt;code&gt;IPostBackDataHandler&lt;/code&gt; interface get loaded with values from &lt;code&gt;HTTP POST&lt;/code&gt; data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Page_Load():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This event is well known among ASP.NET developers and here Page gets loaded and after it all &lt;code&gt;Load()&lt;/code&gt; events of Page Controls fired.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Control Event Handlers:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;These are basically event handlers like Button click event handler &lt;code&gt;Button_Click()&lt;/code&gt; which fires after &lt;code&gt;Page_Load()&lt;/code&gt; event.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PreRender():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This event is fired for each page child controls and her you can change controls values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SaveViewState():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In this event Controls View State saved in Page hidden fields.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Render():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Here all Controls get rendered or every Page Controls Render method is called.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Unload():&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Here we can have Page and Controls clean up operations. This event the Page and its Controls are rendered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ASP.NET Lifecycle will be called ever time there a request for the page.&lt;/li&gt;
+&lt;li&gt;HTTP POST data has only one value per control, that’s why Control like Textbox can gets value from HTTP Post but Control like DropDownList can not gets data from HTTP Post it can gets data from View State.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Init()&lt;/code&gt; and &lt;code&gt;Unload()&lt;/code&gt; events are fired from outside to inside controls, fro example: user control Init() event will be fired before &lt;code&gt;Page_Init()&lt;/code&gt; event.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Reference: &lt;a href="http://msdn.microsoft.com/en-us/library/ms178472.aspx"&gt;ASP.NET Page Lifecycle on MSDN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ASP.NET life cycle events cheat sheet: &lt;a href="http://www.cheat-sheets.org/saved-copy/aspnet-life-cycles-events.pdf"&gt;ASP.NET life cycle events cheat sheet&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 03 May 2012 10:38:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-05-03:aspnet-page-lifecycle-in-plain-english.html</guid><category>aspnet</category></item><item><title>Using Notification in ASP.NET WebForms</title><link>http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html</link><description>&lt;p&gt;I always asked myself, how can I show a neat notification and call it
+from Page code behind? I want to call this notification after doing
+something in code behind, for example notify user that “Record Inserted
+Successfully” and this notification looks like the one on
+&lt;a href="http://twitter.com/"&gt;Twitter&lt;/a&gt; and
+&lt;a href="http://stackoverflow.com/"&gt;Stackoverflow&lt;/a&gt;. I found jQuery plug-in
+called &lt;a href="http://www.givainc.com/labs/jnotify_jquery_plugin.htm"&gt;jNotify&lt;/a&gt;
+has what I want from the notification, and ASP.NET has the Method
+“&lt;strong&gt;&lt;a href="http://msdn.microsoft.com/en-us/library/asz8zsxy.aspx"&gt;ClientScriptManager.RegisterStartupScript
+Method&lt;/a&gt;&lt;/strong&gt;” to add
+Script to page on runtime, so why not combine 2 together and create a
+helper method  plus make it extension method for
+&lt;a href="http://msdn.microsoft.com/en-us/library/system.web.ui.page.aspx"&gt;Page&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Helper Method:&lt;/h4&gt;
+&lt;p&gt;This is the most important part, here where the 2 part I mentioned
+above.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;using System.Web.UI;
+
+namespace jQueryNotification.Helper
+{
+    public static class NotificationHelper
+    {
+        /// &lt;span class="nt"&gt;&amp;lt;summary&amp;gt;&lt;/span&gt;
+        /// Shows the successful notification.
+        /// &lt;span class="nt"&gt;&amp;lt;/summary&amp;gt;&lt;/span&gt;
+        /// &lt;span class="nt"&gt;&amp;lt;param&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;page&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;The page.&lt;span class="nt"&gt;&amp;lt;/param&amp;gt;&lt;/span&gt;
+        /// &lt;span class="nt"&gt;&amp;lt;param&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;The message.&lt;span class="nt"&gt;&amp;lt;/param&amp;gt;&lt;/span&gt;
+        public static void ShowSuccessfulNotification(this Page page, string message)
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), &amp;quot;notificationScript&amp;quot;,
+                                                    &amp;quot;&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;  $(document).ready(function () { $.jnotify(&amp;#39;&amp;quot; +
+                                                    message + &amp;quot;&amp;#39;); });&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&amp;quot;);
+        }
+    }
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;jNotify Script and Style:&lt;/h4&gt;
+&lt;p&gt;In order to use the helper method you need to add jQuery script and
+jNotify script and style&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Styles/jquery.jnotify.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Scripts/jquery-1.4.2.min.js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Scripts/jquery.jnotify.js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Page Code Behind:&lt;/h4&gt;
+&lt;p&gt;ASPX:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;btnSuccess&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;runat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Successful Notification&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;btnSuccess_Click&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;CS:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: Make sure you add the helper method class reference to page’s
+code behind&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;jQueryNotification.Helper&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;jQueryNotification&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;partial&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Default&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UI&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Page&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Page_Load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;btnSuccess_Click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ShowSuccessfulNotification&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Success Notification&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Screenshots:&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="SNAG-0031" src="http://www.emadmokhtar.com/images/SNAG-0031.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0029" src="http://www.emadmokhtar.com/images/SNAG-0029.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0030" src="http://www.emadmokhtar.com/images/SNAG-0030.png" /&gt;&lt;/p&gt;
+&lt;h4&gt;Project File:&lt;/h4&gt;
+&lt;p&gt;I uploaded a project include the notification helper methods I’m using
+in my projects, I’ve added 6 Methods:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Successful Notification:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Normal.&lt;/li&gt;
+&lt;li&gt;Delayed&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Warning Notification:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Normal.&lt;/li&gt;
+&lt;li&gt;Delayed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Error Notification:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Normal.&lt;/li&gt;
+&lt;li&gt;Delayed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I hope these helper methods will help you in your ASP.NET projects,
+happy and productive coding everyone.&lt;/p&gt;
+&lt;p&gt;On GitHub: &lt;a href="https://github.com/EmadMokhtar/jQuery-Notification"&gt;https://github.com/EmadMokhtar/jQuery-Notification&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 02 Feb 2012 15:37:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-02-02:using-notification-in-aspnet-webforms.html</guid><category>aspnet</category><category>jnotify</category><category>jquery</category></item><item><title>Add AJAX effect to ASP.NET Webforms postbacks</title><link>http://www.emadmokhtar.com/add-ajax-effect-to-aspnet-webforms-postbacks.html</link><description>&lt;p&gt;If you want to add AJAX effect to ASP.NET webforms  full postbacks, add
+this meta tags to your page, or even better add it the your master page.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Enter&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Exit&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This effect will remove the blinking  effect from ASP.NET pages, and
+they call it &lt;a href="http://secretgeek.net/fajax.asp"&gt;fajax&lt;/a&gt; aka the fake
+alternative to AJAX&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 01 Jan 2012 15:28:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-01-01:add-ajax-effect-to-aspnet-webforms-postbacks.html</guid><category>ajax</category><category>asp.net</category><category>aspnet</category><category>postback</category><category>tips</category><category>tricks</category></item><item><title>Enforce Join option in Crystal Reports</title><link>http://www.emadmokhtar.com/enforce-join-option-in-crystal-reports.html</link><description>&lt;p&gt;&lt;img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:&lt;/p&gt;
+&lt;h1&gt;Not Enforced&lt;/h1&gt;
+&lt;p&gt;When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the selected tables without restriction (that is, without enforcement based on other tables).&lt;/p&gt;
+&lt;h1&gt;Enforced From&lt;/h1&gt;
+&lt;p&gt;When you select this option, if the "to" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce From and select only a field from Table B, the Select statement will still include the join to Table A because it is enforced. Conversely, selecting only from Table A with the same join condition will not cause the join to Table B to be enforced.&lt;/p&gt;
+&lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will enforce the join if the report has at least one of Store’s fields.&lt;/p&gt;
+&lt;h1&gt;Enforced To&lt;/h1&gt;
+&lt;p&gt;When you select this option, if the "from" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce To and select only a field from Table A, the join to Table B will be enforced, and the Select statement that is generated will include both tables&lt;/p&gt;
+&lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will enforce the join if the report has at least one of Employee’s fields.&lt;b&gt;&lt;/p&gt;
+&lt;h1&gt;Enforced Both&lt;/h1&gt;
+&lt;p&gt;When you select this option, if either the "from" table or the "to" table for this link is used, the link is enforced.&lt;/p&gt;
+&lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will always enforce the join.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Wed, 08 Jun 2011 10:40:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-06-08:enforce-join-option-in-crystal-reports.html</guid></item><item><title>Enable ASP.NET 32-bit application on 64-bit environment</title><link>http://www.emadmokhtar.com/enable-asp-net-32-bit-application-on-64-bit-environment.html</link><description>&lt;p&gt;If you’re deploying 32-bit ASP.NET application on 64-bit environment,
+you can enable 32-bit in IIS, you have 2 ways to do it by:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Set Application Pool Defaults.&lt;/li&gt;
+&lt;li&gt;Change specific Application Pool Advanced Settings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="IIS Manager" src="http://www.emadmokhtar.com/images/32bitasp_1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Here is the setting you need to change either in number 1 or 2:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Application Pool settings" src="http://www.emadmokhtar.com/images/32bitasp1.jpg" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 11 Mar 2011 10:47:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-03-11:enable-asp-net-32-bit-application-on-64-bit-environment.html</guid></item><item><title>Crystal Reports 13 JavaScript Error</title><link>http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html</link><description>&lt;p&gt;&lt;img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to &lt;a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx"&gt;this&lt;/a&gt; method being obsolete.&lt;/p&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;p&gt;So here’s the solution I found it:&lt;/p&gt;
+&lt;p&gt;First, locate &lt;code&gt;crv.js&lt;/code&gt; file in &lt;code&gt;C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer&lt;/code&gt; then search for this code block at the bottom of the file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Sys&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;!==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;undefined&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;Sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;notifyScriptLoaded&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And replace it with this code block&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;!==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;undefined&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;Sys&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;notifyScriptLoaded&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After changed this code, everything works fine now and reports shows in ASP.NET pages.&lt;/p&gt;
+&lt;h1&gt;Note&lt;/h1&gt;
+&lt;p&gt;Take a backup from &lt;code&gt;crv.js&lt;/code&gt; file before editing.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 22 Feb 2011 10:31:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-02-22:crystal-reports-13-javascript-error.html</guid><category>crystalreports</category></item><item><title>Client-side Validation in ASP.NET webforms by using jQuery</title><link>http://www.emadmokhtar.com/client-side-validation-in-aspnet-webforms-by-using-jquery.html</link><description>&lt;p&gt;&lt;img alt="JQuery_logo_color_onwhite.png" src="http://www.emadmokhtar.com/images/JQuery_logo_color_onwhite.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community
+about Client-side Validation using jQuery in ASP.NET webforms, and I
+thought I'll share the session as a blog post, so let's start&lt;/p&gt;
+&lt;h3&gt;Why using Client-side validation?&lt;/h3&gt;
+&lt;p&gt;Web developers love to use Client-side validation to increase their web
+application user experience "UX", to make web application feels like the
+desktop application, and to reduce the round-trip to web server to
+validate the user inputs every time he/she submit a page.&lt;/p&gt;
+&lt;h3&gt;Demo:&lt;/h3&gt;
+&lt;p&gt;First of all I'm using one of the oldest and the first jQuery validation
+plugin called validation, please take a look ot its documentation for
+more info.
+[&lt;a href="http://docs.jquery.com/Plugins/Validation" title="jQuery Validation Plugin Documentation"&gt;link&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;Let's create a simple ASP.NET page to apply some of validation rules on:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;First name:
+
+Password:
+Password Confirmation:
+
+Email Address:
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now let's write our jQuery code to apply some validation rules on this
+ASP.NET form, but first make sure you create a link for jQuery .js file
+and the plugin validation.js file into the aspx page or you can use the
+Microsoft CDN version {hosted on Microsoft servers} "
+&lt;a href="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js"&gt;http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js&lt;/a&gt;"
+"&lt;a href="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"&gt;http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js&lt;/a&gt;
+":&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        $(document).ready(function () {
+            $(&amp;quot;#MainForm&amp;quot;).validate({
+                rules:
+                {
+                    TxtFirstName:
+                    {
+                        required: true,
+                        rangelength: [3, 12]
+                    },
+                    TxtPassword:
+                    {
+                        required: true
+                    },
+                    TxtRePassword:
+                    {
+                        required: true,
+                        equalTo: &amp;quot;#txtPassword&amp;quot;
+                    },
+                    TxtEmail:
+                    {
+                        required: true,
+                        email: true
+                    },
+                }
+            },
+            messages:
+                {
+                    TxtFirstName:
+                    {
+                        required: &amp;quot;Please enter your first name&amp;quot;,
+                        rangelength: &amp;quot;Please enter minimum 3 characters and Maximum 12 character&amp;quot;
+                    },
+                    TxtRePassword:
+                    {
+                        required: &amp;quot;Please enter your password again&amp;quot;,
+                        equalTo: &amp;quot;The two password is not matching&amp;quot;
+                    },
+                    TxtEmail:
+                    {
+                        required: &amp;quot;Please enter your email address&amp;quot;,
+                        email: &amp;quot;Please enter valid email address&amp;quot;
+                    }
+
+                }
+        });
+    });
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As you can see it's so simple and easy to apply these validation, like
+required rule, which means this field is required field, and apply the
+email RegExp with email: true.&lt;/p&gt;
+&lt;p&gt;The .validate() function takes 2 parameters {rules, messages}, rules is
+the validation rules you want to apply, and message is the text message
+you want to appear to the user if he doesn't apply your validation rules
+on his inputs, and BTW message is optional {overload .validate()
+function} you can let the plugin display the default message according
+to the rule itself, for example here I let the plugin display the
+default message for TxtPassword Required rule.&lt;/p&gt;
+&lt;p&gt;Note: please use ASP.NET 4 new feature ClientIDMode, or use &lt;code&gt;&amp;lt;%=txtFirstName.UniqueID %&amp;gt;&lt;/code&gt; when writing the Control ID inside jQuery script.&lt;/p&gt;
+&lt;p&gt;Please for more validation rules read the documentation I refer above.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 20 Jul 2010 06:56:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-07-20:client-side-validation-in-aspnet-webforms-by-using-jquery.html</guid></item><item><title>ASP.NET 4 webforms new feature: ClientIDMode</title><link>http://www.emadmokhtar.com/aspnet-4-webforms-new-feature-clientidmode.html</link><description>&lt;p&gt;Today we'll examine ClientIDMode the new feature of ASP.NET 4 which makes life easier on developers when writing client-side scripting/code like javascript or jQuery.&lt;/p&gt;
+&lt;h1&gt;ClientIDMode control property:&lt;/h1&gt;
+&lt;p&gt;You can assign ClientIDMode property for ASP.NET controls which is take 4 values&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AutoID&lt;/li&gt;
+&lt;li&gt;Inherit&lt;/li&gt;
+&lt;li&gt;Predictable&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Static&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And I'll demonstrate what the different between those 4 values.&lt;/p&gt;
+&lt;h1&gt;Demo:&lt;/h1&gt;
+&lt;p&gt;We've simple ASP.NET 4 page with Master page, with one button on it, and We'll set the ClientIDMode for the button control and examine what's happen when ASP.NET render it to HTML.&lt;/p&gt;
+&lt;h2&gt;AutoID:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”AutoID”/&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;The Rendered HTML:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ctl00$ContentPlaceHolder1$btnSubmit&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;”ctl00_ContentPlaceHolder1_btnSubmit”&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It's rendered like what ASP.NET 3.5 do, so if you want to renter control's ID like ASP.NET 3.5 set ClientIDMode to AutoID.&lt;/p&gt;
+&lt;h2&gt;Inherit:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”Inherit”&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;The Rendered HTML:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ctl00$ContentPlaceHolder1$btnSubmit&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Actually it tells the control to defer to the naming behavior mode of the parent container control.&lt;/p&gt;
+&lt;h2&gt;Predictable (default):&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”Predictable”&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;The Rendered HTML:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ContentPlaceHolder1$btnSubmit&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;”ContentPlaceHolder1_btnSubmit”&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Remove the ugly default auto generated ID prefix "ctl00"&lt;/p&gt;
+&lt;h2&gt;Static:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”Static”&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;The Rendered HTML:&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ctl00$ContentPlaceHolder1$btnSubmit&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It'll rendered the ID like what you set for ID attribute&lt;/p&gt;
+&lt;h1&gt;Where you can set the ClientIDMode:&lt;/h1&gt;
+&lt;h2&gt;Web.config:&lt;/h2&gt;
+&lt;p&gt;You can set the ClientIDMode in web.config file inside page tag&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;system.web&amp;gt;&lt;/span&gt;
+        ...
+        &lt;span class="nt"&gt;&amp;lt;pages&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;“Static“&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        ...
+    &lt;span class="nt"&gt;&amp;lt;/system.web&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Page:&lt;/h2&gt;
+&lt;p&gt;You can set the ClientIDMode on the page tag in the upper of ASPX file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="no"&gt;Page&lt;/span&gt; &lt;span class="no"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;””&lt;/span&gt; &lt;span class="no"&gt;Language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="c1"&gt;#” MasterPageFile=”~/Site.Master” AutoEventWireup=”true”&lt;/span&gt;
+&lt;span class="no"&gt;CodeBehind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="no"&gt;Demo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;aspx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cs&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="no"&gt;Inherits&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="no"&gt;ClientIDModeDemo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Demo&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt; &lt;span class="no"&gt;ClientIDMode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="no"&gt;Static&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Control:&lt;/h2&gt;
+&lt;p&gt;You can set it for specific control, but remember the main control is inherit this property, and this what we do in the demo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”Static”&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 04 May 2010 18:17:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-05-04:aspnet-4-webforms-new-feature-clientidmode.html</guid></item></channel></rss>

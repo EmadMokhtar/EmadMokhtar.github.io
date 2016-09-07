@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/development.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 11 Oct 2015 12:00:00 +0300</lastBuildDate><item><title>Solution for psycopg2 installation error with Mac OSX El Capitan</title><link>http://www.emadmokhtar.com/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html</link><description>&lt;h1&gt;The Issue&lt;/h1&gt;
+&lt;p&gt;If you tried to install to install psycopg2 package after upgrading to Mac OSX El Capitan and got an error like this:     &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;xcrun&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;invalid&lt;/span&gt; &lt;span class="n"&gt;active&lt;/span&gt; &lt;span class="n"&gt;developer&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;(/&lt;/span&gt;&lt;span class="n"&gt;Library&lt;/span&gt;&lt;span class="sr"&gt;/Developer/&lt;/span&gt;&lt;span class="n"&gt;CommandLineTools&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt; 
+&lt;span class="n"&gt;missing&lt;/span&gt; &lt;span class="n"&gt;xcrun&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/Library/Developer/CommandLineTools/usr/bin/x&lt;/span&gt;&lt;span class="n"&gt;crun&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="pip.log" src="http://www.emadmokhtar.com/images/1444569163_full.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;The Soltuion:&lt;/h1&gt;
+&lt;p&gt;Simplly install Command-Line Tools:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo xcode-select --install&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 11 Oct 2015 12:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2015-10-11:solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html</guid><category>developement</category><category>macosx</category></item></channel></rss>
