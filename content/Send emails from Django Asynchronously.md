@@ -21,12 +21,12 @@ Now let’s see how we can do that.
 ## Step 1: Install and Setup Celery
 
 
-* In terminal, active your [virtualenv](http://www.emadmokhtar.com/2015/03/virtual-environment/) and type `$ pip install django-celery` 
+* In terminal, active your [virtualenv](http://www.emadmokhtar.com/2015/03/virtual-environment/) and type `$ pip install django-celery`
 * Now celery and its Django app djcelery are installed into your virtualenv.
 * Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery’ to INSTALLED_APPS.
 
 ```python
-INSTALLED_APPS = ( 
+INSTALLED_APPS = (
 ...
 'djcelery',
 ...
@@ -72,7 +72,7 @@ If you will use RabbitMQ, please visit this links for [download and installation
 * Next step is to add djcelery to your Django project, go to settings.py and add ‘djcelery_email’ to INSTALLED_APPS.
 
 ```python
-INSTALLED_APPS = ( 
+INSTALLED_APPS = (
 ...
 'djcelery_email',
 ...
@@ -172,9 +172,9 @@ mail.send_messages(subject='My App account verification',
 ## Step 4: Running Celery and RabbitMQ
 
 ### Running RabbitMQ
-`$ sudo rabbitmq-server` and keep the terminal session opened.
+`$ sudo rabbitmq-server start` and keep the terminal session opened.
 
-`$ sudo rabbitmq-server -detached` if you want to run RabbitMQ in the background.
+`$ sudo rabbitmq-server start -detached` if you want to run RabbitMQ in the background.
 
 ### Running Celery
-`$ celery -A my_app worker -l info` and keep the terminal session opened.
+`$ ./manage.py celery -l info` and keep the terminal session opened.
