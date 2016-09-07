@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/tools.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2013-11-03T16:16:00+03:00</updated><entry><title>No More Horizontal Scroll Bar in Visual Studio 2012</title><link href="http://www.emadmokhtar.com/no-more-horizontal-scroll-bar-in-visual-studio-2012.html" rel="alternate"></link><updated>2013-11-03T16:16:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2013-11-03:no-more-horizontal-scroll-bar-in-visual-studio-2012.html</id><summary type="html">&lt;p&gt;Every time I’m working on ASP.NET WebForms and open .ASPX file I found an ugly Horizontal scroll bar, and the worst case when you’re searching for attribute for big control like GridView and you want to change it, it’s like a hell, I hate doing this and sadly as developer I’m doing it frequently.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Code Lines Without Wrap" src="http://www.emadmokhtar.com/images/0311201340607PM.png" /&gt;&lt;/p&gt;
+&lt;p&gt;After investigations and googling, I found the solution is to have all the text in front of me and let Visual Studio to wrap it for me. You can do this In Visual Studio 2012 go to Tools –&amp;gt; Options –&amp;gt; Text Editor –&amp;gt; All Languages –&amp;gt; Check Word wrap.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Word wrap Settings" src="http://www.emadmokhtar.com/images/SNAGIT.png" /&gt;&lt;/p&gt;
+&lt;p&gt;After choosing this option Visual Studio 2012 will word warp the lines
+according to your screen but (yes but) Microsoft missing a feature which
+is respect the line Indentation. If you choose this option line after
+wrap will start from the left.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Wrapped Lines Without Indentation" src="http://www.emadmokhtar.com/images/0311201340025PM.png" /&gt;&lt;/p&gt;
+&lt;p&gt;To solve this there is a small extension you can us called &lt;a href="http://visualstudiogallery.msdn.microsoft.com/a5b5001e-fe7a-4c08-9cf5-96ae5892088a"&gt;WordWrapIndentation&lt;/a&gt; download it and it’ll be activated once you activate Word wrap option.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="WordWrapIndentation Lines" src="http://www.emadmokhtar.com/images/0311201340324PM.png" /&gt;&lt;/p&gt;
+&lt;p&gt;That’s all folks.&lt;/p&gt;</summary><category term="VisualStudio"></category><category term="VS2012"></category></entry><entry><title>The fast way to change font to Bold in Visual Studio</title><link href="http://www.emadmokhtar.com/the-fast-way-to-change-font-to-bold-in-visual-studio.html" rel="alternate"></link><updated>2013-10-08T13:24:00+03:00</updated><author><name>admin</name></author><id>tag:www.emadmokhtar.com,2013-10-08:the-fast-way-to-change-font-to-bold-in-visual-studio.html</id><summary type="html">&lt;p&gt;Did you even download Visual Studio color schemes from &lt;a href="http://studiostyl.es/"&gt;studiostyl.es&lt;/a&gt; and you want to change its style to &lt;strong&gt;Bold&lt;/strong&gt;? I’ve did this hundred of times and
+it’s boring to do it manually by going throw even Display Item and set its style to &lt;strong&gt;Bold&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Visual Studio Font Settings" src="http://www.emadmokhtar.com/images/SNAG0017.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I found a way to do this rapidly in less than a minute. The idea comes when I opened the Visual Studio Settings file in notepad and found it’s XML file with all Visual Studio settings and there is a part for font settings with &lt;code&gt;BoldFont="Yes"&lt;/code&gt; attribute for each item.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Settings file in notepad" src="http://www.emadmokhtar.com/images/SNAG0018.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Let’s see How to do it:&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Visual Studio Setting file &lt;code&gt;.vssettings&lt;/code&gt; with Notepad.&lt;/li&gt;
+&lt;li&gt;Press on &lt;code&gt;Ctrl + H&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Replace &lt;code&gt;BoldFont="No"&lt;/code&gt; to &lt;code&gt;BoldFont=”Yes&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save file.&lt;/li&gt;
+&lt;li&gt;Import Settings to Visual Studio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note: if you want to set style for your existing settings please export your settings first and apply the steps mentioned above.&lt;/p&gt;
+&lt;p&gt;*I’m using &lt;a href="http://www.flos-freeware.ch/notepad2.html"&gt;Notepad2&lt;/a&gt;&lt;/p&gt;</summary><category term="VisualStudio"></category><category term="VS2010"></category><category term="VS2012"></category></entry><entry><title>Speedup Visual Studio 2010</title><link href="http://www.emadmokhtar.com/speedup-visual-studio-2010.html" rel="alternate"></link><updated>2011-06-15T15:18:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-06-15:speedup-visual-studio-2010.html</id><summary type="html">&lt;p&gt;&lt;img alt="VisualStudio-WallPaper" src="http://www.emadmokhtar.com/images/VisualStudio-WallPaper-04_2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Every time I finished installing Microsoft Visual Studio 2010 on my machines I Google “Speedup Visual Studio 2010”, so for time sake I’m gathering the effective links in one place as reference to me and to anyone out there.&lt;/p&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/4325630/ways-to-speedup-visual-studio-2010"&gt;Ways to speedup Visual Studio 2010&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.certsandprogs.com/2009/10/speeding-up-start-up-of-visual-studio.html#axzz1PJsvSzZp"&gt;Speeding up the start up of Visual Studio 2010 Beta 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.stevienova.com/2009/01/05/how-to-speed-up-visual-studio-start-up/"&gt;How to Speed Up Visual Studio Start Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bentsai.wordpress.com/2009/06/12/tip-kill-tsvncache-exe-to-speed-up-visual-studio-startup-times/"&gt;Tip: Kill TSVNCache.exe to speed up Visual Studio startup times&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.galador.net/codeblog/post/2008/09/10/Speed-up-Visual-Studio-startup.aspx"&gt;Speed up Visual Studio startup&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Notes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Some of those links have tips for Visual Studio 2008 but still work on Visual Studio 2010&lt;/li&gt;
+&lt;li&gt;Some of those links have tip to disable Resharper for myself I will never do this, I love Resharper and I cannot take the risk to disable it to speed up my Visual Studio 2010.&lt;/li&gt;
+&lt;li&gt;In link no. 2 it is says for Beta 2 but work with RTM and SP1, and please look at the comment I left there.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Free .NET Decompilers</title><link href="http://www.emadmokhtar.com/free-net-decompilers.html" rel="alternate"></link><updated>2011-06-14T15:20:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-06-14:free-net-decompilers.html</id><summary type="html">&lt;p&gt;After &lt;a href="http://www.red-gate.com/"&gt;Redgate&lt;/a&gt; &lt;a href="http://reflector.red-gate.com/download.aspx?TreatAsUpdate=1"&gt;announced the .NET Reflector is became a paid-for product&lt;/a&gt;, some companies took advantage of this announcement and start to build a free decompilers for developers, and developers start looking for alternatives for .NET Reflector they love it as a free product and few of them will pay for it (including me :)), so I &lt;a href="http://www.google.com/"&gt;google&lt;/a&gt;/&lt;a href="http://www.bing.com/"&gt;bing&lt;/a&gt;/&lt;a href="http://www.kngine.com"&gt;kngine&lt;/a&gt; around to gather the best free .NET decompilers; here is the list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.jetbrains.com/decompiler/"&gt;JetBrain dotPeek&lt;/a&gt;: is a new free-of-charge .NET decompile  from JetBrains, the makers of &lt;a href="http://www.jetbrains.com/resharper?dotpeek"&gt;ReSharper&lt;/a&gt; and more developer productivity tools.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dotPeek" src="http://www.emadmokhtar.com/images/dotPeek.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://wiki.sharpdevelop.net/ILSpy.ashx"&gt;ILSpy&lt;/a&gt;: ILSpy is the open-source .NET assembly browser and decompiler.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ILSpy" src="http://www.emadmokhtar.com/images/ILSpy-yield-return_3.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.telerik.com/products/decompiling.aspx"&gt;Telerik JustDecompile&lt;/a&gt;: is a new, free developer productivity tool designed to enable easy .NET assembly browsing and decompiling.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Telerik JustDecompile" src="http://www.emadmokhtar.com/images/justd.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Free Bug Tracking Database</title><link href="http://www.emadmokhtar.com/free-bug-tracking-database.html" rel="alternate"></link><updated>2010-12-31T00:37:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2010-12-31:free-bug-tracking-database.html</id><summary type="html">&lt;p&gt;Today I was looking for free bug tracking database &amp;amp; found a lot some of them are open source, so I’ll share them with you geeks.&lt;/p&gt;
+&lt;p&gt;1.&lt;a href="http://ifdefined.com/bugtrackernet.html"&gt;BugTracker.NET&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;o BugTracker.NET is a free, open-source, web-based bug tracker or
+customer support issue tracker written using ASP.NET, C#, and
+Microsoft SQL Server (or its free cousin, SQL Server Express). It is
+in daily use by thousands of development and customer support teams
+around the world.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2.
+&lt;a href="http://www.bugnetproject.com/"&gt;BugNET&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;o BugNET is an issue tracking and project issue management solution
+built using the ASP.NET web application framework. Email
+notifications, reporting and per project configuration of fields and
+values allows efficient management of bugs, feature requests, and
+other issues for projects of any scale.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.vaxtech.com/bug-tracking.htm"&gt;Web Based Bug
+Tracker&lt;/a&gt;  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;o Web Bug Tracking software allows you to track, manage bugs and
+features so that you can organize your bugs, defects or issue during
+all stages of software development. &lt;strong&gt;Bug Tracker&lt;/strong&gt; makes your project
+development more efficient by tracking bugs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="www.vaxtech.com/win-bug-tracking.htm"&gt;Windows Based Bug Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;o This tool lets you know how many bugs are in process, how many are
+resolved and how many are closed. It records bug report in database
+and allows simultaneous access by different users. Bug Tracker also
+offers bug classification, auto and manual task assignment, sorting,
+fully customizable filter, attachment, flexible right control, auto
+login and more. Bug Tracker also supports task functionality, through
+which you can add tasks and assign tasks to your team members.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;5.&lt;a href="http://www.bugzilla.org/"&gt;Bugzilla&lt;/a&gt;:  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;o Bugzilla is a server software designed to help you manage software
+development.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you’re using any other bug database or if you’re using one of these, please share your experience with us. You also can ping me on Twitter &lt;a href="http:/www.Twitter.com/EmadMokhtar"&gt;&lt;strong&gt;@EmadMokhtar&lt;/strong&gt;&lt;/a&gt; or leave a comment.&lt;/p&gt;</summary></entry></feed>

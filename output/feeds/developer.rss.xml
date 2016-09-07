@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/developer.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 13 Dec 2015 11:47:00 +0300</lastBuildDate><item><title>My journey from paper note to paperless note</title><link>http://www.emadmokhtar.com/my-journey-from-paper-note-to-paperless-note.html</link><description>&lt;p&gt;&lt;a href="http://www.emadmokhtar.com/wp-content/uploads/1450004669_full.png"&gt;&lt;img alt="paperless note on iPad" src="http://www.emadmokhtar.com/images/1450004669_full.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I really love to take notes wherever and wheneve. I like to keep my notes with me, but after buying iPad mini I decide to change my note tool from paper notes to paperless notes (e-notes), but I like to hand writing my notes I want something that feels like paper notes.&lt;/p&gt;
+&lt;h3&gt;Searching for the tool&lt;/h3&gt;
+&lt;p&gt;I thought of buying a stylus for iPad that feels like real pen and start taking notes, first I found &lt;a href="https://www.fiftythree.com/pencil"&gt;fiftythree Pencil&lt;/a&gt; but it was built mainly for designers not for writing, then I found The best stylus for me is the &lt;a href="http://www.adonit.net/jot/script/"&gt;Jot Script&lt;/a&gt; but it is expensive but it has the best writing experience and best accuracy. This is for the stylus, for the application I searched about note application that can enhance my writing accuracy, I found two note apps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://evernote.com/penultimate/"&gt;Penultimate Evernote&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Free&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sync with Evernote&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zoom in and write with line recognition&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.goodnotesapp.com/"&gt;Goodnotes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Paid  (but worth every penny)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Backup with most of cloud storages like Google Driver, Dropbox, &amp;amp; OneDrive.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pen size &amp;amp; color customization.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Palm rest and palm rejection.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add annotations to PDF files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Writing panel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shape recognition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;My final tools&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Device:&lt;/strong&gt; iPad mini with retina display.&lt;br /&gt;
+&lt;strong&gt;Note App:&lt;/strong&gt; Goodnotes.&lt;br /&gt;
+&lt;strong&gt;Stylus:&lt;/strong&gt;  &lt;a href="http://www.moshi.com/peripheral-stylus-pen-stanza-duo"&gt;Moshi Stanza Duo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="moshi stanzaa duo" src="http://www.emadmokhtar.com/images/1450007048_full.jpeg" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 13 Dec 2015 11:47:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2015-12-13:my-journey-from-paper-note-to-paperless-note.html</guid><category>notes</category><category>papreless</category></item><item><title>CodeWars.com Can Improve Your Problem Solving Skill</title><link>http://www.emadmokhtar.com/codewarscom-can-improve-your-problem-solving-skill.html</link><description>&lt;p&gt;&lt;img alt="Codewars logo" src="http://www.emadmokhtar.com/images/1444038896_full.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Recently I posted that &lt;a href="http://www.emadmokhtar.com/2015/05/warning-your-daily-job-can-kill-your-skills/"&gt;your daily job can kill your skills&lt;/a&gt;, and I mentioned specifically the problem solving skill, as a software developer problem solving skill is one of the most important and key skill you need to master to be a good developer, in the post I mentioned that I started to solve code puzzles on &lt;a href="http://codeeval.com/"&gt;CodeEval.com&lt;/a&gt;, it is good but during one of &lt;a href="https://www.livecoding.tv"&gt;livecoding.tv&lt;/a&gt; session the developer mentioned &lt;a href="http://codewars.com/"&gt;CodeWars.com&lt;/a&gt; and I thought to give it a try, so I signed in and start to solve some puzzles aka katas and get higher in rank, and I discovered the differences and why &lt;a href="http://codewars.com/"&gt;CodeWars.com&lt;/a&gt; is better from my perspective.  &lt;/p&gt;
+&lt;h2&gt;CodeWars advantages&lt;/h2&gt;
+&lt;p&gt;In CodeWars you’ll start to solve puzzles (it’s called kata) from starting rank (easy katas) toward much harder ones and this is common in code puzzles website, but what is special about CodeWars:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Check others solutions: &lt;/strong&gt;After post your solution you can view others solutions, and this can really help you in crafting the skill, for example you solved one kata and after you checked others solutions, you discovered better solutions “WOW these guys solved it in very clean way", and now you know how to solve the problem with more than one way, and how to solve it in clean way.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write your own tests:&lt;/strong&gt; While you are trying to solve the kata, you can write your own unit tests using &lt;a href="http://www.codewars.com/docs/kata-test-framework"&gt;CodeWars test framework&lt;/a&gt;&lt;a href="http://www.codewars.com/docs/kata-test-framework"&gt;&lt;/a&gt; and test your solution before submit your final code, this will increase the skill of writing tests.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search:&lt;/strong&gt; During the thinking process, you will do search (Googling) to get the best solution and this will increase your knowledge about the language and moreover libraries inside the language. Believe me some developers don’t have the skill of search and getting the best solution and don’t underestimate this skill.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discussions&lt;/strong&gt;: You can ask and have a discussion with other warriors about certain Kata, if you have any problem with the kata don’t hesitate to ask the community, they are very active and you will get fast responses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Contribution:&lt;/strong&gt; After you get certain rank you can add new kata, translate one kata to other language like if a warrior submitted JavaScript kata you can translate it to Python, vote for beta katas, or vote for other warrior solution.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I really like &lt;a href="http://codewars.com/"&gt;CodeWars.com&lt;/a&gt; and I’m using it for several month now and I’m a big fan. Please if you will give it a try &lt;a href="http://www.codewars.com/r/tv2_EA"&gt;sign up with this link&lt;/a&gt; to give me honor points, and don’t forget to &lt;a href="http://www.codewars.com/users/EmadMokhtar"&gt;follow me&lt;/a&gt; there.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Mon, 05 Oct 2015 09:57:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2015-10-05:codewarscom-can-improve-your-problem-solving-skill.html</guid><category>codeing</category><category>skills</category><category>problem solving</category></item><item><title>Solo Developer</title><link>http://www.emadmokhtar.com/solo-developer.html</link><description>&lt;p&gt;Developers and coders are known as anti-social but after many years in development field, I can tell you this is totally wrong and developers who can communicate well are good developers they can learn and understand what they are really doing, if you read soft skills books for developers, sure you will find chapter about communications and How to be a part of software development team, but if you can’t communicate with your teammate you’ll always work lonely and gain nothing more than loneliness and coding in the dark.&lt;/p&gt;
+&lt;p&gt;Since I joined the software industry 4+ years, and I’m working, coding, and developing alone, I read about pair programming in XP “eXtreme Programming” and daily standup meetings in SCRUM, and How it can increase the quality and productivity of teams, but I didn’t experience those, I never pair programming and never being in one of Agile methodologies, but I’m trying to think with someone else not in the same team and not a developer, but it worth trying because it’s really amazing, you’ll feel like you have two extra minds, yes as you read it, it is like 1 + 1 = 3.&lt;/p&gt;
+&lt;p&gt;If you watched House M.D. series you will know that Dr. House always need his team to think with him even if they are away from the right answer but being there to start a brainstorming and with one simple unintended input from the team Dr. House can find the solution.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="House MD" src="http://www.emadmokhtar.com/images/1434438424_full.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;So I decided that stop working alone and my next gig will be within a development team.&lt;/p&gt;
+&lt;p&gt;And What about you? Do you feel you need to work with a team? Do you like your team? Or Do you love doing it alone?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Wed, 08 Jul 2015 09:45:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2015-07-08:solo-developer.html</guid><category>developer</category><category>programming</category></item><item><title>Fictions for Developers</title><link>http://www.emadmokhtar.com/fictions-for-developers.html</link><description>&lt;p&gt;&lt;img alt="blackhole" src="http://www.emadmokhtar.com/images/blackhole.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://www.timothyferriss.com/"&gt;Tim Ferriss&lt;/a&gt;&lt;/strong&gt; recommended in his
+&lt;strong&gt;&lt;a href="http://www.amazon.com/4-Hour-Work-Week-Escape-Anywhere-ebook/dp/B002WE46UW/ref=sr_1_1?ie=UTF8&amp;amp;qid=1415863625&amp;amp;sr=8-1"&gt;4-Hours
+Workweek&lt;/a&gt;&lt;/strong&gt;
+book to read fiction books before sleep and this will help you
+disconnected from the real world and jump in book world which lead to
+better sleep.&lt;/p&gt;
+&lt;p&gt;Last Monday I went to watch the
+&lt;strong&gt;&lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=4&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=0CCgQFjAD&amp;amp;url=http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0816692%2F&amp;amp;ei=u11kVPXNFIuV7AbVy4DoDw&amp;amp;usg=AFQjCNEwQcJ-old_Ha_400cEjFgIpjPT5g&amp;amp;sig2=fksmaVPQ1mq71ghUjTkRSQ&amp;amp;bvm=bv.79189006,d.ZGU"&gt;Interstellar&lt;/a&gt;&lt;/strong&gt;
+movie with my wife and it was like reading fiction book before sleep,
+the movie is 3 hours long which is unique nowadays and full of science
+and psychics, but the story is full of fiction and the soundtracks are
+incredible. After we finished the movie I looked at my watch and WOW 3
+hours passed and I felt like I was inside the movie and flying in the
+space, the time passed by and all my inner thoughts, to do lists,
+project plans, pending households, and life events are vanished and I’m
+totally inside the movie, in other words I’m totally disconnected from
+the real world. I felt fresh even though that it’s 12:00 AM and I have a
+work to go in the morning, but I felt fresh and my mind is clear and
+this give me chance to start my day so fresh, plus now I want to read
+more about space, black holes, wormholes, and singularity.&lt;/p&gt;
+&lt;h1&gt;Will this help developers?&lt;/h1&gt;
+&lt;p&gt;Yes, developers mind is full of thoughts and ideas like, How am going to
+implement this feature? How can I fix this bug? I want to learn this
+language or technology, etc.. It’s nature of our career, we are thinkers
+and smart people, and you always ALWAYS will find developer mind full of
+thoughts.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 13 Nov 2014 12:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-11-13:fictions-for-developers.html</guid><category>developer</category><category>geek</category></item><item><title>Run rabbit run</title><link>http://www.emadmokhtar.com/run-rabbit-run.html</link><description>&lt;p&gt;&lt;img alt="image" src="http://www.emadmokhtar.com/images/wpid-wp-1413429250063.jpeg" /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Run rabbit run,  dig that hole forget the sun,  and when at last the
+work is done, don't sit down it's time to dig another one. #PinkFloyd&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We keep running in the same freakin loop/circle &amp;amp; forget
+pursuiting/catch our dreams and goals, and just stick to little small
+useless life events.&lt;/p&gt;
+&lt;p&gt;Sometimes we invent things to take them as excuses like money, time,
+children, place, or company. Manage yourself and take guidance from
+Allah, fix your issues aka &amp;amp; "excuses" , have a dream no no have a lot
+of dreams and live your life to catch the and make them true.&lt;/p&gt;
+&lt;p&gt;Ask yourself every morning, Am I like what I'm doing? If no please quit
+it and go live your life and search about what you are like to do and
+start living it, one day shorter breathe and here come the death&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 16 Oct 2014 10:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-10-16:run-rabbit-run.html</guid><category>dreams</category><category>life</category></item><item><title>Generate POCO for Database Tables Using T4 Template</title><link>http://www.emadmokhtar.com/generate-poco-for-database-tables-using-t4-template.html</link><description>&lt;p&gt;If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate &lt;a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object"&gt;POCO&lt;/a&gt; classes for you, I’ve got a solution for you. Personally I prefer using &lt;a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit"&gt;T4 template&lt;/a&gt; that &lt;a href="http://www.toptensoftware.com/petapoco/"&gt;PetaPoco&lt;/a&gt; provides, so let’s see how you can use it.&lt;/p&gt;
+&lt;h1&gt;Let’s Start:&lt;/h1&gt;
+&lt;p&gt;First, install/add PetaPoco to your project using Nuget:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Open **Package Manager Console** and type `install-package petapoco`
+2.  Wait until package downloaded and installed to your project.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="packagemanager" src="http://www.emadmokhtar.com/images/packagemanager.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="solutionafterinstall" src="http://www.emadmokhtar.com/images/solutionafterinstall.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Second, modify T4 template to generate POCO classes for you:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;code&gt;Database.tt&lt;/code&gt; file and modify Settings part.&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;ConnectionStringName&lt;/code&gt; write your database connection string name which located in app.config or web.config.&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;Namespace&lt;/code&gt; write the namespace for generated Poco classes.&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;RepoName&lt;/code&gt; write Repository name, this is optional and recommended if you’ll use PetaPoco.&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;ClassPerfex&lt;/code&gt; write required class name prefix, this is optional.&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;ClassSuffix&lt;/code&gt; write required class name suffix, this is optional.&lt;/li&gt;
+&lt;li&gt;Save the file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="settings" src="http://www.emadmokhtar.com/images/settings.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Third, congratulation your POCO classes and Repo generated under Database.tt –&amp;gt; Database.cs.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="pocos" src="http://www.emadmokhtar.com/images/pocos.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Notes:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure you set &lt;code&gt;providerName&lt;/code&gt; in &lt;code&gt;ConnectString&lt;/code&gt; or T4 template will not work.&lt;/li&gt;
+&lt;li&gt;If you faced C# issue during POCO generation, please open &lt;code&gt;PetaPoco.Core.ttinclude&lt;/code&gt; file and edit the language attribute by removing 3.5 from it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="csharpeerror" src="http://www.emadmokhtar.com/images/csharpe-error.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you won't use PetaPoco, modify the generated POCO classes and remove PetaPoco specific class attributes or you can use modified version of &lt;a href="https://dl.dropboxusercontent.com/u/10071407/PetaPoco.Generator.ttinclude"&gt;Poco.Generator.ttinclude&lt;/a&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="attributes" src="http://www.emadmokhtar.com/images/attributes.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 12 May 2014 12:26:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-05-12:generate-poco-for-database-tables-using-t4-template.html</guid><category>poco</category><category>t4</category><category>dotNET</category><category>C#</category></item><item><title>.NET Developer Comfort Zone</title><link>http://www.emadmokhtar.com/net-developer-comfort-zone.html</link><description>&lt;p&gt;&lt;img alt="red-pill-or-blue-pill" src="http://www.emadmokhtar.com/images/red-pill-or-blue-pill.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I’m a .NET developer and to be specific I’m a web developer who use .NET framework and .NET stack to create web application (Web App), and nowadays I’m learning ASP.NET MVC to move from WebForms world to MVC world, but in future I’m planning to get out of my comfort zone again and get out of .NET world and try the open source software (OSS) world, I’ve attended many sessions for &lt;a href="http://gdgkuwait.com/"&gt;GDG Kuwait&lt;/a&gt; which is Google Developers Group located in Kuwait and the only developer group in here with .NET/C# experience and it’s full of enthusiasm developers.&lt;/p&gt;
+&lt;p&gt;When I will take this leap/paradigm shift I will take it for real, let me explain what I mean by that. What I’m planning is learning &lt;a href="http://rubyonrails.org/"&gt;Ruby on Rails&lt;/a&gt;, maybe you want to learn &lt;a href="https://www.djangoproject.com/"&gt;Django&lt;/a&gt; or &lt;a href="http://nodejs.org/"&gt;Node.js&lt;/a&gt; but when you will, please don’t try to stick to Microsoft world, don’t be afraid to get out of your comfort zone, please don’t use &lt;a href="https://nodejstools.codeplex.com/"&gt;Node.js tools for Visual Studio&lt;/a&gt;, or &lt;a href="https://pytools.codeplex.com/"&gt;Python tools for Visual Studio&lt;/a&gt;, or &lt;a href="http://www.sapphiresteel.com/Products/sapphire-ide/article/ruby-in-steel-developer-overview"&gt;Ruby In Steel Developer&lt;/a&gt; these Frameworks works great with Linux operating systems so learn how to use Linux operating system like &lt;a href="http://www.ubuntu.com/"&gt;Ubuntu&lt;/a&gt;, then how to install/prepare the environment, and then how to use tools to start develop and learn the framework, get out there you will not learn these frameworks by using Visual Studio.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">admin</dc:creator><pubDate>Mon, 17 Mar 2014 14:46:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-03-17:net-developer-comfort-zone.html</guid><category>developer</category><category>development</category><category>dotNet</category></item><item><title>When Old Technology/Framework Dies?</title><link>http://www.emadmokhtar.com/when-old-technologyframework-dies.html</link><description>&lt;p&gt;&lt;img alt="darthvader-design" src="http://www.emadmokhtar.com/images/darthvader-design.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I was wondering when old framework dies? it’s matter of time or matter of usage? let’s talk first about what are things make me wonder?&lt;/p&gt;
+&lt;h2&gt;Sage CRM&lt;/h2&gt;
+&lt;p&gt;Last week I’ve got my hand dirty with Sage CRM and I was completely shocked when I found it’s built using &lt;a href="http://en.wikipedia.org/wiki/Active_Server_Pages"&gt;Classic ASP&lt;/a&gt;. I had WTF moment and asked myself Is this thing still alive? WOW it’s 13 years old Why Sage? Why this very old technology? What I’m always heard about Classic ASP is crap and thank god for modern web frameworks. Is it expensive to upgrade the technology used in your application so that Sage is released 7 versions of it’s CRM built using Classic ASP? When Sage will invest to start use new framework like ASP.NET MVC or even go to another part of the world &lt;em&gt;(world of open-source frameworks)&lt;/em&gt; and use something like &lt;a href="http://rubyonrails.org/"&gt;Ruby on Rails&lt;/a&gt; or &lt;a href="https://www.djangoproject.com/"&gt;Django&lt;/a&gt;?&lt;/p&gt;
+&lt;h2&gt;Microsoft SharePoint&lt;/h2&gt;
+&lt;p&gt;The Microsoft golden boy is build using ASP.NET WebForms, yes I know ASP.NET framework isn’t old framework  but still Microsoft released &lt;a href="http://www.microsoft.com/en-us/download/details.aspx?id=5388"&gt;ASP.NET MVC v1.0 in 13 March 2009&lt;/a&gt; so it’s near 6 years old, and after releasing it everybody asked Do Microsoft will rewrite SharePoint using ASP.NET MVC? The answer was no. Personally I found SharePoint is huge platform and it has many of services and features and rewriting it will be a pain but Does anyone look at HTML generated from SharePoint, it’s ASP.NET WebForms you’ll find a mess inside HTML. I think that’s Why team of Microsoft developers released CMS built using ASP.NET MVC called &lt;a href="http://www.orchardproject.net/mission"&gt;Orchard&lt;/a&gt; which is OSS &lt;em&gt;(open-source software)&lt;/em&gt; .&lt;/p&gt;
+&lt;h2&gt;The Real Question:&lt;/h2&gt;
+&lt;p&gt;To sum it up, if I think like a developer I’ll ask Why are big companies don’t invest in using new technologies? if I think as businessman I’ll ask How to invest in adding more feature that customers need to the product so I can sale and release a new version of the software license?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 11 Feb 2014 17:07:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2014-02-11:when-old-technologyframework-dies.html</guid></item><item><title>To Google Or Not To Google?</title><link>http://www.emadmokhtar.com/to-google-or-not-to-google.html</link><description>&lt;p&gt;&lt;img alt="image" src="http://www.emadmokhtar.com/images/image.png" /&gt;&lt;/p&gt;
+&lt;p&gt;To Google or not to Google? this is not even a question, &lt;a href="http://www.hanselman.com/about/"&gt;Scott
+Hanselman&lt;/a&gt; wrote an article about
+&lt;a href="http://www.hanselman.com/blog/AmIReallyADeveloperOrJustAGoodGoogler.aspx"&gt;Googler Developers or search engine
+developer&lt;/a&gt;
+I found it very interesting because he’s talking about developers whom
+using Google to search for a solution and copy and paste it. Irony some
+developers aren’t able to Google the solution as well, I always believe
+that understand what is the problem is its half solution.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The formulation of the problem is often more essential than its
+solution, which may be merely a matter of mathematical or experimental
+skill.”&lt;/p&gt;
+&lt;p&gt;― Albert Einstein&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then understand what is the problem is a skill that some developers
+missing it, even &lt;a href="http://ayende.com/blog/162849/stories-from-the-interview-room"&gt;Oren
+Eini&lt;/a&gt;
+wrote about some developers in interview have full internet access and
+can’t even solve their problems.&lt;/p&gt;
+&lt;h2&gt;AM I Googler Developer or not?&lt;/h2&gt;
+&lt;p&gt;Sure I am, I Google about the solution online, actually most if not all
+of my technical resources are online &lt;a href="http://www.google.com/"&gt;Google&lt;/a&gt;,
+&lt;a href="http://www.stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;,
+&lt;a href="http://www.GitHub.com"&gt;GitHub&lt;/a&gt;, &lt;a href="http://msdn.microsoft.com/"&gt;MSDN&lt;/a&gt;,
+online documentations, &lt;a href="http://www.emadmokhtar.com/"&gt;my blog&lt;/a&gt;, other
+developers blogs, etc.., but what I’m doing is not just search for a
+code to copy and paste it in order get things done, absolutely not I’m
+search for a solution, not any solution, no I’m searching/Goolging for
+the best and the simplest solution and if I can’t find it, I’ll take the
+best one from what I found and start to enhance or modify it to be in my
+opinion the best.&lt;/p&gt;
+&lt;p&gt;I wrote a blog post about &lt;a href="http://www.emadmokhtar.com/2013/05/add-image-zoom-to-asp-net-webform-gridview/"&gt;How to add image zoom to ASP.NET WebForms
+GridView&lt;/a&gt;
+and it has few lines of code, before I got this solution I Goolged it,
+and found many solution which were in my opinion complex for simple
+task, they’ve many lines of code. So I thought of creating my best
+solution, after that I wrote it to give people and myself a simple
+solution online.&lt;/p&gt;
+&lt;p&gt;In the other hands Rick Strahl also wrote &lt;a href="http://www.west-wind.com/weblog/posts/2013/Aug/24/The-Search-Engine-Developer?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+RickStrahl+%28Rick+Strahl%27s+WebLog%29"&gt;his thoughts about Scott
+Hanselman
+article&lt;/a&gt;,
+and in his article he asked one question&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To put this into context, here's a good one to ask yourself: If you
+had a job interview tomorrow and had to answer a bunch of heavy duty
+technical questions without Internet access, could you do it? To be
+honest, I'm not so sure I could&lt;/p&gt;
+&lt;p&gt;― Rick Strahl&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And for me to be honest I’m not sure I could as well.&lt;/p&gt;
+&lt;h2&gt;What I can do?&lt;/h2&gt;
+&lt;p&gt;Hanselman gave great points in his articles but in comments, someone
+wrote exactly what I was thinking  after reading the article.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image" src="http://www.emadmokhtar.com/images/image1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;When you search/Google for a solution you’ll read other’s code and this
+is a way or learning which learn from strength and weakness of everyone,
+how they wrote this code, why they wrote it like this whether it’s clean
+or not.&lt;/p&gt;
+&lt;h2&gt;Be median&lt;/h2&gt;
+&lt;p&gt;In bottom line what I think is be a median don’t always depend on Google
+and don’t always depend on your memory, choose what is better for your
+situation, even choosing is a skill, try to develop your skills don’t
+depend on your old ones or others.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 27 Aug 2013 13:56:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2013-08-27:to-google-or-not-to-google.html</guid><category>developer</category><category>development</category><category>programmer</category><category>programming</category></item><item><title>How do I learn?</title><link>http://www.emadmokhtar.com/how-do-i-learn.html</link><description>&lt;p&gt;&lt;img alt="abraham lincoln qoute" src="http://www.emadmokhtar.com/images/abrahamlincoln109275.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I’ve got many questions from young developers who want to learn programming and be professionals, I thought of writing this article to give them a glance about how I learn software stuff. I want to tell you I’m still learning and I’ll always pursuit knowledge and being professional software craftsman, and you should consider the same, believe me if you stop learning, you’ll become outdated in this field, and you’ll suck, I met developers with big fat years of experience but they are outdated since 5 years and they can’t go with new technologies anymore, ask any doctor or lawyer and he’ll tell you this craft is about leaning and learning and gaining knowledge.&lt;/p&gt;
+&lt;p&gt;Learning development is separated into two parts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dealing with human.&lt;/li&gt;
+&lt;li&gt;Dealing with computer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Dealing with human&lt;/h1&gt;
+&lt;p&gt;Dealing with human like dealing with client, don’t tell me I just want to code dude, no sometime if not all of the time you have to deal with the clients, think of it as you have your own company you’re entrepreneur now, Do you want to write code only? or you want to create success product by gathering the right requirements from clients and work on them, and then deliver this product, How will you do this if you want to write code only?&lt;/p&gt;
+&lt;p&gt;Dealing with human is dealing with team, crap again dude I want to put my headphones listen to music, go to the zone, and write code, nah good developers are good team player, to help your team-mate in the project, raise flag when you have a problem, or peer programming, you must have dealing with humans skill.&lt;/p&gt;
+&lt;p&gt;You’ll learn these skills during your work, I don’t have a screen cast, video training, or book…oh wait wait actually I know some books taking about this:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/0932633439/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=0932633439&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Peopleware: Productive Projects and Teams (Second Edition)&lt;/a&gt;
+&lt;img alt="Peopleware: Productive Projects and Teams (Second Edition)" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0932633439" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Peopleware: Productive Projects and Teams (Second Edition)" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=1449302440" /&gt; &lt;img alt="Peopleware: Productive Projects and Teams (Second Edition)" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=0932633439" /&gt;
+&lt;img alt="1451377" src="http://www.emadmokhtar.com/images/1451377.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/1449302440/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1449302440&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Team Geek: A Software Developer's Guide to Working Well with
+Others&lt;/a&gt;
+&lt;img alt="Team Geek: A Software Developer's Guide to Working Well with
+Others" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=1449302440" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="51N8dmGcllL" src="http://www.emadmokhtar.com/images/51N8dmGcllL.jpg" /&gt;&lt;/p&gt;
+&lt;h1&gt;Dealing with computer:&lt;/h1&gt;
+&lt;p&gt;Dealing with computer is programming, In my opinion programming learning is in two stages, first learn how to code, and second leaning  how to write code right or how to produce clean code. You’ll learn well if you learn from your mistakes,  personally I learnt from my mistakes, every time I made a mistake I was very sad and in the beginning I made a lot of silly mistakes, please be passionate, never give up, keep going, and learn from it, I know it’s so hard in the beginning but you’ll love what you’re doing.&lt;/p&gt;
+&lt;h1&gt;Craftsmanship:&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Software craftsmanship&lt;/strong&gt; is an approach to software development that
+emphasizes the coding skills of the software developers themselves. It
+is a response by software developers to the perceived ills of the
+mainstream software industry, including the prioritization of
+financial concerns over developer accountability.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Software_craftsmanship"&gt;wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In Clean Code book Martin Bob aka Uncle Bob wrote craftsmanship is
+separated into two parts Knowledge and Experience. Knowledge is the
+learn how to, and Experience is using knowledge to build something, so
+learn and practice by doing something, if you can’t build something with
+what you just learn you can build something as side project, &lt;a href="https://speakerdeck.com/sachag/side-projects"&gt;this
+slides&lt;/a&gt; encourage me to do
+some side projects&lt;/p&gt;
+&lt;script async class="speakerdeck-embed" data-id="508b4413c21140000200a7b7"  data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;h1&gt;Learning Material:&lt;/h1&gt;
+&lt;p&gt;This list of materials where you can learn something some are free and some are paid, so feel free to add yours in comments and give me your feedback about them.&lt;/p&gt;
+&lt;h2&gt;Video Training website:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.pluralsight.com/training"&gt;Pluralsight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peepcode.com/"&gt;PeepCode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tekpub.com/"&gt;TekPub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.udemy.com"&gt;Udemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.codeschool.com/"&gt;CodeSchool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.campusmvp.net/"&gt;campusMVP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Interactive Course:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.codecademy.com/"&gt;Code Academy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubymonk.com/"&gt;RubyMonk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://code.he.net/"&gt;Code Hurricane Electric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Books:&lt;/h2&gt;
+&lt;p&gt;Books for developers are like water for fish, you need to read, read, and read. Technology focused books like ASP.NET books there are many of them in market but make sure you pick nice ones first, personally I search for a book using Amazon read reviews and boom I pick on and read it. There are books I recommended but it’s not technology focused it focus in making you better developer:&lt;/p&gt;
+&lt;h1&gt;Recommended Books:&lt;/h1&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/B0050JLC9Y/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B0050JLC9Y&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;The Clean Coder: A Code of Conduct for Professional Programmers (Robert C. Martin Series)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="0000.L" src="http://www.emadmokhtar.com/images/0000.L.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/B001GSTOAM/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B001GSTOAM&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Clean Code: A Handbook of Agile Software Craftsmanship&lt;/a&gt;
+&lt;img alt="Clean Code" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B001GSTOAM" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="0132350882" src="http://www.emadmokhtar.com/images/0132350882.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Clean Code" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B001GSTOAM" /&gt;
+&lt;a href="http://www.amazon.com/gp/product/B000SEIBB8/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B000SEIBB8&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Design Patterns: Elements of Reusable Object-Oriented Software&lt;/a&gt;
+&lt;img alt="Design Patterns: Elements of Reusable Object-Oriented Software" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B000SEIBB8" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="51Q-RLSadrL" src="http://www.emadmokhtar.com/images/51Q-RLSadrL.jpg" /&gt;]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Design Patterns: Elements of Reusable Object-Oriented Software" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B000SEIBB8" /&gt;
+&lt;a href="http://www.amazon.com/gp/product/B000SEGEKI/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B000SEGEKI&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;The Pragmatic Programmer: From Journeyman to Master&lt;/a&gt;
+&lt;img alt="The Pragmatic Programmer: From Journeyman to Master" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B000SEGEKI" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="41F1cZImneL" src="http://www.emadmokhtar.com/images/41F1cZImneL.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Pragmatic Programmer: From Journeyman to Master" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B000SEGEKI" /&gt;
+&lt;a href="http://www.amazon.com/gp/product/B004OR1XGK/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B004OR1XGK&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Code Complete&lt;/a&gt;
+&lt;img alt="Code Complete" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B004OR1XGK" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Code Complete" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B004OR1XGK" /&gt;
+&lt;img alt="51nWkLCu1SL" src="http://www.emadmokhtar.com/images/51nWkLCu1SL.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/B008HUMTO0/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B008HUMTO0&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;Effective Programming: More Than Writing Code&lt;/a&gt;
+&lt;img alt="Effective Programming: More Than Writing Code" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B008HUMTO0" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="51ysOldcmqL" src="http://www.emadmokhtar.com/images/51ysOldcmqL.jpg" /&gt;
+&lt;img alt="Effective Programming: More Than Writing Code" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B008HUMTO0" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/gp/product/B00AYQNR5U/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00AYQNR5U&amp;amp;linkCode=as2&amp;amp;tag=monsblo08-20"&gt;The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)&lt;/a&gt;
+&lt;img alt="The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B00AYQNR5U" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Passionate Programmer: Creating a Remarkable Career in Software Development (Pragmatic Life)" src="http://www.assoc-amazon.com/e/ir?t=monsblo08-20&amp;amp;l=as2&amp;amp;o=1&amp;amp;a=B00AYQNR5U" /&gt;
+&lt;img alt="5194SMyRiL" src="http://www.emadmokhtar.com/images/5194SMyRiL.jpg" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sat, 20 Apr 2013 17:34:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2013-04-20:how-do-i-learn.html</guid><category>carftsmanship</category><category>coder</category><category>developer</category><category>learn</category><category>programmer</category></item><item><title>Technology U-Turn</title><link>http://www.emadmokhtar.com/technology-u-turn.html</link><description>&lt;p&gt;&lt;img alt="U-Turn" src="http://www.emadmokhtar.com/images/U-Turn.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Technology U-Turn is a terminology I invented that means when a technology leave the direction and take a new one then get back to the old one, actually I invented this term when I realized till now there are two technologies did this, I don’t know if there are more or not but nowadays these two technologies are in the top of tech news.&lt;/p&gt;
+&lt;h1&gt;ASP.NET:&lt;/h1&gt;
+&lt;p&gt;In the past web developers were using &lt;a href="http://en.wikipedia.org/wiki/Active_Server_Pages"&gt;ClassicASP&lt;/a&gt; till Microsoft released &lt;a href="http://www.asp.net/"&gt;ASP.NET&lt;/a&gt; to help Windows Forms developers to develop Web Application with the same look and feel, then create the code behind approach where you will write the server-side code instead on inline script like in &lt;a href="http://en.wikipedia.org/wiki/Active_Server_Pages"&gt;Classic ASP&lt;/a&gt;, but &lt;a href="http://www.php.net/"&gt;PHP&lt;/a&gt; still using the same approach by using inline scripting. Microsoft make the U-Turn and back to inline scripting in ASP.NET MVC especially in &lt;a href="http://en.wikipedia.org/wiki/Microsoft_ASP.NET_Razor_view_engine"&gt;Razor view engine&lt;/a&gt;. in &lt;a href="http://www.php.net/"&gt;PHP&lt;/a&gt; you have the full control over HTML like in &lt;a href="http://www.asp.net/mvc"&gt;ASP.NET MVC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.php.net/"&gt;PHP&lt;/a&gt; stuck with the same direction of inline scripting and keep enhance its technology, but Microsoft change the direction to ASP.NET and guess what back again after enhance the inline scripting from ASPX view engine then &lt;a href="http://en.wikipedia.org/wiki/Microsoft_ASP.NET_Razor_view_engine"&gt;Razor view engine&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;NoSQL:&lt;/h1&gt;
+&lt;p&gt;In the past data was stored in files/documents without any relations and normalization, then the relational database design start to be used by wide rang of folks till now actually the most popular database design is relational database to prevent duplications, more access speed, less capacity consuming; and now the world is making the U-Turn to &lt;a href="http://en.wikipedia.org/wiki/NoSQL"&gt;NoSQL&lt;/a&gt; approach and back to use files/documents to store data, Mega companies like Google, Twitter, Facebook, and Microsoft is start to enhance the way of storing data in files/documents and start to use the feature provided by the Hard Drives file system, there are many of &lt;a href="http://en.wikipedia.org/wiki/NoSQL"&gt;NoSQL&lt;/a&gt; engines released like &lt;a href="http://ravendb.net/"&gt;RavenDB&lt;/a&gt;, &lt;a href="http://cassandra.apache.org/"&gt;Cassandra&lt;/a&gt;, &lt;a href="http://aws.amazon.com/simpledb/"&gt;AmazonSimpleDB&lt;/a&gt;, &lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt;, and &lt;a href="http://couchdb.apache.org/"&gt;CouchDB&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;The Question:&lt;/h1&gt;
+&lt;p&gt;Why Microsoft change its direction and released ASP.NET then after many years it discovered that it didn’t apply the Web Development in the right way and it was just helping the developers to create Web
+Applications with event oriented design rather than MVC design which become popular especially after &lt;a href="http://rubyonrails.org/"&gt;Ruby on Rails&lt;/a&gt; aka RoR (RoR was invented to get rid of repeating the same task over and over again when developing with ASP.NET) get on surface? Why’s Microsoft didn’t stick with the direction and try to develop and enhance it and that what it’s doing nowadays?&lt;/p&gt;
+&lt;p&gt;The same question to NoSQL the world, Why do we get back to document oriented database after spend years in relational databases? Why didn’t we stick with the direction and start to develop and enhance the way we are storing data inside the documents and that what NoSQL world are doing?&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 26 Apr 2012 13:57:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-04-26:technology-u-turn.html</guid><category>aspnet</category><category>aspnetmvc</category><category>nosql</category><category>technology</category></item><item><title>The good, the bad, and the ugly developers</title><link>http://www.emadmokhtar.com/the-good-the-bad-and-the-ugly-developers.html</link><description>&lt;p&gt;&lt;img alt="Intresting tweet" src="http://www.emadmokhtar.com/images/Intresting-tweet.png" /&gt;&lt;/p&gt;
+&lt;p&gt;I saw very interesting tweet from &lt;a href="https://twitter.com/#%21/gblock"&gt;&lt;strong&gt;Glenn
+Block&lt;/strong&gt;&lt;/a&gt; &lt;a href="https://twitter.com/#!/gblock"&gt;@gblock&lt;/a&gt;
+and this remind me with something I read in &lt;a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073"&gt;The Clean
+Coder&lt;/a&gt;
+book from Uncle Bob Martin, which talks about professional developer and
+what to do to be a professional. Uncle Bob describe the professional
+developer takes the responsibility of his mistakes, it’s true because if
+he take this responsibility, he’ll learn from his mistakes and learn how
+he made it in first place, so he can avoid it next time, even if he make
+this mistake again he knows how to solve it quick and clean.&lt;/p&gt;
+&lt;p&gt;Personally I learn like this and it’s teach you the lesson very well.&lt;/p&gt;
+&lt;p&gt;Dear readers please give me your feedback/opinion about this subject.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 15 Mar 2012 23:11:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-03-15:the-good-the-bad-and-the-ugly-developers.html</guid><category>coder</category><category>developer</category></item><item><title>Communication with your customer</title><link>http://www.emadmokhtar.com/communication-with-your-customer.html</link><description>&lt;p&gt;&lt;img alt="people sleeping on the floor at airport" src="http://www.emadmokhtar.com/images/pict0554.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Today I was having a flight from Egypt, Cairo International Airport to
+Kuwait International Airport and when the airplane was almost reach
+Kuwait the pilot keep flying in circles and never enter the Kuwaiti
+boards and fly to the Arabian Gulf for 15 minutes we are wondering Why
+is he flying in all direction but not the one to Kuwait?&lt;/p&gt;
+&lt;p&gt;This situation give me a sight for How your customer will feel when you
+haven’t or stop giving him/her information about the software. s/he’ll
+keep wondering what is he doing to my product? Is it done? Is it won’t
+be done?  and sometimes his/her mind will go to the opposite direction
+of what you are doing.&lt;/p&gt;
+&lt;p&gt;Finally we found that there is a sandstorm at Kuwait International
+Airport and the visibility is zero and we can’t land, so we changed our
+direction to Dubai Airport to land there and what for the sandstorm to
+stop so we can get back. None of us thing in this.&lt;/p&gt;
+&lt;p&gt;The part above I wrote while I’m sitting on floor beside the power
+socket to charge my laptop s I can write these thoughts and here I’m
+from another date and time after one week from this journey sitting on
+my couch continue writing this post, as I felt and saw the final result
+of what the airline did to us, after suffering from lack of information
+and even if we got it we get it too late, after we landed at the
+destination everyone forgive the airline because it deliver what we
+want, we want to get home have some rest in our bed, we want to get home
+whatever it takes and this what the airline did but with so mistakes but
+after it did it we become a happy customers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The bottom line:&lt;/strong&gt; keep communicate with your customers and tell them
+what you’re doing even if it’s not the best way to do it or what you’re
+facing right now, and remember what the customer want is the most
+important goal you must get it whatever whenever however.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sat, 10 Mar 2012 23:34:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2012-03-10:communication-with-your-customer.html</guid><category>development</category><category>software</category></item><item><title>Code Kata: Fizz Buzz Game</title><link>http://www.emadmokhtar.com/code-kata-fizz-buzz-game.html</link><description>&lt;p&gt;I stared to practice recently after reading more about how practicing is important for programmer to become professional and one way of practicing is  &lt;a href="http://www.emadmokhtar.com/coding-kata.html"&gt;Coding Kata&lt;/a&gt;. I found a lot of problem to implement to practice and perform coding kata.&lt;/p&gt;
+&lt;p&gt;This post I'll talk about Fizz Buzz Game a.k.a. Bizz Buzz Game, it's numerical/math game, if the number is divisible by 3 replace it with fizz, or if number divisible by 5 replace it with buzz, or if number is divisible by 3 and 5 replace it with fizzbuzz. For example if we count from 1 to 20 it'll be like this: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16, 17, fizz, 19, buzz.&lt;/p&gt;
+&lt;p&gt;So how to code this game:&lt;/p&gt;
+&lt;p&gt;First I thought I can solve this game by:&lt;/p&gt;
+&lt;p&gt;If (this number is divisible by 3 and not divisible by 5)  return fizz&lt;/p&gt;
+&lt;p&gt;else if (this number is not divisible by 3 and divisible by 5)  return
+buzz&lt;/p&gt;
+&lt;p&gt;else if (this number is divisible by 3 and divisible by 5)  return
+buzzfizz&lt;/p&gt;
+&lt;p&gt;else if(this number is not divisible by 3 and not divisible by 5)  
+return the number&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// Solve fizz buzz problem&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 3 and not by 5 return fizz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 5 and not by 3 return buzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 15 return fizzbuzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;param name=&amp;quot;number&amp;quot;&amp;gt;The number.&amp;lt;/param&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;fizz, buzz, or fizzbuzz&amp;lt;/returns&amp;gt;&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;FizzBuzz&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Empty&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;buzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizzbuzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;But when I look at the code I feel like I can optimize it more by remove
+the and between two logical conditions, as the following.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// Solve fizz buzz problem&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 3 and not by 5 return fizz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 5 and not by 3 return buzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 15 return fizzbuzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;param name=&amp;quot;number&amp;quot;&amp;gt;The number.&amp;lt;/param&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;fizz, buzz, or fizzbuzz&amp;lt;/returns&amp;gt;&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;FizzBuzz&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Empty&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+                       &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizzbuzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+                &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="nf"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;buzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="nf"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After observing the results, I found that fizzbuzz only appears when the number is divisible by 15, so I rewrite my pseudocodecode&lt;/p&gt;
+&lt;p&gt;If (this number is divisible by 15)  return buzfizz&lt;/p&gt;
+&lt;p&gt;else if (this number is divisible by 3)  return fizz&lt;/p&gt;
+&lt;p&gt;else if (this number is divisible by 5)  return buzz&lt;/p&gt;
+&lt;p&gt;else  return the number&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        &lt;span class="c1"&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// Solve fizz buzz problem&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 3 and not by 5 return fizz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 5 and not by 3 return buzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// if number divisible by 15 return fizzbuzz&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;param name=&amp;quot;number&amp;quot;&amp;gt;The number.&amp;lt;/param&amp;gt;&lt;/span&gt;
+        &lt;span class="c1"&gt;/// &amp;lt;returns&amp;gt;fizz, buzz, or fizzbuzz&amp;lt;/returns&amp;gt;&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;FizzBuzz&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Empty&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+                       &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;15&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizzbuzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="nf"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;fizz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="nf"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;buzz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;returnString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToString&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;returnString&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="output" src="http://www.emadmokhtar.com/images/fizzbuzzoutput.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This Coding Kate done, I've enjoyed it as taook me to collage day's when
+having fun solving small problems, I hope you enjoyed it as well. See
+you next Coding Kata.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 20 Dec 2011 22:50:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-12-20:code-kata-fizz-buzz-game.html</guid><category>code</category><category>coding</category><category>game</category><category>kata</category><category>programmer</category><category>programming</category></item><item><title>Coding Kata</title><link>http://www.emadmokhtar.com/coding-kata.html</link><description>&lt;p&gt;&lt;img alt="Practicing Guitar" src="http://www.emadmokhtar.com/images/Practicing_Guitar.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Recently I'm reading &lt;a href="http://twitter.com/#!/unclebobmartin"&gt;Uncle Bob&lt;/a&gt;'s
+&lt;a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073" title="Clean Coder"&gt;Clean Coder book&lt;/a&gt; and I read about how a professional programmer must always practice, like professional musicians, professional football player, and professional martial arts player. I'm learning  how to play electric guitar, you need to start slowly "slow will gain speed" start with something easy and way to go to professional level, and believe me if you stop practicing you lose your speed, but this doesn't mean professional guitarist stop learning new things and stop practicing. When I see a guitarist do something great I ask myself how, how he did it? the answer is simple he practice.&lt;/p&gt;
+&lt;p&gt;Getting a job as programmer will not make you a professional one, doing your work in regular basis won't make you a professional programmer like walking everyday won't make you a professional athletic, you must challenge yourself, learning something new, or try to solve problem with your favorite programming language. Try do practice away from working time, and practice, practice, practice, practice, and practice.&lt;/p&gt;
+&lt;p&gt;In &lt;a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073" title="Clean Coder"&gt;CleanCoder&lt;/a&gt;'s Chapter 6 talking about practicing and there's a part talking about coding kata, so What is Coding Kata?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Kata" src="http://www.emadmokhtar.com/images/Empi_kata.jpg" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kata is a Japanese word describing detailed choreographed patterns of movements practised either solo or in pairs. The term form is used for the corresponding concept in non-Japanese martial arts in general.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Coding Kata&lt;/strong&gt; is solving a small programming problem over and over
+again because when you face it or someone like it you don't need that
+much effort to think how to solve it, for example professional guitarist
+won't think how to do Pull-Offs of Hummer-down when he's playing a solo,
+he just thinking about melodies and its harmony, thus professional
+programmer will consume most of his/her brain power on how to make this
+code clean but on how to solve this simple problem. like in martial arts
+they are doing a series of choreographed practice movements so that when
+he want to do it he'll get a fast response from his body.&lt;/p&gt;
+&lt;p&gt;I'm new in this, I like the idea, I'll keep practicing, and
+I'll keep my moves toward profession.&lt;/p&gt;
+&lt;p&gt;Here's a video of Uncle Bob preforming coding kata with his audience&lt;/p&gt;
+&lt;iframe src="http://player.vimeo.com/video/2499161?title=0&amp;amp;byline=0&amp;amp;portrait=0" frameborder="0" width="400" height="225"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="http://vimeo.com/2499161"&gt;Software Craftsmanship - Coding Dojo - Kata&lt;/a&gt; from &lt;a href="http://vimeo.com/dougbradbury"&gt;Doug Bradbury&lt;/a&gt; on &lt;a href="http://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some links talking about Coding Kata:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The unltimate coding
+    kata &lt;a href="http://www.codinghorror.com/blog/2008/06/the-ultimate-code-kata.html"&gt;http://www.codinghorror.com/blog/2008/06/the-ultimate-code-kata.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;What is all nonsense about
+    katas? &lt;a href="http://blog.objectmentor.com/articles/2009/11/21/whats-all-this-nonsense-about-katas"&gt;http://blog.objectmentor.com/articles/2009/11/21/whats-all-this-nonsense-about-katas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The programming
+    dojo &lt;a href="http://butunclebob.com/ArticleS.UncleBob.TheProgrammingDojo"&gt;http://butunclebob.com/ArticleS.UncleBob.TheProgrammingDojo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code Kata &lt;a href="http://dotnet.dzone.com/news/code-kata"&gt;http://dotnet.dzone.com/news/code-kata&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some resource of Coding Kata:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Coding kata for .NET &lt;a href="http://codingkata.net/"&gt;http://codingkata.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.codekata.com/"&gt;http://www.codekata.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.codingdojo.org/"&gt;http://www.codingdojo.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bowling Game
+    Kata &lt;a href="http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata"&gt;http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 06 Dec 2011 21:18:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-12-06:coding-kata.html</guid><category>coding</category><category>professional</category><category>programmer</category><category>programming</category></item><item><title>Jump from dasBlog to Wordpress</title><link>http://www.emadmokhtar.com/jump-from-dasblog-to-wordpress.html</link><description>&lt;p&gt;&lt;img alt="Dasblog logo" src="http://www.emadmokhtar.com/images/DasBlog-Reflection-640x480-Green.jpg" /&gt; &lt;strong&gt;VS.&lt;/strong&gt; &lt;img alt="Wordpress logo" src="http://www.emadmokhtar.com/images/wordpress-with-text.png" /&gt;&lt;/p&gt;
+&lt;p&gt;In my start into blogging I start to blog on &lt;a href="http://wordpress.com/"&gt;wordpress.com&lt;/a&gt; from hosting blog, I like it but after blogging many posts I found it has many limitations, so I decided to get self hosted blog engine, I searched for many blog engines and I inspired with&lt;a href="http://www.hanselman.com/blog/"&gt;Scott Hanselman's blog&lt;/a&gt; and downloaded &lt;a href="http://dasblog.codeplex.com/"&gt;dasBlog engine&lt;/a&gt;, hosted it locally, and start the journey of customizing and configuration, I wasn't as easy as it sounds, you must get your hand dirty with CSS, ASP.NET, JavaScript, and XML configuration files, but after 2 weeks I got it up and working. After a while I realized I want more fixable blog engine, start searching and found &lt;a href="http://wordpress.org/"&gt;Wordpress&lt;/a&gt; my old engine but the self hosted one is the most common blog used on the internet, even my buddy &lt;a href="http://twitter.com/#!/meligy" title="@Meligy"&gt;Mohammed Meligy&lt;/a&gt; once a while decided to use wordpress as &lt;a href="http://gurustop.net/"&gt;his blog&lt;/a&gt; engine. Decision has been made and it's time to buy PHP hosting instead of .NET one and install Wordpress; it took me 4\~5 days to complete this setup but if you subtract the 2 days I spent in searching for the suitable theme, the total is 2\~3 days to step my wordpress blog, so what did I do in this setup?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buy hosting plan&lt;/li&gt;
+&lt;li&gt;Install &amp;amp; configure Wordpress&lt;/li&gt;
+&lt;li&gt;Install &amp;amp; configure theme&lt;/li&gt;
+&lt;li&gt;Migrate old posts&lt;/li&gt;
+&lt;li&gt;Upload old media&lt;/li&gt;
+&lt;li&gt;Install &amp;amp; configure plug-ins&lt;/li&gt;
+&lt;li&gt;Configure &lt;a href="http://www.feedburner.com/" title="feedburner"&gt;FeedBurner&lt;/a&gt; &amp;amp; &lt;a href="http://www.google.com/analytics" title="Google Analytics"&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After all I'm so happy with Wordpress, I'll keep my blog in here and will never change my engine again to apply this rule of &lt;a href="http://www.hanselman.com/blog/BlogInteresting32WaysToKeepYourBlogFromSucking.aspx"&gt;Scott Hanselamn's 32 rules to make your blog suckless&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Avoid Split Brain -  Pick a Blog and Stay There&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoid maintaining two blogs. It's just as tacky, if not more so,
+    as having 5 phone numbers on your business card. It makes it
+    hard to find you, and your two blogs will always be fighting each
+    other on Google, splitting your virtual  personality.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Wed, 09 Nov 2011 17:18:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-11-09:jump-from-dasblog-to-wordpress.html</guid></item><item><title>Disconnecting</title><link>http://www.emadmokhtar.com/disconnecting.html</link><description>&lt;p&gt;&lt;img alt="131893_10150366827825634_676490633_16737900_7347570_o" src="http://www.emadmokhtar.com/images/131893_10150366827825634_676490633_16737900_7347570_o_2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;After listening to &lt;a href="http://thisdeveloperslife.com/"&gt;&lt;strong&gt;This Developer’s Life&lt;/strong&gt;&lt;/a&gt; podcast episode &lt;a href="http://thisdeveloperslife.com/post/1-1-0-disconnecting"&gt;&lt;strong&gt;1.1.0 Disconnecting&lt;/strong&gt;&lt;/a&gt; and what &lt;a href="http://www.hanselman.com/"&gt;&lt;strong&gt;Scott Hanselman&lt;/strong&gt;&lt;/a&gt; and &lt;a href="http://rob.conery.io/"&gt;&lt;strong&gt;Rob Conery&lt;/strong&gt;&lt;/a&gt; told us about what they felt when they tried to unplug/disconnect from their Technical world, I decided to try it by myself, so I had one extra day in this weekend with my family so I decided to take one day trip away from the crowded city &amp;amp; go to the far south of Kuwait where modern life seems far far away.&lt;/p&gt;
+&lt;p&gt;I took this chance &amp;amp; tried to stay away from checking my Twitter &amp;amp; Facebook, what’s new in the .NET world &amp;amp; technology, what do twitter buddies tweet about, checking my emails, reading this or reading that, the urge to learn new things whether they’re technical things or things about life, wether we published the new episode of &lt;a href="www.egygeeks.net"&gt;&lt;strong&gt;EgyGeeks&lt;/strong&gt;&lt;/a&gt; or not, what’re the listeners’ feedbacks about the new episode &amp;amp; what’s happening in the world.&lt;/p&gt;
+&lt;p&gt;So I started to focus on engaging with my family &amp;amp; specially with my beloved one, to sit &amp;amp; talk with them more than before, to have more conversations about our life &amp;amp; future together, it’s a very good feeling when they start to know you &amp;amp; you know them more than before because you always sit in front of your machine with this big dual 19-inch screens or even in front of 3.5 inch smart phone’s screen,  to start talking &amp;amp; dealing with them, it’s great thing to do&amp;amp; believe me the world &amp;amp; twitter will stay the same nobody is going to change it for one day.&lt;/p&gt;
+&lt;p&gt;I’m sure you’ll miss your geeky mood &amp;amp; the world you live when you’re in this mood but believe me one day away from this world &amp;amp; focusing on other important things, after one day away you’ll back more productive, motivated, full of power &amp;amp; energy &amp;amp; relaxed.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 02 Jan 2011 17:10:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-01-02:disconnecting.html</guid></item><item><title>Being Geek and Solve Problems</title><link>http://www.emadmokhtar.com/being-geek-solve-problems.html</link><description>&lt;p&gt;&lt;img alt="Puzzles" src="http://www.emadmokhtar.com/images/Puzzles_2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes in my life when I face a problem I do everything/mean to solve
+it, because the feeling of solving problems is wonderful feeling
+specially if you eager to solve problems and puzzles, like the feeling
+that &lt;a href="http://en.wikipedia.org/wiki/Isaac_Newton"&gt;Isaac Newton&lt;/a&gt; had when
+he got hit by fallen Apple and discover the notion of gravitation and
+said “I find it I find it”.&lt;/p&gt;
+&lt;p&gt;Or the feeling Tom Hanks/Chuck Noland in &lt;a href="http://www.imdb.com/title/tt0162222/"&gt;Cast Away
+(2000)&lt;/a&gt; had when he made a fire by
+using wood and said “I made a fire I made a fire”.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cast_Away_8" src="{filesname}/images/Cast_Away_8_2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;If I face a problem anytime I can’t do anything except totally focus on
+solving it, usually I forget about anything around me and keep focusing
+on solving it, I forget about sleep, food, drink, and even people, All
+what I want to solve this little buggy problem.&lt;/p&gt;
+&lt;p&gt;Now days in work, when I face a problem, I wish there’s more than 8
+working hours, because I get a bad feeling when I need to leave the
+office and go home, or they will close the work place and leave me there
+alone.&lt;/p&gt;
+&lt;p&gt;For me solving problem or puzzles is more fun and joyful than anything
+except one special thing I do every evening (please don’t get me wrong),
+I think this’s why I love being geek and programmer.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Thu, 07 Oct 2010 06:51:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-10-07:being-geek-solve-problems.html</guid></item><item><title>Web Developer Poetry</title><link>http://www.emadmokhtar.com/web-developer-poetry.html</link><description>&lt;p&gt;Today when I was waiting for the band of Tanora Show to get started, I wrote this poetry for someone special.&lt;/p&gt;
+&lt;p&gt;She SEO my life  &lt;/p&gt;
+&lt;p&gt;She turns my 0'z to 1'z  &lt;/p&gt;
+&lt;p&gt;She nudges my feelings  &lt;/p&gt;
+&lt;p&gt;She is my RSS of my life  &lt;/p&gt;
+&lt;p&gt;If you Google my heart you'll find her  &lt;/p&gt;
+&lt;p&gt;She is a Hashtag of my soul  &lt;/p&gt;
+&lt;p&gt;She is a Love entity in my HeartDB  &lt;/p&gt;
+&lt;p&gt;She is system file of my memory  &lt;/p&gt;
+&lt;p&gt;She is a Silverlight of my future  &lt;/p&gt;
+&lt;p&gt;She autocomplete my thoughts  &lt;/p&gt;
+&lt;p&gt;She ReadyBoost my motivation  &lt;/p&gt;
+&lt;p&gt;And I Favorite/Bookmark here&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sat, 15 May 2010 20:43:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-05-15:web-developer-poetry.html</guid></item><item><title>What is Pomodoro Technique?</title><link>http://www.emadmokhtar.com/what-is-pomodoro-technique.html</link><description>&lt;p&gt;Hello folks, in this post I'll explain technique I use it to get things done in my life like Reading, or development tasks; this technique called Pomodoro technique.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pomodoro kitchen tool" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod1.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;What is Pomodoro Technique?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Pomodoro logo" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;It's a time management system; It's simple, and very productive.&lt;/p&gt;
+&lt;p&gt;Pomodoro is tomato in some language "Google it and see", it's inspired by the kitchen timer that take a shape of Tomato, and the timing of the technique is based on the kitchen timer. And here's [link]((http://www.pomodorotechnique.com/) for more information&lt;/p&gt;
+&lt;h1&gt;How to use/implement Pomodoro Technique?&lt;/h1&gt;
+&lt;p&gt;It's very simple and easy to use, there's a number of apps implement it, even you can use a kitchen times unless you're in your company office :D.&lt;/p&gt;
+&lt;p&gt;Let's start explain how to use it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Allocate a certain task you want to get it done.&lt;/li&gt;
+&lt;li&gt;Do it for 25 minutes.&lt;/li&gt;
+&lt;li&gt;And take a 5 minutes break.&lt;/li&gt;
+&lt;li&gt;Repeat step 2 &amp;amp; 3 4-times.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And then take 30 minutes beak.&lt;/p&gt;
+&lt;p&gt;And start from step 2 again, and if you finish the task start from
+the beginning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Pomodoro Workflow" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod3.png" /&gt;
+Please don't panic like I said there's a lot of apps implement Pomodoro Technique, and that's make life more easily, I'll review one of the most app used for PT.&lt;/p&gt;
+&lt;h1&gt;Focus Booster:&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Focus booster" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod4.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Focus Booster is my favorite pomodoro technique app, it's developed over
+Adobe Air so it is cross-platform, and it's free.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="http://www.focusboosterapp.com/"&gt;focusboosterapp&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;The UI:&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="The app" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod5.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;It's very simple just run the application and press the green play button and the timer will decreased until it reach 00:00 and the green bar increased and change its color to the degrees of red (orange and red).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pomodoro" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod6.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;When it reached 00:00, it'll fire tiny alarm to remind you that's your
+break time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Break" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod7.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;During break time the timer reset to 05:00 and decreased to 00:00 and the bar also decreased with it; when the timer reach 00:00 the same tiny alarm will fire to remind you to start you job/30 min break.&lt;/p&gt;
+&lt;h1&gt;What I can do in the break time?&lt;/h1&gt;
+&lt;p&gt;Anything you are like to do in your free time and not related to the task, you can check Twitter, Facebook, Emails, or even read regular blog posts, go out to get fresh air, go check your family, make your drink, take a shower, etc…&lt;/p&gt;
+&lt;p&gt;For me I like to make my coffee, go pray in the mosque, in the 30 min break I talk a walk, or sometimes check my Emails, Facebook, or Twitter.&lt;/p&gt;
+&lt;p&gt;So folks I wish this technique helps you in Get Things Done in more productive way; and remember Time is very important thing or our life actually it's our life, so spend it wisely.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 14 May 2010 12:53:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-05-14:what-is-pomodoro-technique.html</guid></item><item><title>Microsoft SQL Server 2008 Data types</title><link>http://www.emadmokhtar.com/microsoft-sql-server-2008-data-types.html</link><description>&lt;p&gt;Hello Folks,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SQL Server 2008 Logo" src="http://www.emadmokhtar.com/images/SQL_Server_2008_Grid_v_2.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Today I'll mention the Microsoft SQL Server 2008 Fields data types, you need to choose the right data type for the database fields for more speed efficiency, and I think the most important thing the fundamental of the database itself.&lt;/p&gt;
+&lt;p&gt;Let's begin:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;char&lt;/strong&gt;: the char data type is fixed in length, if you enter fewer that than the number of character defined the remaining length will be space filled to the right; use this data type when the column data is to be of fixed length, which tends to be the case foe customer IDs and bank account IDs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;nchar&lt;/strong&gt;: the nchar type is exactly like char, but will hold characters in Unicode format rather than ANSI; in fact SQL Server allocates double the space internally, so unless there is a need in your database to hold this type of character, it's easier to stick with ANSI.&lt;/p&gt;
+&lt;p&gt;a. Note:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;i. ANSI character sets only hold up to 256 char.&lt;/p&gt;
+&lt;p&gt;ii. Unicode character sets only hold up to 65,536 chr.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;varchar&lt;/strong&gt;: the varchar data type holds alphanumeric data; just like char but with flexible size, you just set the maximum number of characters, maximum size is 8,000 character.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;nvachar&lt;/strong&gt;: it's defined in similar way to varchar but it uses Unicode.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;text&lt;/strong&gt;: the text data type holds data is longer than 8,000.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ntext&lt;/strong&gt;: same as text type, but hold Unicode.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;image&lt;/strong&gt;: is very much like text data type, expect it's for any type of binary data, like images, movies, or music.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;int&lt;/strong&gt;: the integer data type is used for holding a numeric values that don't have any decimal point, it's rang is between -2,147,483,648 and 2,147,483,674.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;bigint&lt;/strong&gt;: the bidint or big integer data type same as int but with larger rang, it's rang is between -9,223,372,036,854,77,808 and 9,223,372,036,854,77,807.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;smallint&lt;/strong&gt;: the smallint data type is similar to int but with smaller rang, it's rang is between -32,768 to 32,767.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;tinyint&lt;/strong&gt;: it's smaller than smallint data type.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;decimal/numeric&lt;/strong&gt;: both the decimal and numeric data types hold the same range of data from -10 to the power 38+1 to 10 to the power 38-1.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;float&lt;/strong&gt;: it's used for numbers where the decimal point isn't fixed, it's rang is between -1.79e+308 to 1.79e+308&lt;/p&gt;
+&lt;p&gt;a. Warning: The values can't always be seen as 100% accurate, as they can be approximate "Rounded".&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;real&lt;/strong&gt;: it's like float data type but with wider rand, it's rang between -3.40e+38 to 3.40e+38, and still hold approximate value also.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;money&lt;/strong&gt;: the money data type is used foe holding numeric values up to four decimal places; This data type doesn't actually store the currency symbol to signify the monetary type, so you shouldn't use this data type with different currencies value, but you can store the currency type in another column and combined those two columns.&lt;/p&gt;
+&lt;p&gt;a. money range is from -922,337,203,685,477.5808 to 922,337,203,685,477.5807&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;smallmoney&lt;/strong&gt;: it's similar to money data type but with smaller range.&lt;/p&gt;
+&lt;p&gt;a. small money range is from -214,748.3648 to 214,748.3647&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;date&lt;/strong&gt;: it's been built to hold only date from Jun. 1,AD1 through to Dec. 31,9999.&lt;/p&gt;
+&lt;p&gt;a. the format: YYYY-MM-DD&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;datetime&lt;/strong&gt;: it'll hold ant date and time from Jan. 1,1753 to Dec. 31,9999.&lt;/p&gt;
+&lt;p&gt;a. It stores not only a date, but also a time alongside it; If you just populate a column defined as datetime with date, a default time of 12:00 will be stored as well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;smalldatetime&lt;/strong&gt;: it's similar to datetime, except the date range  is Jan. 1,1900 to Jun. 6,2079.&lt;/p&gt;
+&lt;p&gt;a. The reason for the strange date at the end of the range is lies in the binary storage representation of this datetime.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;datetime2&lt;/strong&gt;: It's similar to datetime in it can store and time, except it can store the fraction of second to a greater precision.&lt;/p&gt;
+&lt;p&gt;a. The format is YYYY-MM-DD hh:mm:ss[.nnnnnnnn].&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;datetimeoffest&lt;/strong&gt;: if you need to store a date and time relative to a specific date and time zone, then you should define your column with the datetimeoffest data type.&lt;/p&gt;
+&lt;p&gt;a. The date and time is stored in this type in Coordinated Universal Time (UTC) value. and then you define the amount of time to add or subtract depending on time zone that the value should relate.&lt;/p&gt;
+&lt;p&gt;b. The format is YYYY-MM-DD hh:mm:ss[.nnnnnnn][+|-] hh:mm.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;time&lt;/strong&gt;: if you just wish to hold a time based on the 24-hours clock, then you can define a column to use the time data type.&lt;/p&gt;
+&lt;p&gt;a. The format is hh:mm:ss[.nnnnnnn].&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;hierachyid&lt;/strong&gt;: Prior to SQL Server 2008, producing a hierarchy of data could prove complex and usually involved a self-join of the data.&lt;/p&gt;
+&lt;p&gt;a. It's possible to define a column of the hierarcyid data type that allows you to say how a given row sits in the overall hierarchy of rows.&lt;/p&gt;
+&lt;p&gt;b. This is a complex CLR-based data type.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;geometry&lt;/strong&gt;: The geometry data type of a planar CLR data type that allows you to store geographical information in a "Flat Earth" way.&lt;/p&gt;
+&lt;p&gt;a. Data within this data type can be one of 11 different geometry measurements, including point, curve, and polygon.&lt;/p&gt;
+&lt;p&gt;b. It is possible to store on type of measurement in each column defined, and part of the data stored will be the definition of the type of data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 19 Mar 2010 23:01:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-03-19:microsoft-sql-server-2008-data-types.html</guid><category>SQlServer</category><category>SQL</category></item><item><title>Intelligent DNA Identification System</title><link>http://www.emadmokhtar.com/intelligent-dna-identification-system.html</link><description>&lt;p&gt;Hello folks, I know the first thing pop-in your mind What is Intelligent &lt;a href="http://en.wikipedia.org/wiki/DNA"&gt;DNA&lt;/a&gt; Identification System aka IDIS?&lt;/p&gt;
+&lt;p&gt;This's the name of my graduation project in 2009, it's just a &lt;a href="http://en.wikipedia.org/wiki/Bioinformatics"&gt;Bioinformatics&lt;/a&gt; system implemented with DNA as &lt;a href="http://en.wikipedia.org/wiki/Biometrics"&gt;biometric&lt;/a&gt; system, and used for identification.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IDIS Logo" src="http://www.emadmokhtar.com/images/031210_2008_Intelligent1.jpg" /&gt;&lt;/p&gt;
+&lt;h1&gt;Why &lt;a href="http://en.wikipedia.org/wiki/DNA"&gt;DNA&lt;/a&gt;, &lt;a href="http://en.wikipedia.org/wiki/Biometrics"&gt;Biometrics&lt;/a&gt;, and &lt;a href="http://en.wikipedia.org/wiki/Bioinformatics"&gt;Bioinformatics&lt;/a&gt;?&lt;/h1&gt;
+&lt;p&gt;Because we choose our graduation project, we want to do something unique and hard to do.&lt;/p&gt;
+&lt;h1&gt;You said it's a biometric system and used for identification, Are there another applications of &lt;a href="http://en.wikipedia.org/wiki/Biometrics"&gt;biometric&lt;/a&gt; systems?&lt;/h1&gt;
+&lt;p&gt;Yep, there're three types of biometric applications:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identification: When you want to search for unknown personal, to know any information about him.&lt;/li&gt;
+&lt;li&gt;Verification: is to verify XYZ personal is really XYZ personal or not.&lt;/li&gt;
+&lt;li&gt;Screening: searching for "XYZ" personal in a list like "Banned from traveling List".&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;What makes this field Unique and Hard?&lt;/h1&gt;
+&lt;p&gt;The &lt;a href="http://en.wikipedia.org/wiki/Bioinformatics"&gt;Bioinformatics&lt;/a&gt; and  &lt;a href="http://en.wikipedia.org/wiki/Biometrics"&gt;Biometrics&lt;/a&gt; fields are rare in Egypt, and this was the challenge to make something new and not stable yet, the information for these fields are updating every year maybe less, and the information on the internet are rare and sometimes not free, but we manage to read some IEEE papers and the great book of O'Reilly BLAST.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="BLAST Book Cover" src="http://www.emadmokhtar.com/images/031210_2008_Intelligent2.jpg" /&gt;&lt;/p&gt;
+&lt;h1&gt;What is BLAST?&lt;/h1&gt;
+&lt;p&gt;B.L.A.S.T. stand for Basic Local Alignment Search Tool, which our system is based on this powerful tool.&lt;/p&gt;
+&lt;h1&gt;Obstacles&lt;/h1&gt;
+&lt;p&gt;When we decide to build our system, we face some obstacles which are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Information availability, it's not easy to find research papers and books about DNA.&lt;/li&gt;
+&lt;li&gt;Any implementation written in either Python or Java; and we want to build our system on C#.&lt;/li&gt;
+&lt;li&gt;The algorithm of BLAST works for all living being, and we want our system to work only with human being.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So I decide to read the O'Reilly BLAST book from cover to cover, but I really read the first 3 chapters and then an idea popup in my mind, why not customize this algorithm to be optimized for our system.&lt;/p&gt;
+&lt;p&gt;I used the concept of dynamic programming which is divide the big problem into small problems and solve them, so I created an algorithm that divided into 2 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inexact match.&lt;/li&gt;
+&lt;li&gt;Exact match.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;How does it work?&lt;/h1&gt;
+&lt;p&gt;First let's define the Inputs, Outputs, and Processing.&lt;/p&gt;
+&lt;h2&gt;Input&lt;/h2&gt;
+&lt;p&gt;The unknown personal's &lt;a href="http://en.wikipedia.org/wiki/DNA"&gt;DNA&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Processing&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The first step "Inexact match":&lt;/strong&gt; take the input DNA and make a &lt;a href="http://en.wikipedia.org/wiki/Smith-Waterman_algorithm"&gt;local alignment&lt;/a&gt; process and select the most 10 person made the highest match score, who one of them is the person or they are related, so we can use this step to identify the person's relatives like brother, sister, cousin, uncle, aunt, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The second step "exact match":&lt;/strong&gt; we use algorithm called 'Boyer-Moore' which used in string search processing, then the inputs for this step are the first step output "10 personal's DNA and the unknown person's DNA, and run process 10 times, every time run the algorithm with the unknown person's DNA and each of the 10 persons, the result either match or mismatch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Output&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Match "personal's information found".&lt;/li&gt;
+&lt;li&gt;Mismatch "person's info not found".&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;The Flowchart of the algorithm:&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="Algorithm Flowchart" src="http://www.emadmokhtar.com/images/031210_2008_Intelligent3.jpg" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 12 Mar 2010 20:08:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-03-12:intelligent-dna-identification-system.html</guid></item></channel></rss>
