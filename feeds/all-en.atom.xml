@@ -1,5 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2016-09-07T00:00:00+03:00</updated><entry><title>DjangoCon Europe 2016, me, and Django Sprints</title><link href="http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html" rel="alternate"></link><updated>2016-09-07T00:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-07:djangocon-europe-2016-me-and-django-sprints.html</id><summary type="html">&lt;p&gt;&lt;img alt="djangocon logo" src="http://www.emadmokhtar.com/images/yay.jpg" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2016-09-20T15:00:00+03:00</updated><entry><title>How to run Celery as daemon?</title><link href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html" rel="alternate"></link><updated>2016-09-20T15:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-20:how-to-run-celery-as-daemon.html</id><summary type="html">&lt;h1&gt;Install upstart script&lt;/h1&gt;
+&lt;h2&gt;celery&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Copy &lt;code&gt;celeryd&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;celeryd&lt;/code&gt; to &lt;code&gt;/etc/init.d/celeryd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make it executable &lt;code&gt;sudo chmod +x celeryd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make it run on startup&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-rc.d celeryd defaults
+sudo update-rc.d celeryd &lt;span class="nb"&gt;enable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;make it owned by root and give it the right permission&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown root:root celeryd
+sudo chmod &lt;span class="m"&gt;777&lt;/span&gt; celeryd
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Done, now you can start/stop/restart celeryd as service&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service celeryd start
+sudo service celeryd stop
+sudo service celeryd restart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;celery beat&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Copy &lt;code&gt;celerybeat&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;celerybeat&lt;/code&gt; to &lt;code&gt;/etc/init.d/celerybeat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make it executable &lt;code&gt;sudo chmod +x celerybeat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make it run on startup&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-rc.d celerybeat defaults
+sudo update-rc.d celerybeat &lt;span class="nb"&gt;enable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;make it owned by root and give it the right permission&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown root:root celerybeat
+sudo chmod &lt;span class="m"&gt;777&lt;/span&gt; celerybeat
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Done, now you can start/stop/restart celerd as service&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service celerybeat start
+sudo service celerybeat stop
+sudo service celerybeat restart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Configuration file&lt;/h1&gt;
+&lt;p&gt;We'll configure celery to work with Django App, take care that you need to export &lt;code&gt;DANGJO_SETTINGS_MODULE&lt;/code&gt; in order celery to discover your tasks.&lt;/p&gt;
+&lt;h2&gt;Sample Configuration&lt;/h2&gt;
+&lt;p&gt;This configuration example is for a Django project name &lt;strong&gt;django_project&lt;/strong&gt; located at &lt;strong&gt;/home/django_project&lt;/strong&gt;, and we'll use same configuration file for &lt;code&gt;celeryd&lt;/code&gt; and &lt;code&gt;celerybeat&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Django settings module&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;DJANGO_SETTINGS_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;settings&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Names of nodes to start&lt;/span&gt;
+&lt;span class="c1"&gt;#   most people will only start one node:&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_NODES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;worker1&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#   but you can also start multiple and configure settings&lt;/span&gt;
+&lt;span class="c1"&gt;#   for each in CELERYD_OPTS (see `celery multi --help` for examples):&lt;/span&gt;
+&lt;span class="c1"&gt;#CELERYD_NODES=&amp;quot;worker1 worker2 worker3&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#   alternatively, you can specify the number of nodes to start:&lt;/span&gt;
+&lt;span class="c1"&gt;#CELERYD_NODES=10&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Absolute or relative path to the &amp;#39;celery&amp;#39; command:&lt;/span&gt;
+&lt;span class="nv"&gt;CELERY_BIN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/bin/celery&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#CELERY_BIN=&amp;quot;/virtualenvs/def/bin/celery&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# App instance to use&lt;/span&gt;
+&lt;span class="c1"&gt;# comment out this line if you don&amp;#39;t use an app&lt;/span&gt;
+&lt;span class="nv"&gt;CELERY_APP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;django_project_name&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# or fully qualified:&lt;/span&gt;
+&lt;span class="c1"&gt;#CELERY_APP=&amp;quot;django_project_name.tasks:app&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Where to chdir at start.&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_CHDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/home/django_project/&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Extra command-line arguments to the worker&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--time-limit=300 --concurrency=8&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# %N will be replaced with the first part of the nodename.&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_LOG_FILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/log/celery/%N.log&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_PID_FILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/run/celery/%N.pid&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Workers should run as an unprivileged user.&lt;/span&gt;
+&lt;span class="c1"&gt;#   You need to create this user manually (or you can choose&lt;/span&gt;
+&lt;span class="c1"&gt;#   a user/group combination that already exists, e.g. nobody).&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_USER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;celery&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;CELERYD_GROUP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;celery&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# If enabled pid and log directories will be created if missing,&lt;/span&gt;
+&lt;span class="c1"&gt;# and owned by the userid/group configured.&lt;/span&gt;
+&lt;span class="nv"&gt;CELERY_CREATE_DIRS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+
+&lt;span class="c1"&gt;# CELERY BEAT&lt;/span&gt;
+
+&lt;span class="nv"&gt;CELERYBEAT_CHDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/home/django_project/&amp;quot;&lt;/span&gt;
+
+&lt;span class="nv"&gt;CELERYBEAT_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--schedule=/var/run/celery/celerybeat-schedule&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category></entry><entry><title>DjangoCon Europe 2016, me, and Django Sprints</title><link href="http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html" rel="alternate"></link><updated>2016-09-07T00:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-07:djangocon-europe-2016-me-and-django-sprints.html</id><summary type="html">&lt;p&gt;&lt;img alt="djangocon logo" src="http://www.emadmokhtar.com/images/yay.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="djangocon name tag" src="http://www.emadmokhtar.com/images/Name-tag.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Late in 2014 I decided to shift my development stack from Microsoft .NET Framework to &lt;a href="http://www.emadmokhtar.com/my-first-django-app.html"&gt;Django/Python stack&lt;/a&gt;. It's been almost 2 years now and I'm really enjoying and learning many things. I'm so happy that I've done this leap.
 In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I enjoyed it to the maximum, it's my first time to meet the community, and it's first time attending one of Django community events.&lt;/p&gt;

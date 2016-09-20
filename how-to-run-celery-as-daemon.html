@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+    <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+    <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+    <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="Emad Mokhtar" />
+<meta name="description" content="Install upstart script celery Copy celeryd file from Celery official github repository. Add celeryd to /etc/init.d/celeryd Make it executable sudo chmod +x celeryd Make it run on startup sudo update-rc.d celeryd defaults sudo update-rc.d celeryd enable make it owned by root and give it the ..." />
+<meta name="keywords" content="django, python, celery">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="How to run Celery as daemon?"/>
+<meta property="og:description" content="Install upstart script celery Copy celeryd file from Celery official github repository. Add celeryd to /etc/init.d/celeryd Make it executable sudo chmod +x celeryd Make it run on startup sudo update-rc.d celeryd defaults sudo update-rc.d celeryd enable make it owned by root and give it the ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-09-20 15:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emad-mokhtar.html">
+<meta property="article:section" content="Django"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="celery"/>
+<meta property="og:image" content="{filename}/images/celerysmoothie.jpg">
+  <title>Emad Mokhtar's Framework &ndash; How to run Celery as daemon?</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://www.emadmokhtar.com">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="how-to-run-celery-as-daemon">How to run Celery as daemon?</h1>
+    <p>Posted on Tue 20 September 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+  </header>
+  <div>
+    <h1>Install upstart script</h1>
+<h2>celery</h2>
+<ol>
+<li>Copy <code>celeryd</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github repository</a>.</li>
+<li>Add <code>celeryd</code> to <code>/etc/init.d/celeryd</code></li>
+<li>Make it executable <code>sudo chmod +x celeryd</code></li>
+<li>Make it run on startup</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo update-rc.d celeryd defaults
+sudo update-rc.d celeryd <span class="nb">enable</span>
+</pre></div>
+
+
+<ol>
+<li>make it owned by root and give it the right permission</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo chown root:root celeryd
+sudo chmod <span class="m">777</span> celeryd
+</pre></div>
+
+
+<ol>
+<li>Done, now you can start/stop/restart celeryd as service</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo service celeryd start
+sudo service celeryd stop
+sudo service celeryd restart
+</pre></div>
+
+
+<h2>celery beat</h2>
+<ol>
+<li>Copy <code>celerybeat</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github repository</a>.</li>
+<li>Add <code>celerybeat</code> to <code>/etc/init.d/celerybeat</code></li>
+<li>Make it executable <code>sudo chmod +x celerybeat</code></li>
+<li>Make it run on startup</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo update-rc.d celerybeat defaults
+sudo update-rc.d celerybeat <span class="nb">enable</span>
+</pre></div>
+
+
+<ol>
+<li>make it owned by root and give it the right permission</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo chown root:root celerybeat
+sudo chmod <span class="m">777</span> celerybeat
+</pre></div>
+
+
+<ol>
+<li>Done, now you can start/stop/restart celerd as service</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo service celerybeat start
+sudo service celerybeat stop
+sudo service celerybeat restart
+</pre></div>
+
+
+<h1>Configuration file</h1>
+<p>We'll configure celery to work with Django App, take care that you need to export <code>DANGJO_SETTINGS_MODULE</code> in order celery to discover your tasks.</p>
+<h2>Sample Configuration</h2>
+<p>This configuration example is for a Django project name <strong>django_project</strong> located at <strong>/home/django_project</strong>, and we'll use same configuration file for <code>celeryd</code> and <code>celerybeat</code>.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Django settings module</span>
+<span class="nb">export</span> <span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s1">&#39;settings&#39;</span>
+<span class="c1"># Names of nodes to start</span>
+<span class="c1">#   most people will only start one node:</span>
+<span class="nv">CELERYD_NODES</span><span class="o">=</span><span class="s2">&quot;worker1&quot;</span>
+<span class="c1">#   but you can also start multiple and configure settings</span>
+<span class="c1">#   for each in CELERYD_OPTS (see `celery multi --help` for examples):</span>
+<span class="c1">#CELERYD_NODES=&quot;worker1 worker2 worker3&quot;</span>
+<span class="c1">#   alternatively, you can specify the number of nodes to start:</span>
+<span class="c1">#CELERYD_NODES=10</span>
+
+<span class="c1"># Absolute or relative path to the &#39;celery&#39; command:</span>
+<span class="nv">CELERY_BIN</span><span class="o">=</span><span class="s2">&quot;/usr/local/bin/celery&quot;</span>
+<span class="c1">#CELERY_BIN=&quot;/virtualenvs/def/bin/celery&quot;</span>
+
+<span class="c1"># App instance to use</span>
+<span class="c1"># comment out this line if you don&#39;t use an app</span>
+<span class="nv">CELERY_APP</span><span class="o">=</span><span class="s2">&quot;django_project_name&quot;</span>
+<span class="c1"># or fully qualified:</span>
+<span class="c1">#CELERY_APP=&quot;django_project_name.tasks:app&quot;</span>
+
+<span class="c1"># Where to chdir at start.</span>
+<span class="nv">CELERYD_CHDIR</span><span class="o">=</span><span class="s2">&quot;/home/django_project/&quot;</span>
+
+<span class="c1"># Extra command-line arguments to the worker</span>
+<span class="nv">CELERYD_OPTS</span><span class="o">=</span><span class="s2">&quot;--time-limit=300 --concurrency=8&quot;</span>
+
+<span class="c1"># %N will be replaced with the first part of the nodename.</span>
+<span class="nv">CELERYD_LOG_FILE</span><span class="o">=</span><span class="s2">&quot;/var/log/celery/%N.log&quot;</span>
+<span class="nv">CELERYD_PID_FILE</span><span class="o">=</span><span class="s2">&quot;/var/run/celery/%N.pid&quot;</span>
+
+<span class="c1"># Workers should run as an unprivileged user.</span>
+<span class="c1">#   You need to create this user manually (or you can choose</span>
+<span class="c1">#   a user/group combination that already exists, e.g. nobody).</span>
+<span class="nv">CELERYD_USER</span><span class="o">=</span><span class="s2">&quot;celery&quot;</span>
+<span class="nv">CELERYD_GROUP</span><span class="o">=</span><span class="s2">&quot;celery&quot;</span>
+
+<span class="c1"># If enabled pid and log directories will be created if missing,</span>
+<span class="c1"># and owned by the userid/group configured.</span>
+<span class="nv">CELERY_CREATE_DIRS</span><span class="o">=</span>1
+
+<span class="c1"># CELERY BEAT</span>
+
+<span class="nv">CELERYBEAT_CHDIR</span><span class="o">=</span><span class="s2">&quot;/home/django_project/&quot;</span>
+
+<span class="nv">CELERYBEAT_OPTS</span><span class="o">=</span><span class="s2">&quot;--schedule=/var/run/celery/celerybeat-schedule&quot;</span>
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>
+      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>
+      <a href="http://www.emadmokhtar.com/tag/celery.html">celery</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "How to run Celery as daemon?",
+  "headline": "How to run Celery as daemon?",
+  "datePublished": "2016-09-20 15:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Emad Mokhtar",
+    "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
+  },
+  "image": "{filename}/images/celerysmoothie.jpg",
+  "url": "http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html",
+  "description": "Install upstart script celery Copy celeryd file from Celery official github repository. Add celeryd to /etc/init.d/celeryd Make it executable sudo chmod +x celeryd Make it run on startup sudo update-rc.d celeryd defaults sudo update-rc.d celeryd enable make it owned by root and give it the ..."
+}
+</script></body>
+</html>
