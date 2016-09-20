@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 20 Sep 2016 15:00:00 +0300</lastBuildDate><item><title>How to run Celery as daemon?</title><link>http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html</link><description>&lt;h1&gt;Install upstart script&lt;/h1&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 20 Sep 2016 15:00:00 +0300</lastBuildDate><item><title>How to run Celery as daemon?</title><link>http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html</link><description>&lt;p&gt;&lt;img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg" /&gt;&lt;/p&gt;
+&lt;h1&gt;Install upstart script&lt;/h1&gt;
 &lt;h2&gt;celery&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Copy &lt;code&gt;celeryd&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/li&gt;
