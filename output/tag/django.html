@@ -30,7 +30,7 @@
 <meta property="og:url" content="http://www.emadmokhtar.com"/>
 <meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
 
-  <title>Emad Mokhtar's Framework &ndash; Tag: Django</title>
+  <title>Emad Mokhtar's Framework &ndash; Tag: django</title>
 </head>
 <body>
   <aside>
@@ -64,6 +64,36 @@
       <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
     </nav>
 
+<article>
+  <header>
+    <h2><a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html#how-to-run-celery-as-daemon">How to run Celery as daemon?</a></h2>
+    <p>
+      Posted on Tue 20 September 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a>
+      &#8226; Tagged with
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>,      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>,      <a href="http://www.emadmokhtar.com/tag/celery.html">celery</a>      &#8226; <a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p><img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg" /></p>
+<h1>Install upstart script</h1>
+<h2>celery</h2>
+<ol>
+<li>Copy <code>celeryd</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github repository</a>.</li>
+<li>Add <code>celeryd</code> to <code>/etc/init.d/celeryd</code></li>
+<li>Make it executable <code>sudo chmod +x celeryd</code></li>
+<li>Make it run on startup</li>
+</ol>
+<div class="highlight"><pre><span></span>sudo update-rc.d celeryd defaults
+sudo update-rc.d celeryd <span class="nb">enable</span>
+</pre></div>
+
+
+<ol>
+<li>make it owned by root and give it the ...</li></ol>
+      <a class="btn" href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html#how-to-run-celery-as-daemon">Continue reading</a>
+  </div>
+  <hr />
+</article>
 <article>
   <header>
     <h2><a href="http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html#djangocon-europe-2016-me-and-django-sprints">DjangoCon Europe 2016, me, and Django Sprints</a></h2>
