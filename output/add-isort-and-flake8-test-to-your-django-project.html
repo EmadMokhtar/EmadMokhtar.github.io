@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+    <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+    <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+    <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="Emad Mokhtar" />
+<meta name="description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..." />
+<meta name="keywords" content="django, python, unittest, howto">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Add isort and flake8 test to your Django Project"/>
+<meta property="og:description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-09-27 18:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emad-mokhtar.html">
+<meta property="article:section" content="Django"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="unittest"/>
+<meta property="article:tag" content="howto"/>
+<meta property="og:image" content="{filename}/images/unit-test-works.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Add isort and flake8 test to your Django Project</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://www.emadmokhtar.com">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="add-isort-and-flake8-test-to-your-django-project">Add isort and flake8 test to your Django Project</h1>
+    <p>Posted on Tue 27 September 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+  </header>
+  <div>
+    <p><img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg" /></p>
+<p>In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.</p>
+<p>As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, <a href="https://docs.djangoproject.com/en/dev/topics/testing/">testing in Django</a> is easy and you can start writing tests even if you didn't do it before.</p>
+<p>If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add <a href="https://github.com/timothycrosley/isort">isort</a> and <a href="http://flake8.pycqa.org/en/latest/">flake8</a> tests to maintain the quality of your Python code.</p>
+<h1>Installation</h1>
+<p>We need some packages first so we can run the tests</p>
+<div class="highlight"><pre><span></span>pip install flake8 isort flake8-isort
+</pre></div>
+
+
+<p><strong>Note:</strong></p>
+<p>It's better to create and use sperate virtualenv</p>
+<h1>Configurations</h1>
+<p>flake8-isort is using <code>.isort.cfg</code> file to run the isort test against it, so let's add our configuration file.</p>
+<p><strong>.isort.cfg file</strong></p>
+<div class="highlight"><pre><span></span><span class="k">[*.py]</span>
+<span class="na">max_line_length</span> <span class="o">=</span> <span class="s">120</span>
+<span class="na">indent_style</span> <span class="o">=</span> <span class="s">space</span>
+<span class="na">indent_size</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">known_first_party</span> <span class="o">=</span> <span class="s">isort</span>
+<span class="na">ignore_frosted_errors</span> <span class="o">=</span> <span class="s">E103</span>
+<span class="na">skip</span> <span class="o">=</span> <span class="s">runtests.py,build,.tox</span>
+<span class="na">balanced_wrapping</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">not_skip</span> <span class="o">=</span> <span class="s">__init__.py</span>
+</pre></div>
+
+
+<h1>Test Python Script</h1>
+<p>Now it's time to write the Python script to run Django, isort, &amp; flake8 tests.</p>
+<p><strong>runtests.py</strong></p>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">coverage</span>
+<span class="kn">import</span> <span class="nn">django</span>
+<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="nn">django.test.utils</span> <span class="kn">import</span> <span class="n">get_runner</span>
+
+<span class="n">FLAKE8_ARGS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;--ignore=E501&quot;</span><span class="p">,</span> <span class="s2">&quot;--exclude=giants/settings/*&quot;</span><span class="p">]</span>
+<span class="n">APPS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;giants_web&quot;</span><span class="p">,</span> <span class="s2">&quot;giants&quot;</span><span class="p">]</span>
+<span class="n">EXCLUDE_FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;giants/__init__.py&quot;</span><span class="p">,</span> <span class="s2">&quot;giants/settings/*&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">exit_on_failure</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">command</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">flake8_main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Running: flake8&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;flake8&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Failed: flake8 failed.&quot;</span> <span class="k">if</span> <span class="n">command</span> <span class="k">else</span> <span class="s2">&quot;Success. flake8 passed.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">command</span>
+
+
+<span class="k">def</span> <span class="nf">run_django_tests_with_coverage</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DJANGO_SETTINGS_MODULE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;django_project.settings.local&#39;</span>
+        <span class="c1"># Set up and start test coverage</span>
+        <span class="n">cov</span> <span class="o">=</span> <span class="n">coverage</span><span class="o">.</span><span class="n">coverage</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">APPS</span><span class="p">,</span> <span class="n">omit</span><span class="o">=</span><span class="n">EXCLUDE_FILES</span><span class="p">)</span>
+        <span class="n">cov</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="c1"># Setup and start Django tests</span>
+        <span class="n">django</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+        <span class="n">TestRunner</span> <span class="o">=</span> <span class="n">get_runner</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+        <span class="n">test_runner</span> <span class="o">=</span> <span class="n">TestRunner</span><span class="p">()</span>
+        <span class="n">failures</span> <span class="o">=</span> <span class="n">test_runner</span><span class="o">.</span><span class="n">run_tests</span><span class="p">(</span><span class="n">APPS</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">failures</span><span class="p">):</span>
+            <span class="n">cov</span><span class="o">.</span><span class="n">erase</span><span class="p">()</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;Tests Failed. Coverage Cancelled.&quot;</span><span class="p">)</span>
+        <span class="c1"># If success show coverage results</span>
+        <span class="n">cov</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">cov</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">cov</span><span class="o">.</span><span class="n">report</span><span class="p">()</span>  <span class="c1"># Show report on terminal</span>
+        <span class="n">cov</span><span class="o">.</span><span class="n">html_report</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s1">&#39;covhtml&#39;</span><span class="p">)</span>  <span class="c1"># Export HTML report</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">exit_on_failure</span><span class="p">(</span><span class="n">flake8_main</span><span class="p">(</span><span class="n">APPS</span> <span class="o">+</span> <span class="n">FLAKE8_ARGS</span><span class="p">))</span>
+    <span class="n">exit_on_failure</span><span class="p">(</span><span class="n">run_django_tests_with_coverage</span><span class="p">())</span>
+</pre></div>
+
+
+<h1>Run tests</h1>
+<p>To run test simply run <code>runtests.py</code> file</p>
+<div class="highlight"><pre><span></span>python runtests.py
+</pre></div>
+
+
+<p>After you ran the tests, you may get isort issues, so let's see How to fix isort issues.</p>
+<h1>Fix isort issues</h1>
+<p>You can fix isort issues from terminal by calling isort command at project dicrectory.</p>
+<div class="highlight"><pre><span></span>isort
+</pre></div>
+
+
+<p>or from another Python script <strong>runisort.py</strong></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="kn">from</span> <span class="nn">isort</span> <span class="kn">import</span> <span class="n">SortImports</span>
+
+
+<span class="k">def</span> <span class="nf">run_isort</span><span class="p">():</span>
+    <span class="n">py_files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;**/*.py&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">py_files</span><span class="p">:</span>
+        <span class="n">SortImports</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">run_isort</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Run it from terminal <code>python runisort.py</code></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>
+      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>
+      <a href="http://www.emadmokhtar.com/tag/unittest.html">unittest</a>
+      <a href="http://www.emadmokhtar.com/tag/howto.html">howto</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Add isort and flake8 test to your Django Project",
+  "headline": "Add isort and flake8 test to your Django Project",
+  "datePublished": "2016-09-27 18:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Emad Mokhtar",
+    "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
+  },
+  "image": "{filename}/images/unit-test-works.jpg",
+  "url": "http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html",
+  "description": "In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..."
+}
+</script></body>
+</html>
