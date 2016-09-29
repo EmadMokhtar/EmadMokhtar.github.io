@@ -115,58 +115,63 @@
 
 &lt;p&gt;Run it from terminal &lt;code&gt;python runisort.py&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Tue, 27 Sep 2016 18:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-09-27:add-isort-and-flake8-test-to-your-django-project.html</guid><category>django</category><category>python</category><category>unittest</category><category>howto</category></item><item><title>How to run Celery as daemon?</title><link>http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html</link><description>&lt;p&gt;&lt;img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg" /&gt;&lt;/p&gt;
 &lt;h1&gt;Install upstart script&lt;/h1&gt;
-&lt;h2&gt;celery&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Copy &lt;code&gt;celeryd&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Add &lt;code&gt;celeryd&lt;/code&gt; to &lt;code&gt;/etc/init.d/celeryd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Make it executable &lt;code&gt;sudo chmod +x celeryd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Make it run on startup&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2&gt;Permissions&lt;/h2&gt;
+&lt;p&gt;We need to make the user which will be used to run celery an owner of &lt;code&gt;log&lt;/code&gt; and &lt;code&gt;run&lt;/code&gt; directories.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown -R root:root /var/log/celery/
+sudo chown -R root:root /var/run/celery/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Celery upstart&lt;/h2&gt;
+&lt;p&gt;1- Download &lt;code&gt;celeryd&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;2- Copy &lt;code&gt;celeryd&lt;/code&gt; to &lt;code&gt;/etc/init.d/celeryd&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo cp celeryd /etc/init.d/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3- Make it executable&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chmod +x celeryd
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;4- Make it run on startup&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-rc.d celeryd defaults
 sudo update-rc.d celeryd &lt;span class="nb"&gt;enable&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ol&gt;
-&lt;li&gt;make it owned by root and give it the right permission&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;5- make it owned by root&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown root:root celeryd
-sudo chmod &lt;span class="m"&gt;777&lt;/span&gt; celeryd
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ol&gt;
-&lt;li&gt;Done, now you can start/stop/restart celeryd as service&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;6- Done, now you can start/stop/restart celeryd as service&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service celeryd start
 sudo service celeryd stop
 sudo service celeryd restart
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;celery beat&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Copy &lt;code&gt;celerybeat&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Add &lt;code&gt;celerybeat&lt;/code&gt; to &lt;code&gt;/etc/init.d/celerybeat&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Make it executable &lt;code&gt;sudo chmod +x celerybeat&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Make it run on startup&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2&gt;Celerybeat upstart&lt;/h2&gt;
+&lt;p&gt;1- Download &lt;code&gt;celerybeat&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;2- Copy &lt;code&gt;celerybeat&lt;/code&gt; to &lt;code&gt;/etc/init.d/celerybeat&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo cp celerybeat /etc/init.d/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3- Make it executable &lt;code&gt;sudo chmod +x celerybeat&lt;/code&gt;
+4- Make it run on startup&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-rc.d celerybeat defaults
 sudo update-rc.d celerybeat &lt;span class="nb"&gt;enable&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ol&gt;
-&lt;li&gt;make it owned by root and give it the right permission&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;5- make it owned by root&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown root:root celerybeat
-sudo chmod &lt;span class="m"&gt;777&lt;/span&gt; celerybeat
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ol&gt;
-&lt;li&gt;Done, now you can start/stop/restart celerd as service&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;6- Done, now you can start/stop/restart celerd as service&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo service celerybeat start
 sudo service celerybeat stop
 sudo service celerybeat restart
@@ -174,7 +179,11 @@ sudo service celerybeat restart
 
 
 &lt;h1&gt;Configuration file&lt;/h1&gt;
-&lt;p&gt;We'll configure celery to work with Django App, take care that you need to export &lt;code&gt;DANGJO_SETTINGS_MODULE&lt;/code&gt; in order celery to discover your tasks.&lt;/p&gt;
+&lt;p&gt;We'll configure celery to work with Django App, take care that you need to export &lt;code&gt;DANGJO_SETTINGS_MODULE&lt;/code&gt; in order celery to discover your tasks. Configuration file need to be in &lt;code&gt;/etc/default/celeryd&lt;/code&gt; folder.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo nano /etc/default/celeryd
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Sample Configuration&lt;/h2&gt;
 &lt;p&gt;This configuration example is for a Django project name &lt;strong&gt;django_project&lt;/strong&gt; located at &lt;strong&gt;/home/django_project&lt;/strong&gt;, and we'll use same configuration file for &lt;code&gt;celeryd&lt;/code&gt; and &lt;code&gt;celerybeat&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Django settings module&lt;/span&gt;
@@ -223,7 +232,12 @@ sudo service celerybeat restart
 &lt;span class="nv"&gt;CELERYBEAT_CHDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/home/django_project/&amp;quot;&lt;/span&gt;
 
 &lt;span class="nv"&gt;CELERYBEAT_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--schedule=/var/run/celery/celerybeat-schedule&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Tue, 20 Sep 2016 15:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-09-20:how-to-run-celery-as-daemon.html</guid><category>django</category><category>python</category><category>celery</category></item><item><title>Send Emails Asynchronously from Django</title><link>http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html</link><description>&lt;p&gt;In this article you will learn:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Note: &lt;code&gt;CELERYD_USER&lt;/code&gt; &amp;amp; &lt;code&gt;CELERYD_GROUP&lt;/code&gt; is the user will use to run celery tasks from Django app.&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Tue, 20 Sep 2016 15:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-09-20:how-to-run-celery-as-daemon.html</guid><category>django</category><category>python</category><category>celery</category></item><item><title>Send Emails Asynchronously from Django</title><link>http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html</link><description>&lt;p&gt;In this article you will learn:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;How to send emails from &lt;a href="https://www.djangoproject.com"&gt;Django&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;How to use &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="https://github.com/pmclanahan/django-celery-email"&gt;Django-Celery-Email&lt;/a&gt; to send email asynchronously.&lt;/li&gt;
