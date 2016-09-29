@@ -7,49 +7,67 @@ Cover: {filename}/images/celerysmoothie.jpg
 ![celery smoothy]({filename}/images/celerysmoothie.jpg)
 
 # Install upstart script
-## celery
-1. Copy `celeryd` file from [Celery official github repository](http://github.com/celery/celery/tree/3.1/extra/generic-init.d/).
-2. Add `celeryd` to `/etc/init.d/celeryd`
-3. Make it executable `sudo chmod +x celeryd`
-4. Make it run on startup
+## Permissions
+We need to make the user which will be used to run celery an owner of `log` and `run` directories.
+``` bash
+sudo chown -R root:root /var/log/celery/
+sudo chown -R root:root /var/run/celery/
+```
+## Celery upstart
+1- Download `celeryd` file from [Celery official github repository](http://github.com/celery/celery/tree/3.1/extra/generic-init.d/).
+
+2- Copy `celeryd` to `/etc/init.d/celeryd`
+``` bash
+sudo cp celeryd /etc/init.d/
+```
+3- Make it executable
+``` bash
+sudo chmod +x celeryd
+```
+4- Make it run on startup
 ``` bash
 sudo update-rc.d celeryd defaults
 sudo update-rc.d celeryd enable
 ```
-5. make it owned by root and give it the right permission
+5- make it owned by root
 ``` bash
 sudo chown root:root celeryd
-sudo chmod 777 celeryd
 ```
-6. Done, now you can start/stop/restart celeryd as service
+6- Done, now you can start/stop/restart celeryd as service
 ``` bash
 sudo service celeryd start
 sudo service celeryd stop
 sudo service celeryd restart
 ```
 
-## celery beat
-1. Copy `celerybeat` file from [Celery official github repository](http://github.com/celery/celery/tree/3.1/extra/generic-init.d/).
-2. Add `celerybeat` to `/etc/init.d/celerybeat`
-3. Make it executable `sudo chmod +x celerybeat`
-4. Make it run on startup
+## Celerybeat upstart
+1- Download `celerybeat` file from [Celery official github repository](http://github.com/celery/celery/tree/3.1/extra/generic-init.d/).
+
+2- Copy `celerybeat` to `/etc/init.d/celerybeat`
+``` bash
+sudo cp celerybeat /etc/init.d/
+```
+3- Make it executable `sudo chmod +x celerybeat`
+4- Make it run on startup
 ``` bash
 sudo update-rc.d celerybeat defaults
 sudo update-rc.d celerybeat enable
 ```
-5. make it owned by root and give it the right permission
+5- make it owned by root
 ``` bash
 sudo chown root:root celerybeat
-sudo chmod 777 celerybeat
 ```
-6. Done, now you can start/stop/restart celerd as service
+6- Done, now you can start/stop/restart celerd as service
 ``` bash
 sudo service celerybeat start
 sudo service celerybeat stop
 sudo service celerybeat restart
 ```
 # Configuration file
-We'll configure celery to work with Django App, take care that you need to export `DANGJO_SETTINGS_MODULE` in order celery to discover your tasks.
+We'll configure celery to work with Django App, take care that you need to export `DANGJO_SETTINGS_MODULE` in order celery to discover your tasks. Configuration file need to be in `/etc/default/celeryd` folder.
+``` bash
+sudo nano /etc/default/celeryd
+```
 
 ## Sample Configuration
 
@@ -102,3 +120,5 @@ CELERYBEAT_CHDIR="/home/django_project/"
 
 CELERYBEAT_OPTS="--schedule=/var/run/celery/celerybeat-schedule"
 ```
+
+>Note: `CELERYD_USER` & `CELERYD_GROUP` is the user will use to run celery tasks from Django app.
