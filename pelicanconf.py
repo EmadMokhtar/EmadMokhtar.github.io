@@ -56,3 +56,5 @@ DISQUS_SITENAME = "emadmokhtarsframework"
 PLUGIN_PATHS = ['plugins']
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+GOOGLE_ANALYTICS = 'UA-11401860-2'
