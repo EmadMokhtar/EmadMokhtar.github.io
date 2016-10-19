@@ -48,6 +48,7 @@ sudo service celeryd restart
 sudo cp celerybeat /etc/init.d/
 ```
 3- Make it executable `sudo chmod +x celerybeat`
+
 4- Make it run on startup
 ``` bash
 sudo update-rc.d celerybeat defaults
