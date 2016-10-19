@@ -159,8 +159,8 @@ sudo service celeryd restart
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;3- Make it executable &lt;code&gt;sudo chmod +x celerybeat&lt;/code&gt;
-4- Make it run on startup&lt;/p&gt;
+&lt;p&gt;3- Make it executable &lt;code&gt;sudo chmod +x celerybeat&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;4- Make it run on startup&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-rc.d celerybeat defaults
 sudo update-rc.d celerybeat &lt;span class="nb"&gt;enable&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
