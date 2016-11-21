@@ -1,5 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Sep 2016 18:00:00 +0300</lastBuildDate><item><title>Add isort and flake8 test to your Django Project</title><link>http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html</link><description>&lt;p&gt;&lt;img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg" /&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 21 Nov 2016 15:00:00 +0300</lastBuildDate><item><title>Yet another and easier way to daemonize Celery</title><link>http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html</link><description>&lt;p&gt;I wrote a post about &lt;a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html"&gt;how to run celery as daemon&lt;/a&gt; and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.&lt;/p&gt;
+&lt;p&gt;In this method we will use &lt;a href="http://supervisord.org"&gt;supervisor&lt;/a&gt; to daemonize Celery, and this can be achieved by 3 simple steps, so let's do it.&lt;/p&gt;
+&lt;h1&gt;Step 1&lt;/h1&gt;
+&lt;p&gt;Install Supervisord &lt;code&gt;sudo apt-get install supervisor&lt;/code&gt; on Ubuntu server. For other OSs please visit &lt;a href="http://supervisord.org/installing.html"&gt;the official documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Step 2&lt;/h1&gt;
+&lt;p&gt;This is the most important step, and in this step we will create supervisor configuration file to daemonize Celery.&lt;/p&gt;
+&lt;h2&gt;Supervisor Configuration File&lt;/h2&gt;
+&lt;p&gt;Celery project provide the basic configuration file in their &lt;a href="https://github.com/celery/celery/blob/3.1/extra/supervisord/celeryd.conf"&gt;Github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Supervisor configuration files live in &lt;code&gt;\etc\supervisor\conf\&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Celery official configuration file&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;==================================&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt;  celery worker supervisor example
+&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;==================================&lt;/span&gt;
+
+&lt;span class="o"&gt;[&lt;/span&gt;program:celery&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt; Set full path to celery program &lt;span class="k"&gt;if&lt;/span&gt; using virtualenv
+&lt;span class="nv"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;celery worker -A proj --loglevel&lt;span class="o"&gt;=&lt;/span&gt;INFO
+
+&lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/project
+&lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;nobody
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/log/celery/worker.log
+&lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/log/celery/worker.log
+&lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+
+&lt;span class="p"&gt;;&lt;/span&gt; Need to &lt;span class="nb"&gt;wait&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; currently executing tasks to finish at shutdown.
+&lt;span class="p"&gt;;&lt;/span&gt; Increase this &lt;span class="k"&gt;if&lt;/span&gt; you have very long running tasks.
+&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 600
+
+&lt;span class="p"&gt;;&lt;/span&gt; When resorting to send SIGKILL to the program to terminate it
+&lt;span class="p"&gt;;&lt;/span&gt; send SIGKILL to its whole process group instead,
+&lt;span class="p"&gt;;&lt;/span&gt; taking care of its children as well.
+&lt;span class="nv"&gt;killasgroup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+
+&lt;span class="p"&gt;;&lt;/span&gt; Set Celery priority higher than default &lt;span class="o"&gt;(&lt;/span&gt;999&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt; so, &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, it will start first.
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Sample Configurtaion File&lt;/h3&gt;
+&lt;p&gt;This file is a sample of supervisor configuration file used to deamonize Celery and Celery Beat.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;program:django-celery&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="nv"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/celery worker --app&lt;span class="o"&gt;=&lt;/span&gt;django_projects --loglevel&lt;span class="o"&gt;=&lt;/span&gt;INFO --autoscale&lt;span class="o"&gt;=&lt;/span&gt;10,3
+&lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project
+&lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;celery
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/celery.log
+&lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/celery.log
+&lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+&lt;span class="p"&gt;;&lt;/span&gt; Need to &lt;span class="nb"&gt;wait&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; currently executing tasks to finish at shutdown.
+&lt;span class="p"&gt;;&lt;/span&gt; Increase this &lt;span class="k"&gt;if&lt;/span&gt; you have very long running tasks.
+&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 600
+
+&lt;span class="p"&gt;;&lt;/span&gt; When resorting to send SIGKILL to the program to terminate it
+&lt;span class="p"&gt;;&lt;/span&gt; send SIGKILL to its whole process group instead,
+&lt;span class="p"&gt;;&lt;/span&gt; taking care of its children as well.
+&lt;span class="nv"&gt;killasgroup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+
+&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, &lt;span class="nb"&gt;set&lt;/span&gt; its priority higher
+&lt;span class="p"&gt;;&lt;/span&gt; so it starts first
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;998
+&lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;DJANGO_SETTINGS_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;django_project.settings.production&amp;#39;&lt;/span&gt;
+
+&lt;span class="o"&gt;[&lt;/span&gt;program:django-celerybeat&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt; Set full path to celery program &lt;span class="k"&gt;if&lt;/span&gt; using virtualenv
+&lt;span class="nv"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/celery beat --app&lt;span class="o"&gt;=&lt;/span&gt;django_project --loglevel&lt;span class="o"&gt;=&lt;/span&gt;INFO  --schedule&lt;span class="o"&gt;=&lt;/span&gt;celerybeat-schedule.db
+&lt;span class="p"&gt;;&lt;/span&gt; remove the -A myapp argument &lt;span class="k"&gt;if&lt;/span&gt; you are not using an app instance
+
+&lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project
+&lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;celery
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/beat.log
+&lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/beat.log
+&lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+
+&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, &lt;span class="nb"&gt;set&lt;/span&gt; its priority higher
+&lt;span class="p"&gt;;&lt;/span&gt; so it starts first
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;999
+&lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;DJANGO_SETTINGS_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;django_project.settings.production&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let's exmain what in this configuration file:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;[program:django-celery]&lt;/code&gt; this is the service name, and we will use this to stop, start, restart, or check its status.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;command&lt;/code&gt; this is the command needed to run celery, like the command we use to run celery during the development, you can point the command to use system-wide Celery or virtualenv Celery, just point it to Celery path.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;directory&lt;/code&gt; the directory path where Your Celery app lives.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stdout_logfile&lt;/code&gt; the path to log file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stderr_logfile&lt;/code&gt; the path to error log file, and can be the same path as the log file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;user&lt;/code&gt; username who will run the process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;environment&lt;/code&gt; any environment variable will be use by Celery, for example Celery uses &lt;code&gt;DJANGO_SETTINGS_MODULE&lt;/code&gt; environment variable to run with Django app.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--autoscale=10,3&lt;/code&gt; this will start Celery with 3 workers and auto scale itself till 10 workers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Step 3&lt;/h1&gt;
+&lt;p&gt;Last step is to tell supervisor to read our new configuration file, and update the processes it is running.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl reread
+django-celery: avaliable
+django-celerybeat: avaliable
+$ sudo supervisorctl update
+django-celery: added process group
+django-celerybeat: added process group
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;🎊🎉 Congratulations now Celery and Celery Beat daemonized on your server.&lt;/p&gt;
+&lt;h1&gt;Managing Celery proccess&lt;/h1&gt;
+&lt;p&gt;Now we have Celery deamonized on our server, let's see how to manage it from Terminal.&lt;/p&gt;
+&lt;h2&gt;Start&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl start django-celery
+django-celery: started
+$ sudo supervisorctl start django-celerybeat
+django-celerybeat: started
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Stop&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl stop django-celery
+django-celery: stopped
+$ sudo supervisorctl stop django-celerybeat
+django-celerybeat: stopped
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Restart&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl restart django-celery
+django-celery: stopped
+django-celery: started
+$ sudo supervisorctl restart django-celerybeat
+django-celerybeat: stopped
+django-celerybeat: started
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Status&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl status django-celery
+django-celery                    RUNNING    pid 16020, uptime 0:01:00
+$ sudo supervisorctl status django-celerybeat
+django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 21 Nov 2016 15:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-11-21:yet-another-and-easier-way-to-daemonize-celery.html</guid><category>django</category><category>python</category><category>celery</category></item><item><title>Add isort and flake8 test to your Django Project</title><link>http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html</link><description>&lt;p&gt;&lt;img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.&lt;/p&gt;
 &lt;p&gt;As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, &lt;a href="https://docs.djangoproject.com/en/dev/topics/testing/"&gt;testing in Django&lt;/a&gt; is easy and you can start writing tests even if you didn't do it before.&lt;/p&gt;
 &lt;p&gt;If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add &lt;a href="https://github.com/timothycrosley/isort"&gt;isort&lt;/a&gt; and &lt;a href="http://flake8.pycqa.org/en/latest/"&gt;flake8&lt;/a&gt; tests to maintain the quality of your Python code.&lt;/p&gt;

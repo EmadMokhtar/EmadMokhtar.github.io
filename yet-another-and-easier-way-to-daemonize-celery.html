@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+    <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+    <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+    <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..." />
+<meta name="keywords" content="django, python, celery">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Yet another and easier way to daemonize Celery"/>
+<meta property="og:description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-11-21 15:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emadmokhtar.html">
+<meta property="article:section" content="Django"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="celery"/>
+<meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Yet another and easier way to daemonize Celery</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <nav>
+      <a href="http://www.emadmokhtar.com">Home</a>
+      <a href="https://emadmokhtar.github.io/resume">Resume</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+      <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+    </nav>
+
+<article>
+  <header>
+    <h1 id="yet-another-and-easier-way-to-daemonize-celery">Yet another and easier way to daemonize Celery</h1>
+    <p>Posted on Mon 21 November 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+  </header>
+  <div>
+    <p>I wrote a post about <a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html">how to run celery as daemon</a> and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.</p>
+<p>In this method we will use <a href="http://supervisord.org">supervisor</a> to daemonize Celery, and this can be achieved by 3 simple steps, so let's do it.</p>
+<h1>Step 1</h1>
+<p>Install Supervisord <code>sudo apt-get install supervisor</code> on Ubuntu server. For other OSs please visit <a href="http://supervisord.org/installing.html">the official documentation</a></p>
+<h1>Step 2</h1>
+<p>This is the most important step, and in this step we will create supervisor configuration file to daemonize Celery.</p>
+<h2>Supervisor Configuration File</h2>
+<p>Celery project provide the basic configuration file in their <a href="https://github.com/celery/celery/blob/3.1/extra/supervisord/celeryd.conf">Github repository</a>.</p>
+<p>Supervisor configuration files live in <code>\etc\supervisor\conf\</code></p>
+<h3>Celery official configuration file</h3>
+<div class="highlight"><pre><span></span><span class="p">;</span> <span class="o">==================================</span>
+<span class="p">;</span>  celery worker supervisor example
+<span class="p">;</span> <span class="o">==================================</span>
+
+<span class="o">[</span>program:celery<span class="o">]</span>
+<span class="p">;</span> Set full path to celery program <span class="k">if</span> using virtualenv
+<span class="nv">command</span><span class="o">=</span>celery worker -A proj --loglevel<span class="o">=</span>INFO
+
+<span class="nv">directory</span><span class="o">=</span>/path/to/project
+<span class="nv">user</span><span class="o">=</span>nobody
+<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">stdout_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">stderr_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">startsecs</span><span class="o">=</span>10
+
+<span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
+<span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
+<span class="nv">stopwaitsecs</span> <span class="o">=</span> 600
+
+<span class="p">;</span> When resorting to send SIGKILL to the program to terminate it
+<span class="p">;</span> send SIGKILL to its whole process group instead,
+<span class="p">;</span> taking care of its children as well.
+<span class="nv">killasgroup</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="p">;</span> Set Celery priority higher than default <span class="o">(</span>999<span class="o">)</span>
+<span class="p">;</span> so, <span class="k">if</span> rabbitmq is supervised, it will start first.
+<span class="nv">priority</span><span class="o">=</span>1000
+</pre></div>
+
+
+<h3>Sample Configurtaion File</h3>
+<p>This file is a sample of supervisor configuration file used to deamonize Celery and Celery Beat.</p>
+<div class="highlight"><pre><span></span><span class="o">[</span>program:django-celery<span class="o">]</span>
+<span class="nv">command</span><span class="o">=</span>/usr/local/bin/celery worker --app<span class="o">=</span>django_projects --loglevel<span class="o">=</span>INFO --autoscale<span class="o">=</span>10,3
+<span class="nv">directory</span><span class="o">=</span>/home/user/django_project
+<span class="nv">user</span><span class="o">=</span>celery
+<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">stdout_logfile</span><span class="o">=</span>/home/user/django_project/log/celery.log
+<span class="nv">stderr_logfile</span><span class="o">=</span>/home/user/django_project/log/celery.log
+<span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">startsecs</span><span class="o">=</span>10
+<span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
+<span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
+<span class="nv">stopwaitsecs</span> <span class="o">=</span> 600
+
+<span class="p">;</span> When resorting to send SIGKILL to the program to terminate it
+<span class="p">;</span> send SIGKILL to its whole process group instead,
+<span class="p">;</span> taking care of its children as well.
+<span class="nv">killasgroup</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="p">;</span> <span class="k">if</span> rabbitmq is supervised, <span class="nb">set</span> its priority higher
+<span class="p">;</span> so it starts first
+<span class="nv">priority</span><span class="o">=</span>998
+<span class="nv">environment</span><span class="o">=</span><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s1">&#39;django_project.settings.production&#39;</span>
+
+<span class="o">[</span>program:django-celerybeat<span class="o">]</span>
+<span class="p">;</span> Set full path to celery program <span class="k">if</span> using virtualenv
+<span class="nv">command</span><span class="o">=</span>/usr/local/bin/celery beat --app<span class="o">=</span>django_project --loglevel<span class="o">=</span>INFO  --schedule<span class="o">=</span>celerybeat-schedule.db
+<span class="p">;</span> remove the -A myapp argument <span class="k">if</span> you are not using an app instance
+
+<span class="nv">directory</span><span class="o">=</span>/home/user/django_project
+<span class="nv">user</span><span class="o">=</span>celery
+<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">stdout_logfile</span><span class="o">=</span>/home/user/django_project/log/beat.log
+<span class="nv">stderr_logfile</span><span class="o">=</span>/home/user/django_project/log/beat.log
+<span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">startsecs</span><span class="o">=</span>10
+
+<span class="p">;</span> <span class="k">if</span> rabbitmq is supervised, <span class="nb">set</span> its priority higher
+<span class="p">;</span> so it starts first
+<span class="nv">priority</span><span class="o">=</span>999
+<span class="nv">environment</span><span class="o">=</span><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s1">&#39;django_project.settings.production&#39;</span>
+</pre></div>
+
+
+<p>Let's exmain what in this configuration file:</p>
+<ul>
+<li>
+<p><code>[program:django-celery]</code> this is the service name, and we will use this to stop, start, restart, or check its status.</p>
+</li>
+<li>
+<p><code>command</code> this is the command needed to run celery, like the command we use to run celery during the development, you can point the command to use system-wide Celery or virtualenv Celery, just point it to Celery path.</p>
+</li>
+<li><code>directory</code> the directory path where Your Celery app lives.</li>
+<li><code>stdout_logfile</code> the path to log file.</li>
+<li><code>stderr_logfile</code> the path to error log file, and can be the same path as the log file.</li>
+<li><code>user</code> username who will run the process.</li>
+<li><code>environment</code> any environment variable will be use by Celery, for example Celery uses <code>DJANGO_SETTINGS_MODULE</code> environment variable to run with Django app.</li>
+<li><code>--autoscale=10,3</code> this will start Celery with 3 workers and auto scale itself till 10 workers.</li>
+</ul>
+<h1>Step 3</h1>
+<p>Last step is to tell supervisor to read our new configuration file, and update the processes it is running.</p>
+<div class="highlight"><pre><span></span>$ sudo supervisorctl reread
+django-celery: avaliable
+django-celerybeat: avaliable
+$ sudo supervisorctl update
+django-celery: added process group
+django-celerybeat: added process group
+</pre></div>
+
+
+<p>🎊🎉 Congratulations now Celery and Celery Beat daemonized on your server.</p>
+<h1>Managing Celery proccess</h1>
+<p>Now we have Celery deamonized on our server, let's see how to manage it from Terminal.</p>
+<h2>Start</h2>
+<div class="highlight"><pre><span></span>$ sudo supervisorctl start django-celery
+django-celery: started
+$ sudo supervisorctl start django-celerybeat
+django-celerybeat: started
+</pre></div>
+
+
+<h2>Stop</h2>
+<div class="highlight"><pre><span></span>$ sudo supervisorctl stop django-celery
+django-celery: stopped
+$ sudo supervisorctl stop django-celerybeat
+django-celerybeat: stopped
+</pre></div>
+
+
+<h2>Restart</h2>
+<div class="highlight"><pre><span></span>$ sudo supervisorctl restart django-celery
+django-celery: stopped
+django-celery: started
+$ sudo supervisorctl restart django-celerybeat
+django-celerybeat: stopped
+django-celerybeat: started
+</pre></div>
+
+
+<h2>Status</h2>
+<div class="highlight"><pre><span></span>$ sudo supervisorctl status django-celery
+django-celery                    RUNNING    pid 16020, uptime 0:01:00
+$ sudo supervisorctl status django-celerybeat
+django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
+</pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>
+      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>
+      <a href="http://www.emadmokhtar.com/tag/celery.html">celery</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+    <footer>
+        <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11401860-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Yet another and easier way to daemonize Celery",
+  "headline": "Yet another and easier way to daemonize Celery",
+  "datePublished": "2016-11-21 15:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "http://www.emadmokhtar.com/author/emadmokhtar.html"
+  },
+  "image": "http://www.emadmokhtar.com/images/profile.jpg",
+  "url": "http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html",
+  "description": "I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..."
+}
+</script></body>
+</html>
