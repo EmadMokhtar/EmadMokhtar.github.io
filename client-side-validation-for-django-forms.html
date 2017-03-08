@@ -83,11 +83,9 @@
 <h1>Django Parsley</h1>
 <p><a href="https://github.com/agiliq/Django-parsley">Django Parsley</a> is a Django app that replicate Django Form validation to client side using <a href="http://parsleyjs.org">ParsleyJS</a> library, and it’s so easy to use it.</p>
 <h1>How to use Django Parsley?</h1>
-<ol>
-<li>Install Django Parsley <code>pip install django-parsley</code></li>
-<li>Add <code>parsley</code> to <code>INSTALLED_APPS</code></li>
-<li>Add <code>@parsleyfy</code> decorator to Django form class</li>
-</ol>
+<p>1.. Install Django Parsley <code>pip install django-parsley</code>
+2.. Add <code>parsley</code> to <code>INSTALLED_APPS</code>
+3.. Add <code>@parsleyfy</code> decorator to Django form class</p>
 <div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
     <span class="kn">from</span> <span class="nn">parsley.decorators</span> <span class="kn">import</span> <span class="n">parsleyfy</span>
 
@@ -108,9 +106,7 @@
 </pre></div>
 
 
-<ol>
-<li>Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</li>
-</ol>
+<p>4.. Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</p>
 <div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">data-parsley-validate</span><span class="p">&gt;</span>
     {{ form.as_p }}
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
