@@ -87,10 +87,10 @@
 <li>Install Django Parsley <code>pip install django-parsley</code></li>
 <li>Add <code>parsley</code> to <code>INSTALLED_APPS</code></li>
 <li>
-<p>Add <code>@parsleyfy</code> decorator to Django form class
-    ``` python
-    from django import forms
-    from parsley.decorators import parsleyfy</p>
+<p>Add <code>@parsleyfy</code> decorator to Django form class</p>
+<p>``` python
+from django import forms
+from parsley.decorators import parsleyfy</p>
 <p>@parsleyfy
 class UserProfileForm(forms.Form):
     username = forms.CharField(min_length=3, max_lenght=20)
@@ -105,14 +105,16 @@ class UserProfileForm(forms.Form):
                 'error-message': "Your passwords do not match.",
             },
         }
-<code>4. Add `data-parsley-validate` to html `&lt;form&gt;` tag.</code> html
-<form method="post" data-parsley-validate>
+<code>``
+4. Add</code>data-parsley-validate<code>to html</code><form>` tag.</p>
+<p><code>html
+&lt;form method="post" data-parsley-validate&gt;
     {{ form.as_p }}
-</form>
-<code>5. Include jQuery and ParsleyJS in your Django Template.</code> html
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"></script>
-```
+&lt;/form&gt;</code>
+5. Include jQuery and ParsleyJS in your Django Template.</p>
+<p><code>html
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"&gt;&lt;/script&gt;</code>
 6. Voila, now form will be rendered with parsley special attributes that match Django from validations, so your form has client-side validations that almost match the server-side validations.</p>
 </li>
 </ol>

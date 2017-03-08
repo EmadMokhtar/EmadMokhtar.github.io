@@ -10,10 +10,10 @@
 &lt;li&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class
-    ``` python
-    from django import forms
-    from parsley.decorators import parsleyfy&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/p&gt;
+&lt;p&gt;``` python
+from django import forms
+from parsley.decorators import parsleyfy&lt;/p&gt;
 &lt;p&gt;@parsleyfy
 class UserProfileForm(forms.Form):
     username = forms.CharField(min_length=3, max_lenght=20)
@@ -28,14 +28,16 @@ class UserProfileForm(forms.Form):
                 'error-message': "Your passwords do not match.",
             },
         }
-&lt;code&gt;4. Add `data-parsley-validate` to html `&amp;lt;form&amp;gt;` tag.&lt;/code&gt; html
-&lt;form method="post" data-parsley-validate&gt;
+&lt;code&gt;``
+4. Add&lt;/code&gt;data-parsley-validate&lt;code&gt;to html&lt;/code&gt;&lt;form&gt;` tag.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;html
+&amp;lt;form method="post" data-parsley-validate&amp;gt;
     {{ form.as_p }}
-&lt;/form&gt;
-&lt;code&gt;5. Include jQuery and ParsleyJS in your Django Template.&lt;/code&gt; html
-&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"&gt;&lt;/script&gt;
-```
+&amp;lt;/form&amp;gt;&lt;/code&gt;
+5. Include jQuery and ParsleyJS in your Django Template.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;html
+&amp;lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
 6. Voila, now form will be rendered with parsley special attributes that match Django from validations, so your form has client-side validations that almost match the server-side validations.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
