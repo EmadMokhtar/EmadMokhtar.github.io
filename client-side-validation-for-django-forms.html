@@ -87,26 +87,31 @@
 <li>Install Django Parsley <code>pip install django-parsley</code></li>
 <li>Add <code>parsley</code> to <code>INSTALLED_APPS</code></li>
 <li>
-<p>Add <code>@parsleyfy</code> decorator to Django form class</p>
-<p>``` python
-from django import forms
-from parsley.decorators import parsleyfy</p>
-<p>@parsleyfy
+<p>Add <code>@parsleyfy</code> decorator to Django form class
+        ``` python
+        from django import forms
+        from parsley.decorators import parsleyfy</p>
+<div class="highlight"><pre><span></span>@parsleyfy
 class UserProfileForm(forms.Form):
     username = forms.CharField(min_length=3, max_lenght=20)
     name = forms.CharField(min_length=3, max_length=30)
     password = forms.CharField(widget=forms.PasswordInput(), required=True)
     password_1 = forms.CharField(widget=forms.PasswordInput(), required=True,
-                                 label='Confirm password')
+                                 label=&#39;Confirm password&#39;)
     class Meta:
          parsley_extras = {
-            'password_1': {
-                'equalto': "password",
-                'error-message': "Your passwords do not match.",
+            &#39;password_1&#39;: {
+                &#39;equalto&#39;: &quot;password&quot;,
+                &#39;error-message&#39;: &quot;Your passwords do not match.&quot;,
             },
         }
-<code>``
-4. Add</code>data-parsley-validate<code>to html</code><form>` tag.</p>
+```
+</pre></div>
+
+
+<ol>
+<li>Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</li>
+</ol>
 <p><code>html
 &lt;form method="post" data-parsley-validate&gt;
     {{ form.as_p }}

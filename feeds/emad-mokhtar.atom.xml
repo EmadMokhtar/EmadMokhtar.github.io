@@ -10,26 +10,31 @@
 &lt;li&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/p&gt;
-&lt;p&gt;``` python
-from django import forms
-from parsley.decorators import parsleyfy&lt;/p&gt;
-&lt;p&gt;@parsleyfy
+&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class
+        ``` python
+        from django import forms
+        from parsley.decorators import parsleyfy&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@parsleyfy
 class UserProfileForm(forms.Form):
     username = forms.CharField(min_length=3, max_lenght=20)
     name = forms.CharField(min_length=3, max_length=30)
     password = forms.CharField(widget=forms.PasswordInput(), required=True)
     password_1 = forms.CharField(widget=forms.PasswordInput(), required=True,
-                                 label='Confirm password')
+                                 label=&amp;#39;Confirm password&amp;#39;)
     class Meta:
          parsley_extras = {
-            'password_1': {
-                'equalto': "password",
-                'error-message': "Your passwords do not match.",
+            &amp;#39;password_1&amp;#39;: {
+                &amp;#39;equalto&amp;#39;: &amp;quot;password&amp;quot;,
+                &amp;#39;error-message&amp;#39;: &amp;quot;Your passwords do not match.&amp;quot;,
             },
         }
-&lt;code&gt;``
-4. Add&lt;/code&gt;data-parsley-validate&lt;code&gt;to html&lt;/code&gt;&lt;form&gt;` tag.&lt;/p&gt;
+```
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Add &lt;code&gt;data-parsley-validate&lt;/code&gt; to html &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;html
 &amp;lt;form method="post" data-parsley-validate&amp;gt;
     {{ form.as_p }}
