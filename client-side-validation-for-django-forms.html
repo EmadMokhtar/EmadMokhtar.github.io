@@ -85,25 +85,24 @@
 <h1>How to use Django Parsley?</h1>
 <p>1- Install Django Parsley <code>pip install django-parsley</code></p>
 <p>2- Add <code>parsley</code> to <code>INSTALLED_APPS</code></p>
-<p>3- Add <code>@parsleyfy</code> decorator to Django form class
-    ``` python
-    from django import forms
-    from parsley.decorators import parsleyfy</p>
-<div class="highlight"><pre><span></span>@parsleyfy
-class UserProfileForm(forms.Form):
-    username = forms.CharField(min_length=3, max_lenght=20)
-    name = forms.CharField(min_length=3, max_length=30)
-    password = forms.CharField(widget=forms.PasswordInput(), required=True)
-    password_1 = forms.CharField(widget=forms.PasswordInput(), required=True,
-                                 label=&#39;Confirm password&#39;)
-    class Meta:
-         parsley_extras = {
-            &#39;password_1&#39;: {
-                &#39;equalto&#39;: &quot;password&quot;,
-                &#39;error-message&#39;: &quot;Your passwords do not match.&quot;,
-            },
-        }
-```
+<p>3- Add <code>@parsleyfy</code> decorator to Django form class</p>
+<div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+    <span class="kn">from</span> <span class="nn">parsley.decorators</span> <span class="kn">import</span> <span class="n">parsleyfy</span>
+
+    <span class="nd">@parsleyfy</span>
+    <span class="k">class</span> <span class="nc">UserProfileForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_lenght</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">password_1</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                     <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confirm password&#39;</span><span class="p">)</span>
+        <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+             <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;password_1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;equalto&#39;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+                    <span class="s1">&#39;error-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Your passwords do not match.&quot;</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">}</span>
 </pre></div>
 
 
