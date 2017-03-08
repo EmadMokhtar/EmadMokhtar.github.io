@@ -8,13 +8,13 @@
 &lt;h1&gt;How to use Django Parsley?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt; in your settings file.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;
