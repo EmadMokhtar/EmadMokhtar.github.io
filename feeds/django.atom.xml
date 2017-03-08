@@ -6,9 +6,11 @@
 &lt;h1&gt;Django Parsley&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://github.com/agiliq/Django-parsley"&gt;Django Parsley&lt;/a&gt; is a Django app that replicate Django Form validation to client side using &lt;a href="http://parsleyjs.org"&gt;ParsleyJS&lt;/a&gt; library, and it’s so easy to use it.&lt;/p&gt;
 &lt;h1&gt;How to use Django Parsley?&lt;/h1&gt;
-&lt;p&gt;1- Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;2- Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;3- Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;
     &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;parsley.decorators&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;parsleyfy&lt;/span&gt;
 
@@ -29,7 +31,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;4- Add &lt;code&gt;data-parsley-validate&lt;/code&gt; to html &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add &lt;code&gt;data-parsley-validate&lt;/code&gt; to html &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; tag.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;form&lt;/span&gt; &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;data-parsley-validate&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     {{ form.as_p }}
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;form&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
