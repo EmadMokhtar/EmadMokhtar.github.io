@@ -10,10 +10,10 @@
 &lt;li&gt;Install Django Parsley &lt;code&gt;pip install django-parsley&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Add &lt;code&gt;parsley&lt;/code&gt; to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class&lt;/p&gt;
-&lt;p&gt;``` python
-from django import forms
-from parsley.decorators import parsleyfy&lt;/p&gt;
+&lt;p&gt;Add &lt;code&gt;@parsleyfy&lt;/code&gt; decorator to Django form class
+    ``` python
+    from django import forms
+    from parsley.decorators import parsleyfy&lt;/p&gt;
 &lt;p&gt;@parsleyfy
 class UserProfileForm(forms.Form):
     username = forms.CharField(min_length=3, max_lenght=20)
@@ -28,10 +28,8 @@ class UserProfileForm(forms.Form):
                 'error-message': "Your passwords do not match.",
             },
         }
-```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add &lt;code&gt;data-parsley-validate&lt;/code&gt; to html &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;code&gt;``
+4. Add&lt;/code&gt;data-parsley-validate&lt;code&gt;to html&lt;/code&gt;&lt;form&gt;` tag.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;html
 &amp;lt;form method="post" data-parsley-validate&amp;gt;
     {{ form.as_p }}
