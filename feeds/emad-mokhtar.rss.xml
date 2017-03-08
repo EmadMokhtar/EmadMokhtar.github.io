@@ -28,8 +28,10 @@ class UserProfileForm(forms.Form):
                 'error-message': "Your passwords do not match.",
             },
         }
-&lt;code&gt;``
-4. Add&lt;/code&gt;data-parsley-validate&lt;code&gt;to html&lt;/code&gt;&lt;form&gt;` tag.&lt;/p&gt;
+```&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add &lt;code&gt;data-parsley-validate&lt;/code&gt; to html &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;html
 &amp;lt;form method="post" data-parsley-validate&amp;gt;
     {{ form.as_p }}

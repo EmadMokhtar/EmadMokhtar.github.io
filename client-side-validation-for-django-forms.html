@@ -105,8 +105,10 @@ class UserProfileForm(forms.Form):
                 'error-message': "Your passwords do not match.",
             },
         }
-<code>``
-4. Add</code>data-parsley-validate<code>to html</code><form>` tag.</p>
+```</p>
+</li>
+<li>
+<p>Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</p>
 <p><code>html
 &lt;form method="post" data-parsley-validate&gt;
     {{ form.as_p }}
