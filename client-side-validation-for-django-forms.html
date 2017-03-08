@@ -83,45 +83,43 @@
 <h1>Django Parsley</h1>
 <p><a href="https://github.com/agiliq/Django-parsley">Django Parsley</a> is a Django app that replicate Django Form validation to client side using <a href="http://parsleyjs.org">ParsleyJS</a> library, and it’s so easy to use it.</p>
 <h1>How to use Django Parsley?</h1>
-<ol>
-<li>Install Django Parsley <code>pip install django-parsley</code></li>
-<li>Add <code>parsley</code> to <code>INSTALLED_APPS</code></li>
-<li>Add <code>@parsleyfy</code> decorator to Django form class</li>
-</ol>
-<div class="highlight"><pre><span></span>        <span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
-        <span class="kn">from</span> <span class="nn">parsley.decorators</span> <span class="kn">import</span> <span class="n">parsleyfy</span>
+<p>1- Install Django Parsley <code>pip install django-parsley</code></p>
+<p>2- Add <code>parsley</code> to <code>INSTALLED_APPS</code></p>
+<p>3- Add <code>@parsleyfy</code> decorator to Django form class</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span> <span class="nn">parsley.decorators</span> <span class="kn">import</span> <span class="n">parsleyfy</span>
 
-        <span class="nd">@parsleyfy</span>
-        <span class="k">class</span> <span class="nc">UserProfileForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
-            <span class="n">username</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_lenght</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-            <span class="n">name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-            <span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-            <span class="n">password_1</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                                         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confirm password&#39;</span><span class="p">)</span>
-            <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-                 <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
-                    <span class="s1">&#39;password_1&#39;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s1">&#39;equalto&#39;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
-                        <span class="s1">&#39;error-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Your passwords do not match.&quot;</span><span class="p">,</span>
-                    <span class="p">},</span>
-                <span class="p">}</span>
+<span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserProfileForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_lenght</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">password_1</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                 <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confirm password&#39;</span><span class="p">)</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+         <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password_1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;equalto&#39;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+                <span class="s1">&#39;error-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Your passwords do not match.&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
 </pre></div>
 
 
-<ol>
-<li>
-<p>Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</p>
-<p><code>html
-&lt;form method="post" data-parsley-validate&gt;
+<p>4- Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">data-parsley-validate</span><span class="p">&gt;</span>
     {{ form.as_p }}
-&lt;/form&gt;</code>
-5. Include jQuery and ParsleyJS in your Django Template.</p>
-<p><code>html
-&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"&gt;&lt;/script&gt;</code>
-6. Voila, now form will be rendered with parsley special attributes that match Django from validations, so your form has client-side validations that almost match the server-side validations.</p>
-</li>
-</ol>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>5- Include jQuery and ParsleyJS in your Django Template.</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>6- Voila, now form will be rendered with parsley special attributes that match Django from validations, so your form has client-side validations that almost match the server-side validations.</p>
 <h2>The Rendered Form</h2>
 <div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">data-parsley-validate</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
