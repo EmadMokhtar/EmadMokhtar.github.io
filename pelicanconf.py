@@ -41,7 +41,7 @@ GITHUB_ACTIVITY_FEED = 'https://github.com/EmadMokhtar.atom'
 GITHUB_ACTIVITY_MAX_ENTRIES = 10
 TWITTER_USERNAME = 'EmadMokhtar'
 GITHUB_URL = 'https://www.github.com/EmadMokhtar'
-THEME = 'Flex'
+THEME = 'themes/Flex'
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
