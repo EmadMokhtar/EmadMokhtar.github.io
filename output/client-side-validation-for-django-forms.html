@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+  <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+  <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+  <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="Emad Mokhtar" />
+<meta name="description" content="source In DUTH 2016 there was a session for Django Validation by Loïc Bistuer, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is ..." />
+<meta name="keywords" content="Django, Forms">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Client side validation for Django Forms"/>
+<meta property="og:description" content="source In DUTH 2016 there was a session for Django Validation by Loïc Bistuer, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-03-08 00:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emad-mokhtar.html">
+<meta property="article:section" content="Django"/>
+<meta property="article:tag" content="Django"/>
+<meta property="article:tag" content="Forms"/>
+<meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Client side validation for Django Forms</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+</aside>
+<main>
+  <nav>
+    <a href="http://www.emadmokhtar.com">Home</a>
+    <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+  </nav>
+
+<article>
+  <header>
+    <h1 id="client-side-validation-for-django-forms">Client side validation for Django Forms</h1>
+    <p>Posted on Wed 08 March 2017 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+  </header>
+  <div>
+    <p><img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg" /></p>
+<p><a href="https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF">source</a></p>
+<p>In DUTH 2016 there was a session for <a href="https://youtu.be/uzTaWKcMzos">Django Validation by Loïc Bistuer</a>, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is special validation rules you want to implement, you can still implement it, as I said it is easy and straight forward in Django, all of these validation is server side which happen on web server not on client-side, so what about client side?</p>
+<h1>What is client side validation?</h1>
+<p>In simple way, client side validation is validation user input on browser before sending the data to sever.</p>
+<p>It is good practice to validate user inputs from client side to save roundtrips to server, but it needs extra work to implement your validations using JavaScript or using HTML5 form validation, but there is a way to replicate Django form validation to client side, let’s see how.</p>
+<h1>Django Parsley</h1>
+<p><a href="https://github.com/agiliq/Django-parsley">Django Parsley</a> is a Django app that replicate Django Form validation to client side using <a href="http://parsleyjs.org">ParsleyJS</a> library, and it’s so easy to use it.</p>
+<h1>How to use Django Parsley?</h1>
+<ul>
+<li>
+<p>Install Django Parsley <code>pip install django-parsley</code>.</p>
+</li>
+<li>
+<p>Add <code>parsley</code> to <code>INSTALLED_APPS</code> in your settings file.</p>
+</li>
+<li>
+<p>Add <code>@parsleyfy</code> decorator to Django form class.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span> <span class="nn">parsley.decorators</span> <span class="kn">import</span> <span class="n">parsleyfy</span>
+
+<span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserProfileForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_lenght</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">password_1</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                                 <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Confirm password&#39;</span><span class="p">)</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+         <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password_1&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;equalto&#39;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span>
+                <span class="s1">&#39;error-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Your passwords do not match.&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Add <code>data-parsley-validate</code> to html <code>&lt;form&gt;</code> tag.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">data-parsley-validate</span><span class="p">&gt;</span>
+    {{ form.as_p }}
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<ul>
+<li>Include jQuery and ParsleyJS in your Django Template.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<ul>
+<li>Voila, now form will be rendered with parsley special attributes that match Django from validations, so your form has client-side validations that almost match the server-side validations.</li>
+</ul>
+<h2>The Rendered Form</h2>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">data-parsley-validate</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;id_username&quot;</span><span class="p">&gt;</span>Username:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">data-parsley-maxlength</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">data-parsley-minlength</span><span class="o">=</span><span class="s">&quot;3&quot;</span>
+                <span class="na">data-parsley-required</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-parsley-required-message</span><span class="o">=</span><span class="s">&quot;This field is required.&quot;</span>
+                <span class="na">id</span><span class="o">=</span><span class="s">&quot;id_username&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;20&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;3&quot;</span>
+                <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">required</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;id_name&quot;</span><span class="p">&gt;</span>Name:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">data-parsley-maxlength</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="na">data-parsley-minlength</span><span class="o">=</span><span class="s">&quot;3&quot;</span>
+                <span class="na">data-parsley-required</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-parsley-required-message</span><span class="o">=</span><span class="s">&quot;This field is required.&quot;</span>
+                <span class="na">id</span><span class="o">=</span><span class="s">&quot;id_name&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;30&quot;</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span>
+                <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">required</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+         <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;id_password&quot;</span><span class="p">&gt;</span>Password:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">data-parsley-required</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-parsley-required-message</span><span class="o">=</span><span class="s">&quot;This field is required.&quot;</span>
+                <span class="na">id</span><span class="o">=</span><span class="s">&quot;id_password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">required</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;id_password_1&quot;</span><span class="p">&gt;</span>Confirm password:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">data-parsley-equalto</span><span class="o">=</span><span class="s">&quot;#id_password&quot;</span> <span class="na">data-parsley-error-message</span><span class="o">=</span><span class="s">&quot;Your passwords do not match.&quot;</span>
+                <span class="na">data-parsley-required</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">data-parsley-required-message</span><span class="o">=</span><span class="s">&quot;This field is required.&quot;</span>
+                <span class="na">id</span><span class="o">=</span><span class="s">&quot;id_password_1&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password_1&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">required</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+       <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h1>Demo App</h1>
+<p>I've created demo Django app on <a href="https://github.com/EmadMokhtar/django-parsley-demo">Github</a>.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/django.html">Django</a>
+      <a href="http://www.emadmokhtar.com/tag/forms.html">Forms</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+  <footer>
+    <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>  </footer>
+</main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11401860-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Client side validation for Django Forms",
+  "headline": "Client side validation for Django Forms",
+  "datePublished": "2017-03-08 00:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Emad Mokhtar",
+    "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
+  },
+  "image": "http://www.emadmokhtar.com/images/profile.jpg",
+  "url": "http://www.emadmokhtar.com/client-side-validation-for-django-forms.html",
+  "description": "source In DUTH 2016 there was a session for Django Validation by Loïc Bistuer, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is ..."
+}
+</script></body>
+</html>
