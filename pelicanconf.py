@@ -26,15 +26,18 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 #AUTHOR_FEED_ATOM = None
 #AUTHOR_FEED_RSS = None
 # Blogroll
-LINKS = (('Resume', 'https://emadmokhtar.github.io/resume'),)
+LINKS = (
+            ('Resume', 'https://emadmokhtar.github.io/resume'),
+            )
 # Social widget
 SOCIAL = (
           ('envelope-o','mailto:emad@emadmokhtar.com'),
           ('github', 'https://www.github.com/EmadMokhtar'),
+          ('linkedin', 'https://www.linkedin.com/in/emadmokhtar/'),
           ('stack-overflow','http://stackoverflow.com/users/373051/emad-mokhtar'),
           ('facebook', 'https://www.facebook.com/emadmokhtarframework/'),
           ('twitter', 'https://twitter.com/emadmokhtar'),
-          ('linkedin', 'https://www.linkedin.com/in/emadmokhtar/'),)
+          )
 
 
 GITHUB_ACTIVITY_FEED = 'https://github.com/EmadMokhtar.atom'
