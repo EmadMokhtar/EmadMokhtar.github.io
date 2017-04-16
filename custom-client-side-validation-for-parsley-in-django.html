@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+  <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+  <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+  <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="EmadMokhtar" />
+<meta name="description" content="I wrote a post on how to add client side validation for Django Forms. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in django-parsley, like username availability, password strength, email ..." />
+<meta name="keywords" content="django, python, parsley, validation">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Custom Client Side Validation for Parsley in Django"/>
+<meta property="og:description" content="I wrote a post on how to add client side validation for Django Forms. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in django-parsley, like username availability, password strength, email ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-04-16 15:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emadmokhtar.html">
+<meta property="article:section" content="Django"/>
+<meta property="article:tag" content="django"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="parsley"/>
+<meta property="article:tag" content="validation"/>
+<meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Custom Client Side Validation for Parsley in Django</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+           <li><a href="http://www.emadmokhtar.com">Blog</a></li>
+          <li><a href="http://www.emadmokhtar.com/pages/podcasts.html#podcasts">Podcasts</a></li>
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</aside>
+<main>
+  <nav>
+    <a href="http://www.emadmokhtar.com">Home</a>
+    <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+  </nav>
+
+<article>
+  <header>
+    <h1 id="custom-client-side-validation-for-parsley-in-django">Custom Client Side Validation for Parsley in Django</h1>
+    <p>Posted on Sun 16 April 2017 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+  </header>
+  <div>
+    <p><img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg" /></p>
+<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.</p>
+<h1>Parsley remote validation</h1>
+<p><a href="http://parsleyjs.org/doc/index.html">Parsley library</a> has <a href="http://parsleyjs.org/doc/index.html#remote">remote validation</a>, it's calling AJAX service (Django view) and check if AJAX call returns <a href="http://www.restapitutorial.com/httpstatuscodes.html">2xx HTTP status codes</a> then it's valid input else it's invalid input and shows error message. Thankfully you can use remote validation in Django Form using django-parsley via <code>parsley-extras</code> attribute.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserRegistrationForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Password is invalid&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_username_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this username is already exists.&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_email_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this email is already exists.&quot;</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>In the code above we are adding client custom validation as remote to <code>password</code>, <code>username</code>, and <code>email</code>  fields, Did you notice that <code>remote</code> key is holding a URL to Django View? let’s create a complete sample to get our head around it.</p>
+<h1>Django Password Validation Sample</h1>
+<p><a href="https://docs.djangoproject.com/en/dev/topics/auth/passwords/#module-django.contrib.auth.password_validation">Django 1.9 introduce built-in password validation</a>, so we can use Django's built-in password validators and write an AJAX view to use it in the custom remote validator, and we will take in mind that if in future you want to build your own password validator as additional to the default ones, our view will be valid.</p>
+<h2>AJAX Validator</h2>
+<p>Let’s build the AJAX view that use Django’s built-in password validators to validate user’s password.</p>
+<h3>views.py</h3>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span>
+
+
+<span class="k">class</span> <span class="nc">ParselyValidResponse</span><span class="p">(</span><span class="n">JsonResponse</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    JSON response to represent valid data to client-side</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">status_code</span> <span class="o">=</span> <span class="mi">200</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;valid&#39;</span><span class="p">}</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">ParselyValidResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">ParselyInvalidResponse</span><span class="p">(</span><span class="n">JsonResponse</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    JSON response to represent invalid data to client-side</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">status_code</span> <span class="o">=</span> <span class="mi">404</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;invalid&#39;</span><span class="p">}</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">ParselyInvalidResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">validate_password_parsley</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">django.contrib.auth.password_validation</span> <span class="kn">import</span> <span class="n">get_default_password_validators</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">password</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ParselyInvalidResponse</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">password_validators</span> <span class="o">=</span> <span class="n">get_default_password_validators</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">validator</span> <span class="ow">in</span> <span class="n">password_validators</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">validator</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">ValidationError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ParselyInvalidResponse</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ParselyValidResponse</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Because Parsley remote validation need to receive HTTP 2xx status to consider the input value valid other than that input value is invalid, we have created 2 classes <code>ParselyInvalidResponse</code> and <code>ParselyValidResponse</code>  that inherit from <code>JsonResponse</code>, then in <code>validate_password_parsely()</code> view function we’ve imported <a href="https://docs.djangoproject.com/en/1.10/topics/auth/passwords/#django.contrib.auth.password_validation.get_password_validators"><code>get_default_password_validators()</code></a> function that return all password validator configure in <code>AUTH_PASSWORD_VALIDATORS</code>, after that we’ll loop over each validator and validate the password, if one of validator found the password invalid, we’ll return empty JSON with 404 HTTP status to tell parsley the password is invalid.</p>
+<h3>URLs.py</h3>
+<div class="highlight"><pre><span></span><span class="n">URLpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<span class="o">...</span>
+<span class="n">URL</span><span class="p">(</span><span class="s1">r&#39;^validate-password-parsley/$&#39;</span><span class="p">,</span>
+        <span class="n">view</span><span class="o">=</span><span class="n">ajax_views</span><span class="o">.</span><span class="n">validate_password_parsley</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+<span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<h2>Add custom validator to Django Form</h2>
+<p>We’ll create simple User Registration form and password will be a required field and we’ll hook the above AJAX validator with it using Parsley remote by using <a href="https://github.com/agiliq/Django-parsley#advanced-usage">django-parsely <code>parsley_extras</code></a>.</p>
+<div class="highlight"><pre><span></span><span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserRegistrationForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="o">...</span>
+      <span class="n">password</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">PasswordInput</span><span class="p">(),</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="o">...</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Password is invalid&quot;</span>
+            <span class="p">},</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<p>As you can see <code>remote</code> key will hold URL to our AJAX validator, and we can use Django’s <code>reverse_lazy()</code> to get the URL from the <code>URL_patterns</code>, and <code>remote-message</code> key will hold the error message for the invalid value.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>
+      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>
+      <a href="http://www.emadmokhtar.com/tag/parsley.html">parsley</a>
+      <a href="http://www.emadmokhtar.com/tag/validation.html">validation</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+  <footer>
+    <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>  </footer>
+</main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11401860-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Custom Client Side Validation for Parsley in Django",
+  "headline": "Custom Client Side Validation for Parsley in Django",
+  "datePublished": "2017-04-16 15:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "EmadMokhtar",
+    "url": "http://www.emadmokhtar.com/author/emadmokhtar.html"
+  },
+  "image": "http://www.emadmokhtar.com/images/profile.jpg",
+  "url": "http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html",
+  "description": "I wrote a post on how to add client side validation for Django Forms. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in django-parsley, like username availability, password strength, email ..."
+}
+</script></body>
+</html>
