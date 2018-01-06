@@ -10,13 +10,14 @@ One of my source of knowledge is podcasts, I'm listening to podcasts during busy
 # Podcast List
 
 1. [Talk Python to Me](https://talkpython.fm): Python conversations for passionate developers.
-2. [Python Bytes](https://pythonbytes.fm): Developer headlines delivered directly to your earbuds
-3. [Test and code](http://testandcode.com): Software Development, Software Testing, and Python.
-4. [Developer Tea](https://spec.fm/podcasts/developer-tea): A podcast for developers designed to fit inside your tea break.
-5. [Does Not Compute](https://spec.fm/podcasts/does-not-compute): A weekly chat about the lives and workflows of modern web developers, hosted by Sean Washington & Paul Straw.
-6. [API Academy](http://www.apiacademy.co/?tags=Podcast): Listen in as we discuss APIs, the web and network based software.
-7. [Software Daily](https://softwareengineeringdaily.com): Technical interviews about software topics.
-8. [Foundr](https://foundrmag.com/podcast-with-nathan-chan/): Learn From Successful Founders & Proven Entrepreneurs, The Ultimate StartUp Podcast For Business.
+1. [Python Bytes](https://pythonbytes.fm): Developer headlines delivered directly to your earbuds
+1. [Test and code](http://testandcode.com): Software Development, Software Testing, and Python.
+1. [Podcast.__init__('Python')](https://www.podcastinit.com/): The Podcast About Python and the People Who Make It Great.
+1. [Developer Tea](https://spec.fm/podcasts/developer-tea): A podcast for developers designed to fit inside your tea break.
+1. [API Academy](http://www.apiacademy.co/?tags=Podcast): Listen in as we discuss APIs, the web and network based software.
+1. [Blinkist Podcast](https://www.blinkist.com/magazine/podcasts): The Blinkist Podcast makes big ideas personal.
+Read more at: https://www.blinkist.com/magazine/podcasts?utm_source=cpp
+1. [Foundr](https://foundrmag.com/podcast-with-nathan-chan/): Learn From Successful Founders & Proven Entrepreneurs, The Ultimate StartUp Podcast For Business.
 
 
 
