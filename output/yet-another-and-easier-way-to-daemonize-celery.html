@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="EmadMokhtar" />
-<meta name="description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..." />
+<meta name="description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to …" />
 <meta name="keywords" content="django, python, celery">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Yet another and easier way to daemonize Celery"/>
-<meta property="og:description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..."/>
+<meta property="og:description" content="I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html"/>
 <meta property="og:type" content="article"/>
@@ -99,43 +99,43 @@
 
 <span class="nv">directory</span><span class="o">=</span>/path/to/project
 <span class="nv">user</span><span class="o">=</span>nobody
-<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
 <span class="nv">stdout_logfile</span><span class="o">=</span>/var/log/celery/worker.log
 <span class="nv">stderr_logfile</span><span class="o">=</span>/var/log/celery/worker.log
 <span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
-<span class="nv">startsecs</span><span class="o">=</span>10
+<span class="nv">startsecs</span><span class="o">=</span><span class="m">10</span>
 
 <span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
 <span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
-<span class="nv">stopwaitsecs</span> <span class="o">=</span> 600
+<span class="nv">stopwaitsecs</span> <span class="o">=</span> <span class="m">600</span>
 
 <span class="p">;</span> When resorting to send SIGKILL to the program to terminate it
 <span class="p">;</span> send SIGKILL to its whole process group instead,
 <span class="p">;</span> taking care of its children as well.
 <span class="nv">killasgroup</span><span class="o">=</span><span class="nb">true</span>
 
-<span class="p">;</span> Set Celery priority higher than default <span class="o">(</span>999<span class="o">)</span>
+<span class="p">;</span> Set Celery priority higher than default <span class="o">(</span><span class="m">999</span><span class="o">)</span>
 <span class="p">;</span> so, <span class="k">if</span> rabbitmq is supervised, it will start first.
-<span class="nv">priority</span><span class="o">=</span>1000
+<span class="nv">priority</span><span class="o">=</span><span class="m">1000</span>
 </pre></div>
 
 
 <h3>Sample Configurtaion File</h3>
 <p>This file is a sample of supervisor configuration file used to deamonize Celery and Celery Beat.</p>
 <div class="highlight"><pre><span></span><span class="o">[</span>program:django-celery<span class="o">]</span>
-<span class="nv">command</span><span class="o">=</span>/usr/local/bin/celery worker --app<span class="o">=</span>django_projects --loglevel<span class="o">=</span>INFO --autoscale<span class="o">=</span>10,3
+<span class="nv">command</span><span class="o">=</span>/usr/local/bin/celery worker --app<span class="o">=</span>django_projects --loglevel<span class="o">=</span>INFO --autoscale<span class="o">=</span><span class="m">10</span>,3
 <span class="nv">directory</span><span class="o">=</span>/home/user/django_project
 <span class="nv">user</span><span class="o">=</span>celery
-<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
 <span class="nv">stdout_logfile</span><span class="o">=</span>/home/user/django_project/log/celery.log
 <span class="nv">stderr_logfile</span><span class="o">=</span>/home/user/django_project/log/celery.log
 <span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
-<span class="nv">startsecs</span><span class="o">=</span>10
+<span class="nv">startsecs</span><span class="o">=</span><span class="m">10</span>
 <span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
 <span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
-<span class="nv">stopwaitsecs</span> <span class="o">=</span> 600
+<span class="nv">stopwaitsecs</span> <span class="o">=</span> <span class="m">600</span>
 
 <span class="p">;</span> When resorting to send SIGKILL to the program to terminate it
 <span class="p">;</span> send SIGKILL to its whole process group instead,
@@ -144,7 +144,7 @@
 
 <span class="p">;</span> <span class="k">if</span> rabbitmq is supervised, <span class="nb">set</span> its priority higher
 <span class="p">;</span> so it starts first
-<span class="nv">priority</span><span class="o">=</span>998
+<span class="nv">priority</span><span class="o">=</span><span class="m">998</span>
 <span class="nv">environment</span><span class="o">=</span><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s1">&#39;django_project.settings.production&#39;</span>
 
 <span class="o">[</span>program:django-celerybeat<span class="o">]</span>
@@ -154,16 +154,16 @@
 
 <span class="nv">directory</span><span class="o">=</span>/home/user/django_project
 <span class="nv">user</span><span class="o">=</span>celery
-<span class="nv">numprocs</span><span class="o">=</span>1
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
 <span class="nv">stdout_logfile</span><span class="o">=</span>/home/user/django_project/log/beat.log
 <span class="nv">stderr_logfile</span><span class="o">=</span>/home/user/django_project/log/beat.log
 <span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
 <span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
-<span class="nv">startsecs</span><span class="o">=</span>10
+<span class="nv">startsecs</span><span class="o">=</span><span class="m">10</span>
 
 <span class="p">;</span> <span class="k">if</span> rabbitmq is supervised, <span class="nb">set</span> its priority higher
 <span class="p">;</span> so it starts first
-<span class="nv">priority</span><span class="o">=</span>999
+<span class="nv">priority</span><span class="o">=</span><span class="m">999</span>
 <span class="nv">environment</span><span class="o">=</span><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span><span class="s1">&#39;django_project.settings.production&#39;</span>
 </pre></div>
 
@@ -225,9 +225,9 @@ django-celerybeat: started
 
 <h2>Status</h2>
 <div class="highlight"><pre><span></span>$ sudo supervisorctl status django-celery
-django-celery                    RUNNING    pid 16020, uptime 0:01:00
+django-celery                    RUNNING    pid <span class="m">16020</span>, uptime <span class="m">0</span>:01:00
 $ sudo supervisorctl status django-celerybeat
-django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
+django-celerybeat                    RUNNING    pid <span class="m">16030</span>, uptime <span class="m">0</span>:01:10
 </pre></div>
   </div>
   <div class="tag-cloud">
@@ -283,7 +283,7 @@ django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
   },
   "image": "http://www.emadmokhtar.com/images/profile.jpg",
   "url": "http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html",
-  "description": "I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to ..."
+  "description": "I wrote a post about how to run celery as daemon and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery. In this method we will use supervisor to …"
 }
 </script></body>
 </html>

@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="Emad Mokhtar" />
-<meta name="description" content="In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email ..." />
+<meta name="description" content="In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email …" />
 <meta name="keywords" content="django, python, celery, emails">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Send Emails Asynchronously from Django"/>
-<meta property="og:description" content="In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email ..."/>
+<meta property="og:description" content="In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html"/>
 <meta property="og:type" content="article"/>
@@ -86,7 +86,7 @@
 <li>How to use <a href="http://www.celeryproject.org/">Celery</a> and <a href="https://github.com/pmclanahan/django-celery-email">Django-Celery-Email</a> to send email asynchronously.</li>
 </ol>
 <p>Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background.</p>
-<p><img alt="Alt Text" src="http://www.emadmokhtar.com/images/1442310863_full.png" /></p>
+<p><img alt="Alt Text" src="http://www.emadmokhtar.com/images/1442310863_full.png"></p>
 <p>Now let’s see how we can do that.</p>
 <h2>Step 1: Install and Setup Celery</h2>
 <ul>
@@ -118,7 +118,7 @@
 <span class="n">app</span><span class="o">.</span><span class="n">config_from_object</span><span class="p">(</span><span class="s1">&#39;django.conf:settings&#39;</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">autodiscover_tasks</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </pre></div>
 
@@ -174,7 +174,7 @@ I've created class that can help use in this task</p>
 <span class="sd">    Send email messages helper class</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_email</span><span class="o">=</span><span class="s1">&#39;emad.mh@motiva.com&#39;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">from_email</span><span class="o">=</span><span class="s1">&#39;emad.mh@motiva.com&#39;</span><span class="p">):</span>
         <span class="c1"># TODO setup the default from email</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">connection</span> <span class="o">=</span> <span class="n">mail</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">from_email</span> <span class="o">=</span> <span class="n">from_email</span>
@@ -292,7 +292,7 @@ I've created class that can help use in this task</p>
   },
   "image": "{filename}/images/1442310863_full.png",
   "url": "http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html",
-  "description": "In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email ..."
+  "description": "In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email …"
 }
 </script></body>
 </html>

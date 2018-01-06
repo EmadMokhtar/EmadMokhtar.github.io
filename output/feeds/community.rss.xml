@@ -1,152 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emad Mokhtar's Framework</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><atom:link href="http://www.emadmokhtar.com/feeds/community.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 08 Jan 2017 00:00:00 +0300</lastBuildDate><item><title>Django is boring but you can contribute</title><link>http://www.emadmokhtar.com/django-is-boring-but-you-can-contribute.html</link><description>&lt;p&gt;&lt;img alt="Bored employee in front of computer" src="http://blog.inf.ed.ac.uk/sapm/files/2014/03/boredom.jpg" /&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Emad Mokhtar's Framework - Community</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><lastBuildDate>Mon, 10 Jul 2017 15:00:00 +0300</lastBuildDate><item><title>Shinny New Tools</title><link>http://www.emadmokhtar.com/shinny-new-tools.html</link><description>&lt;p&gt;&lt;img alt="Old Tools" src="http://www.emadmokhtar.com/images/felix-russell-saw-167176.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &amp;quot;San Francisco&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Ubuntu, Roboto, Noto, &amp;quot;Segoe UI&amp;quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="http://unsplash.com/@frsphoto?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Felix Russell-Saw"&gt;&lt;span style="display:inline-block;padding:2px 3px;"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"&gt;&lt;title&gt;&lt;/title&gt;&lt;path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span style="display:inline-block;padding:2px 3px;"&gt;Felix Russell-Saw&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One day I realized that Microsoft technologies are not for what I'm looking for. what I'm looking for is working in startup that developing its own product like Instagram, Shopify, or Pinterest. So I've done some research and I found that Microsoft technologies are not made for this …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 10 Jul 2017 15:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2017-07-10:/shinny-new-tools.html</guid><category>developer</category></item><item><title>Django is boring but you can contribute</title><link>http://www.emadmokhtar.com/django-is-boring-but-you-can-contribute.html</link><description>&lt;p&gt;&lt;img alt="Bored employee in front of computer" src="http://blog.inf.ed.ac.uk/sapm/files/2014/03/boredom.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I attended Django Under The Hood 2016, in sprints there is a comment passing around which &lt;a href="https://www.caktusgroup.com/blog/2016/12/14/django-boring-or-why-tech-startups-should-use-django/"&gt;Django is boring&lt;/a&gt;. Django is boring is actually a good news for the framework users, but it's sad one for developers want to contribute to the framework.&lt;/p&gt;
-&lt;p&gt;Every time I go to check &lt;a href="https://code.djangoproject.com/"&gt;Django tickets&lt;/a&gt; to contribute, I found they are difficult and in depth, because Django is a mature project now and the amount of contribution needed to the codebase is rare, but if you want to contribute you can check &lt;a href="https://code.djangoproject.com/query?status=!closed&amp;amp;easy=1"&gt;easy pickings&lt;/a&gt; tickets. In DUTH before the sprints projects leaders start to ask attendees for contributions, I found this is a good opportunity for me and for anyone wants to help the community and start to contribute to Django community.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Github duth contributions" src="http://www.emadmokhtar.com/images/duth-contribution.png" /&gt;&lt;/p&gt;
-&lt;p&gt;If you want to contribute to Django and help the community, I have some suggestions for you:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Write blog posts on How-tos, tips, and tutorials for Django, and &lt;a href="https://djangopackages.org/"&gt;Django packages&lt;/a&gt; for example Django REST Framework.&lt;/li&gt;
-&lt;li&gt;Help Django team to &lt;a href="https://docs.djangoproject.com/en/1.10/internals/contributing/triaging-tickets/#triage-workflow"&gt;move the ticket from stage to another&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Contribute to one of Django’s packages, specially packages you are using, check their github page and help them.&lt;/li&gt;
-&lt;li&gt;Tried more than one package for X? Perfect write Why you picked this over other, and please be gentle we are helping the community.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Django is boring because it’s a mature framework, and I’m enjoying using it, every day I’m learning new things in Django, and trying to help the best community I ever joined. I’m so proud to be part of this community.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 08 Jan 2017 00:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2017-01-08:django-is-boring-but-you-can-contribute.html</guid><category>community</category><category>Django</category><category>duth</category></item><item><title>DjangoCon Europe 2016, me, and Django Sprints</title><link>http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html</link><description>&lt;p&gt;&lt;img alt="djangocon logo" src="http://www.emadmokhtar.com/images/yay.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="djangocon name tag" src="http://www.emadmokhtar.com/images/Name-tag.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Every time I go to check &lt;a href="https://code.djangoproject.com/"&gt;Django …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 08 Jan 2017 00:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2017-01-08:/django-is-boring-but-you-can-contribute.html</guid><category>community</category><category>Django</category><category>duth</category></item><item><title>DjangoCon Europe 2016, me, and Django Sprints</title><link>http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html</link><description>&lt;p&gt;&lt;img alt="djangocon logo" src="http://www.emadmokhtar.com/images/yay.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="djangocon name tag" src="http://www.emadmokhtar.com/images/Name-tag.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Late in 2014 I decided to shift my development stack from Microsoft .NET Framework to &lt;a href="http://www.emadmokhtar.com/my-first-django-app.html"&gt;Django/Python stack&lt;/a&gt;. It's been almost 2 years now and I'm really enjoying and learning many things. I'm so happy that I've done this leap.
-In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I enjoyed it to the maximum, it's my first time to meet the community, and it's first time attending one of Django community events.&lt;/p&gt;
-&lt;h1&gt;Django Community&lt;/h1&gt;
-&lt;p&gt;When I started to learn Django, I found everyone is recommending Django documentation itself as start, from my past experience in .NET framework that its documentation is not enough to get your head around the framework, you need at least to read one book or watch one video course, but after reading Django official documentation, I was shocked that it's enough as start, it's enough for your daily tasks, it's enough to dive in Django framework, or fixing issues. The quality of &lt;a href="https://docs.djangoproject.com/en/dev/"&gt;Django official documentation&lt;/a&gt; is amazing.&lt;/p&gt;
-&lt;p&gt;When I went to DjangoCon Europe 2016 I saw people reflecting the philosophy of Django framework, the community is so welcoming as Django documentation, I had the chance to meet  &lt;a href="https://github.com/freakboy3742"&gt;Russell Keith-Magee&lt;/a&gt; and &lt;a href="https://github.com/tomchristie"&gt;Tom Christie&lt;/a&gt; personally, I asked them humble questions and they were so friendly and welcoming, and they give me solid answers for my questions.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Russell Keith-Magee" src="http://www.emadmokhtar.com/images/Russell.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tom Christie" src="http://www.emadmokhtar.com/images/Tom.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Thanks Russell and Tom 😊&lt;/p&gt;
-&lt;h1&gt;DjangoCon Europe 2016&lt;/h1&gt;
-&lt;p&gt;The conference was amazing and it was one of my best experience, it's good to be with genius and geeks under on roof, and we have the chance to talk and know them,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sprints hall" src="http://www.emadmokhtar.com/images/Sprint.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Again I had the chance to met &lt;a href="https://github.com/erikr"&gt;Erik Romijn&lt;/a&gt; and ask him about Why I got mood changes? and Why someday I feel I'm unstoppable, genius, and ninja and other day I feel down and disappointed? and he gave me nice solution which is make a list of positive things you have done and every time you feel down open it and check your achievements.&lt;/p&gt;
-&lt;p&gt;Thanks Erik 😊&lt;/p&gt;
-&lt;p&gt;During speaking sessions I learnt many things about Django and its community, and during the sprints and I had the chance to work on Django project itself and after one month from the DjangoCon 2016 my &lt;a href="https://github.com/django/django/commit/c4980e28e57f385d8ffed5e32ce373e52ce61049"&gt;pull request&lt;/a&gt; merged 💪🏻&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Django Project Achievement" src="http://www.emadmokhtar.com/images/django-project.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;after this big achievements I felt I can contribute to open source projects, and &lt;a href="https://github.com/manosim/django-rest-framework-docs/pull/92"&gt;yes another&lt;/a&gt; achievement unlocked.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="OSS Contribution" src="http://www.emadmokhtar.com/images/oss-contribution.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;I want to thank &lt;a href="https://2016.djangocon.eu/team/"&gt;DjangoCon Europe 2016 team&lt;/a&gt; for their effort and made this one of the best life experience. 😊 😊 😊&lt;/p&gt;
-&lt;h1&gt;My Goals after DjangoCon Europe 2016&lt;/h1&gt;
-&lt;p&gt;The sky is the limit, so I'm dreaming to contribute more to open source project, write more about technologies, and speak in conference, and I'm confident that I'll do one day and it's soon.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Wed, 07 Sep 2016 00:00:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2016-09-07:djangocon-europe-2016-me-and-django-sprints.html</guid><category>community</category><category>Django</category><category>DjangoCon</category></item><item><title>EgyGeeks Podcast - Little Cloudy</title><link>http://www.emadmokhtar.com/egygeeks-podcast-little-cloudy.html</link><description>&lt;p&gt;We’d recorded the &lt;a href="http://egygeeks.podbean.com/2011/01/02/egygeeks-3-a-little-cloudy/"&gt;3rd episode&lt;/a&gt;
+In 2016 I had the change to attend DjangoCon Europe …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Wed, 07 Sep 2016 00:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2016-09-07:/djangocon-europe-2016-me-and-django-sprints.html</guid><category>community</category><category>Django</category><category>DjangoCon</category></item><item><title>EgyGeeks Podcast - Little Cloudy</title><link>http://www.emadmokhtar.com/egygeeks-podcast-little-cloudy.html</link><description>&lt;p&gt;We’d recorded the &lt;a href="http://egygeeks.podbean.com/2011/01/02/egygeeks-3-a-little-cloudy/"&gt;3rd episode&lt;/a&gt;
 of &lt;a href="http://www.egygeeks.net/"&gt;EgyGeeks&lt;/a&gt; podcast, the podcast that speaks
 Egyptian accent about technology, since Cloud Computing is the big buzz
 word these days in IT world, so we decided to have at least one episode
 about it &amp;amp; our thoughts about it, so Myself &amp;amp; &lt;a href="http://www.twitter.com/AmrEldib"&gt;Amr El
-Dib&lt;/a&gt; recoded what I thought the first
-episode about Cloud Computing because one episode about this subject
-isn’t enough, so I hope to have more than one in future.&lt;/p&gt;
-&lt;div&gt;
-
-&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="210" height="25" id="mp3playerdarksmallv3" align="middle"&gt;
-&lt;param name="allowScriptAccess" value="sameDomain"&gt;&lt;/param&gt;&lt;param name="movie" value="http://www.podbean.com/podcast-audio-video-blog-player/mp3playerdarksmallv3.swf?audioPath=http://egygeeks.podbean.com/mf/play/evjen/EgyGeeks_Podcast_003_2010_12_31_A_Little_Cloudy.mp3&amp;amp;autoStart=no"&gt;&lt;/param&gt;&lt;param name="quality" value="high"&gt;&lt;/param&gt;&lt;param name="bgcolor" value="#ffffff"&gt;&lt;/param&gt;&lt;param name="wmode" value="transparent"&gt;&lt;/param&gt;
-&lt;embed src="http://www.podbean.com/podcast-audio-video-blog-player/mp3playerdarksmallv3.swf?audioPath=http://egygeeks.podbean.com/mf/play/evjen/EgyGeeks_Podcast_003_2010_12_31_A_Little_Cloudy.mp3&amp;amp;autoStart=no" quality="high" width="210" height="25" name="mp3playerdarksmallv3" align="middle" allowscriptaccess="sameDomain" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;
-&lt;/embed&gt;
-&lt;/embed&gt;
-&lt;/object&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Happy listening &amp;amp; please give us your feedback, you can find us on:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font size="2"&gt;Twitter:
-&lt;/font&gt;&lt;a href="http://twitter.com/EgyGeeks"&gt;&lt;font size="2"&gt;@EgyGeeks&lt;/font&gt;&lt;/a&gt;&lt;font size="2"&gt;
-, &lt;/font&gt;&lt;a href="http://twitter.com/EgyGeeks/egygeeks-team"&gt;&lt;font size="2"&gt;@EgyGeeks/Team-Memebers
-list&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font size="2"&gt;Facebook:
-&lt;/font&gt;&lt;a href="http://www.facebook.com/pages/EgyGeeks/117311724947028" title="http://www.facebook.com/pages/EgyGeeks/117311724947028"&gt;&lt;font size="2"&gt;http://www.facebook.com/pages/EgyGeeks/117311724947028&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font size="2"&gt;Blog:
-&lt;/font&gt;&lt;a href="http://www.egygeeks.net/" title="http://www.egygeeks.net/"&gt;&lt;font size="2"&gt;http://www.egygeeks.net/&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font size="2"&gt;Podcast Blog:
-&lt;/font&gt;&lt;a href="http://egygeeks.podbean.com/" title="http://egygeeks.podbean.com/"&gt;&lt;font size="2"&gt;http://egygeeks.podbean.com/&lt;/font&gt;&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 02 Jan 2011 15:51:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-01-02:egygeeks-podcast-little-cloudy.html</guid></item><item><title>Attending 1st Kuwait Technical Tuesday</title><link>http://www.emadmokhtar.com/attending-1st-kuwait-technical-tuesday.html</link><description>&lt;p&gt;&lt;img alt="Kuwait tech Tuesdays" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/164055_132597173466474_132261343500057_199061_3815867_n_2.jpg" /&gt;&lt;/p&gt;
+Dib …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 02 Jan 2011 15:51:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2011-01-02:/egygeeks-podcast-little-cloudy.html</guid></item><item><title>Attending 1st Kuwait Technical Tuesday</title><link>http://www.emadmokhtar.com/attending-1st-kuwait-technical-tuesday.html</link><description>&lt;p&gt;&lt;img alt="Kuwait tech Tuesdays" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/164055_132597173466474_132261343500057_199061_3815867_n_2.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;On December 28th 2010 I attended the 1st Kuwait Technical Tuesday &amp;amp; the 1st community event I attend since I start living in Kuwait.&lt;/p&gt;
 &lt;p&gt;The main theme for this event was “Cloud Computing” specially Microsoft
 Windows Azure, it’s 2 sessions event:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;What is &lt;a href="http://www.microsoft.com/windowsazure/"&gt;Microsoft Windows
     Azure&lt;/a&gt;? by Ramon Smit&lt;/li&gt;
-&lt;li&gt;What is &lt;a href="http://office365.microsoft.com/en-US/online-services.aspx"&gt;Microsoft Office
-    365&lt;/a&gt;? by
-    Faisal Al Khatib&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The first session was nice but unfortunately there’s a missing hands-on during session, because the attendees including myself didn’t bring their notebooks &amp;amp; they did mention it on their FB event page, I hope next time we’ll have hands-on session for new technologies.&lt;/p&gt;
-&lt;p&gt;The second session was good &amp;amp; to see online Office 365 project with &lt;a href="http://sharepoint.microsoft.com/en-us/Pages/default.aspx"&gt;SharePoint&lt;/a&gt;, &lt;a href="http://lync.microsoft.com/en-us/launch/Pages/launch.aspx"&gt;Lync&lt;/a&gt;, &amp;amp; &lt;a href="http://www.microsoft.com/exchange/en-us/default.aspx"&gt;Exchange&lt;/a&gt;, &amp;amp; know how it’s how good to be on cloud &amp;amp; have one with your company or your own project.&lt;/p&gt;
-&lt;p&gt;It was nice event &amp;amp; I want to thanks all for this event, I hope to see you guys again &amp;amp; again, &amp;amp; maybe have me as speaker in one of your sessions.&lt;/p&gt;
-&lt;p&gt;Thanks guys again &amp;amp; Good luck&lt;/p&gt;
-&lt;p&gt;For any information about their incoming events or if you have any question, please visit their &lt;a href="http://www.facebook.com/KuwaitTT"&gt;Facebook page&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 02 Jan 2011 15:29:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2011-01-02:attending-1st-kuwait-technical-tuesday.html</guid></item><item><title>EgyGeeks Podcast: Episode no.2 Joel Test</title><link>http://www.emadmokhtar.com/egygeeks-podcast-episode-no2-joel-test.html</link><description>&lt;p&gt;In this episode me, &lt;a href="http://twitter.com/AmrEldib"&gt;@AmrEldib&lt;/a&gt;, &amp;amp; &lt;a href="http://twitter.com/Meligy"&gt;@Mohamed Meligy&lt;/a&gt; talked about &lt;a href="http://www.joelonsoftware.com/articles/fog0000000043.html"&gt;The Joel Test: 12 Steps to Better Code&lt;/a&gt; posted on Joel Spolsky’s blog “Joel on software”. How’re we think about it, share some stories, &amp;amp; comments.&lt;/p&gt;
+&lt;li&gt;What …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Sun, 02 Jan 2011 15:29:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2011-01-02:/attending-1st-kuwait-technical-tuesday.html</guid></item><item><title>EgyGeeks Podcast: Episode no.2 Joel Test</title><link>http://www.emadmokhtar.com/egygeeks-podcast-episode-no2-joel-test.html</link><description>&lt;p&gt;In this episode me, &lt;a href="http://twitter.com/AmrEldib"&gt;@AmrEldib&lt;/a&gt;, &amp;amp; &lt;a href="http://twitter.com/Meligy"&gt;@Mohamed Meligy&lt;/a&gt; talked about &lt;a href="http://www.joelonsoftware.com/articles/fog0000000043.html"&gt;The Joel Test: 12 Steps to Better Code&lt;/a&gt; posted on Joel Spolsky’s blog “Joel on software”. How’re we think about it, share some stories, &amp;amp; comments.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Here’s The Joel Test:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Do you use source control?&lt;/li&gt;
-&lt;li&gt;Can you make a build in one step?&lt;/li&gt;
-&lt;li&gt;Do you make daily builds?&lt;/li&gt;
-&lt;li&gt;Do you have a bug database?&lt;/li&gt;
-&lt;li&gt;Do you fix bugs before writing new code?&lt;/li&gt;
-&lt;li&gt;Do you have an up-to-date schedule?&lt;/li&gt;
-&lt;li&gt;Do you have a spec?&lt;/li&gt;
-&lt;li&gt;Do programmers have quiet working conditions?&lt;/li&gt;
-&lt;li&gt;Do you use the best tools money can buy?&lt;/li&gt;
-&lt;li&gt;Do you have testers?&lt;/li&gt;
-&lt;li&gt;Do new candidates write code during their interview?&lt;/li&gt;
-&lt;li&gt;Do you do hallway usability testing?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;listen to the podcast:&lt;/p&gt;
-&lt;div&gt;
-
-&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="210" height="25" id="mp3playerlightsmallv3" align="middle"&gt;
-&lt;param name="allowScriptAccess" value="sameDomain"&gt;&lt;/param&gt;&lt;param name="movie" value="http://www.podbean.com/podcast-audio-video-blog-player/mp3playerlightsmallv3.swf?audioPath=http://egygeeks.podbean.com/mf/play/hzfjeq/EgyGeeks_Podcast_002_2010_12_02_Joels_Test.mp3&amp;amp;autoStart=no"&gt;&lt;/param&gt;&lt;param name="quality" value="high"&gt;&lt;/param&gt;&lt;param name="bgcolor" value="#ffffff"&gt;&lt;/param&gt;&lt;param name="wmode" value="transparent"&gt;&lt;/param&gt;
-&lt;embed src="http://www.podbean.com/podcast-audio-video-blog-player/mp3playerlightsmallv3.swf?audioPath=http://egygeeks.podbean.com/mf/play/hzfjeq/EgyGeeks_Podcast_002_2010_12_02_Joels_Test.mp3&amp;amp;autoStart=no" quality="high" width="210" height="25" name="mp3playerlightsmallv3" align="middle" allowscriptaccess="sameDomain" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"&gt;
-&lt;/embed&gt;
-&lt;/embed&gt;
-&lt;/object&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;font size="2"&gt;Or download
-&lt;/font&gt;&lt;a href="http://www.podbean.com/podcast-download?b=311118&amp;amp;f=http://egygeeks.podbean.com/mf/web/hzfjeq/EgyGeeks_Podcast_002_2010_12_02_Joels_Test.mp3"&gt;&lt;font size="2"&gt;MP3&lt;/font&gt;&lt;/a&gt;&lt;font size="2"&gt;.&lt;br /&gt;
-Subscribe to this podcast via
-&lt;/font&gt;&lt;a href="http://feeds.feedburner.com/EgyGeeksPodcast"&gt;&lt;font size="2"&gt;RSS&lt;/font&gt;&lt;/a&gt;&lt;font size="2"&gt;
-(for Zune and other players).&lt;br /&gt;
-Subscribe to this podcast for
-&lt;/font&gt;&lt;a href="itpc://egygeeks.podbean.com/feed"&gt;&lt;font size="2"&gt;iTunes&lt;/font&gt;&lt;/a&gt;&lt;font size="2"&gt;.&lt;br /&gt;
-&lt;/font&gt;&lt;/p&gt;
-&lt;p&gt;Please give us your feed back, you thought can helps us a lot, you can find us on:&lt;/p&gt;
-&lt;p&gt;Twitter: &lt;a href="http://twitter.com/EgyGeeks"&gt;@EgyGeeks&lt;/a&gt;, &lt;a href="http://twitter.com/EgyGeeks/egygeeks-team"&gt;@EgyGeeks/Team-Memebers list&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Facebook: &lt;a href="http://www.facebook.com/pages/EgyGeeks/117311724947028"&gt;#EgyGeeks&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Blog: &lt;a href="http://www.egygeeks.net/"&gt;EgyGeek.net&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Podcast Blog: &lt;a href="http://egygeeks.podbean.com/"&gt;Podcast&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 03 Dec 2010 11:17:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-12-03:egygeeks-podcast-episode-no2-joel-test.html</guid></item><item><title>EgyGeeks Podcast: Episode no.1</title><link>http://www.emadmokhtar.com/egygeeks-podcast-episode-no1.html</link><description>&lt;p&gt;&lt;img alt="EgyGeeksLogo" src="http://www.emadmokhtar.com/images/EgyGeeksLogo_2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Last Saturday, &lt;a href="http://twitter.com/AmrEldib"&gt;@AmrEldib&lt;/a&gt;, &lt;a href="http://twitter.com/RamyMahrous"&gt;@RamyMahrous&lt;/a&gt;, &amp;amp; myself, recoded the first episode of @EgyGeeks podcast, the first Egyptian podcast, it was a fantastic experience that made my mind to become a podcaster, I enjoyed the recoding, specially with Amr &amp;amp; Ramy the funny geeks, &amp;amp; sure I miss the other @EgyGeeks (&lt;a href="http://twitter.com/Meligy"&gt;@Meligy&lt;/a&gt;, &lt;a href="http://twitter.com/Dohaelsayed"&gt;@DohaElSayed&lt;/a&gt;, &amp;amp; &lt;a href="http://twitter.com/MohamedG"&gt;@MohamedGamal&lt;/a&gt;), I wish they will be in the next episode.&lt;/p&gt;
-&lt;p&gt;The first episode we talked about the new Windows Phone 7, &amp;amp; small comparison between Windows Phone 7, Android, &amp;amp; iOS4/iPhone, &amp;amp; How is working with the new platforms like Facebook, &amp;amp; Twitter.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.egygeeks.net/2010/11/egygeeks-podcast-1-pilot.html"&gt;Here’s the link for the podcast&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Please give us your feed back, you thought can helps us a lot, you can find us on:&lt;/p&gt;
-&lt;p&gt;Twitter: &lt;a href="http://twitter.com/EgyGeeks"&gt;@EgyGeeks&lt;/a&gt;, &lt;a href="http://twitter.com/EgyGeeks/egygeeks-team"&gt;@EgyGeeks/Team-Memebers list&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Facebook: &lt;a href="http://www.facebook.com/pages/EgyGeeks/117311724947028"&gt;#EgyGeeks&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Blog: &lt;a href="http://www.egygeeks.net/"&gt;EgyGeek.net&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Podcast Blog: &lt;a href="http://egygeeks.podbean.com/"&gt;Podcast&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 16 Nov 2010 13:03:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-11-16:egygeeks-podcast-episode-no1.html</guid></item><item><title>EgyGeeksOnSkype</title><link>http://www.emadmokhtar.com/egygeeksonskype.html</link><description>&lt;p&gt;Hello Folks,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Skype Slogan" src="http://www.emadmokhtar.com/images/features_bnr_skypeRequires.110142655.jpg" /&gt;&lt;/p&gt;
+&lt;li&gt;Can you make a …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Fri, 03 Dec 2010 11:17:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2010-12-03:/egygeeks-podcast-episode-no2-joel-test.html</guid></item><item><title>EgyGeeks Podcast: Episode no.1</title><link>http://www.emadmokhtar.com/egygeeks-podcast-episode-no1.html</link><description>&lt;p&gt;&lt;img alt="EgyGeeksLogo" src="http://www.emadmokhtar.com/images/EgyGeeksLogo_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;Last Saturday, &lt;a href="http://twitter.com/AmrEldib"&gt;@AmrEldib&lt;/a&gt;, &lt;a href="http://twitter.com/RamyMahrous"&gt;@RamyMahrous&lt;/a&gt;, &amp;amp; myself, recoded the first episode of @EgyGeeks podcast, the first Egyptian podcast, it was a fantastic experience that made my mind to become a podcaster, I enjoyed the recoding, specially with Amr &amp;amp; Ramy the funny geeks, &amp;amp; sure I miss the other @EgyGeeks (&lt;a href="http://twitter.com/Meligy"&gt;@Meligy&lt;/a&gt;, &lt;a href="http://twitter.com/Dohaelsayed"&gt;@DohaElSayed&lt;/a&gt;, &amp;amp; &lt;a href="http://twitter.com/MohamedG"&gt;@MohamedGamal&lt;/a&gt;), I …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Tue, 16 Nov 2010 13:03:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2010-11-16:/egygeeks-podcast-episode-no1.html</guid></item><item><title>EgyGeeksOnSkype</title><link>http://www.emadmokhtar.com/egygeeksonskype.html</link><description>&lt;p&gt;Hello Folks,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Skype Slogan" src="http://www.emadmokhtar.com/images/features_bnr_skypeRequires.110142655.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Yesterday I enjoy the first &lt;strong&gt;EgyGeeksOnSkype&lt;/strong&gt; meeting with &lt;strong&gt;Ayman El
 Hattab, Mohamed Meligy, Ramy Mahrous, Doha El Sayed, Nashwa, and Amr El
 Dieb&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1&gt;How did it happen?&lt;/h1&gt;
-&lt;p&gt;First, we were tweeting about where we'll spend our holiday on Twitter, and I felt dizzy because Twitter don't include threads and you try to trace the conversation, so I invited them to go to a chat room on TinyChat.com, and we try to chat with voice, technically it was bad experience, so I suggest to transfer this conversation to Skype, and we did.&lt;/p&gt;
-&lt;p&gt;Then Mohamed Meligy "inspiring of sarajchipps idea" suggest we make this meeting weekly meeting and we called it EgyGeeksOnSkype.&lt;/p&gt;
-&lt;h1&gt;What did happen on Skype?&lt;/h1&gt;
-&lt;p&gt;We spend 3 hours on Skype, talking about technical and non-technical stuff, but it was awesome conversation I ever have, we all geeks and share common ideas.&lt;/p&gt;
-&lt;h1&gt;Where, When, and How can I join you?&lt;/h1&gt;
-&lt;h2&gt;How It's so simple&lt;/h2&gt;
-&lt;p&gt;and super easy, First think you must have is Skype client and account,
-you can grab the client form
-&lt;a href="http://www.skype.com/intl/en/download/skype/windows/downloading/"&gt;here&lt;/a&gt;
-and register after the installation.&lt;/p&gt;
-&lt;h2&gt;When&lt;/h2&gt;
-&lt;p&gt;Every Friday @ 11:59Pm (Cairo Time, GMT+2)&lt;/p&gt;
-&lt;h2&gt;Where&lt;/h2&gt;
-&lt;p&gt;please add &lt;strong&gt;mohamed.meligy, rmahrous, emad.mokhtar.habib, aymanelhattab or gamalilio&lt;/strong&gt; on skype and we'll add you in the conversation, but please send us a request on the skype in Friday to know you want to join us, also feel free to follow us on Twitter @EmadMokhtar, @aymanelhattab,  @RamyMahrous, @Dohaelsayed, @Meligy, @MohamedG&lt;/p&gt;
-&lt;h1&gt;How you can help us?&lt;/h1&gt;
-&lt;p&gt;You can help us by spreading the word, you can tweet, tell you friend,
-facebook it, or blog about it, but please add this Hashtag to the tweets
-#EgyGeeksOnSkype&lt;/p&gt;
-&lt;h2&gt;What we will discuss in these meetings?&lt;/h2&gt;
-&lt;p&gt;We will decide every week what is the topic on the next week, so next Friday April 9th, First Ayman El Hattab 'SharePoint MVP' will make a demo for us about &lt;strong&gt;No-Code SharePoint Solution&lt;/strong&gt; for one hour, and then we will have open discussion on the &lt;strong&gt;Microsoft OData&lt;/strong&gt; technology.&lt;/p&gt;
-&lt;p&gt;Thanks folks, and I yearn to meet you next Friday, see you there&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 05 Apr 2010 12:51:00 +0300</pubDate><guid>tag:www.emadmokhtar.com,2010-04-05:egygeeksonskype.html</guid></item></channel></rss>
+&lt;p&gt;First, we were tweeting about where we'll spend our holiday on Twitter, and I felt dizzy because Twitter don't include threads …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">EmadMokhtar</dc:creator><pubDate>Mon, 05 Apr 2010 12:51:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2010-04-05:/egygeeksonskype.html</guid></item></channel></rss>

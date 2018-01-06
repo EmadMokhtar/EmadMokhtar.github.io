@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="EmadMokhtar" />
-<meta name="description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..." />
+<meta name="description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results …" />
 <meta name="keywords" content="csharp">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="C# String Concatenation Best Practice"/>
-<meta property="og:description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..."/>
+<meta property="og:description" content="Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/c-string-concatenation-best-practice.html"/>
 <meta property="og:type" content="article"/>
@@ -119,7 +119,7 @@ results.</p>
 
 
 <h1>Results:</h1>
-<p><img alt="stringbench" src="http://www.emadmokhtar.com/images/stringbench1.png" /></p>
+<p><img alt="stringbench" src="http://www.emadmokhtar.com/images/stringbench1.png"></p>
 <p>Please note in code I benchmarked <code>+ operator</code> and <code>String.Concat()</code>
 method for 10000 times and <code>StringBuilder</code> for 1000000 times and
 <code>StringBuilder</code> is still the most efficient way to concatenate strings
@@ -130,7 +130,7 @@ assign a value for it. When you use + Operator or String,Concat() to
 concatunate two strings it’ll create a third string and assign the first
 and second string values to it.</p>
 <p>this line of code <code>string fullName = "Emad" + "Mokhtar";</code></p>
-<p><img alt="string2" src="http://www.emadmokhtar.com/images/string2.png" /></p>
+<p><img alt="string2" src="http://www.emadmokhtar.com/images/string2.png"></p>
 <p>is equivalents to this code </p>
 <div class="highlight"><pre><span></span><span class="kt">string</span> <span class="n">firstName</span> <span class="p">=</span> <span class="s">&quot;Emad&quot;</span><span class="p">;</span>
 <span class="kt">string</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s">&quot;Mokhtar&quot;</span><span class="p">;</span>
@@ -138,7 +138,7 @@ and second string values to it.</p>
 </pre></div>
 
 
-<p><img alt="string" src="http://www.emadmokhtar.com/images/string.png" /></p>
+<p><img alt="string" src="http://www.emadmokhtar.com/images/string.png"></p>
 <p>But when you use <strong>StringBuilder</strong> class C# compiler will take care of
 memory allocations by using the same C/C++ characters array concept and
 produce the string object once you call <code>ToString()</code> method.</p>
@@ -194,7 +194,7 @@ produce the string object once you call <code>ToString()</code> method.</p>
   },
   "image": "http://www.emadmokhtar.com/images/profile.jpg",
   "url": "http://www.emadmokhtar.com/c-string-concatenation-best-practice.html",
-  "description": "Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results ..."
+  "description": "Once I’ve start to learn .NET and C# I heard about the difference between string + concatenation operator and StringBuilder class in C# and how to use them and which on is better to perform string concatenation, so I thought to give it a real benchmark and see the results …"
 }
 </script></body>
 </html>
