@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/django.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2017-05-09T15:00:00+03:00</updated><entry><title>Create Login Page for your Django app</title><link href="http://www.emadmokhtar.com/create-login-page-for-your-django-app.html" rel="alternate"></link><updated>2017-05-09T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2017-05-09:create-login-page-for-your-django-app.html</id><summary type="html">&lt;p&gt;&lt;img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework - Django</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/django.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2017-05-09T15:00:00+03:00</updated><entry><title>Create Login Page for your Django app</title><link href="http://www.emadmokhtar.com/create-login-page-for-your-django-app.html" rel="alternate"></link><published>2017-05-09T15:00:00+03:00</published><updated>2017-05-09T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2017-05-09:/create-login-page-for-your-django-app.html</id><summary type="html">&lt;p&gt;&lt;img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Why Another Post about this?&lt;/h1&gt;
+&lt;p&gt;I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Why Another Post about this?&lt;/h1&gt;
 &lt;p&gt;I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do it from scratch, yep as you read, posts telling you how to build a Django View and Form for login page. And there are already built-in Django login &lt;a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.login"&gt;View&lt;/a&gt; and &lt;a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm"&gt;Form&lt;/a&gt; (please check links).
 So I decided to write my own recipe on how to create Login page in your Django app using the built-in view and form to save time and stop reinvent the wheel.&lt;/p&gt;
@@ -52,7 +54,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.contrib.auth&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;views&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;auth_views&lt;/span&gt;
 &lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
 &lt;span class="o"&gt;....&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;r&amp;#39;^login/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auth_views&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;template_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;login.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;login&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^login/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auth_views&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;template_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;login.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;login&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="o"&gt;....&lt;/span&gt;
 &lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -73,11 +75,12 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;myapp.forms&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;MyAuthForm&lt;/span&gt;
 &lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
 &lt;span class="o"&gt;....&lt;/span&gt;
-&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;r&amp;#39;^login/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auth_views&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;template_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;login.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^login/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auth_views&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;template_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;login.html&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                                     &lt;span class="s1"&gt;&amp;#39;authentication_form&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;MyAuthForm&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;login&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="o"&gt;....&lt;/span&gt;
 &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="django"></category><category term="python"></category><category term="forms"></category></entry><entry><title>Custom Client Side Validation for Parsley in Django</title><link href="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html" rel="alternate"></link><updated>2017-04-16T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2017-04-16:custom-client-side-validation-for-parsley-in-django.html</id><summary type="html">&lt;p&gt;&lt;img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg" /&gt;&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="django"></category><category term="python"></category><category term="forms"></category></entry><entry><title>Custom Client Side Validation for Parsley in Django</title><link href="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html" rel="alternate"></link><published>2017-04-16T15:00:00+03:00</published><updated>2017-04-16T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2017-04-16:/custom-client-side-validation-for-parsley-in-django.html</id><summary type="html">&lt;p&gt;&lt;img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;I wrote a post on how to add &lt;a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html"&gt;client side validation for Django Forms&lt;/a&gt;. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in &lt;a href="https://github.com/agiliq/Django-parsley"&gt;django-parsley&lt;/a&gt;, like username availability, password strength, email duplication …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;I wrote a post on how to add &lt;a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html"&gt;client side validation for Django Forms&lt;/a&gt;. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in &lt;a href="https://github.com/agiliq/Django-parsley"&gt;django-parsley&lt;/a&gt;, like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.&lt;/p&gt;
 &lt;h1&gt;Parsley remote validation&lt;/h1&gt;
 &lt;p&gt;&lt;a href="http://parsleyjs.org/doc/index.html"&gt;Parsley library&lt;/a&gt; has &lt;a href="http://parsleyjs.org/doc/index.html#remote"&gt;remote validation&lt;/a&gt;, it's calling AJAX service (Django view) and check if AJAX call returns &lt;a href="http://www.restapitutorial.com/httpstatuscodes.html"&gt;2xx HTTP status codes&lt;/a&gt; then it's valid input else it's invalid input and shows error message. Thankfully you can use remote validation in Django Form using django-parsley via &lt;code&gt;parsley-extras&lt;/code&gt; attribute.&lt;/p&gt;
@@ -118,10 +121,10 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
     &lt;span class="n"&gt;status_code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
             &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;status&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;valid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ParselyValidResponse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ParselyValidResponse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ParselyInvalidResponse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;JsonResponse&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -130,10 +133,10 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
     &lt;span class="n"&gt;status_code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
             &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;status&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;invalid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ParselyInvalidResponse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ParselyInvalidResponse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;validate_password_parsley&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -156,7 +159,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;h3&gt;URLs.py&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URLpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
-&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;r&amp;#39;^validate-password-parsley/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;^validate-password-parsley/$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
         &lt;span class="n"&gt;view&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ajax_views&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;validate_password_parsley&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
         &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;validate-password-parsley&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -182,7 +185,9 @@ So I decided to write my own recipe on how to create Login page in your Django a
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;As you can see &lt;code&gt;remote&lt;/code&gt; key will hold URL to our AJAX validator, and we can use Django’s &lt;code&gt;reverse_lazy()&lt;/code&gt; to get the URL from the &lt;code&gt;URL_patterns&lt;/code&gt;, and &lt;code&gt;remote-message&lt;/code&gt; key will hold the error message for the invalid value.&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="parsley"></category><category term="validation"></category></entry><entry><title>Client side validation for Django Forms</title><link href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html" rel="alternate"></link><updated>2017-03-08T00:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2017-03-08:client-side-validation-for-django-forms.html</id><summary type="html">&lt;p&gt;&lt;img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;As you can see &lt;code&gt;remote&lt;/code&gt; key will hold URL to our AJAX validator, and we can use Django’s &lt;code&gt;reverse_lazy()&lt;/code&gt; to get the URL from the &lt;code&gt;URL_patterns&lt;/code&gt;, and &lt;code&gt;remote-message&lt;/code&gt; key will hold the error message for the invalid value.&lt;/p&gt;</content><category term="django"></category><category term="python"></category><category term="parsley"></category><category term="validation"></category></entry><entry><title>Client side validation for Django Forms</title><link href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html" rel="alternate"></link><published>2017-03-08T00:00:00+03:00</published><updated>2017-03-08T00:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2017-03-08:/client-side-validation-for-django-forms.html</id><summary type="html">&lt;p&gt;&lt;img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF"&gt;source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In DUTH 2016 there was a session for &lt;a href="https://youtu.be/uzTaWKcMzos"&gt;Django Validation by Loïc Bistuer&lt;/a&gt;, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF"&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In DUTH 2016 there was a session for &lt;a href="https://youtu.be/uzTaWKcMzos"&gt;Django Validation by Loïc Bistuer&lt;/a&gt;, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is special validation rules you want to implement, you can still implement it, as I said it is easy and straight forward in Django, all of these validation is server side which happen on web server not on client-side, so what about client side?&lt;/p&gt;
 &lt;h1&gt;What is client side validation?&lt;/h1&gt;
@@ -271,7 +276,8 @@ So I decided to write my own recipe on how to create Login page in your Django a
 
 
 &lt;h1&gt;Demo App&lt;/h1&gt;
-&lt;p&gt;I've created demo Django app on &lt;a href="https://github.com/EmadMokhtar/django-parsley-demo"&gt;Github&lt;/a&gt;.&lt;/p&gt;</summary><category term="Django"></category><category term="Forms"></category></entry><entry><title>Yet another and easier way to daemonize Celery</title><link href="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html" rel="alternate"></link><updated>2016-11-21T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2016-11-21:yet-another-and-easier-way-to-daemonize-celery.html</id><summary type="html">&lt;p&gt;I wrote a post about &lt;a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html"&gt;how to run celery as daemon&lt;/a&gt; and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.&lt;/p&gt;
+&lt;p&gt;I've created demo Django app on &lt;a href="https://github.com/EmadMokhtar/django-parsley-demo"&gt;Github&lt;/a&gt;.&lt;/p&gt;</content><category term="Django"></category><category term="Forms"></category></entry><entry><title>Yet another and easier way to daemonize Celery</title><link href="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html" rel="alternate"></link><published>2016-11-21T15:00:00+03:00</published><updated>2016-11-21T15:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2016-11-21:/yet-another-and-easier-way-to-daemonize-celery.html</id><summary type="html">&lt;p&gt;I wrote a post about &lt;a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html"&gt;how to run celery as daemon&lt;/a&gt; and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.&lt;/p&gt;
+&lt;p&gt;In this method we will use &lt;a href="http://supervisord.org"&gt;supervisor&lt;/a&gt; to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I wrote a post about &lt;a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html"&gt;how to run celery as daemon&lt;/a&gt; and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.&lt;/p&gt;
 &lt;p&gt;In this method we will use &lt;a href="http://supervisord.org"&gt;supervisor&lt;/a&gt; to daemonize Celery, and this can be achieved by 3 simple steps, so let's do it.&lt;/p&gt;
 &lt;h1&gt;Step 1&lt;/h1&gt;
 &lt;p&gt;Install Supervisord &lt;code&gt;sudo apt-get install supervisor&lt;/code&gt; on Ubuntu server. For other OSs please visit &lt;a href="http://supervisord.org/installing.html"&gt;the official documentation&lt;/a&gt;&lt;/p&gt;
@@ -291,43 +297,43 @@ So I decided to write my own recipe on how to create Login page in your Django a
 
 &lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/path/to/project
 &lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;nobody
-&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/log/celery/worker.log
 &lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/log/celery/worker.log
 &lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 &lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
 
 &lt;span class="p"&gt;;&lt;/span&gt; Need to &lt;span class="nb"&gt;wait&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; currently executing tasks to finish at shutdown.
 &lt;span class="p"&gt;;&lt;/span&gt; Increase this &lt;span class="k"&gt;if&lt;/span&gt; you have very long running tasks.
-&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 600
+&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;600&lt;/span&gt;
 
 &lt;span class="p"&gt;;&lt;/span&gt; When resorting to send SIGKILL to the program to terminate it
 &lt;span class="p"&gt;;&lt;/span&gt; send SIGKILL to its whole process group instead,
 &lt;span class="p"&gt;;&lt;/span&gt; taking care of its children as well.
 &lt;span class="nv"&gt;killasgroup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 
-&lt;span class="p"&gt;;&lt;/span&gt; Set Celery priority higher than default &lt;span class="o"&gt;(&lt;/span&gt;999&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt; Set Celery priority higher than default &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;999&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;;&lt;/span&gt; so, &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, it will start first.
-&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1000
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Sample Configurtaion File&lt;/h3&gt;
 &lt;p&gt;This file is a sample of supervisor configuration file used to deamonize Celery and Celery Beat.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;program:django-celery&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="nv"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/celery worker --app&lt;span class="o"&gt;=&lt;/span&gt;django_projects --loglevel&lt;span class="o"&gt;=&lt;/span&gt;INFO --autoscale&lt;span class="o"&gt;=&lt;/span&gt;10,3
+&lt;span class="nv"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/celery worker --app&lt;span class="o"&gt;=&lt;/span&gt;django_projects --loglevel&lt;span class="o"&gt;=&lt;/span&gt;INFO --autoscale&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;,3
 &lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project
 &lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;celery
-&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/celery.log
 &lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/celery.log
 &lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 &lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
 &lt;span class="p"&gt;;&lt;/span&gt; Need to &lt;span class="nb"&gt;wait&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; currently executing tasks to finish at shutdown.
 &lt;span class="p"&gt;;&lt;/span&gt; Increase this &lt;span class="k"&gt;if&lt;/span&gt; you have very long running tasks.
-&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 600
+&lt;span class="nv"&gt;stopwaitsecs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;600&lt;/span&gt;
 
 &lt;span class="p"&gt;;&lt;/span&gt; When resorting to send SIGKILL to the program to terminate it
 &lt;span class="p"&gt;;&lt;/span&gt; send SIGKILL to its whole process group instead,
@@ -336,7 +342,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
 
 &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, &lt;span class="nb"&gt;set&lt;/span&gt; its priority higher
 &lt;span class="p"&gt;;&lt;/span&gt; so it starts first
-&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;998
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;998&lt;/span&gt;
 &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;DJANGO_SETTINGS_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;django_project.settings.production&amp;#39;&lt;/span&gt;
 
 &lt;span class="o"&gt;[&lt;/span&gt;program:django-celerybeat&lt;span class="o"&gt;]&lt;/span&gt;
@@ -346,16 +352,16 @@ So I decided to write my own recipe on how to create Login page in your Django a
 
 &lt;span class="nv"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project
 &lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;celery
-&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;numprocs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;span class="nv"&gt;stdout_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/beat.log
 &lt;span class="nv"&gt;stderr_logfile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/user/django_project/log/beat.log
 &lt;span class="nv"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 &lt;span class="nv"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;10
+&lt;span class="nv"&gt;startsecs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;
 
 &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; rabbitmq is supervised, &lt;span class="nb"&gt;set&lt;/span&gt; its priority higher
 &lt;span class="p"&gt;;&lt;/span&gt; so it starts first
-&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;999
+&lt;span class="nv"&gt;priority&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;999&lt;/span&gt;
 &lt;span class="nv"&gt;environment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;DJANGO_SETTINGS_MODULE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;django_project.settings.production&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -417,10 +423,12 @@ django-celerybeat: started
 
 &lt;h2&gt;Status&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo supervisorctl status django-celery
-django-celery                    RUNNING    pid 16020, uptime 0:01:00
+django-celery                    RUNNING    pid &lt;span class="m"&gt;16020&lt;/span&gt;, uptime &lt;span class="m"&gt;0&lt;/span&gt;:01:00
 $ sudo supervisorctl status django-celerybeat
-django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category></entry><entry><title>Add isort and flake8 test to your Django Project</title><link href="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html" rel="alternate"></link><updated>2016-09-27T18:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-27:add-isort-and-flake8-test-to-your-django-project.html</id><summary type="html">&lt;p&gt;&lt;img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg" /&gt;&lt;/p&gt;
+django-celerybeat                    RUNNING    pid &lt;span class="m"&gt;16030&lt;/span&gt;, uptime &lt;span class="m"&gt;0&lt;/span&gt;:01:10
+&lt;/pre&gt;&lt;/div&gt;</content><category term="django"></category><category term="python"></category><category term="celery"></category></entry><entry><title>Add isort and flake8 test to your Django Project</title><link href="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html" rel="alternate"></link><published>2016-09-27T18:00:00+03:00</published><updated>2016-09-27T18:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-27:/add-isort-and-flake8-test-to-your-django-project.html</id><summary type="html">&lt;p&gt;&lt;img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.&lt;/p&gt;
+&lt;p&gt;As they said Django is a “batteries included” web application framework, and one of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.&lt;/p&gt;
 &lt;p&gt;As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, &lt;a href="https://docs.djangoproject.com/en/dev/topics/testing/"&gt;testing in Django&lt;/a&gt; is easy and you can start writing tests even if you didn't do it before.&lt;/p&gt;
 &lt;p&gt;If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add &lt;a href="https://github.com/timothycrosley/isort"&gt;isort&lt;/a&gt; and &lt;a href="http://flake8.pycqa.org/en/latest/"&gt;flake8&lt;/a&gt; tests to maintain the quality of your Python code.&lt;/p&gt;
@@ -478,7 +486,7 @@ django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
 
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;run_django_tests_with_coverage&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django_project.settings.local&amp;#39;&lt;/span&gt;
         &lt;span class="c1"&gt;# Set up and start test coverage&lt;/span&gt;
         &lt;span class="n"&gt;cov&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;coverage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;APPS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;omit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;EXCLUDE_FILES&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -498,7 +506,7 @@ django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
         &lt;span class="n"&gt;cov&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html_report&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;covhtml&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Export HTML report&lt;/span&gt;
 
 
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;exit_on_failure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flake8_main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;APPS&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FLAKE8_ARGS&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;exit_on_failure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;run_django_tests_with_coverage&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -529,12 +537,22 @@ django-celerybeat                    RUNNING    pid 16030, uptime 0:01:10
         &lt;span class="n"&gt;SortImports&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;run_isort&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Run it from terminal &lt;code&gt;python runisort.py&lt;/code&gt;&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="unittest"></category><category term="howto"></category></entry><entry><title>How to run Celery as daemon?</title><link href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html" rel="alternate"></link><updated>2016-09-20T15:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-20:how-to-run-celery-as-daemon.html</id><summary type="html">&lt;p&gt;&lt;img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Run it from terminal &lt;code&gt;python runisort.py&lt;/code&gt;&lt;/p&gt;</content><category term="django"></category><category term="python"></category><category term="unittest"></category><category term="howto"></category></entry><entry><title>How to run Celery as daemon?</title><link href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html" rel="alternate"></link><published>2016-09-20T15:00:00+03:00</published><updated>2016-09-20T15:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-09-20:/how-to-run-celery-as-daemon.html</id><summary type="html">&lt;p&gt;&lt;img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;Install upstart script&lt;/h1&gt;
+&lt;h2&gt;Permissions&lt;/h2&gt;
+&lt;p&gt;We need to make the user which will be used to run celery an owner of &lt;code&gt;log&lt;/code&gt; and &lt;code&gt;run&lt;/code&gt; directories.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo chown -R root:root /var/log/celery/
+sudo chown -R root:root /var/run/celery/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Celery upstart&lt;/h2&gt;
+&lt;p&gt;1- Download &lt;code&gt;celeryd&lt;/code&gt; file from &lt;a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/"&gt;Celery official github …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="celery smoothy" src="http://www.emadmokhtar.com/images/celerysmoothie.jpg"&gt;&lt;/p&gt;
 &lt;h1&gt;Install upstart script&lt;/h1&gt;
 &lt;h2&gt;Permissions&lt;/h2&gt;
 &lt;p&gt;We need to make the user which will be used to run celery an owner of &lt;code&gt;log&lt;/code&gt; and &lt;code&gt;run&lt;/code&gt; directories.&lt;/p&gt;
@@ -646,7 +664,7 @@ sudo service celerybeat restart
 
 &lt;span class="c1"&gt;# If enabled pid and log directories will be created if missing,&lt;/span&gt;
 &lt;span class="c1"&gt;# and owned by the userid/group configured.&lt;/span&gt;
-&lt;span class="nv"&gt;CELERY_CREATE_DIRS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;CELERY_CREATE_DIRS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 
 &lt;span class="c1"&gt;# CELERY BEAT&lt;/span&gt;
 
@@ -658,13 +676,18 @@ sudo service celerybeat restart
 
 &lt;blockquote&gt;
 &lt;p&gt;Note: &lt;code&gt;CELERYD_USER&lt;/code&gt; &amp;amp; &lt;code&gt;CELERYD_GROUP&lt;/code&gt; is the user will use to run celery tasks from Django app.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category></entry><entry><title>Send Emails Asynchronously from Django</title><link href="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html" rel="alternate"></link><updated>2016-01-24T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-01-24:send-emails-asynchronously-from-django.html</id><summary type="html">&lt;p&gt;In this article you will learn:&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="django"></category><category term="python"></category><category term="celery"></category></entry><entry><title>Send Emails Asynchronously from Django</title><link href="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html" rel="alternate"></link><published>2016-01-24T12:00:00+03:00</published><updated>2016-01-24T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2016-01-24:/send-emails-asynchronously-from-django.html</id><summary type="html">&lt;p&gt;In this article you will learn:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to send emails from &lt;a href="https://www.djangoproject.com"&gt;Django&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;How to use &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="https://github.com/pmclanahan/django-celery-email"&gt;Django-Celery-Email&lt;/a&gt; to send email asynchronously.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In this article you will learn:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;How to send emails from &lt;a href="https://www.djangoproject.com"&gt;Django&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;How to use &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; and &lt;a href="https://github.com/pmclanahan/django-celery-email"&gt;Django-Celery-Email&lt;/a&gt; to send email asynchronously.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Alt Text" src="http://www.emadmokhtar.com/images/1442310863_full.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Alt Text" src="http://www.emadmokhtar.com/images/1442310863_full.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s see how we can do that.&lt;/p&gt;
 &lt;h2&gt;Step 1: Install and Setup Celery&lt;/h2&gt;
 &lt;ul&gt;
@@ -696,7 +719,7 @@ sudo service celerybeat restart
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config_from_object&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;django.conf:settings&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;autodiscover_tasks&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;INSTALLED_APPS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -752,7 +775,7 @@ I've created class that can help use in this task&lt;/p&gt;
 &lt;span class="sd"&gt;    Send email messages helper class&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;emad.mh@motiva.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from_email&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;emad.mh@motiva.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="c1"&gt;# TODO setup the default from email&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connection&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mail&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_connection&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_email&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;from_email&lt;/span&gt;
@@ -814,7 +837,7 @@ I've created class that can help use in this task&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ sudo rabbitmq-server start -detached&lt;/code&gt; if you want to run RabbitMQ in the background.&lt;/p&gt;
 &lt;h3&gt;Running Celery&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;$ ./manage.py celery -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="celery"></category><category term="emails"></category></entry><entry><title>Extend Django User Model and Generic Class Based View "GCBV"</title><link href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html" rel="alternate"></link><updated>2015-12-18T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2015-12-18:extend-django-user-model-and-generic-class-based-view-gcbv.html</id><summary type="html">&lt;p&gt;&lt;img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png" /&gt; When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one &lt;a href="https://www.youtube.com/watch?v=BJiOERA49ZQ"&gt;DjangoCon videos by Andrew Pinkham&lt;/a&gt; to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ ./manage.py celery -l info&lt;/code&gt; and keep the terminal session opened.&lt;/p&gt;</content><category term="django"></category><category term="python"></category><category term="celery"></category><category term="emails"></category></entry><entry><title>Extend Django User Model and Generic Class Based View "GCBV"</title><link href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html" rel="alternate"></link><published>2015-12-18T12:00:00+03:00</published><updated>2015-12-18T12:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2015-12-18:/extend-django-user-model-and-generic-class-based-view-gcbv.html</id><summary type="html">&lt;p&gt;&lt;img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png"&gt; When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one &lt;a href="https://www.youtube.com/watch?v=BJiOERA49ZQ"&gt;DjangoCon videos by Andrew Pinkham&lt;/a&gt; to make this easier on me, and if you tried or planning to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png"&gt; When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one &lt;a href="https://www.youtube.com/watch?v=BJiOERA49ZQ"&gt;DjangoCon videos by Andrew Pinkham&lt;/a&gt; to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV &lt;/p&gt;
 &lt;h1&gt;What is the relation between GCBV and User Model?&lt;/h1&gt;
 &lt;p&gt;Great question, while I’m working with one of my models fro example her the Teacher model, and teacher will has a user credentials in order to user the app. The easiest and the straightforward way is to make one-to-one relation with &lt;a href="https://github.com/django/django/blob/53ccffdb8c8e47a4d4304df453d8c79a9be295ab/django/contrib/auth/models.py"&gt;django.contrib.auth.models.User&lt;/a&gt; please read the quote from Django documentation: &lt;/p&gt;
 &lt;blockquote&gt;
@@ -1038,7 +1061,7 @@ I posted a question over &lt;a href="http://stackoverflow.com/questions/34117408
         &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endblock&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Django"></category><category term="Python"></category></entry><entry><title>Free Django hosting</title><link href="http://www.emadmokhtar.com/free-django-hosting.html" rel="alternate"></link><updated>2015-04-19T12:33:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2015-04-19:free-django-hosting.html</id><summary type="html">&lt;p&gt;If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use &lt;a href="https://www.pythonanywhere.com/pricing/"&gt;Python Anywhere free hosting&lt;/a&gt;, I’m using it for &lt;a href="http://www.emadmokhtar.com/my-first-django-app.html"&gt;my Django app&lt;/a&gt; and I’m very comfortable with but before using the free hosting please consider the following:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Django"></category><category term="Python"></category></entry><entry><title>Free Django hosting</title><link href="http://www.emadmokhtar.com/free-django-hosting.html" rel="alternate"></link><published>2015-04-19T12:33:00+03:00</published><updated>2015-04-19T12:33:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2015-04-19:/free-django-hosting.html</id><summary type="html">&lt;p&gt;If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use &lt;a href="https://www.pythonanywhere.com/pricing/"&gt;Python Anywhere free hosting&lt;/a&gt;, I’m using it for &lt;a href="http://www.emadmokhtar.com/my-first-django-app.html"&gt;my Django app&lt;/a&gt; and I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use &lt;a href="https://www.pythonanywhere.com/pricing/"&gt;Python Anywhere free hosting&lt;/a&gt;, I’m using it for &lt;a href="http://www.emadmokhtar.com/my-first-django-app.html"&gt;my Django app&lt;/a&gt; and I’m very comfortable with but before using the free hosting please consider the following:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;They provide only MySQL for free hosting, so if you developed your app using PostgreSQL or SQLite, please download the correct driver.&lt;/li&gt;
 &lt;li&gt;Application URL must be sub-domain of pythonanywhere.com, example my-app.pythonanywhere.com&lt;/li&gt;
@@ -1070,7 +1093,8 @@ I posted a question over &lt;a href="http://stackoverflow.com/questions/34117408
 &lt;/li&gt;
 &lt;li&gt;Save the file.&lt;/li&gt;
 &lt;li&gt;Go to Web tab, and reload your application, after reload voila your application is up and running.&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="django"></category><category term="python"></category></entry><entry><title>My First Django App</title><link href="http://www.emadmokhtar.com/my-first-django-app.html" rel="alternate"></link><updated>2015-03-16T13:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2015-03-16:my-first-django-app.html</id><summary type="html">&lt;p&gt;I'm starting to use Django and Python to develop web applications, I really love Django and during my learning process I thought I can build something while learning, and I had one idea keep it on hold as side project so I decided it's time to build it.&lt;/p&gt;
+&lt;/ol&gt;</content><category term="django"></category><category term="python"></category></entry><entry><title>My First Django App</title><link href="http://www.emadmokhtar.com/my-first-django-app.html" rel="alternate"></link><published>2015-03-16T13:00:00+03:00</published><updated>2015-03-16T13:00:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2015-03-16:/my-first-django-app.html</id><summary type="html">&lt;p&gt;I'm starting to use Django and Python to develop web applications, I really love Django and during my learning process I thought I can build something while learning, and I had one idea keep it on hold as side project so I decided it's time to build it.&lt;/p&gt;
+&lt;h1&gt;The Idea …&lt;/h1&gt;</summary><content type="html">&lt;p&gt;I'm starting to use Django and Python to develop web applications, I really love Django and during my learning process I thought I can build something while learning, and I had one idea keep it on hold as side project so I decided it's time to build it.&lt;/p&gt;
 &lt;h1&gt;The Idea&lt;/h1&gt;
 &lt;p&gt;Me and my wife have our financial system which is dividing the monthly budget into a weekly budget, most of us make budget on monthly basis because we get paid on monthly basis, but imagine your budget will be on weekly basis, it’s like every week is new budget and new start, and in order to keep track of the weekly budget you need to know how much you need to spend in a week. To be honest in the first we made a lot of mistakes but at the end we found out how much we need to spend weekly, and this need analysis with trial and error for at least one month then you will master your weekly budgeting.&lt;/p&gt;
 &lt;p&gt;Now the idea is build a system that can keep track of your payments or expenses against your estimated budget for a week. The application name is &lt;strong&gt;Ma3ana&lt;/strong&gt; &lt;strong&gt;Kam&lt;/strong&gt; it's written in &lt;a href="http://en.wikipedia.org/wiki/Arabic_chat_alphabet#Egyptian_Arabic"&gt;Egyptian Arabic Chat Characters&lt;/a&gt;&lt;strong&gt; &lt;/strong&gt;which means "How much left with us?" in English, the name inspired from a question my wife ask when she need to know how much left with us in the current week budget.**&lt;/p&gt;
@@ -1082,24 +1106,24 @@ I posted a question over &lt;a href="http://stackoverflow.com/questions/34117408
 &lt;p&gt;&lt;strong&gt;Period:&lt;/strong&gt; definition of the period dates, the estimate amount to
     be consumed, and description.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;img alt="Period" src="http://www.emadmokhtar.com/images/2015-01-06-16-24-35.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img alt="Period" src="http://www.emadmokhtar.com/images/2015-01-06-16-24-35.png"&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Expense:&lt;/strong&gt; definition of the expense date, amount,
     and description.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;img alt="Expense" src="http://www.emadmokhtar.com/images/2015-01-06-16-25-27.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img alt="Expense" src="http://www.emadmokhtar.com/images/2015-01-06-16-25-27.png"&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As you can see when you adding a expense system will identify its period based on date, so no need to choose the period you are adding expense to.&lt;/p&gt;
 &lt;h1&gt;Screenshots&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Home page:&lt;/strong&gt; Showing the period that as of today
-&lt;img alt="Home" src="http://www.emadmokhtar.com/images/2015-01-06-16-01-482.png" /&gt;&lt;/p&gt;
+&lt;img alt="Home" src="http://www.emadmokhtar.com/images/2015-01-06-16-01-482.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Period List:&lt;/strong&gt; Showing list of periods, to view period details click on Period Description
-&lt;img alt="Period List" src="http://www.emadmokhtar.com/images/2015-01-06-16-03-50.png" /&gt;&lt;/p&gt;
+&lt;img alt="Period List" src="http://www.emadmokhtar.com/images/2015-01-06-16-03-50.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Menu&lt;/strong&gt;
-&lt;img alt="Menu" src="http://www.emadmokhtar.com/images/2015-01-06-16-02-25.png" /&gt;&lt;/p&gt;
+&lt;img alt="Menu" src="http://www.emadmokhtar.com/images/2015-01-06-16-02-25.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Period Details&lt;/strong&gt;
-&lt;img alt="Period Details" src="http://www.emadmokhtar.com/images/2015-01-06-16-04-15.png" /&gt;&lt;/p&gt;</summary><category term="django"></category><category term="python"></category><category term="sideproject"></category></entry></feed>
+&lt;img alt="Period Details" src="http://www.emadmokhtar.com/images/2015-01-06-16-04-15.png"&gt;&lt;/p&gt;</content><category term="django"></category><category term="python"></category><category term="sideproject"></category></entry></feed>

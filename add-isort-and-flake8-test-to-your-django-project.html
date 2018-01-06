@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="Emad Mokhtar" />
-<meta name="description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..." />
+<meta name="description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one of …" />
 <meta name="keywords" content="django, python, unittest, howto">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Add isort and flake8 test to your Django Project"/>
-<meta property="og:description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..."/>
+<meta property="og:description" content="In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one of …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html"/>
 <meta property="og:type" content="article"/>
@@ -80,7 +80,7 @@
     <p>Posted on Tue 27 September 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
   </header>
   <div>
-    <p><img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg" /></p>
+    <p><img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg"></p>
 <p>In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.</p>
 <p>As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, <a href="https://docs.djangoproject.com/en/dev/topics/testing/">testing in Django</a> is easy and you can start writing tests even if you didn't do it before.</p>
 <p>If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add <a href="https://github.com/timothycrosley/isort">isort</a> and <a href="http://flake8.pycqa.org/en/latest/">flake8</a> tests to maintain the quality of your Python code.</p>
@@ -138,7 +138,7 @@
 
 
 <span class="k">def</span> <span class="nf">run_django_tests_with_coverage</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
         <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DJANGO_SETTINGS_MODULE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;django_project.settings.local&#39;</span>
         <span class="c1"># Set up and start test coverage</span>
         <span class="n">cov</span> <span class="o">=</span> <span class="n">coverage</span><span class="o">.</span><span class="n">coverage</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">APPS</span><span class="p">,</span> <span class="n">omit</span><span class="o">=</span><span class="n">EXCLUDE_FILES</span><span class="p">)</span>
@@ -158,7 +158,7 @@
         <span class="n">cov</span><span class="o">.</span><span class="n">html_report</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s1">&#39;covhtml&#39;</span><span class="p">)</span>  <span class="c1"># Export HTML report</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">exit_on_failure</span><span class="p">(</span><span class="n">flake8_main</span><span class="p">(</span><span class="n">APPS</span> <span class="o">+</span> <span class="n">FLAKE8_ARGS</span><span class="p">))</span>
     <span class="n">exit_on_failure</span><span class="p">(</span><span class="n">run_django_tests_with_coverage</span><span class="p">())</span>
 </pre></div>
@@ -189,7 +189,7 @@
         <span class="n">SortImports</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">run_isort</span><span class="p">()</span>
 </pre></div>
 
@@ -250,7 +250,7 @@
   },
   "image": "{filename}/images/unit-test-works.jpg",
   "url": "http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html",
-  "description": "In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one ..."
+  "description": "In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite. As they said Django is a “batteries included” web application framework, and one of …"
 }
 </script></body>
 </html>

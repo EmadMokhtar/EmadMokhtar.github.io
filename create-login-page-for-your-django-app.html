@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="EmadMokhtar" />
-<meta name="description" content="Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do ..." />
+<meta name="description" content="Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …" />
 <meta name="keywords" content="django, python, forms">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Create Login Page for your Django app"/>
-<meta property="og:description" content="Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do ..."/>
+<meta property="og:description" content="Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/create-login-page-for-your-django-app.html"/>
 <meta property="og:type" content="article"/>
@@ -79,7 +79,7 @@
     <p>Posted on Tue 09 May 2017 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
   </header>
   <div>
-    <p><img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png" /></p>
+    <p><img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png"></p>
 <h1>Why Another Post about this?</h1>
 <p>I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do it from scratch, yep as you read, posts telling you how to build a Django View and Form for login page. And there are already built-in Django login <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.login">View</a> and <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm">Form</a> (please check links).
 So I decided to write my own recipe on how to create Login page in your Django app using the built-in view and form to save time and stop reinvent the wheel.</p>
@@ -132,7 +132,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">views</span> <span class="k">as</span> <span class="n">auth_views</span>
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
 <span class="o">....</span>
-<span class="n">url</span><span class="p">(</span><span class="s1">r&#39;^login/$&#39;</span><span class="p">,</span> <span class="n">auth_views</span><span class="o">.</span><span class="n">login</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;template_name&#39;</span><span class="p">:</span> <span class="s1">&#39;login.html&#39;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">),</span>
+<span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^login/$&#39;</span><span class="p">,</span> <span class="n">auth_views</span><span class="o">.</span><span class="n">login</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;template_name&#39;</span><span class="p">:</span> <span class="s1">&#39;login.html&#39;</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">),</span>
 <span class="o">....</span>
 <span class="p">]</span>
 </pre></div>
@@ -153,7 +153,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
 <span class="kn">from</span> <span class="nn">myapp.forms</span> <span class="kn">import</span> <span class="n">MyAuthForm</span>
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
 <span class="o">....</span>
-<span class="n">url</span><span class="p">(</span><span class="s1">r&#39;^login/$&#39;</span><span class="p">,</span> <span class="n">auth_views</span><span class="o">.</span><span class="n">login</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;template_name&#39;</span><span class="p">:</span> <span class="s1">&#39;login.html&#39;</span><span class="p">,</span>
+<span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^login/$&#39;</span><span class="p">,</span> <span class="n">auth_views</span><span class="o">.</span><span class="n">login</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;template_name&#39;</span><span class="p">:</span> <span class="s1">&#39;login.html&#39;</span><span class="p">,</span>
                                     <span class="s1">&#39;authentication_form&#39;</span><span class="p">:</span> <span class="n">MyAuthForm</span><span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;login&#39;</span><span class="p">),</span>
 <span class="o">....</span>
 <span class="p">]</span>
@@ -212,7 +212,7 @@ So I decided to write my own recipe on how to create Login page in your Django a
   },
   "image": "http://www.emadmokhtar.com/images/profile.jpg",
   "url": "http://www.emadmokhtar.com/create-login-page-for-your-django-app.html",
-  "description": "Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do ..."
+  "description": "Why Another Post about this? I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …"
 }
 </script></body>
 </html>

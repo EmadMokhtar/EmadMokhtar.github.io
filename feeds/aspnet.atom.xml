@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/aspnet.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2014-06-19T12:30:00+03:00</updated><entry><title>ASP.NET WebForms Notification Control</title><link href="http://www.emadmokhtar.com/aspnet-webforms-notification-control.html" rel="alternate"></link><updated>2014-06-19T12:30:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2014-06-19:aspnet-webforms-notification-control.html</id><summary type="html">&lt;p&gt;In 2012 I wrote about &lt;a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html"&gt;using notification in ASP.NET WebForms&lt;/a&gt; and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse it like any ASP.NET Server Control in their toolbox.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework - ASP.NET</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/aspnet.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2014-06-19T12:30:00+03:00</updated><entry><title>ASP.NET WebForms Notification Control</title><link href="http://www.emadmokhtar.com/aspnet-webforms-notification-control.html" rel="alternate"></link><published>2014-06-19T12:30:00+03:00</published><updated>2014-06-19T12:30:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2014-06-19:/aspnet-webforms-notification-control.html</id><summary type="html">&lt;p&gt;In 2012 I wrote about &lt;a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html"&gt;using notification in ASP.NET WebForms&lt;/a&gt; and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In 2012 I wrote about &lt;a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html"&gt;using notification in ASP.NET WebForms&lt;/a&gt; and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse it like any ASP.NET Server Control in their toolbox.&lt;/p&gt;
 &lt;h1&gt;About the Project&lt;/h1&gt;
 &lt;p&gt;Notification Control is open source/free ASP.NET server control like &lt;a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSamp eSite/"&gt;ASP.NET Ajax toolkit controls&lt;/a&gt;, it’s wrapper for awesome jQuery plug-in called &lt;a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm"&gt;jNotify&lt;/a&gt; to use it’s functionality from code behind, it’s on &lt;a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl"&gt;GitHub&lt;/a&gt;, please fork it, or test it and report bugs/issues on GitHub.&lt;/p&gt;
 &lt;p&gt;You can find demo &lt;a href="http://notificaitoncontrol.azurewebsites.net/"&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -10,13 +10,13 @@
 &lt;p&gt;Download the repository as&lt;strong&gt; &lt;/strong&gt; &lt;a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip"&gt;Zip file&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Run Visual Studio, and open       project.&lt;img alt="Screenshot-0016" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Run Visual Studio, and open       project.&lt;img alt="Screenshot-0016" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Build the project.&lt;img alt="Screenshot-0026" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png" /&gt;&lt;img alt="Screenshot-0019" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Build the project.&lt;img alt="Screenshot-0026" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png"&gt;&lt;img alt="Screenshot-0019" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Go to bin/Release folder and locate the &lt;code&gt;CustomControls.NotificationControl.dll&lt;/code&gt; file. &lt;img alt="Screenshot-0020" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Go to bin/Release folder and locate the &lt;code&gt;CustomControls.NotificationControl.dll&lt;/code&gt; file. &lt;img alt="Screenshot-0020" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Download via Nuget:&lt;/h2&gt;
@@ -32,8 +32,8 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Select &lt;strong&gt;Choose Items...&lt;/strong&gt; then browse to the &lt;strong&gt;CustomControls.NotificationControl.dll&lt;/strong&gt; file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Screenshot-0021" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png" /&gt;
-&lt;img alt="Screenshot-0022" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot-0021" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0021.png"&gt;
+&lt;img alt="Screenshot-0022" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-0022.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;How to Use&lt;/h1&gt;
@@ -89,7 +89,10 @@ Notificaiton.Show();&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="aspnet"></category></entry><entry><title>Add Image Zoom to ASP.NET WebForm GridView</title><link href="http://www.emadmokhtar.com/add-image-zoom-to-aspnet-webform-gridview.html" rel="alternate"></link><updated>2013-05-27T16:31:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2013-05-27:add-image-zoom-to-aspnet-webform-gridview.html</id><summary type="html">&lt;p&gt;The main reason I’m writing this article is to let you know there is
+&lt;/ul&gt;</content><category term="aspnet"></category></entry><entry><title>Add Image Zoom to ASP.NET WebForm GridView</title><link href="http://www.emadmokhtar.com/add-image-zoom-to-aspnet-webform-gridview.html" rel="alternate"></link><published>2013-05-27T16:31:00+03:00</published><updated>2013-05-27T16:31:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2013-05-27:/add-image-zoom-to-aspnet-webform-gridview.html</id><summary type="html">&lt;p&gt;The main reason I’m writing this article is to let you know there is
+always some way better and simpler to don something, one day I want to
+add image zoom feature to ASP.NET WebForms GridView that shows list of
+products with thumbnail, and instead of user click …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The main reason I’m writing this article is to let you know there is
 always some way better and simpler to don something, one day I want to
 add image zoom feature to ASP.NET WebForms GridView that shows list of
 products with thumbnail, and instead of user click on row to get the
@@ -140,8 +143,9 @@ attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image t
 
 &lt;p&gt;I’m glad to tell you we’re done, please if you want more configuration check this &lt;a href="http://www.elevateweb.co.uk/image-zoom/configuration"&gt;link&lt;/a&gt; but don’t forget like I said before I’ll tell you now what I’ve done.&lt;/p&gt;
 &lt;p&gt;When I’m googling about this I found developers using DataBound event to inject JavaScript to Image in each row, and more treble, but I thought how to tell elevateZoom that I want to add zoom to every image in GridView, an idea hit me “What about jQuery selectors?” and yes this is the solution as you can see I select all &lt;em&gt;img&lt;/em&gt; tags in element with &lt;em&gt;id = grvProducts.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Perview" src="http://www.emadmokhtar.com/images/zoom-perview.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;Developer please think simple, and that all folks, enjoy developing ;)&lt;/p&gt;</summary><category term="aspnet"></category><category term="gridview"></category></entry><entry><title>Storing password in plain text, you’re doing it wrong</title><link href="http://www.emadmokhtar.com/storing-password-in-plain-text-youre-doing-it-wrong.html" rel="alternate"></link><updated>2013-03-06T16:41:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2013-03-06:storing-password-in-plain-text-youre-doing-it-wrong.html</id><summary type="html">&lt;p&gt;&lt;img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Perview" src="http://www.emadmokhtar.com/images/zoom-perview.gif"&gt;&lt;/p&gt;
+&lt;p&gt;Developer please think simple, and that all folks, enjoy developing ;)&lt;/p&gt;</content><category term="aspnet"></category><category term="gridview"></category></entry><entry><title>Storing password in plain text, you’re doing it wrong</title><link href="http://www.emadmokhtar.com/storing-password-in-plain-text-youre-doing-it-wrong.html" rel="alternate"></link><published>2013-03-06T16:41:00+03:00</published><updated>2013-03-06T16:41:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2013-03-06:/storing-password-in-plain-text-youre-doing-it-wrong.html</id><summary type="html">&lt;p&gt;&lt;img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and if you’re doing it please stop and read this article to know how to do it right and being awesome.&lt;/p&gt;
 &lt;p&gt;Username, Password, or Pin codes these are precious information, and if hacker or even internal employee stole the database he can do whatever he wants with your users information. So How to keep these information safe? The answer is hashing it.&lt;/p&gt;
 &lt;p&gt;Why I was not doing that? I was lazy and every time I googled/binged/searched about this, I found many complex How-To articles, but last week I finally found something simple and it’s the reason I’m writing this article.&lt;/p&gt;
@@ -151,9 +155,9 @@ attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image t
 &lt;p&gt;As I mentioned above I found many articles about how-to hash password but most of them are very complex and I believe in work smart not hard, I found &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers&lt;/code&gt;&lt;/a&gt; Namespace that has  &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;Crypto&lt;/code&gt;&lt;/a&gt; class that has many hashing helpers. I play with it and try to learn how to hash a password.&lt;/p&gt;
 &lt;h1&gt;Flow:&lt;/h1&gt;
 &lt;p&gt;Now let’s understand the flow and then check how to implement it in code. First to save password in database you must hash it using one of hashing algorithm and store the hashes password into database.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="StoreHashedPassword" src="http://www.emadmokhtar.com/images/StoreHashedPassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="StoreHashedPassword" src="http://www.emadmokhtar.com/images/StoreHashedPassword.png"&gt;&lt;/p&gt;
 &lt;p&gt;Second to check the user password in login, you should hash the password user input and compare the two hashed passwords (user input &amp;amp; stored in database).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="RetreiveHashedPassword" src="http://www.emadmokhtar.com/images/RetreiveHashedPassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="RetreiveHashedPassword" src="http://www.emadmokhtar.com/images/RetreiveHashedPassword.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Code:&lt;/h1&gt;
 &lt;p&gt;I’ll show you how to hash user’s password and check the password he’ll enter when login to your system. Like I said above I’ll user &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers.Crypto&lt;/code&gt;&lt;/a&gt; class , this class has 2  methods &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.hashpassword(vvs.99).aspx"&gt;&lt;code&gt;HashPassword&lt;/code&gt;&lt;/a&gt; and &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.verifyhashedpassword(v=vs.99).aspx"&gt;&lt;code&gt;VerifyHashedPassword&lt;/code&gt;&lt;/a&gt; we’ll use them&lt;em&gt;.&lt;/em&gt; we’ll write the code in Unit Tests so no need for Console Application and wait for Command Prompt to run, you’ll just write your code test it and you’ll get results in test results quickly, so let’s get our hand dirty:&lt;/p&gt;
 &lt;h2&gt;Hashing:&lt;/h2&gt;
@@ -171,14 +175,14 @@ attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image t
 
 &lt;h2&gt;Complete Code:&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Test]&lt;/span&gt;
-&lt;span class="err"&gt;public&lt;/span&gt; &lt;span class="err"&gt;void&lt;/span&gt; &lt;span class="err"&gt;test_hashing_password()&lt;/span&gt;
-&lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;plainPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;hashedPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+&lt;span class="na"&gt;public void test_hashing_password()&lt;/span&gt;
+&lt;span class="na"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;string plainPassword;&lt;/span&gt;
+    &lt;span class="na"&gt;string hashedPassword;&lt;/span&gt;
     &lt;span class="na"&gt;plainPassword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;;&lt;/span&gt;
 &lt;span class="s"&gt;    hashedPassword = Crypto.HashPassword(plainPassword);&lt;/span&gt;
 &lt;span class="s"&gt;    Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword,plainPassword));&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="na"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -187,9 +191,9 @@ attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image t
 &lt;p&gt;Even after hashing passwords you aren’t safe from hacking and hackers, hackers can use &lt;a href="http://en.wikipedia.org/wiki/Rainbow_table"&gt;rainbow table&lt;/a&gt; to attack your system. The good news is you can increase the security of your hashing by adding salt, let’s see how we can do this:&lt;/p&gt;
 &lt;h1&gt;Flow&lt;/h1&gt;
 &lt;p&gt;Save the password looks like the same flow but this time we’ll use &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.generatesalt(v=vs.99).aspx"&gt;&lt;code&gt;GenerateSalt&lt;/code&gt;&lt;/a&gt; method in &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx"&gt;&lt;code&gt;System.Web.Helpers&lt;/code&gt;&lt;/a&gt; class to generate random salt that will be added to the password and store it to database with the hashed password.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="YetBetterStoreHashingPassword" src="http://www.emadmokhtar.com/images/YetBetterStoreHashingPassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="YetBetterStoreHashingPassword" src="http://www.emadmokhtar.com/images/YetBetterStoreHashingPassword.png"&gt;&lt;/p&gt;
 &lt;p&gt;Retrieving and comparing user input password and the one stored in database is as before but you need to retrieve both the hashed password and salt from database, add salt to plain password, hash the produced string, then compare it with the hashed password that retrieved from database.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="YetBetterRetreivePassword" src="http://www.emadmokhtar.com/images/YetBetterRetreivePassword.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="YetBetterRetreivePassword" src="http://www.emadmokhtar.com/images/YetBetterRetreivePassword.png"&gt;&lt;/p&gt;
 &lt;h1&gt;Code:&lt;/h1&gt;
 &lt;h2&gt;Hashing:&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plainPassword&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -206,23 +210,27 @@ attribute &lt;strong&gt;data-zoom-image&lt;/strong&gt; and bind the full image t
 
 &lt;h2&gt;Complete Code:&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Test]&lt;/span&gt;
-&lt;span class="err"&gt;public&lt;/span&gt; &lt;span class="err"&gt;void&lt;/span&gt; &lt;span class="err"&gt;test_hasing_password_with_salt()&lt;/span&gt;
-&lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;plainPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;hashedPassword&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;salt&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
-    &lt;span class="err"&gt;string&lt;/span&gt; &lt;span class="err"&gt;passwordSaltCombination&lt;/span&gt;&lt;span class="c1"&gt;;&lt;/span&gt;
+&lt;span class="na"&gt;public void test_hasing_password_with_salt()&lt;/span&gt;
+&lt;span class="na"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;string plainPassword;&lt;/span&gt;
+    &lt;span class="na"&gt;string hashedPassword;&lt;/span&gt;
+    &lt;span class="na"&gt;string salt;&lt;/span&gt;
+    &lt;span class="na"&gt;string passwordSaltCombination;&lt;/span&gt;
     &lt;span class="na"&gt;plainPassword&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;P@12345566&amp;quot;;&lt;/span&gt;
 &lt;span class="s"&gt;    salt = Crypto.GenerateSalt();&lt;/span&gt;
 &lt;span class="s"&gt;    passwordSaltCombination = plainPassword + salt;&lt;/span&gt;
 &lt;span class="s"&gt;    hashedPassword = Crypto.HashPassword(passwordSaltCombination);&lt;/span&gt;
 &lt;span class="s"&gt;    Assert.AreEqual(true, Crypto.VerifyHashedPassword(hashedPassword, passwordSaltCombination));&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="na"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;As you can see it’s simple procedure so please use it and stop saving plain password in your database.&lt;/p&gt;
-&lt;p&gt;I encourage you to read Jeff Atwood’s article &lt;a href="http://www.codinghorror.com/blog/2007/09/youre-probably-storing-passwords-incorrectly.html"&gt;You're Probably Storing Passwords Incorrectly&lt;/a&gt;&lt;/p&gt;</summary><category term="security"></category><category term="dotNet"></category><category term="Csharp"></category></entry><entry><title>Add elegant style to ASP.NET WebForms GridView control</title><link href="http://www.emadmokhtar.com/add-elegant-style-to-aspnet-webforms-gridview-control.html" rel="alternate"></link><updated>2012-07-11T11:45:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-07-11:add-elegant-style-to-aspnet-webforms-gridview-control.html</id><summary type="html">&lt;p&gt;&lt;img alt="5628591299_8d5839c072" src="http://www.emadmokhtar.com/images/5628591299_8d5839c072.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I encourage you to read Jeff Atwood’s article &lt;a href="http://www.codinghorror.com/blog/2007/09/youre-probably-storing-passwords-incorrectly.html"&gt;You're Probably Storing Passwords Incorrectly&lt;/a&gt;&lt;/p&gt;</content><category term="security"></category><category term="dotNet"></category><category term="Csharp"></category></entry><entry><title>Add elegant style to ASP.NET WebForms GridView control</title><link href="http://www.emadmokhtar.com/add-elegant-style-to-aspnet-webforms-gridview-control.html" rel="alternate"></link><published>2012-07-11T11:45:00+03:00</published><updated>2012-07-11T11:45:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-07-11:/add-elegant-style-to-aspnet-webforms-gridview-control.html</id><summary type="html">&lt;p&gt;&lt;img alt="5628591299_8d5839c072" src="http://www.emadmokhtar.com/images/5628591299_8d5839c072.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;We are developers whom use the left side of our brains that why we suck in
+designing; we’ll use the already exist styles while developing ASP.NET
+web application, that what we’ll do if we don’t have a designer in our
+team, but thanks for the CSS …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="5628591299_8d5839c072" src="http://www.emadmokhtar.com/images/5628591299_8d5839c072.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;We are developers whom use the left side of our brains that why we suck in
 designing; we’ll use the already exist styles while developing ASP.NET
 web application, that what we’ll do if we don’t have a designer in our
@@ -235,7 +243,7 @@ like more easier.&lt;/p&gt;
 like an awful HTML table with bunch of rows and columns, sure you can
 use the ready made styles “Auto Format” created by Microsoft team, but
 also you can apply much better style to it, let’s find
-how.&lt;img alt="SNAG-0089" src="http://www.emadmokhtar.com/images/SNAG-0089.png" /&gt;&lt;/p&gt;
+how.&lt;img alt="SNAG-0089" src="http://www.emadmokhtar.com/images/SNAG-0089.png"&gt;&lt;/p&gt;
 &lt;p&gt;I’ll show you how to apply 2 styles to GridView:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Twitter Bootstrap.&lt;/li&gt;
@@ -262,14 +270,14 @@ to Twitter Bootstrap CSS classes like this:&lt;/p&gt;
 
 
 &lt;p&gt;Here is the result:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SNAG-0091" src="http://www.emadmokhtar.com/images/SNAG-0091.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0091" src="http://www.emadmokhtar.com/images/SNAG-0091.png"&gt;&lt;/p&gt;
 &lt;p&gt;You can use style you like you can check the Table styles and make your
 combination or use only one CSS class.&lt;/p&gt;
 &lt;p&gt;You can install Twitter Bootstrap to your solution from NuGet. Go to
 Tools –&amp;gt; Library Package Manager –&amp;gt; Manage NuGet Packages for
 solutions… NuGet package manager window will open, search for Twitter
 Bootstrap and Install it.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SNAG-0087" src="http://www.emadmokhtar.com/images/SNAG-0087.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0087" src="http://www.emadmokhtar.com/images/SNAG-0087.png"&gt;&lt;/p&gt;
 &lt;h3&gt;ASP.NET Dynamic Data:&lt;/h3&gt;
 &lt;p&gt;One day I was checking &lt;a href="http://msdn.microsoft.com/en-us/library/ee845452.aspx"&gt;ASP.NET Dynamic
 Data&lt;/a&gt;, I built
@@ -293,10 +301,15 @@ background.&lt;/p&gt;
 
 
 &lt;p&gt;Here is the result:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SNAG-0092" src="http://www.emadmokhtar.com/images/SNAG-0092.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0092" src="http://www.emadmokhtar.com/images/SNAG-0092.png"&gt;&lt;/p&gt;
 &lt;p&gt;I’ve created a Demo project, you can download it from
 &lt;a href="https://github.com/EmadMokhtar/ASPNETGridViewWithStyle"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Happy Developing Folks!&lt;/p&gt;</summary><category term="aspnet"></category><category term="gridview"></category></entry><entry><title>ASP.NET Expressions</title><link href="http://www.emadmokhtar.com/aspnet-expressions.html" rel="alternate"></link><updated>2012-05-10T10:18:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-05-10:aspnet-expressions.html</id><summary type="html">&lt;p&gt;ASP.NET Expression is written inline surrounded with &amp;lt;% %&amp;gt; in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that&lt;/p&gt;
+&lt;p&gt;Happy Developing Folks!&lt;/p&gt;</content><category term="aspnet"></category><category term="gridview"></category></entry><entry><title>ASP.NET Expressions</title><link href="http://www.emadmokhtar.com/aspnet-expressions.html" rel="alternate"></link><published>2012-05-10T10:18:00+03:00</published><updated>2012-05-10T10:18:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-05-10:/aspnet-expressions.html</id><summary type="html">&lt;p&gt;ASP.NET Expression is written inline surrounded with &amp;lt;% %&amp;gt; in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="ss"&gt;ConnectionStrings&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="no"&gt;DefaultConnection&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Let’s lists all ASP.NET Expression and it’s …&lt;/p&gt;</summary><content type="html">&lt;p&gt;ASP.NET Expression is written inline surrounded with &amp;lt;% %&amp;gt; in other words you will write them with your markup in .ASPX files for specific task, for example if want to access a connection string there an expression for that&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="ss"&gt;ConnectionStrings&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="no"&gt;DefaultConnection&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -361,7 +374,9 @@ background.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Note:&lt;/h1&gt;
 &lt;p&gt;If you make incorrect syntax inside these expression, Exception will be thrown.&lt;/p&gt;
-&lt;p&gt;Microsoft Support: &lt;a href="http://support.microsoft.com/kb/976112"&gt;Introduction to ASP.NET inline expressions in the .NET Framework&lt;/a&gt;&lt;/p&gt;</summary><category term="aspnet"></category><category term="webforms"></category></entry><entry><title>ASP.NET Page Lifecycle in Plain English</title><link href="http://www.emadmokhtar.com/aspnet-page-lifecycle-in-plain-english.html" rel="alternate"></link><updated>2012-05-03T10:38:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-05-03:aspnet-page-lifecycle-in-plain-english.html</id><summary type="html">&lt;p&gt;&lt;img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft Support: &lt;a href="http://support.microsoft.com/kb/976112"&gt;Introduction to ASP.NET inline expressions in the .NET Framework&lt;/a&gt;&lt;/p&gt;</content><category term="aspnet"></category><category term="webforms"></category></entry><entry><title>ASP.NET Page Lifecycle in Plain English</title><link href="http://www.emadmokhtar.com/aspnet-page-lifecycle-in-plain-english.html" rel="alternate"></link><published>2012-05-03T10:38:00+03:00</published><updated>2012-05-03T10:38:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-05-03:/aspnet-page-lifecycle-in-plain-english.html</id><summary type="html">&lt;p&gt;&lt;img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know.&lt;/p&gt;
+&lt;p&gt;Let’s dig in and let’s examine ASP.NET Lifecycle but in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know.&lt;/p&gt;
 &lt;p&gt;Let’s dig in and let’s examine ASP.NET Lifecycle but in short list and description:&lt;/p&gt;
 &lt;ol&gt;
@@ -433,7 +448,12 @@ background.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;Init()&lt;/code&gt; and &lt;code&gt;Unload()&lt;/code&gt; events are fired from outside to inside controls, fro example: user control Init() event will be fired before &lt;code&gt;Page_Init()&lt;/code&gt; event.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Reference: &lt;a href="http://msdn.microsoft.com/en-us/library/ms178472.aspx"&gt;ASP.NET Page Lifecycle on MSDN&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;ASP.NET life cycle events cheat sheet: &lt;a href="http://www.cheat-sheets.org/saved-copy/aspnet-life-cycles-events.pdf"&gt;ASP.NET life cycle events cheat sheet&lt;/a&gt;&lt;/p&gt;</summary><category term="aspnet"></category></entry><entry><title>Using Notification in ASP.NET WebForms</title><link href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html" rel="alternate"></link><updated>2012-02-02T15:37:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-02-02:using-notification-in-aspnet-webforms.html</id><summary type="html">&lt;p&gt;I always asked myself, how can I show a neat notification and call it
+&lt;p&gt;ASP.NET life cycle events cheat sheet: &lt;a href="http://www.cheat-sheets.org/saved-copy/aspnet-life-cycles-events.pdf"&gt;ASP.NET life cycle events cheat sheet&lt;/a&gt;&lt;/p&gt;</content><category term="aspnet"></category></entry><entry><title>Using Notification in ASP.NET WebForms</title><link href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html" rel="alternate"></link><published>2012-02-02T15:37:00+03:00</published><updated>2012-02-02T15:37:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-02-02:/using-notification-in-aspnet-webforms.html</id><summary type="html">&lt;p&gt;I always asked myself, how can I show a neat notification and call it
+from Page code behind? I want to call this notification after doing
+something in code behind, for example notify user that “Record Inserted
+Successfully” and this notification looks like the one on
+&lt;a href="http://twitter.com/"&gt;Twitter&lt;/a&gt; and
+&lt;a href="http://stackoverflow.com/"&gt;Stackoverflow&lt;/a&gt;. I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I always asked myself, how can I show a neat notification and call it
 from Page code behind? I want to call this notification after doing
 something in code behind, for example notify user that “Record Inserted
 Successfully” and this notification looks like the one on
@@ -511,9 +531,9 @@ code behind&lt;/strong&gt;&lt;/p&gt;
 
 
 &lt;h4&gt;Screenshots:&lt;/h4&gt;
-&lt;p&gt;&lt;img alt="SNAG-0031" src="http://www.emadmokhtar.com/images/SNAG-0031.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SNAG-0029" src="http://www.emadmokhtar.com/images/SNAG-0029.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SNAG-0030" src="http://www.emadmokhtar.com/images/SNAG-0030.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0031" src="http://www.emadmokhtar.com/images/SNAG-0031.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0029" src="http://www.emadmokhtar.com/images/SNAG-0029.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SNAG-0030" src="http://www.emadmokhtar.com/images/SNAG-0030.png"&gt;&lt;/p&gt;
 &lt;h4&gt;Project File:&lt;/h4&gt;
 &lt;p&gt;I uploaded a project include the notification helper methods I’m using
 in my projects, I’ve added 6 Methods:&lt;/p&gt;
@@ -542,7 +562,14 @@ in my projects, I’ve added 6 Methods:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;I hope these helper methods will help you in your ASP.NET projects,
 happy and productive coding everyone.&lt;/p&gt;
-&lt;p&gt;On GitHub: &lt;a href="https://github.com/EmadMokhtar/jQuery-Notification"&gt;https://github.com/EmadMokhtar/jQuery-Notification&lt;/a&gt;&lt;/p&gt;</summary><category term="aspnet"></category><category term="jnotify"></category><category term="jquery"></category></entry><entry><title>Add AJAX effect to ASP.NET Webforms postbacks</title><link href="http://www.emadmokhtar.com/add-ajax-effect-to-aspnet-webforms-postbacks.html" rel="alternate"></link><updated>2012-01-01T15:28:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-01-01:add-ajax-effect-to-aspnet-webforms-postbacks.html</id><summary type="html">&lt;p&gt;If you want to add AJAX effect to ASP.NET webforms  full postbacks, add
+&lt;p&gt;On GitHub: &lt;a href="https://github.com/EmadMokhtar/jQuery-Notification"&gt;https://github.com/EmadMokhtar/jQuery-Notification&lt;/a&gt;&lt;/p&gt;</content><category term="aspnet"></category><category term="jnotify"></category><category term="jquery"></category></entry><entry><title>Add AJAX effect to ASP.NET Webforms postbacks</title><link href="http://www.emadmokhtar.com/add-ajax-effect-to-aspnet-webforms-postbacks.html" rel="alternate"></link><published>2012-01-01T15:28:00+03:00</published><updated>2012-01-01T15:28:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2012-01-01:/add-ajax-effect-to-aspnet-webforms-postbacks.html</id><summary type="html">&lt;p&gt;If you want to add AJAX effect to ASP.NET webforms  full postbacks, add
+this meta tags to your page, or even better add it the your master page.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Enter&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Exit&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This effect will …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you want to add AJAX effect to ASP.NET webforms  full postbacks, add
 this meta tags to your page, or even better add it the your master page.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Enter&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;blendTrans(Duration=0.2)&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Page-Exit&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
@@ -551,7 +578,10 @@ this meta tags to your page, or even better add it the your master page.&lt;/p&g
 
 &lt;p&gt;This effect will remove the blinking  effect from ASP.NET pages, and
 they call it &lt;a href="http://secretgeek.net/fajax.asp"&gt;fajax&lt;/a&gt; aka the fake
-alternative to AJAX&lt;/p&gt;</summary><category term="ajax"></category><category term="asp.net"></category><category term="aspnet"></category><category term="postback"></category><category term="tips"></category><category term="tricks"></category></entry><entry><title>Enforce Join option in Crystal Reports</title><link href="http://www.emadmokhtar.com/enforce-join-option-in-crystal-reports.html" rel="alternate"></link><updated>2011-06-08T10:40:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-06-08:enforce-join-option-in-crystal-reports.html</id><summary type="html">&lt;p&gt;&lt;img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png" /&gt;&lt;/p&gt;
+alternative to AJAX&lt;/p&gt;</content><category term="ajax"></category><category term="asp.net"></category><category term="aspnet"></category><category term="postback"></category><category term="tips"></category><category term="tricks"></category></entry><entry><title>Enforce Join option in Crystal Reports</title><link href="http://www.emadmokhtar.com/enforce-join-option-in-crystal-reports.html" rel="alternate"></link><published>2011-06-08T10:40:00+03:00</published><updated>2011-06-08T10:40:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-06-08:/enforce-join-option-in-crystal-reports.html</id><summary type="html">&lt;p&gt;&lt;img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:&lt;/p&gt;
+&lt;h1&gt;Not Enforced&lt;/h1&gt;
+&lt;p&gt;When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:&lt;/p&gt;
 &lt;h1&gt;Not Enforced&lt;/h1&gt;
 &lt;p&gt;When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the selected tables without restriction (that is, without enforcement based on other tables).&lt;/p&gt;
@@ -563,15 +593,27 @@ alternative to AJAX&lt;/p&gt;</summary><category term="ajax"></category><categor
 &lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will enforce the join if the report has at least one of Employee’s fields.&lt;b&gt;&lt;/p&gt;
 &lt;h1&gt;Enforced Both&lt;/h1&gt;
 &lt;p&gt;When you select this option, if either the "from" table or the "to" table for this link is used, the link is enforced.&lt;/p&gt;
-&lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will always enforce the join.&lt;/p&gt;</summary></entry><entry><title>Enable ASP.NET 32-bit application on 64-bit environment</title><link href="http://www.emadmokhtar.com/enable-asp-net-32-bit-application-on-64-bit-environment.html" rel="alternate"></link><updated>2011-03-11T10:47:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-03-11:enable-asp-net-32-bit-application-on-64-bit-environment.html</id><summary type="html">&lt;p&gt;If you’re deploying 32-bit ASP.NET application on 64-bit environment,
+&lt;p&gt;Example: Employee.Store_id –&amp;gt; Store.id, CP will always enforce the join.&lt;/p&gt;</content></entry><entry><title>Enable ASP.NET 32-bit application on 64-bit environment</title><link href="http://www.emadmokhtar.com/enable-asp-net-32-bit-application-on-64-bit-environment.html" rel="alternate"></link><published>2011-03-11T10:47:00+03:00</published><updated>2011-03-11T10:47:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-03-11:/enable-asp-net-32-bit-application-on-64-bit-environment.html</id><summary type="html">&lt;p&gt;If you’re deploying 32-bit ASP.NET application on 64-bit environment,
 you can enable 32-bit in IIS, you have 2 ways to do it by:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Set Application Pool Defaults.&lt;/li&gt;
 &lt;li&gt;Change specific Application Pool Advanced Settings.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt="IIS Manager" src="http://www.emadmokhtar.com/images/32bitasp_1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IIS Manager" src="http://www.emadmokhtar.com/images/32bitasp_1.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Here is the setting you need to change either in number 1 or 2:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Application Pool settings" src="http://www.emadmokhtar.com/images/32bitasp1.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Crystal Reports 13 JavaScript Error</title><link href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html" rel="alternate"></link><updated>2011-02-22T10:31:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-02-22:crystal-reports-13-javascript-error.html</id><summary type="html">&lt;p&gt;&lt;img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Application Pool settings" src="http://www.emadmokhtar.com/images/32bitasp1.jpg"&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you’re deploying 32-bit ASP.NET application on 64-bit environment,
+you can enable 32-bit in IIS, you have 2 ways to do it by:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Set Application Pool Defaults.&lt;/li&gt;
+&lt;li&gt;Change specific Application Pool Advanced Settings.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="IIS Manager" src="http://www.emadmokhtar.com/images/32bitasp_1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Here is the setting you need to change either in number 1 or 2:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Application Pool settings" src="http://www.emadmokhtar.com/images/32bitasp1.jpg"&gt;&lt;/p&gt;</content></entry><entry><title>Crystal Reports 13 JavaScript Error</title><link href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html" rel="alternate"></link><published>2011-02-22T10:31:00+03:00</published><updated>2011-02-22T10:31:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2011-02-22:/crystal-reports-13-javascript-error.html</id><summary type="html">&lt;p&gt;&lt;img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to &lt;a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx"&gt;this&lt;/a&gt; method being obsolete.&lt;/p&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;p&gt;So here’s the solution I found it:&lt;/p&gt;
+&lt;p&gt;First, locate &lt;code&gt;crv.js&lt;/code&gt; file in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to &lt;a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx"&gt;this&lt;/a&gt; method being obsolete.&lt;/p&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;p&gt;So here’s the solution I found it:&lt;/p&gt;
@@ -591,7 +633,12 @@ you can enable 32-bit in IIS, you have 2 ways to do it by:&lt;/p&gt;
 
 &lt;p&gt;After changed this code, everything works fine now and reports shows in ASP.NET pages.&lt;/p&gt;
 &lt;h1&gt;Note&lt;/h1&gt;
-&lt;p&gt;Take a backup from &lt;code&gt;crv.js&lt;/code&gt; file before editing.&lt;/p&gt;</summary><category term="crystalreports"></category></entry><entry><title>Client-side Validation in ASP.NET webforms by using jQuery</title><link href="http://www.emadmokhtar.com/client-side-validation-in-aspnet-webforms-by-using-jquery.html" rel="alternate"></link><updated>2010-07-20T06:56:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2010-07-20:client-side-validation-in-aspnet-webforms-by-using-jquery.html</id><summary type="html">&lt;p&gt;&lt;img alt="JQuery_logo_color_onwhite.png" src="http://www.emadmokhtar.com/images/JQuery_logo_color_onwhite.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Take a backup from &lt;code&gt;crv.js&lt;/code&gt; file before editing.&lt;/p&gt;</content><category term="crystalreports"></category></entry><entry><title>Client-side Validation in ASP.NET webforms by using jQuery</title><link href="http://www.emadmokhtar.com/client-side-validation-in-aspnet-webforms-by-using-jquery.html" rel="alternate"></link><published>2010-07-20T06:56:00+03:00</published><updated>2010-07-20T06:56:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2010-07-20:/client-side-validation-in-aspnet-webforms-by-using-jquery.html</id><summary type="html">&lt;p&gt;&lt;img alt="JQuery_logo_color_onwhite.png" src="http://www.emadmokhtar.com/images/JQuery_logo_color_onwhite.png"&gt;&lt;/p&gt;
+&lt;p&gt;Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community
+about Client-side Validation using jQuery in ASP.NET webforms, and I
+thought I'll share the session as a blog post, so let's start&lt;/p&gt;
+&lt;h3&gt;Why using Client-side validation?&lt;/h3&gt;
+&lt;p&gt;Web developers love to use Client-side validation to increase their web …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="JQuery_logo_color_onwhite.png" src="http://www.emadmokhtar.com/images/JQuery_logo_color_onwhite.png"&gt;&lt;/p&gt;
 &lt;p&gt;Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community
 about Client-side Validation using jQuery in ASP.NET webforms, and I
 thought I'll share the session as a blog post, so let's start&lt;/p&gt;
@@ -682,7 +729,7 @@ function} you can let the plugin display the default message according
 to the rule itself, for example here I let the plugin display the
 default message for TxtPassword Required rule.&lt;/p&gt;
 &lt;p&gt;Note: please use ASP.NET 4 new feature ClientIDMode, or use &lt;code&gt;&amp;lt;%=txtFirstName.UniqueID %&amp;gt;&lt;/code&gt; when writing the Control ID inside jQuery script.&lt;/p&gt;
-&lt;p&gt;Please for more validation rules read the documentation I refer above.&lt;/p&gt;</summary></entry><entry><title>ASP.NET 4 webforms new feature: ClientIDMode</title><link href="http://www.emadmokhtar.com/aspnet-4-webforms-new-feature-clientidmode.html" rel="alternate"></link><updated>2010-05-04T18:17:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2010-05-04:aspnet-4-webforms-new-feature-clientidmode.html</id><summary type="html">&lt;p&gt;Today we'll examine ClientIDMode the new feature of ASP.NET 4 which makes life easier on developers when writing client-side scripting/code like javascript or jQuery.&lt;/p&gt;
+&lt;p&gt;Please for more validation rules read the documentation I refer above.&lt;/p&gt;</content></entry><entry><title>ASP.NET 4 webforms new feature: ClientIDMode</title><link href="http://www.emadmokhtar.com/aspnet-4-webforms-new-feature-clientidmode.html" rel="alternate"></link><published>2010-05-04T18:17:00+03:00</published><updated>2010-05-04T18:17:00+03:00</updated><author><name>EmadMokhtar</name></author><id>tag:www.emadmokhtar.com,2010-05-04:/aspnet-4-webforms-new-feature-clientidmode.html</id><summary type="html">&lt;p&gt;Today we'll examine ClientIDMode the new feature of ASP.NET 4 which makes life easier on developers when writing client-side scripting/code like javascript or jQuery.&lt;/p&gt;
 &lt;h1&gt;ClientIDMode control property:&lt;/h1&gt;
 &lt;p&gt;You can assign ClientIDMode property for ASP.NET controls which is take 4 values&lt;/p&gt;
 &lt;ul&gt;
@@ -691,7 +738,19 @@ default message for TxtPassword Required rule.&lt;/p&gt;
 &lt;li&gt;Predictable&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Static&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And I'll demonstrate …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today we'll examine ClientIDMode the new feature of ASP.NET 4 which makes life easier on developers when writing client-side scripting/code like javascript or jQuery.&lt;/p&gt;
+&lt;h1&gt;ClientIDMode control property:&lt;/h1&gt;
+&lt;p&gt;You can assign ClientIDMode property for ASP.NET controls which is take 4 values&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AutoID&lt;/li&gt;
+&lt;li&gt;Inherit&lt;/li&gt;
+&lt;li&gt;Predictable&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Static&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And I'll demonstrate what the different between those 4 values.&lt;/p&gt;
@@ -768,4 +827,4 @@ default message for TxtPassword Required rule.&lt;/p&gt;
 &lt;h2&gt;Control:&lt;/h2&gt;
 &lt;p&gt;You can set it for specific control, but remember the main control is inherit this property, and this what we do in the demo.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;asp:Button&lt;/span&gt; &lt;span class="na"&gt;ID=&lt;/span&gt;&lt;span class="s"&gt;”btnSubmit”&lt;/span&gt; &lt;span class="na"&gt;runat=&lt;/span&gt;&lt;span class="s"&gt;”server”&lt;/span&gt; &lt;span class="na"&gt;Text=&lt;/span&gt;&lt;span class="s"&gt;”Button”&lt;/span&gt; &lt;span class="na"&gt;ClientIDMode=&lt;/span&gt;&lt;span class="s"&gt;”Static”&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>
