@@ -1,8 +1,9 @@
 Title: Being a Team member
-Date: YYYY-MM-dd 12:00
+Date: 2018-01-06 12:00
 Category: career
 Tags: career, work, Netherlands
 Authors: Emad Mokhtar
+Status: draft
 
 ## The Start
 
