@@ -17,7 +17,7 @@ Or the feeling Tom Hanks/Chuck Noland in [Cast Away
 (2000)](http://www.imdb.com/title/tt0162222/) had when he made a fire by
 using wood and said “I made a fire I made a fire”.
 
-![Cast\_Away\_8]({filesname}/images/Cast_Away_8_2.jpg)
+![Cast\_Away\_8]({filename}/images/Cast_Away_8_2.jpg)
 
 If I face a problem anytime I can’t do anything except totally focus on
 solving it, usually I forget about anything around me and keep focusing
