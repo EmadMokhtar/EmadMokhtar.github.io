@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/pygments.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.emadmokhtar.com/theme/stylesheet/font-awesome.min.css">
+
+
+  <link href="http://www.emadmokhtar.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Emad Mokhtar's Framework Atom">
+
+  <link href="http://www.emadmokhtar.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Emad Mokhtar's Framework RSS">
+
+  <link rel="shortcut icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="http://www.emadmokhtar.com/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+<meta name="author" content="Emad Mokhtar" />
+<meta name="description" content="I had a chance to try Node.js framework last month; I decided to build REST APIs using Node.js and express.js. Regularly I'm using JavaScript in my daily work. I'm using Django to build Web Applications, but many times I need to develop a front-end feature, I need …" />
+<meta name="keywords" content="Python">
+<meta property="og:site_name" content="Emad Mokhtar's Framework"/>
+<meta property="og:title" content="Nodejs and I like it"/>
+<meta property="og:description" content="I had a chance to try Node.js framework last month; I decided to build REST APIs using Node.js and express.js. Regularly I'm using JavaScript in my daily work. I'm using Django to build Web Applications, but many times I need to develop a front-end feature, I need …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://www.emadmokhtar.com/drafts/nodejs-and-i-like-it.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-12-31 12:00:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://www.emadmokhtar.com/author/emad-mokhtar.html">
+<meta property="article:section" content="python, nodejs"/>
+<meta property="article:tag" content="Python"/>
+<meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
+  <title>Emad Mokhtar's Framework &ndash; Nodejs and I like it</title>
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://www.emadmokhtar.com">
+        <img src="http://www.emadmokhtar.com/images/profile.jpg" alt="" title="">
+      </a>
+      <h1><a href="http://www.emadmokhtar.com"></a></h1>
+      <p>Geek developer who's in search of code perfection.</p>
+      <nav>
+        <ul class="list">
+           <li><a href="http://www.emadmokhtar.com">Blog</a></li>
+          <li><a href="http://www.emadmokhtar.com/pages/podcasts.html#podcasts">Podcasts</a></li>
+          <li><a href="http://www.emadmokhtar.com/pages/projects.html#projects">Projects</a></li>
+          <li><a href="https://emadmokhtar.github.io/resume" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a class="sc-envelope-o" href="mailto:emad@emadmokhtar.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+        <li><a class="sc-github" href="https://www.github.com/EmadMokhtar" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/emadmokhtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-stack-overflow" href="http://stackoverflow.com/users/373051/emad-mokhtar" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/emadmokhtarframework/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/emadmokhtar" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</aside>
+<main>
+  <nav>
+    <a href="http://www.emadmokhtar.com">Home</a>
+    <a href="https://emadmokhtar.github.io/resume">Resume</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.atom.xml">Atom</a>
+    <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
+  </nav>
+
+<article>
+  <header>
+    <h1 id="nodejs-and-i-like-it">Nodejs and I like it</h1>
+    <p>Posted on Mon 31 December 2018 in <a href="http://www.emadmokhtar.com/category/python-nodejs.html">python, nodejs</a></p>
+  </header>
+  <div>
+    <p>I had a chance to try Node.js framework last month; I decided to build REST APIs using <a href="1">Node.js</a> and <a href="2">express.js</a>. Regularly I'm using JavaScript in my daily work. I'm using <a href="3">Django</a> to build Web Applications, but many times I need to develop a front-end feature, I need to use JavaScript. I'm always using JavaScript to write front-end logic, but I never wrote back-end logic using it. I took the challenge to develop a simple REST APIs using <a href="2">express.js</a>.</p>
+<p>===Challenge accepted image==</p>
+<h1>Development environment</h1>
+<p>To start developing, I need to get my machine ready, so I installed <a href="1">node.js</a> via Homebrew (I'm a macOS user), it is quite easy, and node.js installation comes with <a href="4">npm</a> "npm is a package manager for node.js it is like <a href="5">pypi</a> or pip for Python". I used <a href="6">Visual Studio Code</a> as a text editor.</p>
+<h1>What I've learned?</h1>
+<p>I learned many things, especially that I'm experiencing the new dev stack.</p>
+<h2>Node.js</h2>
+<p>Node is a backend engine; it is Google Chrome V8 engine running a JavaScript on your machine instead of a browser. Node is not a language it is an engine.</p>
+<h2>Expressjs</h2>
+<p>It is a web framework that runs via Node.js; it is a framework that receives requests and replies with responses. It is Micro-framework, you can say it is like <a href="7">Flask</a>, micro-framework means it doesn't have ORM, Template engine, etc.</p>
+<h2>ORM</h2>
+<p>I tried to build my models using <a href="http://docs.sequelizejs.com/">sequelize JS</a> as I'm more familiar with PostgreSQL DB engine, but it turns to be so tricky to implement my feature using RDBMS system. I switch to using <a href="https://mongoosejs.com/">Mongoose JS</a> and my DB engine is MongoDB. I was wrong from the beginning, but after switching to MongoDB, it is much easier to implement the feature, and MongoDB is a preferred DB in Node.js community.</p>
+<h2>Asynchronous Programming</h2>
+<p>Get the used of the nature of <a href="https://developers.google.com/web/fundamentals/primers/promises">JavaScript asynchronous "Promises"</a> was a big challenge for me, it is a complete paradigm shift. On daily basis I'm using <a href="3">Django</a>, and it is not asynchronous by default <a href="https://www.aeracode.org/2018/06/04/django-async-roadmap/">"there is a roadmap for Django to be Async"</a>. <a href="https://docs.python.org/3.5/library/asyncio.html">Python has async programming since 3.5</a>, but frameworks need to adopte it to become async as well, like <a href="https://github.com/ross/requests-futures">requests-future</a>.</p>
+<h1>Final Thoughts</h1>
+<p>I enjoyed using Node.js; the community is excellent, there is nothing you can't find a package for it on NPM, it is such an active community, but what I don't like in the community is the quality of tutorial, it is such naive tutorials, yes we need naive tutorial, but  what about the advanced tutorial.</p>
+<p>The async programming challenge was an eye-opener for me; I need to dig deep in this way of programming especially in Python. I'm lucky that there is a video course on Talk Python about asynchronous in Python, and I think I will watch it.</p>
+<p>1: https://nodejs.org/en/
+2: https://expressjs.com/
+3: https://www.djangoproject.com/
+4: https://www.npmjs.com/
+5: https://pypi.org/
+6: https://code.visualstudio.com/
+7: http://flask.pocoo.org/</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://www.emadmokhtar.com/tag/python.html">Python</a>
+    </p>
+  </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'emadmokhtarsframework';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+
+  <footer>
+    <p>&copy; Emad Mokhtar </p>
+<p>Built using <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>  </footer>
+</main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11401860-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "name": "Nodejs and I like it",
+  "headline": "Nodejs and I like it",
+  "datePublished": "2018-12-31 12:00:00+03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Emad Mokhtar",
+    "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
+  },
+  "image": "http://www.emadmokhtar.com/images/profile.jpg",
+  "url": "http://www.emadmokhtar.com/drafts/nodejs-and-i-like-it.html",
+  "description": "I had a chance to try Node.js framework last month; I decided to build REST APIs using Node.js and express.js. Regularly I'm using JavaScript in my daily work. I'm using Django to build Web Applications, but many times I need to develop a front-end feature, I need …"
+}
+</script></body>
+</html>
