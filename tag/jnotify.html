@@ -81,7 +81,44 @@ from Page code behind? I want to call this notification after doing
 something in code behind, for example notify user that “Record Inserted
 Successfully” and this notification looks like the one on
 <a href="http://twitter.com/">Twitter</a> and
-<a href="http://stackoverflow.com/">Stackoverflow</a>. I …</p>
+<a href="http://stackoverflow.com/">Stackoverflow</a>. I found jQuery plug-in
+called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.htm">jNotify</a>
+has what I want from the notification, and ASP.NET has the Method
+“<strong><a href="http://msdn.microsoft.com/en-us/library/asz8zsxy.aspx">ClientScriptManager.RegisterStartupScript
+Method</a></strong>” to add
+Script to page on runtime, so why not combine 2 together and create a
+helper method  plus make it extension method for
+<a href="http://msdn.microsoft.com/en-us/library/system.web.ui.page.aspx">Page</a>.</p>
+<h4>Helper Method:</h4>
+<p>This is the most important part, here where the 2 part I mentioned
+above.</p>
+<div class="highlight"><pre><span></span>using System.Web.UI;
+
+namespace jQueryNotification.Helper
+{
+    public static class NotificationHelper
+    {
+        /// <span class="nt">&lt;summary&gt;</span>
+        /// Shows the successful notification.
+        /// <span class="nt">&lt;/summary&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>The page.<span class="nt">&lt;/param&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;message&quot;</span><span class="nt">&gt;</span>The message.<span class="nt">&lt;/param&gt;</span>
+        public static void ShowSuccessfulNotification(this Page page, string message)
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), &quot;notificationScript&quot;,
+                                                    &quot;<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&#39;text/javascript&#39;</span><span class="nt">&gt;</span>  $(document).ready(function () { $.jnotify(&#39;&quot; +
+                                                    message + &quot;&#39;); });<span class="nt">&lt;/script&gt;</span>&quot;);
+        }
+    }
+}
+</pre></div>
+
+
+<h4>jNotify Script and Style:</h4>
+<p>In order to use the helper method you need to add jQuery script and
+jNotify script and style</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Styles/jquery.jnotify.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">script …</span></pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html#using-notification-in-aspnet-webforms">Continue reading</a>
   </div>
 </article>

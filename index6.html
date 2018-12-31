@@ -81,7 +81,44 @@ from Page code behind? I want to call this notification after doing
 something in code behind, for example notify user that “Record Inserted
 Successfully” and this notification looks like the one on
 <a href="http://twitter.com/">Twitter</a> and
-<a href="http://stackoverflow.com/">Stackoverflow</a>. I …</p>
+<a href="http://stackoverflow.com/">Stackoverflow</a>. I found jQuery plug-in
+called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.htm">jNotify</a>
+has what I want from the notification, and ASP.NET has the Method
+“<strong><a href="http://msdn.microsoft.com/en-us/library/asz8zsxy.aspx">ClientScriptManager.RegisterStartupScript
+Method</a></strong>” to add
+Script to page on runtime, so why not combine 2 together and create a
+helper method  plus make it extension method for
+<a href="http://msdn.microsoft.com/en-us/library/system.web.ui.page.aspx">Page</a>.</p>
+<h4>Helper Method:</h4>
+<p>This is the most important part, here where the 2 part I mentioned
+above.</p>
+<div class="highlight"><pre><span></span>using System.Web.UI;
+
+namespace jQueryNotification.Helper
+{
+    public static class NotificationHelper
+    {
+        /// <span class="nt">&lt;summary&gt;</span>
+        /// Shows the successful notification.
+        /// <span class="nt">&lt;/summary&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>The page.<span class="nt">&lt;/param&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;message&quot;</span><span class="nt">&gt;</span>The message.<span class="nt">&lt;/param&gt;</span>
+        public static void ShowSuccessfulNotification(this Page page, string message)
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), &quot;notificationScript&quot;,
+                                                    &quot;<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&#39;text/javascript&#39;</span><span class="nt">&gt;</span>  $(document).ready(function () { $.jnotify(&#39;&quot; +
+                                                    message + &quot;&#39;); });<span class="nt">&lt;/script&gt;</span>&quot;);
+        }
+    }
+}
+</pre></div>
+
+
+<h4>jNotify Script and Style:</h4>
+<p>In order to use the helper method you need to add jQuery script and
+jNotify script and style</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Styles/jquery.jnotify.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">script …</span></pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html#using-notification-in-aspnet-webforms">Continue reading</a>
   </div>
   <hr />
@@ -103,7 +140,9 @@ this meta tags to your page, or even better add it the your master page.</p>
 </pre></div>
 
 
-<p>This effect will …</p>
+<p>This effect will remove the blinking  effect from ASP.NET pages, and
+they call it <a href="http://secretgeek.net/fajax.asp">fajax</a> aka the fake
+alternative to AJAX</p>
       <a class="btn" href="http://www.emadmokhtar.com/add-ajax-effect-to-aspnet-webforms-postbacks.html#add-ajax-effect-to-aspnet-webforms-postbacks">Continue reading</a>
   </div>
   <hr />
@@ -119,7 +158,16 @@ this meta tags to your page, or even better add it the your master page.</p>
   </header>
   <div>
       <p>I stared to practice recently after reading more about how practicing is important for programmer to become professional and one way of practicing is  <a href="http://www.emadmokhtar.com/coding-kata.html">Coding Kata</a>. I found a lot of problem to implement to practice and perform coding kata.</p>
-<p>This post I'll talk about Fizz Buzz Game a.k …</p>
+<p>This post I'll talk about Fizz Buzz Game a.k.a. Bizz Buzz Game, it's numerical/math game, if the number is divisible by 3 replace it with fizz, or if number divisible by 5 replace it with buzz, or if number is divisible by 3 and 5 replace it with fizzbuzz. For example if we count from 1 to 20 it'll be like this: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16, 17, fizz, 19, buzz.</p>
+<p>So how to code this game:</p>
+<p>First I thought I can solve this game by:</p>
+<p>If (this number is divisible by 3 and not divisible by 5)  return fizz</p>
+<p>else if (this number is not divisible by 3 and divisible by 5)  return
+buzz</p>
+<p>else if (this number is divisible by 3 and divisible by 5)  return
+buzzfizz</p>
+<p>else if(this number is not divisible by 3 and not divisible by 5)  
+return the number …</p>
       <a class="btn" href="http://www.emadmokhtar.com/code-kata-fizz-buzz-game.html#code-kata-fizz-buzz-game">Continue reading</a>
   </div>
   <hr />
@@ -136,7 +184,12 @@ this meta tags to your page, or even better add it the your master page.</p>
   <div>
       <p><img alt="Practicing Guitar" src="http://www.emadmokhtar.com/images/Practicing_Guitar.jpg"></p>
 <p>Recently I'm reading <a href="http://twitter.com/#!/unclebobmartin">Uncle Bob</a>'s
-<a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073" title="Clean Coder">Clean Coder book</a> and I read about how a professional programmer must always practice, like professional musicians, professional football player, and professional martial arts player. I'm learning  how to play electric guitar, you need to start slowly "slow will gain speed" start with something …</p>
+<a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073" title="Clean Coder">Clean Coder book</a> and I read about how a professional programmer must always practice, like professional musicians, professional football player, and professional martial arts player. I'm learning  how to play electric guitar, you need to start slowly "slow will gain speed" start with something easy and way to go to professional level, and believe me if you stop practicing you lose your speed, but this doesn't mean professional guitarist stop learning new things and stop practicing. When I see a guitarist do something great I ask myself how, how he did it? the answer is simple he practice.</p>
+<p>Getting a job as programmer will not make you a professional one, doing your work in regular basis won't make you a professional programmer like walking everyday won't make you a professional athletic, you must challenge yourself, learning something new, or try to solve problem with your favorite programming language. Try do practice away from working time, and practice, practice, practice, practice, and practice.</p>
+<p>In <a href="http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073" title="Clean Coder">CleanCoder</a>'s Chapter 6 talking about practicing and there's a part talking about coding kata, so What is Coding Kata?</p>
+<p><img alt="Kata" src="http://www.emadmokhtar.com/images/Empi_kata.jpg"></p>
+<ul>
+<li>Kata is a Japanese word describing detailed choreographed patterns of movements …</li></ul>
       <a class="btn" href="http://www.emadmokhtar.com/coding-kata.html#coding-kata">Continue reading</a>
   </div>
   <hr />
@@ -151,7 +204,7 @@ this meta tags to your page, or even better add it the your master page.</p>
   </header>
   <div>
       <p><img alt="Dasblog logo" src="http://www.emadmokhtar.com/images/DasBlog-Reflection-640x480-Green.jpg"> <strong>VS.</strong> <img alt="Wordpress logo" src="http://www.emadmokhtar.com/images/wordpress-with-text.png"></p>
-<p>In my start into blogging I start to blog on <a href="http://wordpress.com/">wordpress.com</a> from hosting blog, I like it but after blogging many posts I found it has many limitations, so I decided to get self hosted blog engine, I searched for many blog engines and I inspired with<a href="http://www.hanselman.com/blog/">Scott …</a></p>
+<p>In my start into blogging I start to blog on <a href="http://wordpress.com/">wordpress.com</a> from hosting blog, I like it but after blogging many posts I found it has many limitations, so I decided to get self hosted blog engine, I searched for many blog engines and I inspired with<a href="http://www.hanselman.com/blog/">Scott Hanselman's blog</a> and downloaded <a href="http://dasblog.codeplex.com/">dasBlog engine</a>, hosted it locally, and start the journey of customizing and configuration, I wasn't as easy as it sounds, you must get your hand dirty with CSS, ASP.NET, JavaScript, and XML configuration files, but after 2 weeks I got it up and working. After a while I realized I want more fixable blog engine, start searching and found <a href="http://wordpress.org/">Wordpress</a> my old engine but the self hosted one is the most common blog used on the internet, even my buddy <a href="http://twitter.com/#!/meligy" title="@Meligy">Mohammed Meligy</a> once a while decided to use wordpress as <a href="http://gurustop.net/">his blog</a> engine. Decision has been made and it's time to buy PHP hosting instead of .NET one and install Wordpress; it took me 4\~5 days to complete this setup but if you subtract the 2 days I spent in searching for the suitable theme, the total is 2\~3 days to step my …</p>
       <a class="btn" href="http://www.emadmokhtar.com/jump-from-dasblog-to-wordpress.html#jump-from-dasblog-to-wordpress">Continue reading</a>
   </div>
   <hr />
@@ -170,7 +223,17 @@ this meta tags to your page, or even better add it the your master page.</p>
 <h1>Links</h1>
 <ol>
 <li><a href="http://stackoverflow.com/questions/4325630/ways-to-speedup-visual-studio-2010">Ways to speedup Visual Studio 2010</a></li>
-<li><a href="http://www.certsandprogs.com/2009/10/speeding-up-start-up-of-visual-studio.html#axzz1PJsvSzZp">Speeding up the …</a></li></ol>
+<li><a href="http://www.certsandprogs.com/2009/10/speeding-up-start-up-of-visual-studio.html#axzz1PJsvSzZp">Speeding up the start up of Visual Studio 2010 Beta 2</a></li>
+<li><a href="http://blog.stevienova.com/2009/01/05/how-to-speed-up-visual-studio-start-up/">How to Speed Up Visual Studio Start Up</a></li>
+<li><a href="http://bentsai.wordpress.com/2009/06/12/tip-kill-tsvncache-exe-to-speed-up-visual-studio-startup-times/">Tip: Kill TSVNCache.exe to speed up Visual Studio startup times</a></li>
+<li><a href="http://www.galador.net/codeblog/post/2008/09/10/Speed-up-Visual-Studio-startup.aspx">Speed up Visual Studio startup</a></li>
+</ol>
+<h1>Notes</h1>
+<ul>
+<li>Some of those links have tips for Visual Studio 2008 but still work on Visual Studio 2010</li>
+<li>Some of those links have tip to disable Resharper for myself I will never do this, I love Resharper and I cannot take the risk to disable it to speed up my Visual Studio 2010.</li>
+<li>In link no. 2 it is says for Beta 2 but work with RTM and SP1, and please look at the comment I left there.</li>
+</ul>
       <a class="btn" href="http://www.emadmokhtar.com/speedup-visual-studio-2010.html#speedup-visual-studio-2010">Continue reading</a>
   </div>
   <hr />
@@ -184,7 +247,21 @@ this meta tags to your page, or even better add it the your master page.</p>
     </p>
   </header>
   <div>
-      <p>After <a href="http://www.red-gate.com/">Redgate</a> <a href="http://reflector.red-gate.com/download.aspx?TreatAsUpdate=1">announced the .NET Reflector is became a paid-for product</a>, some companies took advantage of this announcement and start to build a free decompilers for developers, and developers start looking for alternatives for .NET Reflector they love it as a free product and few of them will pay for …</p>
+      <p>After <a href="http://www.red-gate.com/">Redgate</a> <a href="http://reflector.red-gate.com/download.aspx?TreatAsUpdate=1">announced the .NET Reflector is became a paid-for product</a>, some companies took advantage of this announcement and start to build a free decompilers for developers, and developers start looking for alternatives for .NET Reflector they love it as a free product and few of them will pay for it (including me :)), so I <a href="http://www.google.com/">google</a>/<a href="http://www.bing.com/">bing</a>/<a href="http://www.kngine.com">kngine</a> around to gather the best free .NET decompilers; here is the list:</p>
+<ul>
+<li>
+<p><a href="http://www.jetbrains.com/decompiler/">JetBrain dotPeek</a>: is a new free-of-charge .NET decompile  from JetBrains, the makers of <a href="http://www.jetbrains.com/resharper?dotpeek">ReSharper</a> and more developer productivity tools.</p>
+<p><img alt="dotPeek" src="http://www.emadmokhtar.com/images/dotPeek.png"></p>
+</li>
+<li>
+<p><a href="http://wiki.sharpdevelop.net/ILSpy.ashx">ILSpy</a>: ILSpy is the open-source .NET assembly browser and decompiler.</p>
+<p><img alt="ILSpy" src="http://www.emadmokhtar.com/images/ILSpy-yield-return_3.png"></p>
+</li>
+<li>
+<p><a href="http://www.telerik.com/products/decompiling.aspx">Telerik JustDecompile</a>: is a new, free developer productivity tool designed to enable easy .NET assembly browsing and decompiling.</p>
+<p><img alt="Telerik JustDecompile" src="http://www.emadmokhtar.com/images/justd.png"></p>
+</li>
+</ul>
       <a class="btn" href="http://www.emadmokhtar.com/free-net-decompilers.html#free-net-decompilers">Continue reading</a>
   </div>
   <hr />
@@ -201,7 +278,12 @@ this meta tags to your page, or even better add it the your master page.</p>
       <p><img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png"></p>
 <p>SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:</p>
 <h1>Not Enforced</h1>
-<p>When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the …</p>
+<p>When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the selected tables without restriction (that is, without enforcement based on other tables).</p>
+<h1>Enforced From</h1>
+<p>When you select this option, if the "to" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce From and select only a field from Table B, the Select statement will still include the join to Table A because it is enforced. Conversely, selecting only from Table A with the same join condition will not cause the join to Table B to be enforced.</p>
+<p>Example: Employee.Store_id –&gt; Store.id, CP will enforce the join if the report has at least one of Store’s fields.</p>
+<h1>Enforced To</h1>
+<p>When you select this option, if the "from" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce To …</p>
       <a class="btn" href="http://www.emadmokhtar.com/enforce-join-option-in-crystal-reports.html#enforce-join-option-in-crystal-reports">Continue reading</a>
   </div>
   <hr />
@@ -242,7 +324,23 @@ you can enable 32-bit in IIS, you have 2 ways to do it by:</p>
 <p>Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to <a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx">this</a> method being obsolete.</p>
 <h1>Solution</h1>
 <p>So here’s the solution I found it:</p>
-<p>First, locate <code>crv.js</code> file in …</p>
+<p>First, locate <code>crv.js</code> file in <code>C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer</code> then search for this code block at the bottom of the file</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>And replace it with this code block</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>After changed this code, everything works fine now and reports shows in ASP.NET pages.</p>
+<h1>Note</h1>
+<p>Take a backup from <code>crv.js</code> file before editing.</p>
       <a class="btn" href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#crystal-reports-13-javascript-error">Continue reading</a>
   </div>
 </article>

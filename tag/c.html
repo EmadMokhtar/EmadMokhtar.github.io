@@ -76,7 +76,33 @@
     </p>
   </header>
   <div>
-      <p>If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate <a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object">POCO</a> classes for you, I’ve got a solution for you. Personally I prefer using <a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit">T4 template</a> that <a href="http://www.toptensoftware.com/petapoco/">PetaPoco</a> provides, so let’s see …</p>
+      <p>If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate <a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object">POCO</a> classes for you, I’ve got a solution for you. Personally I prefer using <a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit">T4 template</a> that <a href="http://www.toptensoftware.com/petapoco/">PetaPoco</a> provides, so let’s see how you can use it.</p>
+<h1>Let’s Start:</h1>
+<p>First, install/add PetaPoco to your project using Nuget:</p>
+<div class="highlight"><pre><span></span>1.  Open **Package Manager Console** and type `install-package petapoco`
+2.  Wait until package downloaded and installed to your project.
+</pre></div>
+
+
+<p><img alt="packagemanager" src="http://www.emadmokhtar.com/images/packagemanager.png"></p>
+<p><img alt="solutionafterinstall" src="http://www.emadmokhtar.com/images/solutionafterinstall.png"></p>
+<p>Second, modify T4 template to generate POCO classes for you:</p>
+<ol>
+<li>Open <code>Database.tt</code> file and modify Settings part.</li>
+<li>In <code>ConnectionStringName</code> write your database connection string name which located in app.config or web.config.</li>
+<li>In <code>Namespace</code> write the namespace for generated Poco classes.</li>
+<li>In <code>RepoName</code> write Repository name, this is optional and recommended if you’ll use PetaPoco.</li>
+<li>In <code>ClassPerfex</code> write required class name prefix, this is optional.</li>
+<li>In <code>ClassSuffix</code> write required class name suffix, this is optional.</li>
+<li>Save the file.</li>
+</ol>
+<p><img alt="settings" src="http://www.emadmokhtar.com/images/settings.png"></p>
+<p>Third, congratulation your POCO classes and Repo generated under Database.tt –&gt; Database.cs.</p>
+<p><img alt="pocos" src="http://www.emadmokhtar.com/images/pocos.png"></p>
+<h1>Notes:</h1>
+<ul>
+<li>Make sure you set <code>providerName</code> in <code>ConnectString</code> or T4 template will not work.</li>
+<li>If you faced C# issue during …</li></ul>
       <a class="btn" href="http://www.emadmokhtar.com/generate-poco-for-database-tables-using-t4-template.html#generate-poco-for-database-tables-using-t4-template">Continue reading</a>
   </div>
 </article>

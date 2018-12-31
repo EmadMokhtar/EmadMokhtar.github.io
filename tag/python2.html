@@ -76,7 +76,11 @@
     </p>
   </header>
   <div>
-      <p><img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png"> When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one <a href="https://www.youtube.com/watch?v=BJiOERA49ZQ">DjangoCon videos by Andrew Pinkham</a> to make this easier on me, and if you tried or planning to …</p>
+      <p><img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png"> When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one <a href="https://www.youtube.com/watch?v=BJiOERA49ZQ">DjangoCon videos by Andrew Pinkham</a> to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV </p>
+<h1>What is the relation between GCBV and User Model?</h1>
+<p>Great question, while I’m working with one of my models fro example her the Teacher model, and teacher will has a user credentials in order to user the app. The easiest and the straightforward way is to make one-to-one relation with <a href="https://github.com/django/django/blob/53ccffdb8c8e47a4d4304df453d8c79a9be295ab/django/contrib/auth/models.py">django.contrib.auth.models.User</a> please read the quote from Django documentation: </p>
+<blockquote>
+<p>There are two ways to extend the default User …</p></blockquote>
       <a class="btn" href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html#extend-django-user-model-and-generic-class-based-view-gcbv">Continue reading</a>
   </div>
   <hr />
@@ -91,7 +95,25 @@
     </p>
   </header>
   <div>
-      <p>If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use <a href="https://www.pythonanywhere.com/pricing/">Python Anywhere free hosting</a>, I’m using it for <a href="http://www.emadmokhtar.com/my-first-django-app.html">my Django app</a> and I …</p>
+      <p>If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use <a href="https://www.pythonanywhere.com/pricing/">Python Anywhere free hosting</a>, I’m using it for <a href="http://www.emadmokhtar.com/my-first-django-app.html">my Django app</a> and I’m very comfortable with but before using the free hosting please consider the following:</p>
+<ol>
+<li>They provide only MySQL for free hosting, so if you developed your app using PostgreSQL or SQLite, please download the correct driver.</li>
+<li>Application URL must be sub-domain of pythonanywhere.com, example my-app.pythonanywhere.com</li>
+<li>I’ll host one application only.</li>
+<li>No full access to a machine, you’ll deploy your application using console, use the console to install your virtual environment and packages, and edit some code using their in-browser code editor.</li>
+</ol>
+<h1>How to deploy?</h1>
+<ol>
+<li>First go to this <a href="https://www.pythonanywhere.com/registration/register/beginner/"><span
+    class="s2">link</a>
+    and register your free account, then </li>
+<li>Go to your dashboard, and select
+    Consoles tab.</li>
+<li>Click on Python 2.7 (I personally still using
+    python 2.7 but if you want select python 3.3) to open a
+    new console.</li>
+<li>New console will open in your browser.</li>
+<li>Start by creating your <a href="http://www.emadmokhtar.com/2015/03/virtual-environment/">virtualenv</a> and install the required packages …</li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/free-django-hosting.html#free-django-hosting">Continue reading</a>
   </div>
   <hr />
@@ -107,7 +129,9 @@
   </header>
   <div>
       <p>I'm starting to use Django and Python to develop web applications, I really love Django and during my learning process I thought I can build something while learning, and I had one idea keep it on hold as side project so I decided it's time to build it.</p>
-<h1>The Idea …</h1>
+<h1>The Idea</h1>
+<p>Me and my wife have our financial system which is dividing the monthly budget into a weekly budget, most of us make budget on monthly basis because we get paid on monthly basis, but imagine your budget will be on weekly basis, it’s like every week is new budget and new start, and in order to keep track of the weekly budget you need to know how much you need to spend in a week. To be honest in the first we made a lot of mistakes but at the end we found out how much we need to spend weekly, and this need analysis with trial and error for at least one month then you will master your weekly budgeting.</p>
+<p>Now the idea is build a system that can keep track of your payments or expenses against your estimated budget for a week. The application name is <strong>Ma3ana …</strong></p>
       <a class="btn" href="http://www.emadmokhtar.com/my-first-django-app.html#my-first-django-app">Continue reading</a>
   </div>
   <hr />
@@ -127,7 +151,37 @@ VirtualEnv or Virtual Environment is widely used, in first I didn't get
 it because I came from Microsoft .NET Framework development platform, so
 I thought of writing a post about it to make simple.</p>
 <h2>What is Virtual Environment?</h2>
-<p>VirtualEnv …</p>
+<p>VirtualEnv or Virtual Environment is a way to create isolated
+development environment each one has it's own packages and specific
+package version, for example VirEnv1 has Django 1.6 and VirEnv2 has
+Django 1.7, this isolation will keep your project packages dependency
+clear, isolated, and as I'll show you below that you can replicate the
+environment with one command and file, so if you work in team it's easy
+to share the same environment among the
+team.</p>
+<p><img alt="virtualenv 1" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193423.png">
+<img alt="virtualenv 2" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193318.png"></p>
+<h2>How to install VirtualEnv?</h2>
+<p>VirtualEnv is a python package so to install is you need to install pip
+first.</p>
+<ol>
+<li>
+<p>Open terminal and type the following command</p>
+<p><code>sudo apt-get install python-pip</code></p>
+</li>
+<li>
+<p>After finish installing pip type the following command to install
+    virtual environment</p>
+<p><code>sudo pip install virtualenv</code></p>
+</li>
+<li>
+<p>After finish installing virtualenv, type the following command to
+    create folder to store your virtual environments</p>
+<p><code>mkdir .virtualenvs</code></p>
+</li>
+</ol>
+<h2>How to create virtualenv?</h2>
+<p>After install virtualenv you are …</p>
       <a class="btn" href="http://www.emadmokhtar.com/virtual-environment.html#virtual-environment">Continue reading</a>
   </div>
 </article>

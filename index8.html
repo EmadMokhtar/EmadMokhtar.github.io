@@ -80,7 +80,14 @@
 <p>She turns my 0'z to 1'z  </p>
 <p>She nudges my feelings  </p>
 <p>She is my RSS of my life  </p>
-<p>If you Google my heart you'll find her …</p>
+<p>If you Google my heart you'll find her  </p>
+<p>She is a Hashtag of my soul  </p>
+<p>She is a Love entity in my HeartDB  </p>
+<p>She is system file of my memory  </p>
+<p>She is a Silverlight of my future  </p>
+<p>She autocomplete my thoughts  </p>
+<p>She ReadyBoost my motivation  </p>
+<p>And I Favorite/Bookmark here</p>
       <a class="btn" href="http://www.emadmokhtar.com/web-developer-poetry.html#web-developer-poetry">Continue reading</a>
   </div>
   <hr />
@@ -99,7 +106,23 @@
 <h1>What is Pomodoro Technique?</h1>
 <p><img alt="Pomodoro logo" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod2.jpg"></p>
 <p>It's a time management system; It's simple, and very productive.</p>
-<p>Pomodoro is tomato in some language "Google it …</p>
+<p>Pomodoro is tomato in some language "Google it and see", it's inspired by the kitchen timer that take a shape of Tomato, and the timing of the technique is based on the kitchen timer. And here's [link]((http://www.pomodorotechnique.com/) for more information</p>
+<h1>How to use/implement Pomodoro Technique?</h1>
+<p>It's very simple and easy to use, there's a number of apps implement it, even you can use a kitchen times unless you're in your company office :D.</p>
+<p>Let's start explain how to use it:</p>
+<ul>
+<li>Allocate a certain task you want to get it done.</li>
+<li>Do it for 25 minutes.</li>
+<li>And take a 5 minutes break.</li>
+<li>Repeat step 2 &amp; 3 4-times.</li>
+<li>
+<p>And then take 30 minutes beak.</p>
+<p>And start from step 2 again, and if you finish the task start from
+the beginning.</p>
+</li>
+</ul>
+<p><img alt="Pomodoro Workflow" src="http://www.emadmokhtar.com/images/051410_1252_WhatisPomod3.png">
+Please don't panic like I said there's a lot of apps implement Pomodoro Technique, and that's make life more easily, I'll review one of the …</p>
       <a class="btn" href="http://www.emadmokhtar.com/what-is-pomodoro-technique.html#what-is-pomodoro-technique">Continue reading</a>
   </div>
   <hr />
@@ -125,7 +148,39 @@
 <p><img alt="ClientIDMode Autocomplete" src="http://www.emadmokhtar.com/wp-content/uploads/2011/11/050410_1817_ASPNET4webf1.jpg"></p>
 </li>
 </ul>
-<p>And I'll demonstrate …</p>
+<p>And I'll demonstrate what the different between those 4 values.</p>
+<h1>Demo:</h1>
+<p>We've simple ASP.NET 4 page with Master page, with one button on it, and We'll set the ClientIDMode for the button control and examine what's happen when ASP.NET render it to HTML.</p>
+<h2>AutoID:</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”AutoID”/</span><span class="nt">&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”ctl00_ContentPlaceHolder1_btnSubmit”</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>It's rendered like what ASP.NET 3.5 do, so if you want to renter control's ID like ASP.NET 3.5 set ClientIDMode to AutoID.</p>
+<h2>Inherit:</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Inherit”</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ctl00$ContentPlaceHolder1$btnSubmit&quot;</span>
+ <span class="na">value</span><span class="o">=</span><span class="s">&quot;Button&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">”btnSubmit”</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p>Actually it tells the control to defer to the naming behavior mode of the parent container control.</p>
+<h2>Predictable (default):</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;asp:Button</span> <span class="na">ID=</span><span class="s">”btnSubmit”</span> <span class="na">runat=</span><span class="s">”server”</span> <span class="na">Text=</span><span class="s">”Button”</span> <span class="na">ClientIDMode=</span><span class="s">”Predictable”</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<h3>The Rendered HTML …</h3>
       <a class="btn" href="http://www.emadmokhtar.com/aspnet-4-webforms-new-feature-clientidmode.html#aspnet-4-webforms-new-feature-clientidmode">Continue reading</a>
   </div>
   <hr />
@@ -144,7 +199,17 @@
 <h1>The paragraph:</h1>
 <blockquote>
 <p>Work-centered people may become "workaholics" driving themselves to
-produce at the sacrifice of health, relationships, and other …</p></blockquote>
+produce at the sacrifice of health, relationships, and other important
+areas of their live. Their fundamental identity comes from their
+work-"I'm a doctor", "I'm a writer", "I'm an actor". Because their
+identity and sense of self-worth are wrapped up in their work, their
+security is vulnerable to anything that happens to prevent them from
+continuing in it. Their wisdom and power come In the limited areas of
+their work, rendering them ineffective in other areas of life.</p>
+</blockquote>
+<h1>My opinion:</h1>
+<p>I think he's right most of us "Geeks" can be categorized in this kind of people. How many of us work at night? Who doesn't work in the weekend? Who doesn't spend most of his time with machine whatever PC, Mac, Notebook, Workstation, Server, etc.?</p>
+<p>In other hand if you look and examine the life of the most effective Geeks in our community, you'll see they spend more time with their family and friend who can be not a …</p>
       <a class="btn" href="http://www.emadmokhtar.com/interesting-paragraph-in-7-habits-of-highly-effective-people.html#interesting-paragraph-in-7-habits-of-highly-effective-people">Continue reading</a>
   </div>
   <hr />
@@ -164,7 +229,20 @@ produce at the sacrifice of health, relationships, and other …</p></blockquote
 Hattab, Mohamed Meligy, Ramy Mahrous, Doha El Sayed, Nashwa, and Amr El
 Dieb</strong>.</p>
 <h1>How did it happen?</h1>
-<p>First, we were tweeting about where we'll spend our holiday on Twitter, and I felt dizzy because Twitter don't include threads …</p>
+<p>First, we were tweeting about where we'll spend our holiday on Twitter, and I felt dizzy because Twitter don't include threads and you try to trace the conversation, so I invited them to go to a chat room on TinyChat.com, and we try to chat with voice, technically it was bad experience, so I suggest to transfer this conversation to Skype, and we did.</p>
+<p>Then Mohamed Meligy "inspiring of sarajchipps idea" suggest we make this meeting weekly meeting and we called it EgyGeeksOnSkype.</p>
+<h1>What did happen on Skype?</h1>
+<p>We spend 3 hours on Skype, talking about technical and non-technical stuff, but it was awesome conversation I ever have, we all geeks and share common ideas.</p>
+<h1>Where, When, and How can I join you?</h1>
+<h2>How It's so simple</h2>
+<p>and super easy, First think you must have is Skype client and account,
+you can grab the client form
+<a href="http://www.skype.com/intl/en/download/skype/windows/downloading/">here</a>
+and register after the installation.</p>
+<h2>When</h2>
+<p>Every Friday @ 11:59Pm (Cairo Time, GMT+2)</p>
+<h2>Where</h2>
+<p>please add <strong>mohamed.meligy, rmahrous, emad.mokhtar.habib …</strong></p>
       <a class="btn" href="http://www.emadmokhtar.com/egygeeksonskype.html#egygeeksonskype">Continue reading</a>
   </div>
   <hr />
@@ -185,7 +263,18 @@ Dieb</strong>.</p>
 <p>Let's begin:</p>
 <ol>
 <li>
-<p><strong>char</strong>: the char data type is …</p></li></ol>
+<p><strong>char</strong>: the char data type is fixed in length, if you enter fewer that than the number of character defined the remaining length will be space filled to the right; use this data type when the column data is to be of fixed length, which tends to be the case foe customer IDs and bank account IDs.</p>
+</li>
+<li>
+<p><strong>nchar</strong>: the nchar type is exactly like char, but will hold characters in Unicode format rather than ANSI; in fact SQL Server allocates double the space internally, so unless there is a need in your database to hold this type of character, it's easier to stick with ANSI.</p>
+<p>a. Note:</p>
+<blockquote>
+<p>i. ANSI character sets only hold up to 256 char.</p>
+<p>ii. Unicode character sets only hold up to 65,536 chr.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>varchar</strong>: the varchar data type holds alphanumeric data; just like char but with flexible size, you just set the maximum number of characters, maximum size is 8,000 …</p></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/microsoft-sql-server-2008-data-types.html#microsoft-sql-server-2008-data-types">Continue reading</a>
   </div>
   <hr />
@@ -203,7 +292,19 @@ Dieb</strong>.</p>
 <p>This's the name of my graduation project in 2009, it's just a <a href="http://en.wikipedia.org/wiki/Bioinformatics">Bioinformatics</a> system implemented with DNA as <a href="http://en.wikipedia.org/wiki/Biometrics">biometric</a> system, and used for identification.</p>
 <p><img alt="IDIS Logo" src="http://www.emadmokhtar.com/images/031210_2008_Intelligent1.jpg"></p>
 <h1>Why <a href="http://en.wikipedia.org/wiki/DNA">DNA</a>, <a href="http://en.wikipedia.org/wiki/Biometrics">Biometrics</a>, and <a href="http://en.wikipedia.org/wiki/Bioinformatics">Bioinformatics</a>?</h1>
-<p>Because we choose …</p>
+<p>Because we choose our graduation project, we want to do something unique and hard to do.</p>
+<h1>You said it's a biometric system and used for identification, Are there another applications of <a href="http://en.wikipedia.org/wiki/Biometrics">biometric</a> systems?</h1>
+<p>Yep, there're three types of biometric applications:</p>
+<ol>
+<li>Identification: When you want to search for unknown personal, to know any information about him.</li>
+<li>Verification: is to verify XYZ personal is really XYZ personal or not.</li>
+<li>Screening: searching for "XYZ" personal in a list like "Banned from traveling List".</li>
+</ol>
+<h1>What makes this field Unique and Hard?</h1>
+<p>The <a href="http://en.wikipedia.org/wiki/Bioinformatics">Bioinformatics</a> and  <a href="http://en.wikipedia.org/wiki/Biometrics">Biometrics</a> fields are rare in Egypt, and this was the challenge to make something new and not stable yet, the information for these fields are updating every year maybe less, and the information on the internet are rare and sometimes not free, but we manage to read some IEEE papers and the great book of O'Reilly BLAST.</p>
+<p><img alt="BLAST Book Cover" src="http://www.emadmokhtar.com/images/031210_2008_Intelligent2.jpg"></p>
+<h1>What is BLAST?</h1>
+<p>B.L.A …</p>
       <a class="btn" href="http://www.emadmokhtar.com/intelligent-dna-identification-system.html#intelligent-dna-identification-system">Continue reading</a>
   </div>
 </article>

@@ -79,7 +79,18 @@
       <p>Did you even download Visual Studio color schemes from <a href="http://studiostyl.es/">studiostyl.es</a> and you want to change its style to <strong>Bold</strong>? I’ve did this hundred of times and
 it’s boring to do it manually by going throw even Display Item and set its style to <strong>Bold</strong>.</p>
 <p><img alt="Visual Studio Font Settings" src="http://www.emadmokhtar.com/images/SNAG0017.png"></p>
-<p>I found a …</p>
+<p>I found a way to do this rapidly in less than a minute. The idea comes when I opened the Visual Studio Settings file in notepad and found it’s XML file with all Visual Studio settings and there is a part for font settings with <code>BoldFont="Yes"</code> attribute for each item.</p>
+<p><img alt="Settings file in notepad" src="http://www.emadmokhtar.com/images/SNAG0018.png"></p>
+<h1>Let’s see How to do it:</h1>
+<ol>
+<li>Open Visual Studio Setting file <code>.vssettings</code> with Notepad.</li>
+<li>Press on <code>Ctrl + H</code>.</li>
+<li>Replace <code>BoldFont="No"</code> to <code>BoldFont=”Yes</code>.</li>
+<li>Save file.</li>
+<li>Import Settings to Visual Studio.</li>
+</ol>
+<p>Note: if you want to set style for your existing settings please export your settings first and apply the steps mentioned above.</p>
+<p>*I’m using <a href="http://www.flos-freeware.ch/notepad2.html">Notepad2</a></p>
       <a class="btn" href="http://www.emadmokhtar.com/the-fast-way-to-change-font-to-bold-in-visual-studio.html#the-fast-way-to-change-font-to-bold-in-visual-studio">Continue reading</a>
   </div>
 </article>

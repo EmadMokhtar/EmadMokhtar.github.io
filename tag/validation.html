@@ -77,7 +77,33 @@
   </header>
   <div>
       <p><img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg"></p>
-<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication …</p>
+<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.</p>
+<h1>Parsley remote validation</h1>
+<p><a href="http://parsleyjs.org/doc/index.html">Parsley library</a> has <a href="http://parsleyjs.org/doc/index.html#remote">remote validation</a>, it's calling AJAX service (Django view) and check if AJAX call returns <a href="http://www.restapitutorial.com/httpstatuscodes.html">2xx HTTP status codes</a> then it's valid input else it's invalid input and shows error message. Thankfully you can use remote validation in Django Form using django-parsley via <code>parsley-extras</code> attribute.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserRegistrationForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Password is invalid&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_username_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this username is already exists.&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_email_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this email is already exists.&quot;</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>In the code above we are adding client custom validation as remote to <code>password</code>, <code>username</code>, and <code>email</code>  fields, Did you notice that <code>remote</code> key is holding a URL to Django View? let’s create a complete sample to get our head around it.</p>
+<h1>Django Password …</h1>
       <a class="btn" href="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html#custom-client-side-validation-for-parsley-in-django">Continue reading</a>
   </div>
 </article>

@@ -78,7 +78,34 @@
   <div>
       <p><img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg"></p>
 <p>In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.</p>
-<p>As they said Django is a “batteries included” web application framework, and one of …</p>
+<p>As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, <a href="https://docs.djangoproject.com/en/dev/topics/testing/">testing in Django</a> is easy and you can start writing tests even if you didn't do it before.</p>
+<p>If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add <a href="https://github.com/timothycrosley/isort">isort</a> and <a href="http://flake8.pycqa.org/en/latest/">flake8</a> tests to maintain the quality of your Python code.</p>
+<h1>Installation</h1>
+<p>We need some packages first so we can run the tests</p>
+<div class="highlight"><pre><span></span>pip install flake8 isort flake8-isort
+</pre></div>
+
+
+<p><strong>Note:</strong></p>
+<p>It's better to create and use sperate virtualenv</p>
+<h1>Configurations</h1>
+<p>flake8-isort is using <code>.isort.cfg</code> file to run the isort test against it, so let's add our configuration file.</p>
+<p><strong>.isort.cfg file</strong></p>
+<div class="highlight"><pre><span></span><span class="k">[*.py]</span>
+<span class="na">max_line_length</span> <span class="o">=</span> <span class="s">120</span>
+<span class="na">indent_style</span> <span class="o">=</span> <span class="s">space</span>
+<span class="na">indent_size</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">known_first_party</span> <span class="o">=</span> <span class="s">isort</span>
+<span class="na">ignore_frosted_errors</span> <span class="o">=</span> <span class="s">E103</span>
+<span class="na">skip</span> <span class="o">=</span> <span class="s">runtests.py,build,.tox</span>
+<span class="na">balanced_wrapping</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">not_skip</span> <span class="o">=</span> <span class="s">__init__.py</span>
+</pre></div>
+
+
+<h1>Test Python Script</h1>
+<p>Now it's time to write the Python script to run Django, isort, &amp; flake8 tests.</p>
+<p><strong>runtests …</strong></p>
       <a class="btn" href="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html#add-isort-and-flake8-test-to-your-django-project">Continue reading</a>
   </div>
 </article>

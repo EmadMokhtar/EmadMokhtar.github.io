@@ -82,7 +82,18 @@
 <p>Let's begin:</p>
 <ol>
 <li>
-<p><strong>char</strong>: the char data type is …</p></li></ol>
+<p><strong>char</strong>: the char data type is fixed in length, if you enter fewer that than the number of character defined the remaining length will be space filled to the right; use this data type when the column data is to be of fixed length, which tends to be the case foe customer IDs and bank account IDs.</p>
+</li>
+<li>
+<p><strong>nchar</strong>: the nchar type is exactly like char, but will hold characters in Unicode format rather than ANSI; in fact SQL Server allocates double the space internally, so unless there is a need in your database to hold this type of character, it's easier to stick with ANSI.</p>
+<p>a. Note:</p>
+<blockquote>
+<p>i. ANSI character sets only hold up to 256 char.</p>
+<p>ii. Unicode character sets only hold up to 65,536 chr.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>varchar</strong>: the varchar data type holds alphanumeric data; just like char but with flexible size, you just set the maximum number of characters, maximum size is 8,000 …</p></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/microsoft-sql-server-2008-data-types.html#microsoft-sql-server-2008-data-types">Continue reading</a>
   </div>
 </article>
