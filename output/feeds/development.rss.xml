@@ -9,4 +9,4 @@
 &lt;p&gt;&lt;img alt="pip.log" src="http://www.emadmokhtar.com/images/1444569163_full.png"&gt;&lt;/p&gt;
 &lt;h1&gt;The Soltuion:&lt;/h1&gt;
 &lt;p&gt;Simplly install Command-Line Tools:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 11 Oct 2015 12:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2015-10-11:/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html</guid><category>developement</category><category>macosx</category></item></channel></rss>
+&lt;p&gt;&lt;code&gt;sudo xcode-select --install&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sun, 11 Oct 2015 12:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2015-10-11:/solution-for-psycopg2-installation-error-with-mac-osx-el-capitan.html</guid><category>developement</category><category>macosx</category></item></channel></rss>

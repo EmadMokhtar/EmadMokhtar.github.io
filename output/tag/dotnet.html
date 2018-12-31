@@ -76,7 +76,33 @@
     </p>
   </header>
   <div>
-      <p>If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate <a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object">POCO</a> classes for you, I’ve got a solution for you. Personally I prefer using <a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit">T4 template</a> that <a href="http://www.toptensoftware.com/petapoco/">PetaPoco</a> provides, so let’s see …</p>
+      <p>If you are using Micro-ORM which doesn’t have fancy UI that generate your data model for you, or you want a free tool to generate <a href="http://en.wikipedia.org/wiki/Plain_Old_CLR_Object">POCO</a> classes for you, I’ve got a solution for you. Personally I prefer using <a href="http://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit">T4 template</a> that <a href="http://www.toptensoftware.com/petapoco/">PetaPoco</a> provides, so let’s see how you can use it.</p>
+<h1>Let’s Start:</h1>
+<p>First, install/add PetaPoco to your project using Nuget:</p>
+<div class="highlight"><pre><span></span>1.  Open **Package Manager Console** and type `install-package petapoco`
+2.  Wait until package downloaded and installed to your project.
+</pre></div>
+
+
+<p><img alt="packagemanager" src="http://www.emadmokhtar.com/images/packagemanager.png"></p>
+<p><img alt="solutionafterinstall" src="http://www.emadmokhtar.com/images/solutionafterinstall.png"></p>
+<p>Second, modify T4 template to generate POCO classes for you:</p>
+<ol>
+<li>Open <code>Database.tt</code> file and modify Settings part.</li>
+<li>In <code>ConnectionStringName</code> write your database connection string name which located in app.config or web.config.</li>
+<li>In <code>Namespace</code> write the namespace for generated Poco classes.</li>
+<li>In <code>RepoName</code> write Repository name, this is optional and recommended if you’ll use PetaPoco.</li>
+<li>In <code>ClassPerfex</code> write required class name prefix, this is optional.</li>
+<li>In <code>ClassSuffix</code> write required class name suffix, this is optional.</li>
+<li>Save the file.</li>
+</ol>
+<p><img alt="settings" src="http://www.emadmokhtar.com/images/settings.png"></p>
+<p>Third, congratulation your POCO classes and Repo generated under Database.tt –&gt; Database.cs.</p>
+<p><img alt="pocos" src="http://www.emadmokhtar.com/images/pocos.png"></p>
+<h1>Notes:</h1>
+<ul>
+<li>Make sure you set <code>providerName</code> in <code>ConnectString</code> or T4 template will not work.</li>
+<li>If you faced C# issue during …</li></ul>
       <a class="btn" href="http://www.emadmokhtar.com/generate-poco-for-database-tables-using-t4-template.html#generate-poco-for-database-tables-using-t4-template">Continue reading</a>
   </div>
   <hr />
@@ -97,7 +123,24 @@ released his second book <a href="http://www.packtpub.com/windows-powershell-4-0
 Developers</a>
 which is filling the gap between .NET Developers and Administration tool
 like Windows PowerShell, before reading this book I was having small
-information about PowerShell and I didn’t know it’ll help me …</p>
+information about PowerShell and I didn’t know it’ll help me in my
+development tasks. Target audiences of this book are .NET Developers.</p>
+<h1>Chapter 1: Getting Started with Windows PowerShell</h1>
+<p>It’s an introduction chapter with very basic information about
+PowerShell and the scripting environments.</p>
+<h1>Chapter 2: Unleashing Your Development Skills with PowerShell</h1>
+<p>From this chapter things start to get real and you’ll find script to do
+some job like Create .NET Object, parse and query XML files, create
+modules, etc..</p>
+<h1>Chapter 3: PowerShell for Your Daily Administration Tasks</h1>
+<p>Where things getting more excitement, in this chapter you will learn how
+to use execute PowerShell <em>cmdlet</em>s remotely on other machine, execute
+your script as workflow, use PowerShell with SQL SERVER and IIS
+(Internet Information Services), and last but not least manage local
+users and groups with PowerShell.</p>
+<h1>Chapter 4: PowerShell and Web Technologies</h1>
+<p>In this chapter you’ll see that PowerShell can deal with Web Services
+SOAP or REST …</p>
       <a class="btn" href="http://www.emadmokhtar.com/book-review-windows-powershell-4-0-for-net-developers.html#book-review-windows-powershell-4-0-for-net-developers">Continue reading</a>
   </div>
   <hr />
@@ -113,7 +156,8 @@ information about PowerShell and I didn’t know it’ll help me …</p>
   </header>
   <div>
       <p><img alt="red-pill-or-blue-pill" src="http://www.emadmokhtar.com/images/red-pill-or-blue-pill.jpg"></p>
-<p>I’m a .NET developer and to be specific I’m a web developer who use .NET framework and .NET stack to create web application (Web App), and nowadays I’m learning ASP.NET MVC to move from WebForms world to MVC world, but in future I’m planning to …</p>
+<p>I’m a .NET developer and to be specific I’m a web developer who use .NET framework and .NET stack to create web application (Web App), and nowadays I’m learning ASP.NET MVC to move from WebForms world to MVC world, but in future I’m planning to get out of my comfort zone again and get out of .NET world and try the open source software (OSS) world, I’ve attended many sessions for <a href="http://gdgkuwait.com/">GDG Kuwait</a> which is Google Developers Group located in Kuwait and the only developer group in here with .NET/C# experience and it’s full of enthusiasm developers.</p>
+<p>When I will take this leap/paradigm shift I will take it for real, let me explain what I mean by that. What I’m planning is learning <a href="http://rubyonrails.org/">Ruby on Rails</a>, maybe you want to learn <a href="https://www.djangoproject.com/">Django</a> or <a href="http://nodejs.org/">Node.js</a> but when you will, please don’t try to stick to Microsoft world, don’t be afraid to get out of your comfort zone, please don’t use <a href="https://nodejstools.codeplex.com/">Node.js tools for Visual Studio</a>, or <a href="https://pytools.codeplex.com/">Python tools for Visual Studio</a>, or <a href="http://www.sapphiresteel.com/Products/sapphire-ide/article/ruby-in-steel-developer-overview">Ruby In Steel Developer</a> these Frameworks works great with Linux operating systems so learn …</p>
       <a class="btn" href="http://www.emadmokhtar.com/net-developer-comfort-zone.html#net-developer-comfort-zone">Continue reading</a>
   </div>
   <hr />
@@ -129,7 +173,12 @@ information about PowerShell and I didn’t know it’ll help me …</p>
   </header>
   <div>
       <p><img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg"></p>
-<p>If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and …</p>
+<p>If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and if you’re doing it please stop and read this article to know how to do it right and being awesome.</p>
+<p>Username, Password, or Pin codes these are precious information, and if hacker or even internal employee stole the database he can do whatever he wants with your users information. So How to keep these information safe? The answer is hashing it.</p>
+<p>Why I was not doing that? I was lazy and every time I googled/binged/searched about this, I found many complex How-To articles, but last week I finally found something simple and it’s the reason I’m writing this article.</p>
+<h1>What is hashing?</h1>
+<p>Hashing is encoding string "message” to hash value and you can’t reproduce the original string “message” from hash value, so it’s one way cryptographic algorithm, <a href="http://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it">it’s different than encryption</a> that it’s  two way cryptographic algorithm.</p>
+<h1>How to Hash password …</h1>
       <a class="btn" href="http://www.emadmokhtar.com/storing-password-in-plain-text-youre-doing-it-wrong.html#storing-password-in-plain-text-youre-doing-it-wrong">Continue reading</a>
   </div>
 </article>

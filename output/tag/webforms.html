@@ -81,7 +81,44 @@
 </pre></div>
 
 
-<p>Let’s lists all ASP.NET Expression and it’s …</p>
+<p>Let’s lists all ASP.NET Expression and it’s task:</p>
+<ol>
+<li>
+<p><strong>Directive Expression</strong> &lt;%@ .. %&gt; </p>
+<ul>
+<li>It’s used in Web Forms .ASPX files or User Control .ASCX files
+    to set settings, for example the Page directive where you can
+    declare Title, Master Page, Language, etc.
+    <code>aspx
+    &lt;%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master"
+    AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASPNETExpressions._Default" %&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Data-Binding Expression</strong> &lt;%# .. %&gt;</p>
+<ul>
+<li>
+<p>Create binding between server control with data source when calling DataBind() method, most of the time you’ll see this expression inside Data Bound Controls like GridView and DetailView.</p>
+<p><code>aspx
+&lt;asp:TextBox runat="server" ID="txtFirstName"  Text="&lt;%# Eval("FirstName") %&gt;"/&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Expression Builder</strong> &lt;%\$ .. %&gt;</p>
+<ul>
+<li>This expression is used to set controls properties that located in configuration files <code>Web.Config</code> such as <code>AppSettings</code>, <code>ConnectionStrings</code>, or <code>Resources</code></li>
+<li>Its syntax is <code>&lt;$ Expression Prefix: Expression Value %&gt;</code>
+    <code>aspx
+    &lt;%$ ConnectionStrings:DefaultConnection %&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Server-side Comment Expression</strong> &lt;%-- .. --%&gt;</p>
+<ul>
+<li>It’s to comment a block of code so that it’ll not rendered or executed inside the page.
+    <code>aspx
+    &lt;%— This …</code></li></ul></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/aspnet-expressions.html#aspnet-expressions">Continue reading</a>
   </div>
 </article>

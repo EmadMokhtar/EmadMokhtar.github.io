@@ -78,7 +78,8 @@
   <div>
       <p><img alt="Old Tools" src="http://www.emadmokhtar.com/images/felix-russell-saw-167176.jpg"></p>
 <p><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="http://unsplash.com/@frsphoto?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Felix Russell-Saw"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Felix Russell-Saw</span></a></p>
-<p>One day I realized that Microsoft technologies are not for what I'm looking for. what I'm looking for is working in startup that developing its own product like Instagram, Shopify, or Pinterest. So I've done some research and I found that Microsoft technologies are not made for this …</p>
+<p>One day I realized that Microsoft technologies are not for what I'm looking for. what I'm looking for is working in startup that developing its own product like Instagram, Shopify, or Pinterest. So I've done some research and I found that Microsoft technologies are not made for this purpose, Microsoft technologies made for enterprises, I worked with Microsoft Dynamics AX, Microsoft SharePoint, ASP.NET WebForms, and ASP.NET Web Services you won't find a startup work with these or built their business around these kind of products, so I start to research for another technology to use.</p>
+<p>After long time of research and Q&amp;A with my friend <a href="https://github.com/burhan">Burhan</a>, I switched to <a href="https://www.python.org/">Python</a>, I didn't pick <a href="https://nodejs.org/en/">Node.js</a> or <a href="http://rubyonrails.org/">Ruby on Rails</a>, because I don't like to pick a new shinny tool/framework for sake of it's new, I picked Python and Django one of it's web framework. I found during my research many people recommended Node.js because it's the new thing, again I don't like to pick the new shinny tool, this is common between developer community, developer will be proud if someone ask Which language/framework are you using? and the developer answer is the …</p>
       <a class="btn" href="http://www.emadmokhtar.com/shinny-new-tools.html#shinny-new-tools">Continue reading</a>
   </div>
   <hr />
@@ -95,7 +96,12 @@
   <div>
       <p><img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png"></p>
 <h1>Why Another Post about this?</h1>
-<p>I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …</p>
+<p>I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do it from scratch, yep as you read, posts telling you how to build a Django View and Form for login page. And there are already built-in Django login <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.login">View</a> and <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm">Form</a> (please check links).
+So I decided to write my own recipe on how to create Login page in your Django app using the built-in view and form to save time and stop reinvent the wheel.</p>
+<h1>How to do it?</h1>
+<p>Actually it’s an easy one, because we’ll use already built-in View and Form, so we will build the Template for it, that it. We have a Form and View ready, so first thing first, we’ll write a template to show HTML form for login, I'm assuming you have another template called <code>base.html</code> and we’ll just write the <code>container block</code> part only, and we are using <a href="http://getbootstrap.com">Boostrap framework</a> and <a href="https://github.com/django-crispy-forms/django-crispy-forms">crispy_form app</a>.</p>
+<p><strong>login.html</strong></p>
+<div class="highlight"><pre><span></span>{% extends &quot;base.html …</pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/create-login-page-for-your-django-app.html#create-login-page-for-your-django-app">Continue reading</a>
   </div>
   <hr />
@@ -111,7 +117,33 @@
   </header>
   <div>
       <p><img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg"></p>
-<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication …</p>
+<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.</p>
+<h1>Parsley remote validation</h1>
+<p><a href="http://parsleyjs.org/doc/index.html">Parsley library</a> has <a href="http://parsleyjs.org/doc/index.html#remote">remote validation</a>, it's calling AJAX service (Django view) and check if AJAX call returns <a href="http://www.restapitutorial.com/httpstatuscodes.html">2xx HTTP status codes</a> then it's valid input else it's invalid input and shows error message. Thankfully you can use remote validation in Django Form using django-parsley via <code>parsley-extras</code> attribute.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserRegistrationForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Password is invalid&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_username_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this username is already exists.&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_email_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this email is already exists.&quot;</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>In the code above we are adding client custom validation as remote to <code>password</code>, <code>username</code>, and <code>email</code>  fields, Did you notice that <code>remote</code> key is holding a URL to Django View? let’s create a complete sample to get our head around it.</p>
+<h1>Django Password …</h1>
       <a class="btn" href="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html#custom-client-side-validation-for-parsley-in-django">Continue reading</a>
   </div>
   <hr />
@@ -127,7 +159,35 @@
   </header>
   <div>
       <p>I wrote a post about <a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html">how to run celery as daemon</a> and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.</p>
-<p>In this method we will use <a href="http://supervisord.org">supervisor</a> to …</p>
+<p>In this method we will use <a href="http://supervisord.org">supervisor</a> to daemonize Celery, and this can be achieved by 3 simple steps, so let's do it.</p>
+<h1>Step 1</h1>
+<p>Install Supervisord <code>sudo apt-get install supervisor</code> on Ubuntu server. For other OSs please visit <a href="http://supervisord.org/installing.html">the official documentation</a></p>
+<h1>Step 2</h1>
+<p>This is the most important step, and in this step we will create supervisor configuration file to daemonize Celery.</p>
+<h2>Supervisor Configuration File</h2>
+<p>Celery project provide the basic configuration file in their <a href="https://github.com/celery/celery/blob/3.1/extra/supervisord/celeryd.conf">Github repository</a>.</p>
+<p>Supervisor configuration files live in <code>\etc\supervisor\conf\</code></p>
+<h3>Celery official configuration file</h3>
+<div class="highlight"><pre><span></span><span class="p">;</span> <span class="o">==================================</span>
+<span class="p">;</span>  celery worker supervisor example
+<span class="p">;</span> <span class="o">==================================</span>
+
+<span class="o">[</span>program:celery<span class="o">]</span>
+<span class="p">;</span> Set full path to celery program <span class="k">if</span> using virtualenv
+<span class="nv">command</span><span class="o">=</span>celery worker -A proj --loglevel<span class="o">=</span>INFO
+
+<span class="nv">directory</span><span class="o">=</span>/path/to/project
+<span class="nv">user</span><span class="o">=</span>nobody
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">stdout_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">stderr_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">startsecs</span><span class="o">=</span><span class="m">10</span>
+
+<span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
+<span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
+<span class="nv">stopwaitsecs …</span></pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html#yet-another-and-easier-way-to-daemonize-celery">Continue reading</a>
   </div>
   <hr />
@@ -142,7 +202,25 @@
     </p>
   </header>
   <div>
-      <p>If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use <a href="https://www.pythonanywhere.com/pricing/">Python Anywhere free hosting</a>, I’m using it for <a href="http://www.emadmokhtar.com/my-first-django-app.html">my Django app</a> and I …</p>
+      <p>If you developed Django application and want to deploy/publish it to the web you can check this list of Django friendly (http://djangofriendly.com/hosts/), but if you want a free hosting you can use <a href="https://www.pythonanywhere.com/pricing/">Python Anywhere free hosting</a>, I’m using it for <a href="http://www.emadmokhtar.com/my-first-django-app.html">my Django app</a> and I’m very comfortable with but before using the free hosting please consider the following:</p>
+<ol>
+<li>They provide only MySQL for free hosting, so if you developed your app using PostgreSQL or SQLite, please download the correct driver.</li>
+<li>Application URL must be sub-domain of pythonanywhere.com, example my-app.pythonanywhere.com</li>
+<li>I’ll host one application only.</li>
+<li>No full access to a machine, you’ll deploy your application using console, use the console to install your virtual environment and packages, and edit some code using their in-browser code editor.</li>
+</ol>
+<h1>How to deploy?</h1>
+<ol>
+<li>First go to this <a href="https://www.pythonanywhere.com/registration/register/beginner/"><span
+    class="s2">link</a>
+    and register your free account, then </li>
+<li>Go to your dashboard, and select
+    Consoles tab.</li>
+<li>Click on Python 2.7 (I personally still using
+    python 2.7 but if you want select python 3.3) to open a
+    new console.</li>
+<li>New console will open in your browser.</li>
+<li>Start by creating your <a href="http://www.emadmokhtar.com/2015/03/virtual-environment/">virtualenv</a> and install the required packages …</li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/free-django-hosting.html#free-django-hosting">Continue reading</a>
   </div>
   <hr />
@@ -158,7 +236,9 @@
   </header>
   <div>
       <p>I'm starting to use Django and Python to develop web applications, I really love Django and during my learning process I thought I can build something while learning, and I had one idea keep it on hold as side project so I decided it's time to build it.</p>
-<h1>The Idea …</h1>
+<h1>The Idea</h1>
+<p>Me and my wife have our financial system which is dividing the monthly budget into a weekly budget, most of us make budget on monthly basis because we get paid on monthly basis, but imagine your budget will be on weekly basis, it’s like every week is new budget and new start, and in order to keep track of the weekly budget you need to know how much you need to spend in a week. To be honest in the first we made a lot of mistakes but at the end we found out how much we need to spend weekly, and this need analysis with trial and error for at least one month then you will master your weekly budgeting.</p>
+<p>Now the idea is build a system that can keep track of your payments or expenses against your estimated budget for a week. The application name is <strong>Ma3ana …</strong></p>
       <a class="btn" href="http://www.emadmokhtar.com/my-first-django-app.html#my-first-django-app">Continue reading</a>
   </div>
   <hr />
@@ -178,7 +258,37 @@ VirtualEnv or Virtual Environment is widely used, in first I didn't get
 it because I came from Microsoft .NET Framework development platform, so
 I thought of writing a post about it to make simple.</p>
 <h2>What is Virtual Environment?</h2>
-<p>VirtualEnv …</p>
+<p>VirtualEnv or Virtual Environment is a way to create isolated
+development environment each one has it's own packages and specific
+package version, for example VirEnv1 has Django 1.6 and VirEnv2 has
+Django 1.7, this isolation will keep your project packages dependency
+clear, isolated, and as I'll show you below that you can replicate the
+environment with one command and file, so if you work in team it's easy
+to share the same environment among the
+team.</p>
+<p><img alt="virtualenv 1" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193423.png">
+<img alt="virtualenv 2" src="http://www.emadmokhtar.com/images/Screenshot-from-2015-03-01-193318.png"></p>
+<h2>How to install VirtualEnv?</h2>
+<p>VirtualEnv is a python package so to install is you need to install pip
+first.</p>
+<ol>
+<li>
+<p>Open terminal and type the following command</p>
+<p><code>sudo apt-get install python-pip</code></p>
+</li>
+<li>
+<p>After finish installing pip type the following command to install
+    virtual environment</p>
+<p><code>sudo pip install virtualenv</code></p>
+</li>
+<li>
+<p>After finish installing virtualenv, type the following command to
+    create folder to store your virtual environments</p>
+<p><code>mkdir .virtualenvs</code></p>
+</li>
+</ol>
+<h2>How to create virtualenv?</h2>
+<p>After install virtualenv you are …</p>
       <a class="btn" href="http://www.emadmokhtar.com/virtual-environment.html#virtual-environment">Continue reading</a>
   </div>
   <hr />
@@ -202,7 +312,18 @@ disconnected from the real world and jump in book world which lead to
 better sleep.</p>
 <p>Last Monday I went to watch the
 <strong><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;cad=rja&amp;uact=8&amp;ved=0CCgQFjAD&amp;url=http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0816692%2F&amp;ei=u11kVPXNFIuV7AbVy4DoDw&amp;usg=AFQjCNEwQcJ-old_Ha_400cEjFgIpjPT5g&amp;sig2=fksmaVPQ1mq71ghUjTkRSQ&amp;bvm=bv.79189006,d.ZGU">Interstellar</a></strong>
-movie with my wife and it was like …</p>
+movie with my wife and it was like reading fiction book before sleep,
+the movie is 3 hours long which is unique nowadays and full of science
+and psychics, but the story is full of fiction and the soundtracks are
+incredible. After we finished the movie I looked at my watch and WOW 3
+hours passed and I felt like I was inside the movie and flying in the
+space, the time passed by and all my inner thoughts, to do lists,
+project plans, pending households, and life events are vanished and I’m
+totally inside the movie, in other words I’m totally disconnected from
+the real world. I felt fresh even though that it’s 12:00 AM and I have a
+work to go in the morning, but I felt fresh and my mind is clear and
+this give me chance to start my day so fresh, plus now I want to read
+more about …</p>
       <a class="btn" href="http://www.emadmokhtar.com/fictions-for-developers.html#fictions-for-developers">Continue reading</a>
   </div>
   <hr />
@@ -224,7 +345,14 @@ work is done, don't sit down it's time to dig another one. #PinkFloyd</p>
 </blockquote>
 <p>We keep running in the same freakin loop/circle &amp; forget
 pursuiting/catch our dreams and goals, and just stick to little small
-useless …</p>
+useless life events.</p>
+<p>Sometimes we invent things to take them as excuses like money, time,
+children, place, or company. Manage yourself and take guidance from
+Allah, fix your issues aka &amp; "excuses" , have a dream no no have a lot
+of dreams and live your life to catch the and make them true.</p>
+<p>Ask yourself every morning, Am I like what I'm doing? If no please quit
+it and go live your life and search about what you are like to do and
+start living it, one day shorter breathe and here come the death</p>
       <a class="btn" href="http://www.emadmokhtar.com/run-rabbit-run.html#run-rabbit-run">Continue reading</a>
   </div>
   <hr />
@@ -239,7 +367,27 @@ useless …</p>
     </p>
   </header>
   <div>
-      <p>I was having my annual vacation in Egypt, and I had the chance to download Easy Taxi application on my mobile phone, I have downloaded and installed the application on my mobile phone “Nokia Lumia 920”, I created an account and started use the application. I'll share my experience with …</p>
+      <p>I was having my annual vacation in Egypt, and I had the chance to download Easy Taxi application on my mobile phone, I have downloaded and installed the application on my mobile phone “Nokia Lumia 920”, I created an account and started use the application. I'll share my experience with you.  </p>
+<h2>My experience:</h2>
+<p>I was at Abbasia Street and want to go to Al Shams Sporting Club, I opened the application and it detected my location:</p>
+<p><img alt="clip_image002" src="http://www.emadmokhtar.com/images/clip_image002.png"></p>
+<p>Then I request a taxi, application will ask about my destination and more information about my location, and when I submitted the request, it send a request and wait for a driver to accept the request.</p>
+<p><img alt="clip_image004" src="http://www.emadmokhtar.com/images/clip_image004.jpg"></p>
+<p><img alt="clip_image006" src="http://www.emadmokhtar.com/images/wp_ss_20140726_0004.png"></p>
+<p><img alt="clip_image008" src="http://www.emadmokhtar.com/images/wp_ss_20140726_0005.png"></p>
+<p>The application showed driver's contact and car information, and his
+current location, so that I can call him and keep tracking his position.</p>
+<p><img alt="clip_image010" src="http://www.emadmokhtar.com/images/wp_ss_20140726_0006.png"></p>
+<p>Then when the taxi arrived application notified me</p>
+<p><img alt="clip_image012" src="http://www.emadmokhtar.com/images/wp_ss_20140726_0007.png">  </p>
+<h2>Conclusion:</h2>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>Request Taxi without any human interaction, maybe there will be phone calls.</li>
+<li>Share Taxi’s car information, so you have a log and can ride this taxi safely.</li>
+<li>Share Taxi’s contact information, so you can call him whenever you want.</li>
+<li>Share your location, so no need to tell the driver where you are.</li>
+<li>Real …</li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/easy-taxi-app-review.html#easy-taxi-app-review">Continue reading</a>
   </div>
 </article>

@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="EmadMokhtar" />
-<meta name="description" content="Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in …" />
+<meta name="description" content="Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer then search for this code block at the bottom of the file if(typeof(Sys)!=='undefined') { Sys.Application.notifyScriptLoaded(); } And replace it with this code block if(typeof(Sys.Application)!=='undefined') { Sys.Application.notifyScriptLoaded(); } After changed this code, everything works fine now and reports shows in ASP.NET pages. Note Take a backup from crv.js file before editing." />
 <meta name="keywords" content="crystalreports">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Crystal Reports 13 JavaScript Error"/>
-<meta property="og:description" content="Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in …"/>
+<meta property="og:description" content="Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer then search for this code block at the bottom of the file if(typeof(Sys)!=='undefined') { Sys.Application.notifyScriptLoaded(); } And replace it with this code block if(typeof(Sys.Application)!=='undefined') { Sys.Application.notifyScriptLoaded(); } After changed this code, everything works fine now and reports shows in ASP.NET pages. Note Take a backup from crv.js file before editing."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html"/>
 <meta property="og:type" content="article"/>
@@ -150,7 +150,7 @@
   },
   "image": "http://www.emadmokhtar.com/images/profile.jpg",
   "url": "http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html",
-  "description": "Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in …"
+  "description": "Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to this method being obsolete. Solution So here’s the solution I found it: First, locate crv.js file in C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer then search for this code block at the bottom of the file if(typeof(Sys)!=='undefined') { Sys.Application.notifyScriptLoaded(); } And replace it with this code block if(typeof(Sys.Application)!=='undefined') { Sys.Application.notifyScriptLoaded(); } After changed this code, everything works fine now and reports shows in ASP.NET pages. Note Take a backup from crv.js file before editing."
 }
 </script></body>
 </html>

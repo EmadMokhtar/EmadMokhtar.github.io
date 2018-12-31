@@ -79,7 +79,13 @@
       <p><img alt="idea" src="http://www.emadmokhtar.com/images/james-pond-185593-unsplash.jpg"></p>
 <p><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@shotbyjamespond?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from James Pond"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">James Pond</span></a></p>
 <h1>Discovery</h1>
-<p>After many years of developing web applications, I found my passion is building Web APIs. so why I like it, I like it because I think it's giving your application a power to integrate with other apps (desktop, mobile apps, etc.), other devices (Amazon Dot, Google …</p>
+<p>After many years of developing web applications, I found my passion is building Web APIs. so why I like it, I like it because I think it's giving your application a power to integrate with other apps (desktop, mobile apps, etc.), other devices (Amazon Dot, Google Home, etc.),  sensors (RaspberryPi, Arduino, etc.), and bots (Slack, Telegram, Facebook Messanger, etc.).
+Can you feel the power that Web API that can add to your apps?</p>
+<h1>Let's build something</h1>
+<p>After I found my passion and start to search for a project to ably what I like and keep developing it. I found that there is no Web API for <a href="https://en.wikipedia.org/wiki/Tafsir">Quran Tafseer/Translation</a>. What can Quran Tafseer API do for developers? If you want to develop an application for Quran and you want to provide a Tafseer/Translation to the application users, you need to gather the information from more than one source. I found most of the existing applications done it and after that work, app developers will keep this information available to their app only, so I thought of doing this work for the community and provide Tafseer/Translation for free as Web API.</p>
+<h1>Stages</h1>
+<h2>Stage I</h2>
+<p>I …</p>
       <a class="btn" href="http://www.emadmokhtar.com/lets-build-it.html#lets-build-it">Continue reading</a>
   </div>
   <hr />
@@ -96,7 +102,12 @@
   <div>
       <p><img alt="Create Login Page for your Django app" src="http://www.emadmokhtar.com/images/Create-Login-Page-for-your-Django-app.png"></p>
 <h1>Why Another Post about this?</h1>
-<p>I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do …</p>
+<p>I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do it from scratch, yep as you read, posts telling you how to build a Django View and Form for login page. And there are already built-in Django login <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.login">View</a> and <a href="https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm">Form</a> (please check links).
+So I decided to write my own recipe on how to create Login page in your Django app using the built-in view and form to save time and stop reinvent the wheel.</p>
+<h1>How to do it?</h1>
+<p>Actually it’s an easy one, because we’ll use already built-in View and Form, so we will build the Template for it, that it. We have a Form and View ready, so first thing first, we’ll write a template to show HTML form for login, I'm assuming you have another template called <code>base.html</code> and we’ll just write the <code>container block</code> part only, and we are using <a href="http://getbootstrap.com">Boostrap framework</a> and <a href="https://github.com/django-crispy-forms/django-crispy-forms">crispy_form app</a>.</p>
+<p><strong>login.html</strong></p>
+<div class="highlight"><pre><span></span>{% extends &quot;base.html …</pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/create-login-page-for-your-django-app.html#create-login-page-for-your-django-app">Continue reading</a>
   </div>
   <hr />
@@ -112,7 +123,33 @@
   </header>
   <div>
       <p><img alt="Custom Validation for Parsley in Django" src="http://www.emadmokhtar.com/images/Custom-Validation-for-Parsley-in-Django.jpeg"></p>
-<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication …</p>
+<p>I wrote a post on how to add <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html">client side validation for Django Forms</a>. In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in <a href="https://github.com/agiliq/Django-parsley">django-parsley</a>, like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.</p>
+<h1>Parsley remote validation</h1>
+<p><a href="http://parsleyjs.org/doc/index.html">Parsley library</a> has <a href="http://parsleyjs.org/doc/index.html#remote">remote validation</a>, it's calling AJAX service (Django view) and check if AJAX call returns <a href="http://www.restapitutorial.com/httpstatuscodes.html">2xx HTTP status codes</a> then it's valid input else it's invalid input and shows error message. Thankfully you can use remote validation in Django Form using django-parsley via <code>parsley-extras</code> attribute.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nd">@parsleyfy</span>
+<span class="k">class</span> <span class="nc">UserRegistrationForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="o">...</span>
+        <span class="n">parsley_extras</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate-password-parsley&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;Password is invalid&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_username_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this username is already exists.&quot;</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;remote&#39;</span><span class="p">:</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;validate_email_uniqueness&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;remote-message&#39;</span><span class="p">:</span> <span class="s2">&quot;User with this email is already exists.&quot;</span>
+            <span class="p">},</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<p>In the code above we are adding client custom validation as remote to <code>password</code>, <code>username</code>, and <code>email</code>  fields, Did you notice that <code>remote</code> key is holding a URL to Django View? let’s create a complete sample to get our head around it.</p>
+<h1>Django Password …</h1>
       <a class="btn" href="http://www.emadmokhtar.com/custom-client-side-validation-for-parsley-in-django.html#custom-client-side-validation-for-parsley-in-django">Continue reading</a>
   </div>
   <hr />
@@ -129,7 +166,16 @@
   <div>
       <p><img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg"></p>
 <p><a href="https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF">source</a></p>
-<p>In DUTH 2016 there was a session for <a href="https://youtu.be/uzTaWKcMzos">Django Validation by Loïc Bistuer</a>, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is …</p>
+<p>In DUTH 2016 there was a session for <a href="https://youtu.be/uzTaWKcMzos">Django Validation by Loïc Bistuer</a>, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is special validation rules you want to implement, you can still implement it, as I said it is easy and straight forward in Django, all of these validation is server side which happen on web server not on client-side, so what about client side?</p>
+<h1>What is client side validation?</h1>
+<p>In simple way, client side validation is validation user input on browser before sending the data to sever.</p>
+<p>It is good practice to validate user inputs from client side to save roundtrips to server, but it needs extra work to implement your validations using JavaScript or using HTML5 form validation, but there is a way to replicate Django form validation to client side, let’s see how.</p>
+<h1>Django Parsley</h1>
+<p><a href="https://github.com/agiliq/Django-parsley">Django Parsley</a> is a Django app that replicate Django Form validation to client side using <a href="http://parsleyjs.org">ParsleyJS</a> library, and it’s so easy to use it.</p>
+<h1>How to use Django Parsley?</h1>
+<ul>
+<li>
+<p>Install Django Parsley …</p></li></ul>
       <a class="btn" href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html#client-side-validation-for-django-forms">Continue reading</a>
   </div>
   <hr />
@@ -146,7 +192,14 @@
   <div>
       <p><img alt="Bored employee in front of computer" src="http://blog.inf.ed.ac.uk/sapm/files/2014/03/boredom.jpg"></p>
 <p>I attended Django Under The Hood 2016, in sprints there is a comment passing around which <a href="https://www.caktusgroup.com/blog/2016/12/14/django-boring-or-why-tech-startups-should-use-django/">Django is boring</a>. Django is boring is actually a good news for the framework users, but it's sad one for developers want to contribute to the framework.</p>
-<p>Every time I go to check <a href="https://code.djangoproject.com/">Django …</a></p>
+<p>Every time I go to check <a href="https://code.djangoproject.com/">Django tickets</a> to contribute, I found they are difficult and in depth, because Django is a mature project now and the amount of contribution needed to the codebase is rare, but if you want to contribute you can check <a href="https://code.djangoproject.com/query?status=!closed&amp;easy=1">easy pickings</a> tickets. In DUTH before the sprints projects leaders start to ask attendees for contributions, I found this is a good opportunity for me and for anyone wants to help the community and start to contribute to Django community.</p>
+<p><img alt="Github duth contributions" src="http://www.emadmokhtar.com/images/duth-contribution.png"></p>
+<p>If you want to contribute to Django and help the community, I have some suggestions for you:</p>
+<ol>
+<li>Write blog posts on How-tos, tips, and tutorials for Django, and <a href="https://djangopackages.org/">Django packages</a> for example Django REST Framework.</li>
+<li>Help Django team to <a href="https://docs.djangoproject.com/en/1.10/internals/contributing/triaging-tickets/#triage-workflow">move the ticket from stage to another</a>.</li>
+<li>Contribute to one of Django’s packages, specially packages you are using, check their github page and help them.</li>
+<li>Tried more than one package for X …</li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/django-is-boring-but-you-can-contribute.html#django-is-boring-but-you-can-contribute">Continue reading</a>
   </div>
   <hr />
@@ -162,7 +215,35 @@
   </header>
   <div>
       <p>I wrote a post about <a href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html">how to run celery as daemon</a> and it has many steps to do, many files to copy to your server, configure permissions, and configure upstart, but after sometime I found another and easier way to daemonize Celery.</p>
-<p>In this method we will use <a href="http://supervisord.org">supervisor</a> to …</p>
+<p>In this method we will use <a href="http://supervisord.org">supervisor</a> to daemonize Celery, and this can be achieved by 3 simple steps, so let's do it.</p>
+<h1>Step 1</h1>
+<p>Install Supervisord <code>sudo apt-get install supervisor</code> on Ubuntu server. For other OSs please visit <a href="http://supervisord.org/installing.html">the official documentation</a></p>
+<h1>Step 2</h1>
+<p>This is the most important step, and in this step we will create supervisor configuration file to daemonize Celery.</p>
+<h2>Supervisor Configuration File</h2>
+<p>Celery project provide the basic configuration file in their <a href="https://github.com/celery/celery/blob/3.1/extra/supervisord/celeryd.conf">Github repository</a>.</p>
+<p>Supervisor configuration files live in <code>\etc\supervisor\conf\</code></p>
+<h3>Celery official configuration file</h3>
+<div class="highlight"><pre><span></span><span class="p">;</span> <span class="o">==================================</span>
+<span class="p">;</span>  celery worker supervisor example
+<span class="p">;</span> <span class="o">==================================</span>
+
+<span class="o">[</span>program:celery<span class="o">]</span>
+<span class="p">;</span> Set full path to celery program <span class="k">if</span> using virtualenv
+<span class="nv">command</span><span class="o">=</span>celery worker -A proj --loglevel<span class="o">=</span>INFO
+
+<span class="nv">directory</span><span class="o">=</span>/path/to/project
+<span class="nv">user</span><span class="o">=</span>nobody
+<span class="nv">numprocs</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">stdout_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">stderr_logfile</span><span class="o">=</span>/var/log/celery/worker.log
+<span class="nv">autostart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">autorestart</span><span class="o">=</span><span class="nb">true</span>
+<span class="nv">startsecs</span><span class="o">=</span><span class="m">10</span>
+
+<span class="p">;</span> Need to <span class="nb">wait</span> <span class="k">for</span> currently executing tasks to finish at shutdown.
+<span class="p">;</span> Increase this <span class="k">if</span> you have very long running tasks.
+<span class="nv">stopwaitsecs …</span></pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/yet-another-and-easier-way-to-daemonize-celery.html#yet-another-and-easier-way-to-daemonize-celery">Continue reading</a>
   </div>
   <hr />
@@ -179,7 +260,34 @@
   <div>
       <p><img alt="Unit Test Works" src="http://www.emadmokhtar.com/images/unit-test-works.jpg"></p>
 <p>In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.</p>
-<p>As they said Django is a “batteries included” web application framework, and one of …</p>
+<p>As they said Django is a “batteries included” web application framework, and one of the batteries is Testing framework, <a href="https://docs.djangoproject.com/en/dev/topics/testing/">testing in Django</a> is easy and you can start writing tests even if you didn't do it before.</p>
+<p>If you ever work with Django, you will write tests for your project, to test your views, models, forms, etc.. but it's better if you can add <a href="https://github.com/timothycrosley/isort">isort</a> and <a href="http://flake8.pycqa.org/en/latest/">flake8</a> tests to maintain the quality of your Python code.</p>
+<h1>Installation</h1>
+<p>We need some packages first so we can run the tests</p>
+<div class="highlight"><pre><span></span>pip install flake8 isort flake8-isort
+</pre></div>
+
+
+<p><strong>Note:</strong></p>
+<p>It's better to create and use sperate virtualenv</p>
+<h1>Configurations</h1>
+<p>flake8-isort is using <code>.isort.cfg</code> file to run the isort test against it, so let's add our configuration file.</p>
+<p><strong>.isort.cfg file</strong></p>
+<div class="highlight"><pre><span></span><span class="k">[*.py]</span>
+<span class="na">max_line_length</span> <span class="o">=</span> <span class="s">120</span>
+<span class="na">indent_style</span> <span class="o">=</span> <span class="s">space</span>
+<span class="na">indent_size</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">known_first_party</span> <span class="o">=</span> <span class="s">isort</span>
+<span class="na">ignore_frosted_errors</span> <span class="o">=</span> <span class="s">E103</span>
+<span class="na">skip</span> <span class="o">=</span> <span class="s">runtests.py,build,.tox</span>
+<span class="na">balanced_wrapping</span> <span class="o">=</span> <span class="s">true</span>
+<span class="na">not_skip</span> <span class="o">=</span> <span class="s">__init__.py</span>
+</pre></div>
+
+
+<h1>Test Python Script</h1>
+<p>Now it's time to write the Python script to run Django, isort, &amp; flake8 tests.</p>
+<p><strong>runtests …</strong></p>
       <a class="btn" href="http://www.emadmokhtar.com/add-isort-and-flake8-test-to-your-django-project.html#add-isort-and-flake8-test-to-your-django-project">Continue reading</a>
   </div>
   <hr />
@@ -204,7 +312,57 @@ sudo chown -R root:root /var/run/celery/
 
 
 <h2>Celery upstart</h2>
-<p>1- Download <code>celeryd</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github …</a></p>
+<p>1- Download <code>celeryd</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github repository</a>.</p>
+<p>2- Copy <code>celeryd</code> to <code>/etc/init.d/celeryd</code></p>
+<div class="highlight"><pre><span></span>sudo cp celeryd /etc/init.d/
+</pre></div>
+
+
+<p>3- Make it executable</p>
+<div class="highlight"><pre><span></span>sudo chmod +x celeryd
+</pre></div>
+
+
+<p>4- Make it run on startup</p>
+<div class="highlight"><pre><span></span>sudo update-rc.d celeryd defaults
+sudo update-rc.d celeryd <span class="nb">enable</span>
+</pre></div>
+
+
+<p>5- make it owned by root</p>
+<div class="highlight"><pre><span></span>sudo chown root:root celeryd
+</pre></div>
+
+
+<p>6- Done, now you can start/stop/restart celeryd as service</p>
+<div class="highlight"><pre><span></span>sudo service celeryd start
+sudo service celeryd stop
+sudo service celeryd restart
+</pre></div>
+
+
+<h2>Celerybeat upstart</h2>
+<p>1- Download <code>celerybeat</code> file from <a href="http://github.com/celery/celery/tree/3.1/extra/generic-init.d/">Celery official github repository</a>.</p>
+<p>2- Copy <code>celerybeat</code> to <code>/etc/init.d/celerybeat</code></p>
+<div class="highlight"><pre><span></span>sudo cp celerybeat /etc/init.d/
+</pre></div>
+
+
+<p>3- Make it executable <code>sudo chmod +x celerybeat</code></p>
+<p>4- Make it run on startup</p>
+<div class="highlight"><pre><span></span>sudo update-rc.d celerybeat defaults
+sudo update-rc.d celerybeat <span class="nb">enable</span>
+</pre></div>
+
+
+<p>5- make it owned by root</p>
+<div class="highlight"><pre><span></span>sudo chown root:root celerybeat
+</pre></div>
+
+
+<p>6- Done, now you can start/stop/restart celerd as service</p>
+<div class="highlight"><pre><span></span>sudo service celerybeat start
+sudo service …</pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html#how-to-run-celery-as-daemon">Continue reading</a>
   </div>
   <hr />
@@ -222,7 +380,10 @@ sudo chown -R root:root /var/run/celery/
       <p><img alt="djangocon logo" src="http://www.emadmokhtar.com/images/yay.jpg"></p>
 <p><img alt="djangocon name tag" src="http://www.emadmokhtar.com/images/Name-tag.jpg"></p>
 <p>Late in 2014 I decided to shift my development stack from Microsoft .NET Framework to <a href="http://www.emadmokhtar.com/my-first-django-app.html">Django/Python stack</a>. It's been almost 2 years now and I'm really enjoying and learning many things. I'm so happy that I've done this leap.
-In 2016 I had the change to attend DjangoCon Europe …</p>
+In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I enjoyed it to the maximum, it's my first time to meet the community, and it's first time attending one of Django community events.</p>
+<h1>Django Community</h1>
+<p>When I started to learn Django, I found everyone is recommending Django documentation itself as start, from my past experience in .NET framework that its documentation is not enough to get your head around the framework, you need at least to read one book or watch one video course, but after reading Django official documentation, I was shocked that it's enough as start, it's enough for your daily tasks, it's enough to dive in Django framework, or fixing issues. The quality of <a href="https://docs.djangoproject.com/en/dev/">Django official documentation</a> is amazing.</p>
+<p>When I went to DjangoCon Europe 2016 I saw people reflecting the philosophy of Django framework, the community is so welcoming as Django documentation, I had the chance to meet  <a href="https://github.com/freakboy3742">Russell Keith-Magee</a> and …</p>
       <a class="btn" href="http://www.emadmokhtar.com/djangocon-europe-2016-me-and-django-sprints.html#djangocon-europe-2016-me-and-django-sprints">Continue reading</a>
   </div>
   <hr />
@@ -237,7 +398,22 @@ In 2016 I had the change to attend DjangoCon Europe …</p>
     </p>
   </header>
   <div>
-      <p>Generously PACKT publishing is offering 50% discount on Python and Django ebook and videos. PACKT has many Python ebooks and videos from novice to advanced level, it one of the most publishing company that releases books and videos for Python and Django, If you tried to Google a book for …</p>
+      <p>Generously PACKT publishing is offering 50% discount on Python and Django ebook and videos. PACKT has many Python ebooks and videos from novice to advanced level, it one of the most publishing company that releases books and videos for Python and Django, If you tried to Google a book for Python or Django, you differently will find one of their books in the search results.</p>
+<h2>Interesting ebooks and videos for Python:</h2>
+<p><a href="https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning"><img alt="Python Machine Learning" src="https://www.packtpub.com/sites/default/files/5130OS_Python%20Machine%20Learning_.jpg"></a></p>
+<p><a href="https://www.packtpub.com/big-data-and-business-intelligence/mastering-python-video"><img alt="Mastering Python" src="https://www.packtpub.com/sites/default/files/bookretailers/9781783988969.jpg"></a></p>
+<p><a href="https://www.packtpub.com/big-data-and-business-intelligence/python-data-analysis"><img alt="Python DAta Analysis" src="https://www.packtpub.com/sites/default/files/3358OS_cov.jpg"></a></p>
+<p><a href="https://www.packtpub.com/application-development/geospatial-development-example-python"><img alt="Geospatial Development by Example Python" src="https://www.packtpub.com/sites/default/files/2355OS_4558_Geospatial%20Development%20by%20Example%20with%20Python.jpg"></a></p>
+<h2>Interesting ebooks and videos for Django:</h2>
+<p><a href="https://www.packtpub.com/web-development/web-development-django-cookbook-second-edition"><img alt="Web Development Django Cookbook" src="https://www.packtpub.com/sites/default/files/6775O9S_Web%20Development%20with%20Django%20Cookbook-%20Second%20Edition.jpg"></a></p>
+<p><a href="https://www.packtpub.com/web-development/django-example"><img alt="Django By Example" src="https://www.packtpub.com/sites/default/files/B03922_Django%20By%20Example_.jpg"></a></p>
+<p><a href="https://www.packtpub.com/web-development/mastering-django-web-development-video"><img alt="Master Django Web Developement" src="https://www.packtpub.com/sites/default/files/bookretailers/9781783989805_new.jpg"></a></p>
+<h2>Coupons</h2>
+<p>Please take the chance and buy your favorite Python or Django ebooks or videos form PACKT publishing. This offer is valid till <strong>28th of March 2016</strong> so please hurry up</p>
+<ul>
+<li>For <a href="https://www.packtpub.com/tech/python#/?utm_source=RP-Emadmokhtar&amp;utm_medium=referral&amp;utm_campaign=OMEPython">Python</a> books and videos use <strong>PYTHON50</strong> code.</li>
+<li>For <a href="https://www.packtpub.com/tech/django#/?utm_source=RP-Emadmokhtar&amp;utm_medium=referral&amp;utm_campaign=OMEDjango">Django</a> books and videos use  <strong>DJANGO50</strong> code.</li>
+</ul>
       <a class="btn" href="http://www.emadmokhtar.com/packt-publishing-ebooks-and-videos-50-discount-offer.html#packt-publishing-ebooks-and-videos-50-discount-offer">Continue reading</a>
   </div>
 </article>

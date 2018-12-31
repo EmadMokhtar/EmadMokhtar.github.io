@@ -76,7 +76,33 @@
     </p>
   </header>
   <div>
-      <p>In 2012 I wrote about <a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html">using notification in ASP.NET WebForms</a> and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse …</p>
+      <p>In 2012 I wrote about <a href="//Using Notification in ASP.NET WebForms.md/http://www.emadmokhtar.com/aspnet-webforms-notification-control.html">using notification in ASP.NET WebForms</a> and most of questions I’ve got are asking about why it isn’t working, so I thought I can make it easier for developers by creating ASP.NET Server Control that has notification functionality and developers can reuse it like any ASP.NET Server Control in their toolbox.</p>
+<h1>About the Project</h1>
+<p>Notification Control is open source/free ASP.NET server control like <a href="http://www.asp.net/ajax/ajaxcontroltoolkit/samples//ajaxlibrary/AjaxControlToolkitSamp eSite/">ASP.NET Ajax toolkit controls</a>, it’s wrapper for awesome jQuery plug-in called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.cfm">jNotify</a> to use it’s functionality from code behind, it’s on <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl">GitHub</a>, please fork it, or test it and report bugs/issues on GitHub.</p>
+<p>You can find demo <a href="http://notificaitoncontrol.azurewebsites.net/">here</a></p>
+<h1>How to Install</h1>
+<h2>Download via GitHub repository</h2>
+<ol>
+<li>
+<p>Download the repository as<strong> </strong> <a href="https://github.com/EmadMokhtar/CustomControls.NotificationControl/archive/master.zip">Zip file</a>.</p>
+</li>
+<li>
+<p>Run Visual Studio, and open       project.<img alt="Screenshot-0016" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00161.png"></p>
+</li>
+<li>
+<p>Build the project.<img alt="Screenshot-0026" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00261.png"><img alt="Screenshot-0019" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00191.png"></p>
+</li>
+<li>
+<p>Go to bin/Release folder and locate the <code>CustomControls.NotificationControl.dll</code> file. <img alt="Screenshot-0020" src="http://www.emadmokhtar.com/wp-content/uploads/Screenshot-00202.png"></p>
+</li>
+</ol>
+<h2>Download via Nuget:</h2>
+<ol>
+<li>
+<p>In Visual Studio open Package Manager Console and type <code>Install-Package NotificationControl</code>, wait until the package download is done, and open the project folder, then browse to <strong>{ProjectFolder}/NotificationControl.{version}</strong> you’ll find the DLL file.</p>
+</li>
+<li>
+<p>In your ASP.NET WebForms project open any .ASPX file then …</p></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/aspnet-webforms-notification-control.html#aspnet-webforms-notification-control">Continue reading</a>
   </div>
   <hr />
@@ -94,7 +120,21 @@
       <p>The main reason I’m writing this article is to let you know there is
 always some way better and simpler to don something, one day I want to
 add image zoom feature to ASP.NET WebForms GridView that shows list of
-products with thumbnail, and instead of user click …</p>
+products with thumbnail, and instead of user click on row to get the
+product information and see a full picture of the product, I want user
+to just when hovering on the image a big preview of it appears, I found
+this jQuery plug-in called
+<a href="http://www.elevateweb.co.uk/image-zoom">elevateZoom</a> I love it because
+it’s simple, have a lot of feature, and easy to configure.</p>
+<p>Now the change is how to add this plug-in to every single image in every
+row in GridView, I googled but unfortunately I found many of complex
+solution and I thought these developers intend to make this complex, but
+no this isn’t that complex, I denied all of them even they are working
+and I’ll tell you what If done in the end of this article, so let us how
+to get this done.</p>
+<p>First <a href="http://www.elevateweb.co.uk/image-zoom/download">download</a> the
+plug-in, reference jQuery to your ASP.NET application, second add the
+GridView control to your form and …</p>
       <a class="btn" href="http://www.emadmokhtar.com/add-image-zoom-to-aspnet-webform-gridview.html#add-image-zoom-to-aspnet-webform-gridview">Continue reading</a>
   </div>
   <hr />
@@ -110,7 +150,12 @@ products with thumbnail, and instead of user click …</p>
   </header>
   <div>
       <p><img alt="Hacking for password" src="http://www.emadmokhtar.com/images/114166encryption.jpg"></p>
-<p>If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and …</p>
+<p>If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and if you’re doing it please stop and read this article to know how to do it right and being awesome.</p>
+<p>Username, Password, or Pin codes these are precious information, and if hacker or even internal employee stole the database he can do whatever he wants with your users information. So How to keep these information safe? The answer is hashing it.</p>
+<p>Why I was not doing that? I was lazy and every time I googled/binged/searched about this, I found many complex How-To articles, but last week I finally found something simple and it’s the reason I’m writing this article.</p>
+<h1>What is hashing?</h1>
+<p>Hashing is encoding string "message” to hash value and you can’t reproduce the original string “message” from hash value, so it’s one way cryptographic algorithm, <a href="http://stackoverflow.com/questions/326699/difference-between-hashing-a-password-and-encrypting-it">it’s different than encryption</a> that it’s  two way cryptographic algorithm.</p>
+<h1>How to Hash password …</h1>
       <a class="btn" href="http://www.emadmokhtar.com/storing-password-in-plain-text-youre-doing-it-wrong.html#storing-password-in-plain-text-youre-doing-it-wrong">Continue reading</a>
   </div>
   <hr />
@@ -129,7 +174,22 @@ products with thumbnail, and instead of user click …</p>
 <p>We are developers whom use the left side of our brains that why we suck in
 designing; we’ll use the already exist styles while developing ASP.NET
 web application, that what we’ll do if we don’t have a designer in our
-team, but thanks for the CSS …</p>
+team, but thanks for the CSS framework over the internet which make our
+like more easier.</p>
+<p>Nowadays I’m playing with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> CSS framework and I find myself create very neat and awesome looking ASP.NET applications by just using the already defined CSS classes in the framework, it’s so easy and the documentation is easy to understand and readable, you can find the documentation right
+<a href="http://twitter.github.com/bootstrap/base-css.html">here</a>.</p>
+<p>So let’s get into the business, the most commonly used ASP.NET Control
+<strong>GridView</strong> is very ugly if you don’t apply a style to it, it’ll look
+like an awful HTML table with bunch of rows and columns, sure you can
+use the ready made styles “Auto Format” created by Microsoft team, but
+also you can apply much better style to it, let’s find
+how.<img alt="SNAG-0089" src="http://www.emadmokhtar.com/images/SNAG-0089.png"></p>
+<p>I’ll show you how to apply 2 styles to GridView:</p>
+<ol>
+<li>Twitter Bootstrap.</li>
+<li>ASP.NET Dynamic Data.</li>
+</ol>
+<h3>Twitter …</h3>
       <a class="btn" href="http://www.emadmokhtar.com/add-elegant-style-to-aspnet-webforms-gridview-control.html#add-elegant-style-to-aspnet-webforms-gridview-control">Continue reading</a>
   </div>
   <hr />
@@ -149,7 +209,44 @@ team, but thanks for the CSS …</p>
 </pre></div>
 
 
-<p>Let’s lists all ASP.NET Expression and it’s …</p>
+<p>Let’s lists all ASP.NET Expression and it’s task:</p>
+<ol>
+<li>
+<p><strong>Directive Expression</strong> &lt;%@ .. %&gt; </p>
+<ul>
+<li>It’s used in Web Forms .ASPX files or User Control .ASCX files
+    to set settings, for example the Page directive where you can
+    declare Title, Master Page, Language, etc.
+    <code>aspx
+    &lt;%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master"
+    AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASPNETExpressions._Default" %&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Data-Binding Expression</strong> &lt;%# .. %&gt;</p>
+<ul>
+<li>
+<p>Create binding between server control with data source when calling DataBind() method, most of the time you’ll see this expression inside Data Bound Controls like GridView and DetailView.</p>
+<p><code>aspx
+&lt;asp:TextBox runat="server" ID="txtFirstName"  Text="&lt;%# Eval("FirstName") %&gt;"/&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Expression Builder</strong> &lt;%\$ .. %&gt;</p>
+<ul>
+<li>This expression is used to set controls properties that located in configuration files <code>Web.Config</code> such as <code>AppSettings</code>, <code>ConnectionStrings</code>, or <code>Resources</code></li>
+<li>Its syntax is <code>&lt;$ Expression Prefix: Expression Value %&gt;</code>
+    <code>aspx
+    &lt;%$ ConnectionStrings:DefaultConnection %&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Server-side Comment Expression</strong> &lt;%-- .. --%&gt;</p>
+<ul>
+<li>It’s to comment a block of code so that it’ll not rendered or executed inside the page.
+    <code>aspx
+    &lt;%— This …</code></li></ul></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/aspnet-expressions.html#aspnet-expressions">Continue reading</a>
   </div>
   <hr />
@@ -166,7 +263,42 @@ team, but thanks for the CSS …</p>
   <div>
       <p><img alt="asp.net" src="http://www.emadmokhtar.com/wp-content/uploads/2012/05/asp.net_.jpg"></p>
 <p>ASP.NET Page Lifecycle is very important piece of knowledge every ASP.NET developer must know, and unfortunately some of ASP.NET developer out there don’t know and they think it’s not important to know.</p>
-<p>Let’s dig in and let’s examine ASP.NET Lifecycle but in …</p>
+<p>Let’s dig in and let’s examine ASP.NET Lifecycle but in short list and description:</p>
+<ol>
+<li>
+<p><strong>PreInit():</strong></p>
+<ul>
+<li>In this event all Controls created and Initialized with their default values. You can create dynamic Controls here. You can set theme programmatically here</li>
+</ul>
+</li>
+<li>
+<p><strong>OnInit():</strong></p>
+<ul>
+<li>In this event you can read the Controls properties the were set in Design Mode and can not read values changed by user.</li>
+</ul>
+</li>
+<li>
+<p><strong>LoadViewState():</strong></p>
+<ul>
+<li>This event fires only if the page is posted back <code>IsPostback == true</code> and here View State data where are stored in hidden form fields get de-serialized and loads all controls View State data.</li>
+</ul>
+</li>
+<li>
+<p><strong>LoadPostBackData():</strong></p>
+<ul>
+<li>This event only fires when Page is posted back and Controls which implement <code>IPostBackDataHandler</code> interface get loaded with values from <code>HTTP POST</code> data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Page_Load():</strong></p>
+<ul>
+<li>This event is well known among ASP.NET developers and here Page gets loaded and after it all <code>Load()</code> events of Page Controls fired.</li>
+</ul>
+</li>
+<li>
+<p><strong>Control Event Handlers:</strong></p>
+<ul>
+<li>These are basically event handlers like Button click event handler <code>Button_Click …</code></li></ul></li></ol>
       <a class="btn" href="http://www.emadmokhtar.com/aspnet-page-lifecycle-in-plain-english.html#aspnet-page-lifecycle-in-plain-english">Continue reading</a>
   </div>
   <hr />
@@ -186,7 +318,44 @@ from Page code behind? I want to call this notification after doing
 something in code behind, for example notify user that “Record Inserted
 Successfully” and this notification looks like the one on
 <a href="http://twitter.com/">Twitter</a> and
-<a href="http://stackoverflow.com/">Stackoverflow</a>. I …</p>
+<a href="http://stackoverflow.com/">Stackoverflow</a>. I found jQuery plug-in
+called <a href="http://www.givainc.com/labs/jnotify_jquery_plugin.htm">jNotify</a>
+has what I want from the notification, and ASP.NET has the Method
+“<strong><a href="http://msdn.microsoft.com/en-us/library/asz8zsxy.aspx">ClientScriptManager.RegisterStartupScript
+Method</a></strong>” to add
+Script to page on runtime, so why not combine 2 together and create a
+helper method  plus make it extension method for
+<a href="http://msdn.microsoft.com/en-us/library/system.web.ui.page.aspx">Page</a>.</p>
+<h4>Helper Method:</h4>
+<p>This is the most important part, here where the 2 part I mentioned
+above.</p>
+<div class="highlight"><pre><span></span>using System.Web.UI;
+
+namespace jQueryNotification.Helper
+{
+    public static class NotificationHelper
+    {
+        /// <span class="nt">&lt;summary&gt;</span>
+        /// Shows the successful notification.
+        /// <span class="nt">&lt;/summary&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;page&quot;</span><span class="nt">&gt;</span>The page.<span class="nt">&lt;/param&gt;</span>
+        /// <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;message&quot;</span><span class="nt">&gt;</span>The message.<span class="nt">&lt;/param&gt;</span>
+        public static void ShowSuccessfulNotification(this Page page, string message)
+        {
+            page.ClientScript.RegisterStartupScript(page.GetType(), &quot;notificationScript&quot;,
+                                                    &quot;<span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&#39;text/javascript&#39;</span><span class="nt">&gt;</span>  $(document).ready(function () { $.jnotify(&#39;&quot; +
+                                                    message + &quot;&#39;); });<span class="nt">&lt;/script&gt;</span>&quot;);
+        }
+    }
+}
+</pre></div>
+
+
+<h4>jNotify Script and Style:</h4>
+<p>In order to use the helper method you need to add jQuery script and
+jNotify script and style</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;Styles/jquery.jnotify.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">script …</span></pre></div>
       <a class="btn" href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html#using-notification-in-aspnet-webforms">Continue reading</a>
   </div>
   <hr />
@@ -208,7 +377,9 @@ this meta tags to your page, or even better add it the your master page.</p>
 </pre></div>
 
 
-<p>This effect will …</p>
+<p>This effect will remove the blinking  effect from ASP.NET pages, and
+they call it <a href="http://secretgeek.net/fajax.asp">fajax</a> aka the fake
+alternative to AJAX</p>
       <a class="btn" href="http://www.emadmokhtar.com/add-ajax-effect-to-aspnet-webforms-postbacks.html#add-ajax-effect-to-aspnet-webforms-postbacks">Continue reading</a>
   </div>
   <hr />
@@ -225,7 +396,12 @@ this meta tags to your page, or even better add it the your master page.</p>
       <p><img alt="Link option" src="http://www.emadmokhtar.com/images/10_1.png"></p>
 <p>SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:</p>
 <h1>Not Enforced</h1>
-<p>When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the …</p>
+<p>When you select this option, the link you've created is used only if it's explicitly required by the Select statement. This is the default option. Your users can create reports based on the selected tables without restriction (that is, without enforcement based on other tables).</p>
+<h1>Enforced From</h1>
+<p>When you select this option, if the "to" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce From and select only a field from Table B, the Select statement will still include the join to Table A because it is enforced. Conversely, selecting only from Table A with the same join condition will not cause the join to Table B to be enforced.</p>
+<p>Example: Employee.Store_id –&gt; Store.id, CP will enforce the join if the report has at least one of Store’s fields.</p>
+<h1>Enforced To</h1>
+<p>When you select this option, if the "from" table for the link is used, the link is enforced. For example, if you create a link from Table A to Table B using Enforce To …</p>
       <a class="btn" href="http://www.emadmokhtar.com/enforce-join-option-in-crystal-reports.html#enforce-join-option-in-crystal-reports">Continue reading</a>
   </div>
   <hr />
