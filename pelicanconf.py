@@ -38,15 +38,13 @@ SOCIAL = (
           ('facebook', 'https://www.facebook.com/emadmokhtarframework/'),
           ('twitter', 'https://twitter.com/emadmokhtar'),
           )
-
-
 GITHUB_ACTIVITY_FEED = 'https://github.com/EmadMokhtar.atom'
 GITHUB_ACTIVITY_MAX_ENTRIES = 10
 TWITTER_USERNAME = 'EmadMokhtar'
 GITHUB_URL = 'https://www.github.com/EmadMokhtar'
 THEME = 'themes/Flex'
 DEFAULT_PAGINATION = 10
-
+SUMMARY_MAX_LENGTH = 200
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 MENUITEMS = (
@@ -56,8 +54,10 @@ MAIN_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 DISQUS_SITENAME = "emadmokhtarsframework"
 
-PLUGIN_PATHS = ['plugins']
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 GOOGLE_ANALYTICS = 'UA-11401860-2'
+# Plugins 
+PLUGINS = ['github_activity', 'summary']
+PLUGIN_PATHS = ['plugins']
