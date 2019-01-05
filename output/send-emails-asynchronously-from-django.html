@@ -37,7 +37,7 @@
 <meta property="article:tag" content="python"/>
 <meta property="article:tag" content="celery"/>
 <meta property="article:tag" content="emails"/>
-<meta property="og:image" content="{filename}/images/1442310863_full.png">
+<meta property="og:image" content="{static}/images/1442310863_full.png">
   <title>Emad Mokhtar's Framework &ndash; Send Emails Asynchronously from Django</title>
 </head>
 <body>
@@ -77,7 +77,7 @@
 <article>
   <header>
     <h1 id="send-emails-asynchronously-from-django">Send Emails Asynchronously from Django</h1>
-    <p>Posted on Sun 24 January 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a></p>
+    <p>Posted on Sun 24 January 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a> <b>Read in 4 min.</b></p>
   </header>
   <div>
     <p>In this article you will learn:</p>
@@ -290,7 +290,7 @@ I've created class that can help use in this task</p>
     "name": "Emad Mokhtar",
     "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
   },
-  "image": "{filename}/images/1442310863_full.png",
+  "image": "{static}/images/1442310863_full.png",
   "url": "http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html",
   "description": "In this article you will learn: How to send emails from Django. How to use Celery and Django-Celery-Email to send email asynchronously. Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background. Now let’s see how we can do that. Step 1: Install and Setup Celery In terminal, active your virtualenv and type $ pip install django-celery Now celery and its Django app djcelery are installed into your virtualenv. Next step is …"
 }
