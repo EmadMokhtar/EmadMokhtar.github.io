@@ -13,7 +13,7 @@
 <article>
   <header>
     <h1 id="{{ article.slug }}">{{ article.title }}</h1>
-    <p>Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+    <p>Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> {% if article.readtime %}<b>Read in {{article.readtime.minutes}} min.</b>{% endif %}</p>
   </header>
   <div>
     {{ article.content }}
