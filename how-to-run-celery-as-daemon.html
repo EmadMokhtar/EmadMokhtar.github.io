@@ -36,7 +36,7 @@
 <meta property="article:tag" content="django"/>
 <meta property="article:tag" content="python"/>
 <meta property="article:tag" content="celery"/>
-<meta property="og:image" content="{filename}/images/celerysmoothie.jpg">
+<meta property="og:image" content="{static}/images/celerysmoothie.jpg">
   <title>Emad Mokhtar's Framework &ndash; How to run Celery as daemon?</title>
 </head>
 <body>
@@ -256,7 +256,7 @@ sudo service celerybeat restart
     "name": "Emad Mokhtar",
     "url": "http://www.emadmokhtar.com/author/emad-mokhtar.html"
   },
-  "image": "{filename}/images/celerysmoothie.jpg",
+  "image": "{static}/images/celerysmoothie.jpg",
   "url": "http://www.emadmokhtar.com/how-to-run-celery-as-daemon.html",
   "description": "Install upstart script Permissions We need to make the user which will be used to run celery an owner of log and run directories. sudo chown -R root:root /var/log/celery/ sudo chown -R root:root /var/run/celery/ Celery upstart 1- Download celeryd file from Celery official github repository. 2- Copy celeryd to /etc/init.d/celeryd sudo cp celeryd /etc/init.d/ 3- Make it executable sudo chmod +x celeryd 4- Make it run on startup sudo update-rc.d celeryd defaults sudo update-rc.d celeryd enable 5- make it owned by root sudo chown root:root celeryd 6- Done, now you can start/stop/restart celeryd as service sudo service celeryd start sudo service celeryd stop sudo service celeryd restart Celerybeat upstart 1- Download celerybeat file from Celery official github repository. 2- Copy celerybeat to /etc/init.d/celerybeat sudo cp celerybeat /etc/init.d/ 3- Make it executable sudo chmod +x celerybeat 4- Make it run on startup sudo update-rc.d celerybeat defaults sudo update-rc.d celerybeat enable 5- make it owned by root sudo chown root:root celerybeat 6- Done, now you can start/stop/restart celerd as service sudo service celerybeat start sudo service …"
 }
