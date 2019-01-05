@@ -5,7 +5,7 @@ Category: Geeks
 Slug: interesting-paragraph-in-7-habits-of-highly-effective-people
 Status: published
 
-![workaholics]({filename}/images/050210_1612_Interesting1.jpg)
+![workaholics]({static}/images/050210_1612_Interesting1.jpg)
 
 Yesterday when I was reading 7 Habits of high Effective People, I read extremely interesting paragraph in habit no 2 "Begin with the end in mind" which talk about work-centered people
 

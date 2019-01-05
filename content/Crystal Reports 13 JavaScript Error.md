@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: ASP.NET
 Tags: crystalreports
 
-![JSerror]({filename}/images/JSerror.jpg)
+![JSerror]({static}/images/JSerror.jpg)
 
 Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to [this](http://msdn.microsoft.com/en-us/library/bb310952.aspx) method being obsolete.
 

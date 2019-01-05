@@ -4,7 +4,7 @@ Category: Review
 Tags: book, review
 Authors: Emad Mokhtar
 
-![Book cover]({filename}/images/the-subtle-art.jpg)
+![Book cover]({static}/images/the-subtle-art.jpg)
 
 Last month I had small trip to Netherlands, Rotterdam, at night I went to have a dinner with friends at [EuroMast](http://www.euromast.nl/en), it was windy day, we putted our bags in my friend’s car trunk, but unfortunately someone broken inside the car and took 2 bags and one of them was my bag. My travel backpack is stolen and I lost most of my gadgets (MacBook Pro, iPad, Amazon Kindle, Wallet, etc..)
 

@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: dreams, life
 
-![image]({filename}/images/wpid-wp-1413429250063.jpeg)
+![image]({static}/images/wpid-wp-1413429250063.jpeg)
 
 > Run rabbit run,  dig that hole forget the sun,  and when at last the
 > work is done, don't sit down it's time to dig another one. \#PinkFloyd

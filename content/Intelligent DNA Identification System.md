@@ -7,7 +7,7 @@ Hello folks, I know the first thing pop-in your mind What is Intelligent [DNA](h
 
 This's the name of my graduation project in 2009, it's just a [Bioinformatics](http://en.wikipedia.org/wiki/Bioinformatics) system implemented with DNA as [biometric](http://en.wikipedia.org/wiki/Biometrics) system, and used for identification.
 
-![IDIS Logo]({filename}/images/031210_2008_Intelligent1.jpg)
+![IDIS Logo]({static}/images/031210_2008_Intelligent1.jpg)
 
 # Why [DNA](http://en.wikipedia.org/wiki/DNA), [Biometrics](http://en.wikipedia.org/wiki/Biometrics), and [Bioinformatics](http://en.wikipedia.org/wiki/Bioinformatics)?
 
@@ -25,7 +25,7 @@ Yep, there're three types of biometric applications:
 
 The [Bioinformatics](http://en.wikipedia.org/wiki/Bioinformatics) and  [Biometrics](http://en.wikipedia.org/wiki/Biometrics) fields are rare in Egypt, and this was the challenge to make something new and not stable yet, the information for these fields are updating every year maybe less, and the information on the internet are rare and sometimes not free, but we manage to read some IEEE papers and the great book of O'Reilly BLAST.
 
-![BLAST Book Cover]({filename}/images/031210_2008_Intelligent2.jpg)
+![BLAST Book Cover]({static}/images/031210_2008_Intelligent2.jpg)
 
 # What is BLAST?
 B.L.A.S.T. stand for Basic Local Alignment Search Tool, which our system is based on this powerful tool.
@@ -62,4 +62,4 @@ The unknown personal's [DNA](http://en.wikipedia.org/wiki/DNA)
 
 # The Flowchart of the algorithm:
 
-![Algorithm Flowchart]({filename}/images/031210_2008_Intelligent3.jpg)
+![Algorithm Flowchart]({static}/images/031210_2008_Intelligent3.jpg)

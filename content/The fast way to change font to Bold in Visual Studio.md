@@ -7,11 +7,11 @@ Tags: VisualStudio, VS2010, VS2012
 Did you even download Visual Studio color schemes from [studiostyl.es](http://studiostyl.es/) and you want to change its style to **Bold**? I’ve did this hundred of times and
 it’s boring to do it manually by going throw even Display Item and set its style to **Bold**.
 
-![Visual Studio Font Settings]({filename}/images/SNAG0017.png)
+![Visual Studio Font Settings]({static}/images/SNAG0017.png)
 
 I found a way to do this rapidly in less than a minute. The idea comes when I opened the Visual Studio Settings file in notepad and found it’s XML file with all Visual Studio settings and there is a part for font settings with `BoldFont="Yes"` attribute for each item.
 
-![Settings file in notepad]({filename}/images/SNAG0018.png)
+![Settings file in notepad]({static}/images/SNAG0018.png)
 
 # Let’s see How to do it:
 

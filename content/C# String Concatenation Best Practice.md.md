@@ -51,7 +51,7 @@ Console.WriteLine("StringBuilder took {0}", stringBuilderWatch.Elapsed.Milliseco
 
 # Results:
 
-![stringbench]({filename}/images/stringbench1.png)
+![stringbench]({static}/images/stringbench1.png)
 
 Please note in code I benchmarked `+ operator` and `String.Concat()`
 method for 10000 times and `StringBuilder` for 1000000 times and
@@ -68,7 +68,7 @@ and second string values to it.
 this line of code `string fullName = "Emad" + "Mokhtar";`
 
 
-![string2]({filename}/images/string2.png)
+![string2]({static}/images/string2.png)
 
 is equivalents to this code 
 
@@ -78,7 +78,7 @@ string lastName = "Mokhtar";
 string fullName = firstName + lastName;
 ```
 
-![string]({filename}/images/string.png)
+![string]({static}/images/string.png)
 
 But when you use **StringBuilder** class C\# compiler will take care of
 memory allocations by using the same C/C++ characters array concept and

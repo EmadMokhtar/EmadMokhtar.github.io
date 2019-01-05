@@ -4,7 +4,7 @@ Category: python, community
 Tags: Python
 Authors: Emad Mokhtar
 
-![thank you]({filename}/images/thank-you-community.jpg)
+![thank you]({static}/images/thank-you-community.jpg)
 
 November 2015 [I left my comfort zone, and I started my journey with Python](http://emadmokhtar.com/net-developer-comfort-zone.html#net-developer-comfort-zone), it was not an easy start. I was a Windows/Microsoft guy, I was using Microsoft Visual Studio on a daily basis, and Windows was my primary OS.  I switched to macOS and Pycharm; I picked these to make my transition easier than using Linux (Ubuntu) and Vim.
 

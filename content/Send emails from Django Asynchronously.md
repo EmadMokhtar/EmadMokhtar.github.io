@@ -3,7 +3,7 @@ Date: 2016-01-24 12:00
 Category: Django
 Tags: django, python, celery, emails
 Authors: Emad Mokhtar
-Cover: {filename}/images/1442310863_full.png
+Cover: {static}/images/1442310863_full.png
 
 
 In this article you will learn:
@@ -14,7 +14,7 @@ In this article you will learn:
 
 Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background.
 
-![Alt Text]({filename}/images/1442310863_full.png)
+![Alt Text]({static}/images/1442310863_full.png)
 
 Now let’s see how we can do that.
 

@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: development, software
 
-![people sleeping on the floor at airport]({filename}/images/pict0554.jpg)
+![people sleeping on the floor at airport]({static}/images/pict0554.jpg)
 
 Today I was having a flight from Egypt, Cairo International Airport to
 Kuwait International Airport and when the airplane was almost reach

@@ -4,7 +4,7 @@ Category: Developer
 Tags: codeing, skills, problem solving
 Authors: Emad Mokhtar
 
-![Codewars logo]({filename}/images/1444038896_full.png)
+![Codewars logo]({static}/images/1444038896_full.png)
 
 Recently I posted that [your daily job can kill your skills](http://www.emadmokhtar.com/2015/05/warning-your-daily-job-can-kill-your-skills/), and I mentioned specifically the problem solving skill, as a software developer problem solving skill is one of the most important and key skill you need to master to be a good developer, in the post I mentioned that I started to solve code puzzles on [CodeEval.com](http://codeeval.com/), it is good but during one of [livecoding.tv](https://www.livecoding.tv) session the developer mentioned [CodeWars.com](http://codewars.com/) and I thought to give it a try, so I signed in and start to solve some puzzles aka katas and get higher in rank, and I discovered the differences and why [CodeWars.com](http://codewars.com/) is better from my perspective.  
 

@@ -4,7 +4,7 @@ Category: Django
 Tags: Django, Python
 Authors: Emad Mokhtar
 
-![1450356512_full.png]({filename}/images/1450356512_full.png) When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one [DjangoCon videos by Andrew Pinkham](https://www.youtube.com/watch?v=BJiOERA49ZQ) to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV 
+![1450356512_full.png]({static}/images/1450356512_full.png) When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one [DjangoCon videos by Andrew Pinkham](https://www.youtube.com/watch?v=BJiOERA49ZQ) to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV 
 
 # What is the relation between GCBV and User Model?
 

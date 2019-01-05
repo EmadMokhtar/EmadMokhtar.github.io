@@ -142,7 +142,7 @@ else  return the number
         }
 ```
 
-![output]({filename}/images/fizzbuzzoutput.png)
+![output]({static}/images/fizzbuzzoutput.png)
 
 This Coding Kate done, I've enjoyed it as taook me to collage day's when
 having fun solving small problems, I hope you enjoyed it as well. See

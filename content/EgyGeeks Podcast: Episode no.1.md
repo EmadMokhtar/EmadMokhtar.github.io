@@ -3,7 +3,7 @@ Date: 2010-11-16 13:03
 Author: EmadMokhtar
 Category: Community
 
-![EgyGeeksLogo]({filename}/images/EgyGeeksLogo_2.png)
+![EgyGeeksLogo]({static}/images/EgyGeeksLogo_2.png)
 
 Last Saturday, [@AmrEldib](http://twitter.com/AmrEldib), [@RamyMahrous](http://twitter.com/RamyMahrous), & myself, recoded the first episode of @EgyGeeks podcast, the first Egyptian podcast, it was a fantastic experience that made my mind to become a podcaster, I enjoyed the recoding, specially with Amr & Ramy the funny geeks, & sure I miss the other @EgyGeeks ([@Meligy](http://twitter.com/Meligy), [@DohaElSayed](http://twitter.com/Dohaelsayed), & [@MohamedGamal](http://twitter.com/MohamedG)), I wish they will be in the next episode.
 

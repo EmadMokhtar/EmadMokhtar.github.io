@@ -5,7 +5,7 @@ Tags: review
 Authors: Emad Mokhtar
 
 
-![fitbit-logo]({filename}/images/fitbit-logo.png)
+![fitbit-logo]({static}/images/fitbit-logo.png)
 
 ## The start
 
@@ -13,15 +13,15 @@ I received Fitbit Flex as my birthday gift from my wife and I joined Fitbit comm
 
 ## First Issue
 
-Less than one year of using my Fitbit Flex, it started to not charging, and vibrating for alarms and feedback, so I created a support issue on Fibit support portal, and the quick answer was, Oh we are sorry please give us an address so we can send you another one. I got shocked, this reminded me of Amazon Customer Service quality. ![fitbit support 01]({filename}/images/Screenshot-2016-01-05-14.15.50.png)
+Less than one year of using my Fitbit Flex, it started to not charging, and vibrating for alarms and feedback, so I created a support issue on Fibit support portal, and the quick answer was, Oh we are sorry please give us an address so we can send you another one. I got shocked, this reminded me of Amazon Customer Service quality. ![fitbit support 01]({static}/images/Screenshot-2016-01-05-14.15.50.png)
 
 ## Second Issue
 
-After receiving the second Fitbit Flex, I used it for while and the wristband got damaged, I created a support issue again, they request a confirmation that my band is damaged, I replied with images, and boom the same response "Oh we are sorry please give us an address so we can send you another one". ![Fitbit Support 02]({filename}/images/Screenshot-2016-01-05-14.22.55.png)
+After receiving the second Fitbit Flex, I used it for while and the wristband got damaged, I created a support issue again, they request a confirmation that my band is damaged, I replied with images, and boom the same response "Oh we are sorry please give us an address so we can send you another one". ![Fitbit Support 02]({static}/images/Screenshot-2016-01-05-14.22.55.png)
 
 ## Third Issue
 
-My replacement Fitbit Flex got damaged also and again I created support issue, and this time they were more awesome than before, they sent me a replacement though my warranty is expired, Can you believe it? ![Fitbit Support 03]({filename}/images/Screenshot-2016-01-05-14.23.50.png)
+My replacement Fitbit Flex got damaged also and again I created support issue, and this time they were more awesome than before, they sent me a replacement though my warranty is expired, Can you believe it? ![Fitbit Support 03]({static}/images/Screenshot-2016-01-05-14.23.50.png)
 
 ## Searching for another tracker
 
@@ -29,19 +29,19 @@ After my Fitbit Flex got broken for the third time, I thought I'll buy new track
 
 ### [Apple Watch](https://www.apple.com/watch/)
 
-![s38si-sbbl-sel_GEO_US]({filename}/images/s38si-sbbl-sel_GEO_US.jpg) Apple Watch has its own Heath app and tracking your activity and with thrid party you can sync these data to your Fitbit account, but for me Apple Watch is expensive and fancy, so No. 
+![s38si-sbbl-sel_GEO_US]({static}/images/s38si-sbbl-sel_GEO_US.jpg) Apple Watch has its own Heath app and tracking your activity and with thrid party you can sync these data to your Fitbit account, but for me Apple Watch is expensive and fancy, so No. 
 
 ### [Peddle Time](https://www.pebble.com/pebble-time-smartwatch-features)
 
-![0_480_640_0_70__News_pebble-health]({filename}/images/0_480_640_0_70__News_pebble-health.jpg) After I made my mind and orderd my new tracker they implement [activity tracking inside Peddle Time Watch](http://www.forbes.com/sites/bradmoon/2015/12/16/pebble-health-pebble-time-smartwatch-gains-native-activity-and-sleep-tracking/) but for me I love Fitbit community and I have friends more there, so No. 
+![0_480_640_0_70__News_pebble-health]({static}/images/0_480_640_0_70__News_pebble-health.jpg) After I made my mind and orderd my new tracker they implement [activity tracking inside Peddle Time Watch](http://www.forbes.com/sites/bradmoon/2015/12/16/pebble-health-pebble-time-smartwatch-gains-native-activity-and-sleep-tracking/) but for me I love Fitbit community and I have friends more there, so No. 
 
 ### [Fitbit Surge](http://www.fitbit.com/surge)
 
-![Fitbit-Surge]({filename}/images/Fitbit-Surge.jpg) It's very nice tracker but with its size I can't take it with me to bed and this is one of the main feature I bought Fitbit Flex for, so sorry buy No. 
+![Fitbit-Surge]({static}/images/Fitbit-Surge.jpg) It's very nice tracker but with its size I can't take it with me to bed and this is one of the main feature I bought Fitbit Flex for, so sorry buy No. 
 
 ### [Fitbit Charge HR](http://www.fitbit.com/chargehr)
 
-![e16f2610-4ebc-486c-9b3b-37a51b5612e6._V330045372__SR285,285_]({filename}/images/e16f2610-4ebc-486c-9b3b-37a51b5612e6._V330045372__SR285285_.jpg) Yes, I order Fitbit Charge HR because it has all what I want: 
+![e16f2610-4ebc-486c-9b3b-37a51b5612e6._V330045372__SR285,285_]({static}/images/e16f2610-4ebc-486c-9b3b-37a51b5612e6._V330045372__SR285285_.jpg) Yes, I order Fitbit Charge HR because it has all what I want: 
 
   1. Watch Face.
   2. Automatic Sleep Tracking.

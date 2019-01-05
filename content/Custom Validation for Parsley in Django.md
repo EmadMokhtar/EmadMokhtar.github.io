@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Django
 Tags: django, python, parsley, validation
 
-![Custom Validation for Parsley in Django]({filename}/images/Custom-Validation-for-Parsley-in-Django.jpeg)
+![Custom Validation for Parsley in Django]({static}/images/Custom-Validation-for-Parsley-in-Django.jpeg)
 
 I wrote a post on how to add [client side validation for Django Forms]({filename}/Client side validation for Django Forms.md). In this post I’ll show you how to add custom client validation to Django Forms. I mean by custom validation is a validation that isn't available in [django-parsley][1], like username availability, password strength, email duplication, etc.. let’s see how to add custom client side validation to Django Form.
 

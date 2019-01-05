@@ -5,7 +5,7 @@ Category: life
 Slug: my-journey-with-diet
 Status: published
 
-![Healthy food]({filename}/images/071210_1443_MyJourneywi1.jpg)
+![Healthy food]({static}/images/071210_1443_MyJourneywi1.jpg)
 
 In November 2009 I decided to change my life from unhealthy to healthy lifestyle and lose weight to be healthy person, and this was a big and hard decision to make it's like paradigm shifting so that I should be careful with every step I take and analyze what to do next and how to it right.
 
@@ -25,8 +25,8 @@ In November 2009 I decided to change my life from unhealthy to healthy lifestyle
 
     - My journey in losing weight (form 160 Kg to 110 Kg till now) was too damn hard but the benefits was huge, all my back and knee pains gone, and I'm feeling that I'm very light even sometimes when I'm walking people think I'm running, but actually it's brisk walking.
 
-![Before]({filename}/images/071210_1443_MyJourneywi2.jpg)
-![After]({filename}/images/071210_1443_MyJourneywi3.jpg)
+![Before]({static}/images/071210_1443_MyJourneywi2.jpg)
+![After]({static}/images/071210_1443_MyJourneywi3.jpg)
 
 # Some Advices:  
 
@@ -45,6 +45,6 @@ In November 2009 I decided to change my life from unhealthy to healthy lifestyle
 7. Sugar:
     - Stop using white and brown sugar and use fruit sugar instead, it's useful for diet and diabetic people, I use pocket [CANDEREL](http://www.canderel.co.uk/) sugar.
 
-    ![CANDEREL Diet Sugar]({filename}/images/071210_1443_MyJourneywi4.gif)
+    ![CANDEREL Diet Sugar]({static}/images/071210_1443_MyJourneywi4.gif)
 
 Note: I'm still on diet as I said my weight now is 110 Kg and my perfect weight is between 95 and 85.

@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Django
 Tags: django, python, forms
 
-![Create Login Page for your Django app]({filename}/images/Create-Login-Page-for-your-Django-app.png)
+![Create Login Page for your Django app]({static}/images/Create-Login-Page-for-your-Django-app.png)
 
 # Why Another Post about this?
 I found each time I start new Django project, I need to create Login HTML page, and with that I need to write Django View and Form. Each time I tried to Google how to do it, I found many posts about how to do it from scratch, yep as you read, posts telling you how to build a Django View and Form for login page. And there are already built-in Django login [View](https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.login) and [Form](https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm) (please check links).

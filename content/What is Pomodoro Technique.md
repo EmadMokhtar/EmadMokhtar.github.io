@@ -5,12 +5,12 @@ Category: Developer
 
 Hello folks, in this post I'll explain technique I use it to get things done in my life like Reading, or development tasks; this technique called Pomodoro technique.
 
-![Pomodoro kitchen tool]({filename}/images/051410_1252_WhatisPomod1.png)
+![Pomodoro kitchen tool]({static}/images/051410_1252_WhatisPomod1.png)
 
 What is Pomodoro Technique?
 ===========================
 
-![Pomodoro logo]({filename}/images/051410_1252_WhatisPomod2.jpg)
+![Pomodoro logo]({static}/images/051410_1252_WhatisPomod2.jpg)
 
 It's a time management system; It's simple, and very productive.
 
@@ -32,13 +32,13 @@ Let's start explain how to use it:
     And start from step 2 again, and if you finish the task start from
     the beginning.
 
-![Pomodoro Workflow]({filename}/images/051410_1252_WhatisPomod3.png)
+![Pomodoro Workflow]({static}/images/051410_1252_WhatisPomod3.png)
 Please don't panic like I said there's a lot of apps implement Pomodoro Technique, and that's make life more easily, I'll review one of the most app used for PT.
 
 Focus Booster:
 ==============
 
-![Focus booster]({filename}/images/051410_1252_WhatisPomod4.jpg)
+![Focus booster]({static}/images/051410_1252_WhatisPomod4.jpg)
 
 Focus Booster is my favorite pomodoro technique app, it's developed over
 Adobe Air so it is cross-platform, and it's free.
@@ -49,16 +49,16 @@ Adobe Air so it is cross-platform, and it's free.
 The UI:
 -------
 
-![The app]({filename}/images/051410_1252_WhatisPomod5.jpg)
+![The app]({static}/images/051410_1252_WhatisPomod5.jpg)
 
 It's very simple just run the application and press the green play button and the timer will decreased until it reach 00:00 and the green bar increased and change its color to the degrees of red (orange and red).
 
-![Pomodoro]({filename}/images/051410_1252_WhatisPomod6.jpg)
+![Pomodoro]({static}/images/051410_1252_WhatisPomod6.jpg)
 
 When it reached 00:00, it'll fire tiny alarm to remind you that's your
 break time.
 
-![Break]({filename}/images/051410_1252_WhatisPomod7.jpg)
+![Break]({static}/images/051410_1252_WhatisPomod7.jpg)
 
 During break time the timer reset to 05:00 and decreased to 00:00 and the bar also decreased with it; when the timer reach 00:00 the same tiny alarm will fire to remind you to start you job/30 min break.
 

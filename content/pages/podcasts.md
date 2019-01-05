@@ -2,7 +2,7 @@ Title: Podcasts
 Date: 2016-03-13 12:00
 Authors: Emad Mokhtar
 
-![Podcast]({filename}/images/Podcast.jpg)
+![Podcast]({static}/images/Podcast.jpg)
 
 One of my source of knowledge is podcasts, I'm listening to podcasts during busy day, in commute, or while coding, so I thought I'll give you a list of my favorite podcasts, and I hope you like it and start listening to them.
 

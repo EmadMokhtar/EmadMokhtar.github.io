@@ -6,7 +6,7 @@ Tags: SQlServer, SQL
 
 Hello Folks,
 
-![SQL Server 2008 Logo]({filename}/images/SQL_Server_2008_Grid_v_2.jpg)
+![SQL Server 2008 Logo]({static}/images/SQL_Server_2008_Grid_v_2.jpg)
 
 Today I'll mention the Microsoft SQL Server 2008 Fields data types, you need to choose the right data type for the database fields for more speed efficiency, and I think the most important thing the fundamental of the database itself.
 

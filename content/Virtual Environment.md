@@ -23,8 +23,8 @@ environment with one command and file, so if you work in team it's easy
 to share the same environment among the
 team.
 
-![virtualenv 1]({filename}/images/Screenshot-from-2015-03-01-193423.png)
-![virtualenv 2]({filename}/images/Screenshot-from-2015-03-01-193318.png)
+![virtualenv 1]({static}/images/Screenshot-from-2015-03-01-193423.png)
+![virtualenv 2]({static}/images/Screenshot-from-2015-03-01-193318.png)
 
 How to install VirtualEnv?
 --------------------------
@@ -87,7 +87,7 @@ environment, open the terminal:
 5.  If you find the treminal current line has virtualenv name inside
     brackets (VirEnv1) this means that your virtualenv is activated.
 
-![activate]({filename}/images/activate.png)
+![activate]({static}/images/activate.png)
 
 There is another package to help you doing the above setups with one
 simple command which called virtualenvwrapper.
@@ -157,7 +157,7 @@ packages from file exported, lets see how to can do this.
 ```
 pip freeze
 ```
-![pip-freeze]({filename}/images/pip-freeze2.png)
+![pip-freeze]({static}/images/pip-freeze2.png)
 
 # Export environment packages
 
@@ -165,8 +165,8 @@ pip freeze
 pip freeze > requirements.txt
 ```
 
-![pip-freeze]({filename}/images/pip-freeze-2.png)
-![requirements]({filename}/images/requirements2.png)
+![pip-freeze]({static}/images/pip-freeze-2.png)
+![requirements]({static}/images/requirements2.png)
 
 # Install virtual envirment packages from file
 

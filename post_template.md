@@ -7,4 +7,4 @@ Authors: Emad Mokhtar
 
 POST
 
-IMAGE ![alt]({filename}/images/filename)
+IMAGE ![alt]({static}/images/filename)

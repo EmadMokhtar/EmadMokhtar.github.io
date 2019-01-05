@@ -4,7 +4,7 @@ Category: Developer
 Tags: notes, papreless
 Authors: Emad Mokhtar
 
-[![paperless note on iPad]({filename}/images/1450004669_full.png)](http://www.emadmokhtar.com/wp-content/uploads/1450004669_full.png)
+[![paperless note on iPad]({static}/images/1450004669_full.png)](http://www.emadmokhtar.com/wp-content/uploads/1450004669_full.png)
 
   
 I really love to take notes wherever and wheneve. I like to keep my notes with me, but after buying iPad mini I decide to change my note tool from paper notes to paperless notes (e-notes), but I like to hand writing my notes I want something that feels like paper notes.
@@ -79,4 +79,4 @@ I thought of buying a stylus for iPad that feels like real pen and start taking 
 **Note App:** Goodnotes.  
 **Stylus:**  [Moshi Stanza Duo](http://www.moshi.com/peripheral-stylus-pen-stanza-duo)
 
-![moshi stanzaa duo]({filename}/images/1450007048_full.jpeg)
+![moshi stanzaa duo]({static}/images/1450007048_full.jpeg)

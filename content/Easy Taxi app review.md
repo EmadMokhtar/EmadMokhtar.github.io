@@ -11,24 +11,24 @@ My experience:
 
 I was at Abbasia Street and want to go to Al Shams Sporting Club, I opened the application and it detected my location:
 
-![clip\_image002]({filename}/images/clip_image002.png)
+![clip\_image002]({static}/images/clip_image002.png)
 
 Then I request a taxi, application will ask about my destination and more information about my location, and when I submitted the request, it send a request and wait for a driver to accept the request.
 
-![clip\_image004]({filename}/images/clip_image004.jpg)
+![clip\_image004]({static}/images/clip_image004.jpg)
 
-![clip\_image006]({filename}/images/wp_ss_20140726_0004.png)
+![clip\_image006]({static}/images/wp_ss_20140726_0004.png)
 
-![clip\_image008]({filename}/images/wp_ss_20140726_0005.png)
+![clip\_image008]({static}/images/wp_ss_20140726_0005.png)
 
 The application showed driver's contact and car information, and his
 current location, so that I can call him and keep tracking his position.
 
-![clip\_image010]({filename}/images/wp_ss_20140726_0006.png)
+![clip\_image010]({static}/images/wp_ss_20140726_0006.png)
 
 Then when the taxi arrived application notified me
 
-![clip\_image012]({filename}/images/wp_ss_20140726_0007.png)  
+![clip\_image012]({static}/images/wp_ss_20140726_0007.png)  
 
 Conclusion:
 -----------

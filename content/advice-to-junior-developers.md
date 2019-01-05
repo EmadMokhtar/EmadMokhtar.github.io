@@ -4,7 +4,7 @@ Category: career
 Tags: career, developer, programmer
 Authors: Emad Mokhtar
 
-![journey]({filename}/images/oziel-gomez-555955-unsplash.jpg)
+![journey]({static}/images/oziel-gomez-555955-unsplash.jpg)
 
 One day I answered [What is the best advice you can give to a junior programmer?](https://www.quora.com/What-is-the-best-advice-you-can-give-to-a-junior-programmer/answer/Emad-Mokhtar) question on Quora.com. I was shocked that my answer got many upvotes, so I thought to share my answer to this question on my blog.
 

@@ -5,7 +5,7 @@ Category: Community
 
 Hello Folks,
 
-![Skype Slogan]({filename}/images/features_bnr_skypeRequires.110142655.jpg)
+![Skype Slogan]({static}/images/features_bnr_skypeRequires.110142655.jpg)
 
 Yesterday I enjoy the first **EgyGeeksOnSkype** meeting with **Ayman El
 Hattab, Mohamed Meligy, Ramy Mahrous, Doha El Sayed, Nashwa, and Amr El

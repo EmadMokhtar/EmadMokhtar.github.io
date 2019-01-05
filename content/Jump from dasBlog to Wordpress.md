@@ -3,7 +3,7 @@ Date: 2011-11-09 17:18
 Author: EmadMokhtar
 Category: Developer
 
-![Dasblog logo]({filename}/images/DasBlog-Reflection-640x480-Green.jpg) **VS.** ![Wordpress logo]({filename}/images/wordpress-with-text.png)
+![Dasblog logo]({static}/images/DasBlog-Reflection-640x480-Green.jpg) **VS.** ![Wordpress logo]({static}/images/wordpress-with-text.png)
 
 In my start into blogging I start to blog on [wordpress.com](http://wordpress.com/) from hosting blog, I like it but after blogging many posts I found it has many limitations, so I decided to get self hosted blog engine, I searched for many blog engines and I inspired with[Scott Hanselman's blog](http://www.hanselman.com/blog/) and downloaded [dasBlog engine](http://dasblog.codeplex.com/), hosted it locally, and start the journey of customizing and configuration, I wasn't as easy as it sounds, you must get your hand dirty with CSS, ASP.NET, JavaScript, and XML configuration files, but after 2 weeks I got it up and working. After a while I realized I want more fixable blog engine, start searching and found [Wordpress](http://wordpress.org/) my old engine but the self hosted one is the most common blog used on the internet, even my buddy [Mohammed Meligy](http://twitter.com/#!/meligy "@Meligy") once a while decided to use wordpress as [his blog](http://gurustop.net/) engine. Decision has been made and it's time to buy PHP hosting instead of .NET one and install Wordpress; it took me 4\~5 days to complete this setup but if you subtract the 2 days I spent in searching for the suitable theme, the total is 2\~3 days to step my wordpress blog, so what did I do in this setup?
 

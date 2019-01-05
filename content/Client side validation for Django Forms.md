@@ -4,7 +4,7 @@ Category: Django
 Tags: Django, Forms
 Authors: Emad Mokhtar
 
-![Parsley]({filename}/images/parsley.jpg)
+![Parsley]({static}/images/parsley.jpg)
 
 [source](https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF)
 

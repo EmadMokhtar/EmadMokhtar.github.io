@@ -6,7 +6,7 @@ Tags: developer, geek
 Slug: fictions-for-developers
 Status: published
 
-![blackhole]({filename}/images/blackhole.jpg)
+![blackhole]({static}/images/blackhole.jpg)
 
 **[Tim Ferriss](http://www.timothyferriss.com/)** recommended in his
 **[4-Hours

@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: developer, development, programmer, programming
 
-![image]({filename}/images/image.png)
+![image]({static}/images/image.png)
 
 To Google or not to Google? this is not even a question, [Scott
 Hanselman](http://www.hanselman.com/about/) wrote an article about
@@ -70,7 +70,7 @@ What I can do?
 Hanselman gave great points in his articles but in comments, someone
 wrote exactly what I was thinking  after reading the article.
 
-![image]({filename}/images/image1.png)
+![image]({static}/images/image1.png)
 
 When you search/Google for a solution you’ll read other’s code and this
 is a way or learning which learn from strength and weakness of everyone,

@@ -3,7 +3,7 @@ Date: 2011-06-15 15:18
 Author: EmadMokhtar
 Category: Tools
 
-![VisualStudio-WallPaper]({filename}/images/VisualStudio-WallPaper-04_2.jpg)
+![VisualStudio-WallPaper]({static}/images/VisualStudio-WallPaper-04_2.jpg)
 
 Every time I finished installing Microsoft Visual Studio 2010 on my machines I Google “Speedup Visual Studio 2010”, so for time sake I’m gathering the effective links in one place as reference to me and to anyone out there.
 

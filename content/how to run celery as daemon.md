@@ -3,8 +3,8 @@ Date: 2016-09-20 15:00
 Category: Django
 Tags: django, python, celery
 Authors: Emad Mokhtar
-Cover: {filename}/images/celerysmoothie.jpg
-![celery smoothy]({filename}/images/celerysmoothie.jpg)
+Cover: {static}/images/celerysmoothie.jpg
+![celery smoothy]({static}/images/celerysmoothie.jpg)
 
 # Install upstart script
 ## Permissions

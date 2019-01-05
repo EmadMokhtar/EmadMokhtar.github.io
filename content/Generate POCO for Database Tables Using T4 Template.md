@@ -13,9 +13,9 @@ First, install/add PetaPoco to your project using Nuget:
     1.  Open **Package Manager Console** and type `install-package petapoco`
     2.  Wait until package downloaded and installed to your project.
 
-![packagemanager]({filename}/images/packagemanager.png)
+![packagemanager]({static}/images/packagemanager.png)
 
-![solutionafterinstall]({filename}/images/solutionafterinstall.png)
+![solutionafterinstall]({static}/images/solutionafterinstall.png)
 
 Second, modify T4 template to generate POCO classes for you:
 
@@ -27,19 +27,19 @@ Second, modify T4 template to generate POCO classes for you:
 6.  In `ClassSuffix` write required class name suffix, this is optional.
 7.  Save the file.
 
-![settings]({filename}/images/settings.png)
+![settings]({static}/images/settings.png)
 
 Third, congratulation your POCO classes and Repo generated under Database.tt –&gt; Database.cs.
 
-![pocos]({filename}/images/pocos.png)
+![pocos]({static}/images/pocos.png)
 
 # Notes:
 
 -   Make sure you set `providerName` in `ConnectString` or T4 template will not work.
 -   If you faced C\# issue during POCO generation, please open `PetaPoco.Core.ttinclude` file and edit the language attribute by removing 3.5 from it.
 
-![csharpeerror]({filename}/images/csharpe-error.png)
+![csharpeerror]({static}/images/csharpe-error.png)
 
 -   If you won't use PetaPoco, modify the generated POCO classes and remove PetaPoco specific class attributes or you can use modified version of [Poco.Generator.ttinclude](https://dl.dropboxusercontent.com/u/10071407/PetaPoco.Generator.ttinclude) file.
 
-![attributes]({filename}/images/attributes.png)
+![attributes]({static}/images/attributes.png)

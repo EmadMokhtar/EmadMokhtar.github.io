@@ -3,7 +3,7 @@ Date: 2011-01-02 17:10
 Author: EmadMokhtar
 Category: Developer
 
-![131893\_10150366827825634\_676490633\_16737900\_7347570\_o]({filename}/images/131893_10150366827825634_676490633_16737900_7347570_o_2.jpg)
+![131893\_10150366827825634\_676490633\_16737900\_7347570\_o]({static}/images/131893_10150366827825634_676490633_16737900_7347570_o_2.jpg)
 
 After listening to [**This Developer’s Life**](http://thisdeveloperslife.com/) podcast episode [**1.1.0 Disconnecting**](http://thisdeveloperslife.com/post/1-1-0-disconnecting) and what [**Scott Hanselman**](http://www.hanselman.com/) and [**Rob Conery**](http://rob.conery.io/) told us about what they felt when they tried to unplug/disconnect from their Technical world, I decided to try it by myself, so I had one extra day in this weekend with my family so I decided to take one day trip away from the crowded city & go to the far south of Kuwait where modern life seems far far away.
 

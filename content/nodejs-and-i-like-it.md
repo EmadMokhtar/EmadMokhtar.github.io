@@ -5,7 +5,7 @@ Tags: Python
 Authors: Emad Mokhtar
 
 <!-- PELICAN_BEGIN_SUMMARY -->
-![The Sign]({filename}/images/austin-chan-275638-unsplash.jpg)
+![The Sign]({static}/images/austin-chan-275638-unsplash.jpg)
 Photo by Austin Chan on Unsplash
 
 I had a chance to try Node.js framework last month; I decided to build REST APIs using [Node.js][1] and [express.js][2]. Regularly I'm using JavaScript in my daily work besides using [Django][3] to build Web Applications, but many times I need to develop a front-end feature, This when I need to use JavaScript. I'm always using JavaScript to write front-end logic, but I never wrote back-end logic using it. I took the challenge to develop a simple REST APIs using [express.js][2].

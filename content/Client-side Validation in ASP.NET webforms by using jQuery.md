@@ -3,7 +3,7 @@ Date: 2010-07-20 06:56
 Author: EmadMokhtar
 Category: ASP.NET
 
-![JQuery\_logo\_color\_onwhite.png]({filename}/images/JQuery_logo_color_onwhite.png)
+![JQuery\_logo\_color\_onwhite.png]({static}/images/JQuery_logo_color_onwhite.png)
 
 Hello folks, on July 9th 2010, I'd spoken on EgyGeeks online community
 about Client-side Validation using jQuery in ASP.NET webforms, and I

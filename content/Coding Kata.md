@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: coding, professional, programmer, programming
 
-![Practicing Guitar]({filename}/images/Practicing_Guitar.jpg)
+![Practicing Guitar]({static}/images/Practicing_Guitar.jpg)
 
  
 
@@ -15,7 +15,7 @@ Getting a job as programmer will not make you a professional one, doing your w
 
 In [CleanCoder](http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073 "Clean Coder")'s Chapter 6 talking about practicing and there's a part talking about coding kata, so What is Coding Kata?
 
-![Kata]({filename}/images/Empi_kata.jpg)
+![Kata]({static}/images/Empi_kata.jpg)
 
  
 

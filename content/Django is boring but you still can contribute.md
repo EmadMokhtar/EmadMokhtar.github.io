@@ -10,7 +10,7 @@ I attended Django Under The Hood 2016, in sprints there is a comment passing aro
 
 Every time I go to check [Django tickets](https://code.djangoproject.com/) to contribute, I found they are difficult and in depth, because Django is a mature project now and the amount of contribution needed to the codebase is rare, but if you want to contribute you can check [easy pickings](https://code.djangoproject.com/query?status=!closed&easy=1) tickets. In DUTH before the sprints projects leaders start to ask attendees for contributions, I found this is a good opportunity for me and for anyone wants to help the community and start to contribute to Django community.
 
-![Github duth contributions]({filename}/images/duth-contribution.png)
+![Github duth contributions]({static}/images/duth-contribution.png)
 
 If you want to contribute to Django and help the community, I have some suggestions for you:
 

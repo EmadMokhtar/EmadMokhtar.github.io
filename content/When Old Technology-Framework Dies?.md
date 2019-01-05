@@ -3,7 +3,7 @@ Date: 2014-02-11 17:07
 Author: EmadMokhtar
 Category: Developer
 
-![darthvader-design]({filename}/images/darthvader-design.jpg)
+![darthvader-design]({static}/images/darthvader-design.jpg)
 
 I was wondering when old framework dies? it’s matter of time or matter of usage? let’s talk first about what are things make me wonder?
 

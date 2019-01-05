@@ -13,7 +13,7 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
 
-![pip.log]({filename}/images/1444569163_full.png)
+![pip.log]({static}/images/1444569163_full.png)
 
 # The Soltuion:
 

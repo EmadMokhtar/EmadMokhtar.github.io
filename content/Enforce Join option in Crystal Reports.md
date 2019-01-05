@@ -3,7 +3,7 @@ Date: 2011-06-08 10:40
 Author: EmadMokhtar
 Category: ASP.NET
 
-![Link option]({filename}/images/10_1.png)
+![Link option]({static}/images/10_1.png)
 
 SAP Crystal Reports enables you to enforce the use of tables while you're specifying joins:
 

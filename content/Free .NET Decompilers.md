@@ -9,12 +9,12 @@ After [Redgate](http://www.red-gate.com/) [announced the .NET Reflector is becam
 
 - [JetBrain dotPeek](http://www.jetbrains.com/decompiler/): is a new free-of-charge .NET decompile  from JetBrains, the makers of [ReSharper](http://www.jetbrains.com/resharper?dotpeek) and more developer productivity tools.
 
-    ![dotPeek]({filename}/images/dotPeek.png)
+    ![dotPeek]({static}/images/dotPeek.png)
 
 -   [ILSpy](http://wiki.sharpdevelop.net/ILSpy.ashx): ILSpy is the open-source .NET assembly browser and decompiler.
 
-    ![ILSpy]({filename}/images/ILSpy-yield-return_3.png)
+    ![ILSpy]({static}/images/ILSpy-yield-return_3.png)
 
 -   [Telerik JustDecompile](http://www.telerik.com/products/decompiling.aspx): is a new, free developer productivity tool designed to enable easy .NET assembly browsing and decompiling.
 
-    ![Telerik JustDecompile]({filename}/images/justd.png)
+    ![Telerik JustDecompile]({static}/images/justd.png)

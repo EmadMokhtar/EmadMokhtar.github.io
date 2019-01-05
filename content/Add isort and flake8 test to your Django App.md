@@ -3,9 +3,9 @@ Date: 2016-09-27 18:00
 Category: Django
 Tags: django, python, unittest, howto
 Authors: Emad Mokhtar
-Cover: {filename}/images/unit-test-works.jpg
+Cover: {static}/images/unit-test-works.jpg
 
-![Unit Test Works]({filename}/images/unit-test-works.jpg)
+![Unit Test Works]({static}/images/unit-test-works.jpg)
 
 In this post I'll tell you how to add isort and flake8 tests to your Django project test suite, this is simple script and you can start from this point and customize you own test suite.
 

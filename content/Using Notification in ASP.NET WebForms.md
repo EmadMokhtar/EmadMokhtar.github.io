@@ -92,11 +92,11 @@ namespace jQueryNotification
 
 #### Screenshots:
 
-![SNAG-0031]({filename}/images/SNAG-0031.png)
+![SNAG-0031]({static}/images/SNAG-0031.png)
 
-![SNAG-0029]({filename}/images/SNAG-0029.png)
+![SNAG-0029]({static}/images/SNAG-0029.png)
 
-![SNAG-0030]({filename}/images/SNAG-0030.png)
+![SNAG-0030]({static}/images/SNAG-0030.png)
 
 #### Project File:
 

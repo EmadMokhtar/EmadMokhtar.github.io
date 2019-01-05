@@ -63,6 +63,6 @@ I’m glad to tell you we’re done, please if you want more configuration check
 
 When I’m googling about this I found developers using DataBound event to inject JavaScript to Image in each row, and more treble, but I thought how to tell elevateZoom that I want to add zoom to every image in GridView, an idea hit me “What about jQuery selectors?” and yes this is the solution as you can see I select all *img* tags in element with *id = grvProducts.*
 
-![Perview]({filename}/images/zoom-perview.gif)
+![Perview]({static}/images/zoom-perview.gif)
 
 Developer please think simple, and that all folks, enjoy developing ;)

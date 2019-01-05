@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: aspnet, aspnetmvc, nosql, technology
 
-![U-Turn]({filename}/images/U-Turn.png)
+![U-Turn]({static}/images/U-Turn.png)
 
 Technology U-Turn is a terminology I invented that means when a technology leave the direction and take a new one then get back to the old one, actually I invented this term when I realized till now there are two technologies did this, I don’t know if there are more or not but nowadays these two technologies are in the top of tech news.
 

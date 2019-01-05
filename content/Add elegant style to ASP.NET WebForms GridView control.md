@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: ASP.NET
 Tags: aspnet, gridview
 
-![5628591299\_8d5839c072]({filename}/images/5628591299_8d5839c072.jpg)
+![5628591299\_8d5839c072]({static}/images/5628591299_8d5839c072.jpg)
 
 We are developers whom use the left side of our brains that why we suck in
 designing; we’ll use the already exist styles while developing ASP.NET
@@ -20,7 +20,7 @@ So let’s get into the business, the most commonly used ASP.NET Control
 like an awful HTML table with bunch of rows and columns, sure you can
 use the ready made styles “Auto Format” created by Microsoft team, but
 also you can apply much better style to it, let’s find
-how.![SNAG-0089]({filename}/images/SNAG-0089.png)
+how.![SNAG-0089]({static}/images/SNAG-0089.png)
 
 I’ll show you how to apply 2 styles to GridView:
 
@@ -51,7 +51,7 @@ to Twitter Bootstrap CSS classes like this:
 
 Here is the result:
 
-![SNAG-0091]({filename}/images/SNAG-0091.png)
+![SNAG-0091]({static}/images/SNAG-0091.png)
 
 You can use style you like you can check the Table styles and make your
 combination or use only one CSS class.
@@ -61,7 +61,7 @@ Tools –&gt; Library Package Manager –&gt; Manage NuGet Packages for
 solutions… NuGet package manager window will open, search for Twitter
 Bootstrap and Install it.
 
-![SNAG-0087]({filename}/images/SNAG-0087.png)
+![SNAG-0087]({static}/images/SNAG-0087.png)
 
 ### ASP.NET Dynamic Data:
 
@@ -90,7 +90,7 @@ Here is the **GridView** control, take a look on **CssClass**,
 
 Here is the result:
 
-![SNAG-0092]({filename}/images/SNAG-0092.png)
+![SNAG-0092]({static}/images/SNAG-0092.png)
 
 I’ve created a Demo project, you can download it from
 [GitHub](https://github.com/EmadMokhtar/ASPNETGridViewWithStyle).

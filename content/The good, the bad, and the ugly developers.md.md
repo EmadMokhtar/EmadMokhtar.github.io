@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: Developer
 Tags: coder, developer
 
-![Intresting tweet]({filename}/images/Intresting-tweet.png)
+![Intresting tweet]({static}/images/Intresting-tweet.png)
 
 I saw very interesting tweet from [**Glenn
 Block**](https://twitter.com/#%21/gblock) [@gblock](https://twitter.com/#!/gblock)

@@ -4,7 +4,7 @@ Author: EmadMokhtar
 Category: ASP.NET
 Tags: security, dotNet ,Csharp
 
-![Hacking for password]({filename}/images/114166encryption.jpg)
+![Hacking for password]({static}/images/114166encryption.jpg)
 
 If you’re software developer then there is big chance you’ll implement user login feature, and you must store the username and password in your system. Most of developers stored these precious information in database as plain text, yes we did include myself I was doing it wrong, and if you’re doing it please stop and read this article to know how to do it right and being awesome.
 
@@ -27,11 +27,11 @@ As I mentioned above I found many articles about how-to hash password but most o
 
 Now let’s understand the flow and then check how to implement it in code. First to save password in database you must hash it using one of hashing algorithm and store the hashes password into database.
 
-![StoreHashedPassword]({filename}/images/StoreHashedPassword.png)
+![StoreHashedPassword]({static}/images/StoreHashedPassword.png)
 
 Second to check the user password in login, you should hash the password user input and compare the two hashed passwords (user input & stored in database).
 
-![RetreiveHashedPassword]({filename}/images/RetreiveHashedPassword.png)
+![RetreiveHashedPassword]({static}/images/RetreiveHashedPassword.png)
 
 # Code:
 
@@ -85,11 +85,11 @@ Save the password looks like the same flow but this time we’ll use [`GenerateS
 [6]: http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto.generatesalt(v=vs.99).aspx
 [7]: http://msdn.microsoft.com/en-us/library/system.web.helpers.crypto(v=vs.99).aspx
 
-![YetBetterStoreHashingPassword]({filename}/images/YetBetterStoreHashingPassword.png)
+![YetBetterStoreHashingPassword]({static}/images/YetBetterStoreHashingPassword.png)
 
 Retrieving and comparing user input password and the one stored in database is as before but you need to retrieve both the hashed password and salt from database, add salt to plain password, hash the produced string, then compare it with the hashed password that retrieved from database.
 
-![YetBetterRetreivePassword]({filename}/images/YetBetterRetreivePassword.png)
+![YetBetterRetreivePassword]({static}/images/YetBetterRetreivePassword.png)
 
 # Code:
 
