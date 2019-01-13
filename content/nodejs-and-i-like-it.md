@@ -1,4 +1,4 @@
-Title: I tired Nodejs and I like it
+Title: I tried Nodejs and I like it
 Date: 2018-12-31 12:00
 Category: python, nodejs
 Tags: Python
