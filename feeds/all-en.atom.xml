@@ -2,26 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Emad Mokhtar's Framework</title><link href="http://www.emadmokhtar.com/" rel="alternate"></link><link href="http://www.emadmokhtar.com/feeds/all-en.atom.xml" rel="self"></link><id>http://www.emadmokhtar.com/</id><updated>2019-01-26T17:00:00+03:00</updated><subtitle>Geek developer who's in search of code perfection.</subtitle><entry><title>Difference between `==` and `is` in Python, and when to use each of them</title><link href="http://www.emadmokhtar.com/difference-between-and-is-in-python-and-when-to-use-each-of-them.html" rel="alternate"></link><published>2019-01-26T17:00:00+03:00</published><updated>2019-01-26T17:00:00+03:00</updated><author><name>Emad Mokhtar</name></author><id>tag:www.emadmokhtar.com,2019-01-26:/difference-between-and-is-in-python-and-when-to-use-each-of-them.html</id><summary type="html">
 
 &lt;p&gt;&lt;img alt="Difference" src="http://www.emadmokhtar.com/images/will-francis-1071726-unsplash.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;In Python there are many &lt;a href="https://realpython.com/python-operators-expressions/#comparison-operators"&gt;comparison operators&lt;/a&gt;; you always use them to check something in your code and let your code take decision according to the comparison, for example:&lt;/p&gt;
-if datetime.now().time().hour &amp;lt; 12:
-    print(&amp;#39;Good morning&amp;#39;)
-else:
-    print(&amp;#39;Good afternoon&amp;#39;)
-&lt;/pre&gt;
-
-
+&lt;p&gt;In Python there are many &lt;a href="https://realpython.com/python-operators-expressions/#comparison-operators"&gt;comparison operators&lt;/a&gt;; you always use them to check something in your code and let your code take decision according to the comparison&lt;/p&gt;
 &lt;p&gt;In this article, I want to go deep with two operators &lt;code&gt;==&lt;/code&gt; to check equality, and &lt;code&gt;is&lt;/code&gt; to check identity.&lt;/p&gt;
 </summary><content type="html">
 
 &lt;p&gt;&lt;img alt="Difference" src="http://www.emadmokhtar.com/images/will-francis-1071726-unsplash.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;In Python there are many &lt;a href="https://realpython.com/python-operators-expressions/#comparison-operators"&gt;comparison operators&lt;/a&gt;; you always use them to check something in your code and let your code take decision according to the comparison, for example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if datetime.now().time().hour &amp;lt; 12:
-    print(&amp;#39;Good morning&amp;#39;)
-else:
-    print(&amp;#39;Good afternoon&amp;#39;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;In Python there are many &lt;a href="https://realpython.com/python-operators-expressions/#comparison-operators"&gt;comparison operators&lt;/a&gt;; you always use them to check something in your code and let your code take decision according to the comparison&lt;/p&gt;
 &lt;p&gt;In this article, I want to go deep with two operators &lt;code&gt;==&lt;/code&gt; to check equality, and &lt;code&gt;is&lt;/code&gt; to check identity.&lt;/p&gt;
 
 
