@@ -21,11 +21,11 @@
   <meta name="robots" content="" />
 
 <meta name="author" content="Emad Mokhtar" />
-<meta name="description" content="In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity." />
+<meta name="description" content="In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: if datetime.now().time().hour < 12: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity." />
 <meta name="keywords" content="python">
 <meta property="og:site_name" content="Emad Mokhtar's Framework"/>
 <meta property="og:title" content="Difference between `==` and `is` in Python, and when to use each of them"/>
-<meta property="og:description" content="In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity."/>
+<meta property="og:description" content="In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: if datetime.now().time().hour < 12: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://www.emadmokhtar.com/difference-between-and-is-in-python-and-when-to-use-each-of-them.html"/>
 <meta property="og:type" content="article"/>
@@ -81,10 +81,10 @@
 
 <p><img alt="Difference" src="http://www.emadmokhtar.com/images/will-francis-1071726-unsplash.jpg"></p>
 <p>In Python there are many <a href="https://realpython.com/python-operators-expressions/#comparison-operators">comparison operators</a>; you always use them to check something in your code and let your code take decision according to the comparison, for example:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">.</span><span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Good morning&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Good afternoon&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>if datetime.now().time().hour &lt; 12:
+    print(&#39;Good morning&#39;)
+else:
+    print(&#39;Good afternoon&#39;)
 </pre></div>
 
 
@@ -230,7 +230,7 @@ Do objects <strong>a</strong> and <strong>b</strong> refer to the same object? S
   },
   "image": "http://www.emadmokhtar.com/images/profile.jpg",
   "url": "http://www.emadmokhtar.com/difference-between-and-is-in-python-and-when-to-use-each-of-them.html",
-  "description": "In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity."
+  "description": "In Python there are many comparison operators; you always use them to check something in your code and let your code take decision according to the comparison, for example: if datetime.now().time().hour < 12: print('Good morning') else: print('Good afternoon') In this article, I want to go deep with two operators == to check equality, and is to check identity."
 }
 </script></body>
 </html>

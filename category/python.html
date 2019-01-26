@@ -80,10 +80,10 @@
 
 <p><img alt="Difference" src="http://www.emadmokhtar.com/images/will-francis-1071726-unsplash.jpg"></p>
 <p>In Python there are many <a href="https://realpython.com/python-operators-expressions/#comparison-operators">comparison operators</a>; you always use them to check something in your code and let your code take decision according to the comparison, for example:</p>
-
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Good morning&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Good afternoon&#39;</span><span class="p">)</span>
+if datetime.now().time().hour &lt; 12:
+    print(&#39;Good morning&#39;)
+else:
+    print(&#39;Good afternoon&#39;)
 </pre>
 
 
