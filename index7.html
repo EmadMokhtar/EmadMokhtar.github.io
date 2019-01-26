@@ -68,6 +68,41 @@
 
 <article>
   <header>
+    <h2><a href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#crystal-reports-13-javascript-error">Crystal Reports 13 JavaScript Error</a></h2>
+    <p>
+      Posted on Tue 22 February 2011 in <a href="http://www.emadmokhtar.com/category/aspnet.html">ASP.NET</a>
+      &#8226; Tagged with
+      <a href="http://www.emadmokhtar.com/tag/crystalreports.html">crystalreports</a>      &#8226; <a href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p><img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg"></p>
+<p>Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to <a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx">this</a> method being obsolete.</p>
+<h1>Solution</h1>
+<p>So here’s the solution I found it:</p>
+<p>First, locate <code>crv.js</code> file in <code>C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer</code> then search for this code block at the bottom of the file</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>And replace it with this code block</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>After changed this code, everything works fine now and reports shows in ASP.NET pages.</p>
+<h1>Note</h1>
+<p>Take a backup from <code>crv.js</code> file before editing.</p>
+      <a class="btn" href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#crystal-reports-13-javascript-error">Continue reading</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://www.emadmokhtar.com/disconnecting.html#disconnecting">Disconnecting</a></h2>
     <p>
       Posted on Sun 02 January 2011 in <a href="http://www.emadmokhtar.com/category/developer.html">Developer</a>
@@ -381,28 +416,6 @@ Microsoft CDN version {hosted on Microsoft servers} "
 <a href="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js">http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.js</a>"
 "<a href="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js">http://ajax.microsoft.com/ajax/jquery.validate …</a></p>
       <a class="btn" href="http://www.emadmokhtar.com/client-side-validation-in-aspnet-webforms-by-using-jquery.html#client-side-validation-in-aspnet-webforms-by-using-jquery">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://www.emadmokhtar.com/my-journey-with-diet.html#my-journey-with-diet">My Journey with Diet</a></h2>
-    <p>
-      Posted on Mon 12 July 2010 in <a href="http://www.emadmokhtar.com/category/life.html">life</a>
-      &#8226; <a href="http://www.emadmokhtar.com/my-journey-with-diet.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p><img alt="Healthy food" src="http://www.emadmokhtar.com/images/071210_1443_MyJourneywi1.jpg"></p>
-<p>In November 2009 I decided to change my life from unhealthy to healthy lifestyle and lose weight to be healthy person, and this was a big and hard decision to make it's like paradigm shifting so that I should be careful with every step I take and analyze what to do next and how to it right.</p>
-<h1>My Journey steps:</h1>
-<ol>
-<li>
-<p>First step, I went to nutrition doctor rather than going to gym like most of Egyptian men do, which all they do is burn fat and left some weights but still eating junk food, which I think it's an awful thing to do, because you solve one part of the puzzle and left the other parts unsolved.</p>
-</li>
-<li>
-<p>Second step start to love healthy food and walk for long durations and distances, but I did this step in baby steps style, which made it a habit rather than something to do to lose weight, for example I start to walk for small distance if there's no transportation to it, or if this distance will take 10 minutes to reach OK then walk rather than ride a transportation, and Thanks for my iPod, I love walking while listing to my favorite music …</p></li></ol>
-      <a class="btn" href="http://www.emadmokhtar.com/my-journey-with-diet.html#my-journey-with-diet">Continue reading</a>
   </div>
 </article>
 

@@ -68,6 +68,32 @@
 
 <article>
   <header>
+    <h2><a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html#client-side-validation-for-django-forms">Client side validation for Django Forms</a></h2>
+    <p>
+      Posted on Wed 08 March 2017 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a>
+      &#8226; Tagged with
+      <a href="http://www.emadmokhtar.com/tag/django.html">Django</a>,      <a href="http://www.emadmokhtar.com/tag/forms.html">Forms</a>      &#8226; <a href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p><img alt="Parsley" src="http://www.emadmokhtar.com/images/parsley.jpg"></p>
+<p><a href="https://www.lovethegarden.com/sites/default/files/styles/full_width_700/public/images_and_media/parsley.jpg?itok=X7psNkrF">source</a></p>
+<p>In DUTH 2016 there was a session for <a href="https://youtu.be/uzTaWKcMzos">Django Validation by Loïc Bistuer</a>, in the session Loïc showed many areas you can validate user inputs from Django Form way to the Database Engine. To be honest validation in Django is a piece of cake and even if there is special validation rules you want to implement, you can still implement it, as I said it is easy and straight forward in Django, all of these validation is server side which happen on web server not on client-side, so what about client side?</p>
+<h1>What is client side validation?</h1>
+<p>In simple way, client side validation is validation user input on browser before sending the data to sever.</p>
+<p>It is good practice to validate user inputs from client side to save roundtrips to server, but it needs extra work to implement your validations using JavaScript or using HTML5 form validation, but there is a way to replicate Django form validation to client side, let’s see how.</p>
+<h1>Django Parsley</h1>
+<p><a href="https://github.com/agiliq/Django-parsley">Django Parsley</a> is a Django app that replicate Django Form validation to client side using <a href="http://parsleyjs.org">ParsleyJS</a> library, and it’s so easy to use it.</p>
+<h1>How to use Django Parsley?</h1>
+<ul>
+<li>
+<p>Install Django Parsley …</p></li></ul>
+      <a class="btn" href="http://www.emadmokhtar.com/client-side-validation-for-django-forms.html#client-side-validation-for-django-forms">Continue reading</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://www.emadmokhtar.com/django-is-boring-but-you-can-contribute.html#django-is-boring-but-you-can-contribute">Django is boring but you can contribute</a></h2>
     <p>
       Posted on Sun 08 January 2017 in <a href="http://www.emadmokhtar.com/category/community.html">Community</a>
@@ -377,25 +403,6 @@ In 2016 I had the change to attend DjangoCon Europe 2016 at Budapest, Hungry. I 
 <li>It has On/Off button which I found it's taking it really off, my iPad mini 2 can't recognize its tip if it's off.</li>
 <li>It take AAA battery which can run it for 2 weeks at least, you won't change the …</li></ul>
       <a class="btn" href="http://www.emadmokhtar.com/dotpen-review.html#dotpen-review">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html#extend-django-user-model-and-generic-class-based-view-gcbv">Extend Django User Model and Generic Class Based View "GCBV"</a></h2>
-    <p>
-      Posted on Fri 18 December 2015 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a>
-      &#8226; Tagged with
-      <a href="http://www.emadmokhtar.com/tag/django.html">Django</a>,      <a href="http://www.emadmokhtar.com/tag/python.html">Python</a>      &#8226; <a href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p><img alt="1450356512_full.png" src="http://www.emadmokhtar.com/images/1450356512_full.png"> When I started to learn Django, I used to use the function based view aka FBV and in my current project I decided to learn class based view CBV, I watched one <a href="https://www.youtube.com/watch?v=BJiOERA49ZQ">DjangoCon videos by Andrew Pinkham</a> to make this easier on me, and if you tried or planning to learn CBV, you will be confused about the class based views and the generic class based views inside Django, it’s some many of them, please watch the video to get your head around it. OK, now I’ve done my homework and it’s time to use CBV, believe me it’s easy and you will find the number of code lines inside our views will be decreased specially if you use GCBV. User Model and GCBV </p>
-<h1>What is the relation between GCBV and User Model?</h1>
-<p>Great question, while I’m working with one of my models fro example her the Teacher model, and teacher will has a user credentials in order to user the app. The easiest and the straightforward way is to make one-to-one relation with <a href="https://github.com/django/django/blob/53ccffdb8c8e47a4d4304df453d8c79a9be295ab/django/contrib/auth/models.py">django.contrib.auth.models.User</a> please read the quote from Django documentation: </p>
-<blockquote>
-<p>There are two ways to extend the default User …</p></blockquote>
-      <a class="btn" href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html#extend-django-user-model-and-generic-class-based-view-gcbv">Continue reading</a>
   </div>
 </article>
 

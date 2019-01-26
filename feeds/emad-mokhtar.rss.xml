@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Emad Mokhtar's Framework - Emad Mokhtar</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><lastBuildDate>Mon, 31 Dec 2018 12:00:00 +0300</lastBuildDate><item><title>I tried Nodejs and I like it</title><link>http://www.emadmokhtar.com/i-tried-nodejs-and-i-like-it.html</link><description>
+<rss version="2.0"><channel><title>Emad Mokhtar's Framework - Emad Mokhtar</title><link>http://www.emadmokhtar.com/</link><description>Geek developer who's in search of code perfection.</description><lastBuildDate>Sat, 26 Jan 2019 17:00:00 +0300</lastBuildDate><item><title>Difference between `==` and `is` in Python, and when to use each of them</title><link>http://www.emadmokhtar.com/difference-between-and-is-in-python-and-when-to-use-each-of-them.html</link><description>
+
+&lt;p&gt;&lt;img alt="Difference" src="http://www.emadmokhtar.com/images/will-francis-1071726-unsplash.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;In Python there are many &lt;a href="https://realpython.com/python-operators-expressions/#comparison-operators"&gt;comparison operators&lt;/a&gt;; you always use them to check something in your code and let your code take decision according to the comparison, for example:&lt;/p&gt;
+
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Good morning&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Good afternoon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;In this article, I want to go deep with two operators &lt;code&gt;==&lt;/code&gt; to check equality, and &lt;code&gt;is&lt;/code&gt; to check identity.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emad Mokhtar</dc:creator><pubDate>Sat, 26 Jan 2019 17:00:00 +0300</pubDate><guid isPermaLink="false">tag:www.emadmokhtar.com,2019-01-26:/difference-between-and-is-in-python-and-when-to-use-each-of-them.html</guid><category>python</category></item><item><title>I tried Nodejs and I like it</title><link>http://www.emadmokhtar.com/i-tried-nodejs-and-i-like-it.html</link><description>
 
 &lt;p&gt;&lt;img alt="The Sign" src="http://www.emadmokhtar.com/images/austin-chan-275638-unsplash.jpg"&gt;
 Photo by Austin Chan on Unsplash&lt;/p&gt;

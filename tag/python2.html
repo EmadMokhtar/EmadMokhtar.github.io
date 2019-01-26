@@ -30,7 +30,7 @@
 <meta property="og:url" content="http://www.emadmokhtar.com"/>
 <meta property="og:image" content="http://www.emadmokhtar.com/images/profile.jpg">
 
-  <title>Emad Mokhtar's Framework &ndash; Tag: Python</title>
+  <title>Emad Mokhtar's Framework &ndash; Tag: python</title>
 </head>
 <body>
   <aside>
@@ -66,6 +66,33 @@
     <a href="http://www.emadmokhtar.com/feeds/all.rss.xml">RSS</a>
   </nav>
 
+<article>
+  <header>
+    <h2><a href="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html#send-emails-asynchronously-from-django">Send Emails Asynchronously from Django</a></h2>
+    <p>
+      Posted on Sun 24 January 2016 in <a href="http://www.emadmokhtar.com/category/django.html">Django</a>
+      &#8226; Tagged with
+      <a href="http://www.emadmokhtar.com/tag/django.html">django</a>,      <a href="http://www.emadmokhtar.com/tag/python.html">python</a>,      <a href="http://www.emadmokhtar.com/tag/celery.html">celery</a>,      <a href="http://www.emadmokhtar.com/tag/emails.html">emails</a>      &#8226; <a href="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p>In this article you will learn:</p>
+<ol>
+<li>How to send emails from <a href="https://www.djangoproject.com">Django</a>.</li>
+<li>How to use <a href="http://www.celeryproject.org/">Celery</a> and <a href="https://github.com/pmclanahan/django-celery-email">Django-Celery-Email</a> to send email asynchronously.</li>
+</ol>
+<p>Last week I had the chance to get my hand dirty with Celery, I used it to send emails from Django project asynchronously using Django app call djnago-celery-email. What am I mean by sending emails asynchronously? I mean that user doesn’t wait for SMTP/mail server to send email message and give feedback to the web server, instead Django will call the send email procedure, pass it to Celery to do it away from Django application, so that user won’t wait, for example you want to send email to customer once he save customer information, you don’t want to keep user wait for application to save the customer data and send email, by sending email asynchronously user will only wait for saving confirmation and sending email celery will take care of it in the background.</p>
+<p><img alt="Alt Text" src="http://www.emadmokhtar.com/images/1442310863_full.png"></p>
+<p>Now let’s see how we can do that.</p>
+<h2>Step 1: Install and Setup Celery</h2>
+<ul>
+<li>In terminal, active your <a href="http://www.emadmokhtar.com/2015/03/virtual-environment/">virtualenv</a> and type <code>$ pip install django-celery</code></li>
+<li>Now celery and its Django app djcelery are installed into your virtualenv.</li>
+<li>Next step is …</li></ul>
+      <a class="btn" href="http://www.emadmokhtar.com/send-emails-asynchronously-from-django.html#send-emails-asynchronously-from-django">Continue reading</a>
+  </div>
+  <hr />
+</article>
 <article>
   <header>
     <h2><a href="http://www.emadmokhtar.com/extend-django-user-model-and-generic-class-based-view-gcbv.html#extend-django-user-model-and-generic-class-based-view-gcbv">Extend Django User Model and Generic Class Based View "GCBV"</a></h2>

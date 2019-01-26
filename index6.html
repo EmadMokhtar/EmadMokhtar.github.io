@@ -68,6 +68,37 @@
 
 <article>
   <header>
+    <h2><a href="http://www.emadmokhtar.com/communication-with-your-customer.html#communication-with-your-customer">Communication with your customer</a></h2>
+    <p>
+      Posted on Sat 10 March 2012 in <a href="http://www.emadmokhtar.com/category/developer.html">Developer</a>
+      &#8226; Tagged with
+      <a href="http://www.emadmokhtar.com/tag/development.html">development</a>,      <a href="http://www.emadmokhtar.com/tag/software.html">software</a>      &#8226; <a href="http://www.emadmokhtar.com/communication-with-your-customer.html#disqus_thread">Leave a comment</a>
+    </p>
+  </header>
+  <div>
+      <p><img alt="people sleeping on the floor at airport" src="http://www.emadmokhtar.com/images/pict0554.jpg"></p>
+<p>Today I was having a flight from Egypt, Cairo International Airport to
+Kuwait International Airport and when the airplane was almost reach
+Kuwait the pilot keep flying in circles and never enter the Kuwaiti
+boards and fly to the Arabian Gulf for 15 minutes we are wondering Why
+is he flying in all direction but not the one to Kuwait?</p>
+<p>This situation give me a sight for How your customer will feel when you
+haven’t or stop giving him/her information about the software. s/he’ll
+keep wondering what is he doing to my product? Is it done? Is it won’t
+be done?  and sometimes his/her mind will go to the opposite direction
+of what you are doing.</p>
+<p>Finally we found that there is a sandstorm at Kuwait International
+Airport and the visibility is zero and we can’t land, so we changed our
+direction to Dubai Airport to land there and what for the sandstorm to
+stop so we can get back. None of us thing in this.</p>
+<p>The part above I wrote while I’m sitting on floor beside the power
+socket to charge my laptop s I can write these thoughts and here …</p>
+      <a class="btn" href="http://www.emadmokhtar.com/communication-with-your-customer.html#communication-with-your-customer">Continue reading</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://www.emadmokhtar.com/using-notification-in-aspnet-webforms.html#using-notification-in-aspnet-webforms">Using Notification in ASP.NET WebForms</a></h2>
     <p>
       Posted on Thu 02 February 2012 in <a href="http://www.emadmokhtar.com/category/aspnet.html">ASP.NET</a>
@@ -307,41 +338,6 @@ you can enable 32-bit in IIS, you have 2 ways to do it by:</p>
 <p>Here is the setting you need to change either in number 1 or 2:</p>
 <p><img alt="Application Pool settings" src="http://www.emadmokhtar.com/images/32bitasp1.jpg"></p>
       <a class="btn" href="http://www.emadmokhtar.com/enable-asp-net-32-bit-application-on-64-bit-environment.html#enable-asp-net-32-bit-application-on-64-bit-environment">Continue reading</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#crystal-reports-13-javascript-error">Crystal Reports 13 JavaScript Error</a></h2>
-    <p>
-      Posted on Tue 22 February 2011 in <a href="http://www.emadmokhtar.com/category/aspnet.html">ASP.NET</a>
-      &#8226; Tagged with
-      <a href="http://www.emadmokhtar.com/tag/crystalreports.html">crystalreports</a>      &#8226; <a href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#disqus_thread">Leave a comment</a>
-    </p>
-  </header>
-  <div>
-      <p><img alt="JSerror" src="http://www.emadmokhtar.com/images/JSerror.jpg"></p>
-<p>Today I’d faced JavaScript bug caused by SAP Crystal Report’s js file, I Google/Bing it for one hour till I found a solution, the problem is related to <a href="http://msdn.microsoft.com/en-us/library/bb310952.aspx">this</a> method being obsolete.</p>
-<h1>Solution</h1>
-<p>So here’s the solution I found it:</p>
-<p>First, locate <code>crv.js</code> file in <code>C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETClientFiles\crystalreportviewers13\js\crviewer</code> then search for this code block at the bottom of the file</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>And replace it with this code block</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">)</span><span class="o">!==</span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Sys</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">notifyScriptLoaded</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>After changed this code, everything works fine now and reports shows in ASP.NET pages.</p>
-<h1>Note</h1>
-<p>Take a backup from <code>crv.js</code> file before editing.</p>
-      <a class="btn" href="http://www.emadmokhtar.com/crystal-reports-13-javascript-error.html#crystal-reports-13-javascript-error">Continue reading</a>
   </div>
 </article>
 
